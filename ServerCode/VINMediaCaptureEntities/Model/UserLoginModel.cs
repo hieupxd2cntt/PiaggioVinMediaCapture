@@ -10,11 +10,11 @@ namespace VINMediaCaptureEntities.Model
     public class UserLoginModel
     {
         public User User { get; set; }
-        public Branch Branch { get; set; }
+     
         public UserLoginModel()
         {
             User = new User();
-            Branch = new Branch();
+     
         }
     }
 }

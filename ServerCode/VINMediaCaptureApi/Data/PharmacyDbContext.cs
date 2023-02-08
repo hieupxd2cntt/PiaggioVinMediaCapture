@@ -39,5 +39,5 @@ public class PharmacyDbContext : DbContext
     public DbSet<Customer> Customer { get; set; }
     public DbSet<TransactionDetail> TransactionDetail { get; set; }
     public DbSet<User> User { get; set; }
-    public DbSet<Warehouse> Warehouse { get; set; }
+    public DbSet<Color> Warehouse { get; set; }
 }

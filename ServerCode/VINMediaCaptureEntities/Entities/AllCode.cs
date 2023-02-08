@@ -5,27 +5,23 @@ namespace VINMediaCaptureEntities.Entities
     public class AllCode
     {
         [Key]
-        public int Id { get; set; }
+        public int IDX { get; set; }
 
-        public string Code { get; set; }
+        public string? CodeName { get; set; }
 
-        public string Name { get; set; }
+        public string? TypeName { get; set; }
 
-        public string? Description { get; set; }
-        public int? Value { get; set; }
+        public string? CodeVal { get; set; }
 
-    }
-    public class ALLCODE
-    {
-        [Key]
-        public int ID { get; set; }
+        public int? CodeIDX { get; set; }
 
-        public string CODE { get; set; }
+        public string? Contents { get; set; }
 
-        public string NAME { get; set; }
+        public int? ResourceID { get; set; }
 
-        public string? DESCRIPTION { get; set; }
-        public int? VALUE { get; set; }
+        public bool? Modify { get; set; }
+
+        public bool? Disable { get; set; }
 
     }
 }

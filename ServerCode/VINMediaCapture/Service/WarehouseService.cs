@@ -34,7 +34,7 @@ namespace VINMediaCapture.Services
             
         }
 
-        public async Task<RestOutput<int>> SetStatus(List<Warehouse> warehouse)
+        public async Task<RestOutput<int>> SetStatus(List<Color> warehouse)
         {
             var url = string.Format("Warehouse/SetStatus");
             var data = await PostApi(url, warehouse);
@@ -45,7 +45,7 @@ namespace VINMediaCapture.Services
     public interface IWarehouseService
     {
         public Task<WarehouseIndexModel> SearchWarehouse(WarehouseIndexModel search);
-        public Task<RestOutput<int>> SetStatus(List<Warehouse> warehouse);
+        public Task<RestOutput<int>> SetStatus(List<Color> warehouse);
         public Task<NotificationModel> GetDrugNotification();
 
     }
