@@ -18,7 +18,7 @@ class CameraPage extends StatefulWidget {
 
 class _CameraPageState extends State<CameraPage> {
   late CameraController controller;
-  var pictureFile = "";
+  var pictureFile;
 
   @override
   void initState() {
@@ -77,11 +77,11 @@ class _CameraPageState extends State<CameraPage> {
                 '${DateTime.now()}.png',
               );
 
-              var t = controller.takePicture(path);
-
+              XFile t = await controller.takePicture();
+              t.saveTo(path);
               pictureFile = path;
-              var check = io.File(path).existsSync();
-              var checkFolder = io.Directory(tempDir.path).existsSync();
+              GallerySaver.saveImage(path)
+
               setState(() {});
             },
             child: const Text('Capture Image'),
