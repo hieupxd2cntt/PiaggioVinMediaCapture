@@ -1,0 +1,24 @@
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\bin\Debug\net6.0\PharmacyManagementEntities.deps.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\bin\Debug\net6.0\PharmacyManagementEntities.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\bin\Debug\net6.0\PharmacyManagementEntities.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.csproj.AssemblyReference.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.AssemblyInfoInputs.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.AssemblyInfo.cs
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.csproj.CoreCompileInputs.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\obj\Debug\net6.0\refint\PharmacyManagementEntities.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagementEntities\obj\Debug\net6.0\ref\PharmacyManagementEntities.dll
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\bin\Debug\net6.0\PharmacyManagementEntities.deps.json
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\bin\Debug\net6.0\PharmacyManagementEntities.dll
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\bin\Debug\net6.0\PharmacyManagementEntities.pdb
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.csproj.AssemblyReference.cache
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.AssemblyInfoInputs.cache
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.AssemblyInfo.cs
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.csproj.CoreCompileInputs.cache
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.dll
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\obj\Debug\net6.0\refint\PharmacyManagementEntities.dll
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\obj\Debug\net6.0\PharmacyManagementEntities.pdb
+E:\Working\A Viet\CoreCode\Core\PharmacyManagementEntities\obj\Debug\net6.0\ref\PharmacyManagementEntities.dll

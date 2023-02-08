@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>TanvirArjel.EFCore.QueryRepository</id>
+    <version>1.5.0</version>
+    <title>EF Core Query Repository</title>
+    <authors>TanvirArjel</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>icon.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/TanvirArjel/EFCore.GenericRepository</projectUrl>
+    <description>This library is a Generic Query Repository implementation for EF Core ORM which will remove developers' pain to write query repository layer for each .NET Core and .NET project.
+
+			This library includes the following notable features:
+
+			1. This library can be run on any .NET Core or .NET application which has .NET Core 3.1, .NET Standard 2.1 and .NET 5.0+ support.
+
+			2. It has all the required methods to query your data in whatever way you want without getting IQueryable&lt;T&gt; from the repository.
+
+			3. It also has Specification&lt;T&gt; pattern support so that you can build your query dynamically i.e. differed query building.
+
+			4. It also has database-level projection support for your query.
+
+			5. It also has support to run raw SQL command against your relational database.
+
+			6. It also has support to choose whether you would like to track your query entity/entities or not.
+
+			7. Most importantly, it has full Unit Testing support. It facilitates the writing unit test with mocking.
+
+			8. It also has pagination support.
+
+			9. Free raw SQL query support both for complex type and primitive types.</description>
+    <releaseNotes>1. dotNET 7.0 support has been added.</releaseNotes>
+    <copyright>©2021 TanvirArjel. All rights reserved.</copyright>
+    <tags>EFCore, RepositoryLayer, GenericRepository, QueryRepository, .NET, .NETCore, ASP.NETCore</tags>
+    <repository type="Git" url="https://github.com/TanvirArjel/EFCore.GenericRepository" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.EntityFrameworkCore.Relational" version="6.0.13" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Dynamic.Core" version="1.2.25" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Microsoft.EntityFrameworkCore.Relational" version="5.0.17" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Dynamic.Core" version="1.2.25" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.dll" target="lib\net6.0\TanvirArjel.EFCore.QueryRepository.dll" />
+    <file src="E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.xml" target="lib\net6.0\TanvirArjel.EFCore.QueryRepository.xml" />
+    <file src="E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll" target="lib\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll" />
+    <file src="E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml" target="lib\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml" />
+    <file src="E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\LICENSE" target="\LICENSE" />
+    <file src="E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\README.md" target="\README.md" />
+    <file src="E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\images\icon.png" target="icon.png" />
+  </files>
+</package>

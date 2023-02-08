@@ -1,0 +1,12 @@
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\bin\Debug\net6.0\VINMediaCaptureEntities.deps.json
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\bin\Debug\net6.0\VINMediaCaptureEntities.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\bin\Debug\net6.0\VINMediaCaptureEntities.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\obj\Debug\net6.0\VINMediaCaptureEntities.csproj.AssemblyReference.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\obj\Debug\net6.0\VINMediaCaptureEntities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\obj\Debug\net6.0\VINMediaCaptureEntities.AssemblyInfoInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\obj\Debug\net6.0\VINMediaCaptureEntities.AssemblyInfo.cs
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\obj\Debug\net6.0\VINMediaCaptureEntities.csproj.CoreCompileInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\obj\Debug\net6.0\VINMediaCaptureEntities.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\obj\Debug\net6.0\refint\VINMediaCaptureEntities.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\obj\Debug\net6.0\VINMediaCaptureEntities.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureEntities\obj\Debug\net6.0\ref\VINMediaCaptureEntities.dll

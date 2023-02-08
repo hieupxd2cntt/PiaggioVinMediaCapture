@@ -1,0 +1,48 @@
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.deps.json
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.AssemblyReference.cache
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfoInputs.cache
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfo.cs
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.CoreCompileInputs.cache
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.deps.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.AssemblyReference.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfoInputs.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfo.cs
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.CoreCompileInputs.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.deps.json
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.AssemblyReference.cache
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfoInputs.cache
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfo.cs
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.CoreCompileInputs.cache
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.deps.json
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.AssemblyReference.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfoInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfo.cs
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.CoreCompileInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Debug\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb

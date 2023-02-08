@@ -1,0 +1,72 @@
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.AssemblyReference.cache
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.AssemblyInfoInputs.cache
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.AssemblyInfo.cs
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.CoreCompileInputs.cache
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.deps.json
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.dll
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.pdb
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.xml
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.dll
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.pdb
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.xml
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.CopyComplete
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.dll
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\refint\TanvirArjel.EFCore.GenericRepository.dll
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.xml
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.pdb
+C:\Users\HieuPX\Downloads\EFCore.GenericRepository-master\EFCore.GenericRepository-master\src\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\ref\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.deps.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.xml
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.AssemblyReference.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.AssemblyInfoInputs.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.AssemblyInfo.cs
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.CoreCompileInputs.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.CopyComplete
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\refint\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.xml
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\ref\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.deps.json
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.pdb
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.xml
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.AssemblyReference.cache
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.AssemblyInfoInputs.cache
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.AssemblyInfo.cs
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.CoreCompileInputs.cache
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.CopyComplete
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\refint\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.xml
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.pdb
+E:\Working\A Viet\CoreCode\Core\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\ref\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.deps.json
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Debug\net6.0\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.AssemblyReference.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.AssemblyInfoInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.AssemblyInfo.cs
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.CoreCompileInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.csproj.CopyComplete
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\refint\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\TanvirArjel.EFCore.GenericRepository.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Debug\net6.0\ref\TanvirArjel.EFCore.GenericRepository.dll

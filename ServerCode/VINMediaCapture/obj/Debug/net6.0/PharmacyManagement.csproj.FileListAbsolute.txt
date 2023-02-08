@@ -1,0 +1,70 @@
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\appsettings.Development.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\appsettings.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.staticwebassets.runtime.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.exe
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.deps.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.runtimeconfig.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.csproj.AssemblyReference.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.AssemblyInfoInputs.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.AssemblyInfo.cs
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.csproj.CoreCompileInputs.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.MvcApplicationPartsAssemblyInfo.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.RazorAssemblyInfo.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.RazorAssemblyInfo.cs
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\staticwebassets\msbuild.PharmacyManagement.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\staticwebassets\msbuild.build.PharmacyManagement.props
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.PharmacyManagement.props
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.PharmacyManagement.props
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\staticwebassets.pack.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\staticwebassets.build.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\staticwebassets.development.json
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\scopedcss\bundle\PharmacyManagement.styles.css
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\scopedcss\projectbundle\PharmacyManagement.bundle.scp.css
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\refint\PharmacyManagement.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.genruntimeconfig.cache
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\ref\PharmacyManagement.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\PharmacyManagementEntities.dll
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\bin\Debug\net6.0\PharmacyManagementEntities.pdb
+E:\Working\QLQuayThuoc\PharmacyManagement\PharmacyManagement\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.csproj.CopyComplete
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\appsettings.Development.json
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\appsettings.json
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.staticwebassets.runtime.json
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.exe
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.deps.json
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.runtimeconfig.json
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.dll
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\PharmacyManagement.pdb
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\PharmacyManagementEntities.dll
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\bin\Debug\net6.0\PharmacyManagementEntities.pdb
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.csproj.AssemblyReference.cache
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.AssemblyInfoInputs.cache
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.AssemblyInfo.cs
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.csproj.CoreCompileInputs.cache
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.MvcApplicationPartsAssemblyInfo.cache
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.RazorAssemblyInfo.cache
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.RazorAssemblyInfo.cs
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\staticwebassets\msbuild.PharmacyManagement.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\staticwebassets\msbuild.build.PharmacyManagement.props
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.PharmacyManagement.props
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.PharmacyManagement.props
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\staticwebassets.pack.json
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\staticwebassets.build.json
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\staticwebassets.development.json
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\scopedcss\bundle\PharmacyManagement.styles.css
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\scopedcss\projectbundle\PharmacyManagement.bundle.scp.css
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.csproj.CopyComplete
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.dll
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\refint\PharmacyManagement.dll
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.pdb
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\PharmacyManagement.genruntimeconfig.cache
+E:\Working\A Viet\CoreCode\Core\PharmacyManagement\obj\Debug\net6.0\ref\PharmacyManagement.dll

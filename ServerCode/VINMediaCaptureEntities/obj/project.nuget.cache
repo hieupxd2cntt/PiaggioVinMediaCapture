@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "IUWRbNi5M9JJwN5pM09nLkBHPUR+lnUyMsfUbEamc9WEvC/rHt9knH0t9pNmlbH4ShJnHLdwssVNKtiF2ES5OA==",
+  "success": true,
+  "projectFilePath": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCaptureEntities\\VINMediaCaptureEntities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HieuPX\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.12\\microsoft.aspnetcore.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\HieuPX\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",
+    "C:\\Users\\HieuPX\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

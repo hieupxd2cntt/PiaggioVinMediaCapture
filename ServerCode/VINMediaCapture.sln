@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VINMediaCaptureApi", "VINMediaCaptureApi\VINMediaCaptureApi.csproj", "{AAAFF250-8196-41E7-8291-27E81869C964}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VINMediaCaptureEntities", "VINMediaCaptureEntities\VINMediaCaptureEntities.csproj", "{2AB98F5E-60C4-4439-BADA-8CB96F6C8799}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TanvirArjel.EFCore.GenericRepository", "TanvirArjel.EFCore.GenericRepository\TanvirArjel.EFCore.GenericRepository.csproj", "{36E468CD-5F68-4F1B-8D0F-94CCFAE11287}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TanvirArjel.EFCore.QueryRepository", "TanvirArjel.EFCore.QueryRepository\TanvirArjel.EFCore.QueryRepository.csproj", "{14F0C8C6-7E0C-497B-8303-7DCDA85186F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VINMediaCapture", "VINMediaCapture\VINMediaCapture.csproj", "{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAAFF250-8196-41E7-8291-27E81869C964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAAFF250-8196-41E7-8291-27E81869C964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAAFF250-8196-41E7-8291-27E81869C964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAAFF250-8196-41E7-8291-27E81869C964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB98F5E-60C4-4439-BADA-8CB96F6C8799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB98F5E-60C4-4439-BADA-8CB96F6C8799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB98F5E-60C4-4439-BADA-8CB96F6C8799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB98F5E-60C4-4439-BADA-8CB96F6C8799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36E468CD-5F68-4F1B-8D0F-94CCFAE11287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36E468CD-5F68-4F1B-8D0F-94CCFAE11287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36E468CD-5F68-4F1B-8D0F-94CCFAE11287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36E468CD-5F68-4F1B-8D0F-94CCFAE11287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F0C8C6-7E0C-497B-8303-7DCDA85186F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F0C8C6-7E0C-497B-8303-7DCDA85186F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F0C8C6-7E0C-497B-8303-7DCDA85186F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F0C8C6-7E0C-497B-8303-7DCDA85186F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26B92922-58D6-47BC-9928-CE5FE6C5E5D6}
+	EndGlobalSection
+EndGlobal
