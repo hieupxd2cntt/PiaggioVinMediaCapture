@@ -9,9 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:async';
 import 'dart:io';
-import 'design_course/models/category.dart';
+
 import 'login/firebase_options.dart';
-import 'navigation_home_screen.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 import 'piaggio/doctype_screen.dart';
@@ -71,7 +70,7 @@ class MyApp extends StatelessWidget {
         textTheme: AppTheme.textTheme,
         platform: TargetPlatform.iOS,
       ),
-      home: DetailModelScreen(),
+      home: loginscreen(),
     );
   }
 }

@@ -8,11 +8,6 @@ import '../camera/camera_page.dart';
 import 'Component.dart';
 
 import 'package:flutter/material.dart';
-
-import 'Forgetpassword.dart';
-import 'LoginHomescreen.dart';
-import 'Loginwithphoneno.dart';
-import 'SignUpScreen.dart';
 import 'Toast.dart';
 
 class loginscreen extends StatefulWidget {
@@ -125,23 +120,6 @@ class _loginscreenState extends State<loginscreen> {
                           SizedBox(
                             height: 5,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                forgetpassword()));
-                                  },
-                                  child: Text(
-                                    "Forgot password?",
-                                    style: TextStyle(color: Colors.black),
-                                  )),
-                            ],
-                          ),
                           SizedBox(
                             height: 55,
                           ),
@@ -159,79 +137,16 @@ class _loginscreenState extends State<loginscreen> {
                                     ),
                                   ),
                                 );
-                                /*FirebaseAuth.instance
-                                    .signInWithEmailAndPassword(
-                                        email: emailcon.text.toString(),
-                                        password: passwordcon.text.toString())
-                                    .then((value) {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              loginhomescreen(name: '')));
-                                }).onError((error, stackTrace) {
-                                  toastmessage(error.toString());
-                                });*/
                               }),
                           SizedBox(
                             height: 10,
                           ),
-                          Text("- OR -"),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          loginwithphoneno()));
-                            },
-                            child: Container(
-                              height: 37,
-                              width: 49,
-                              decoration: BoxDecoration(
-                                color: bcolor,
-                                shape: BoxShape.circle,
-                              ),
-                              child: Icon(
-                                Icons.phone,
-                                color: Colors.white,
-                              ),
-                            ),
-                          )
                         ],
                       ),
                     ),
                   ),
                 ),
               ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(30),
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Don't have an account",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => signUpScreen()));
-                      },
-                      child: Text("Sign Up")),
-                ],
-              ),
             ),
           ),
         ],
