@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:gallery_saver/gallery_saver.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -66,23 +67,28 @@ class _CameraPageState extends State<CameraPage> {
           padding: const EdgeInsets.all(8.0),
           child: ElevatedButton(
             onPressed: () async {
-              Directory tempDir = await getTemporaryDirectory();
+              String dir = (await getApplicationDocumentsDirectory()).path;
+              File file = new File('$dir' + "/hieupx.txt");
+              await file.create();
+              Directory d = new Directory(dir);
+              if (!await d.exists()) {
+                await d.create();
+              }
 
               // Construct the path where the image should be saved using the
               // pattern package.
               final path = join(
                 // Store the picture in the temp directory.
                 // Find the temp directory using the `path_provider` plugin.
-                (await getTemporaryDirectory()).path,
-                '${DateTime.now()}.png',
+                dir,
+                'hieu.png',
               );
 
               XFile t = await controller.takePicture();
               t.saveTo(path);
               pictureFile = path;
-              GallerySaver.saveImage(path)
-
-              setState(() {});
+              GallerySaver.saveImage(path);
+              //setState();
             },
             child: const Text('Capture Image'),
           ),

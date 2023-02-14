@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:best_flutter_ui_templates/login/loginscreen.dart';
 import 'package:best_flutter_ui_templates/piaggio/detail_model_screen.dart';
+import 'package:best_flutter_ui_templates/piaggio/testcam.dart';
 import 'package:camera/camera.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,17 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'piaggio/doctype_screen.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  /* runApp(
+    MaterialApp(
+      theme: ThemeData.dark(),
+      home: TakePictureScreen(
+        // Pass the appropriate camera to the TakePictureScreen widget.
+        camera: firstCamera,
+      ),
+    ),
+  );*/
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
 //options: DefaultFirebaseOptions.android, // if you're using windows emulator
