@@ -1,12 +1,11 @@
-import 'dart:ui';
+import 'dart:convert';
 
-import 'package:camera/camera.dart';
+import 'package:best_flutter_ui_templates/apilib/apilib.dart';
+import 'package:best_flutter_ui_templates/objectmodel/users.dart';
+import 'package:best_flutter_ui_templates/piaggio/doctype_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-import '../camera/camera_page.dart';
 import 'Component.dart';
-
 import 'package:flutter/material.dart';
 import 'Toast.dart';
 
@@ -47,7 +46,7 @@ class _loginscreenState extends State<loginscreen> {
                 ),
                 Center(
                   child: Text(
-                    "Firebase",
+                    "Login",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 30,
@@ -88,27 +87,27 @@ class _loginscreenState extends State<loginscreen> {
                             child: Column(
                               children: [
                                 TextFormField(
-                                    // validator: (value) {
-                                    //   if (value!.isEmpty) {
-                                    //     return 'Enter Email';
-                                    //   } else {
-                                    //     return null;
-                                    //   }
-                                    // },
+                                    /*validator: (value) {
+                                      if (value!.isEmpty) {
+                                        return 'Enter Email';
+                                      } else {
+                                        return null;
+                                      }
+                                    },*/
                                     keyboardType: TextInputType.emailAddress,
                                     controller: emailcon,
                                     decoration: InputDecoration(
                                       hintText: "Email",
                                     )),
                                 TextFormField(
-                                  // validator: (value) {
-                                  //   if (value!.isEmpty) {
-                                  //     return 'Enter Password';
-                                  //   } else {
-                                  //     return null;
-                                  //   }
-                                  // },
-                                  keyboardType: TextInputType.emailAddress,
+                                  /*validator: (value) {
+                                    if (value!.isEmpty) {
+                                      return 'Enter Password';
+                                    } else {
+                                      return null;
+                                    }
+                                  },*/
+                                  keyboardType: TextInputType.number,
                                   controller: passwordcon,
                                   decoration: InputDecoration(
                                     hintText: "Password",
@@ -126,17 +125,33 @@ class _loginscreenState extends State<loginscreen> {
                           roundbutton(
                               title: "Login",
                               tapfun: () async {
-                                toastmessage("test");
-                                await availableCameras().then(
+                                var user = new Users.login(
+                                    emailcon.text, passwordcon.text);
+                                Users? userData = null;
+                                try {
+                                  var userTemp = await GetLogin(user);
+                                  userData =
+                                      Users.fromJson(jsonDecode(userTemp.body));
+                                } catch (e) {
+                                  var b = 1;
+                                }
+                                if (userData != null) {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => DocTypeScreen(),
+                                    ),
+                                  );
+                                }
+
+                                /*await availableCameras().then(
                                   (value) => Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => CameraPage(
-                                        cameras: value,
-                                      ),
+                                      builder: (context) => DocTypeScreen(),
                                     ),
                                   ),
-                                );
+                                );*/
                               }),
                           SizedBox(
                             height: 10,
