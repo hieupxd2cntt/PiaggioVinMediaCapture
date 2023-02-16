@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:best_flutter_ui_templates/login/loginscreen.dart';
+import 'package:best_flutter_ui_templates/piaggio/barcode_scan_screen.dart';
 import 'package:best_flutter_ui_templates/piaggio/detail_model_screen.dart';
 import 'package:best_flutter_ui_templates/piaggio/testcam.dart';
 import 'package:camera/camera.dart';
@@ -79,7 +80,7 @@ class MyApp extends StatelessWidget {
         textTheme: AppTheme.textTheme,
         platform: TargetPlatform.iOS,
       ),
-      home: loginscreen(),
+      home: BarCodeScanScreen(),
     );
   }
 }

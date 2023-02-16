@@ -2,8 +2,10 @@ import 'dart:convert';
 
 import 'package:best_flutter_ui_templates/apilib/apilib.dart';
 import 'package:best_flutter_ui_templates/objectmodel/users.dart';
+import 'package:best_flutter_ui_templates/piaggio/barcode_scan_screen.dart';
 import 'package:best_flutter_ui_templates/piaggio/doctype_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_session_manager/flutter_session_manager.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'Component.dart';
 import 'package:flutter/material.dart';
@@ -132,14 +134,17 @@ class _loginscreenState extends State<loginscreen> {
                                   var userTemp = await GetLogin(user);
                                   userData =
                                       Users.fromJson(jsonDecode(userTemp.body));
-                                } catch (e) {
-                                  var b = 1;
-                                }
+                                } catch (e) {}
                                 if (userData != null) {
+                                  var sessionManager = SessionManager();
+                                  await sessionManager.set(
+                                      "loginName", userData.loginName);
+                                  await sessionManager.set(
+                                      "userID", userData.userID);
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => DocTypeScreen(),
+                                      builder: (context) => BarCodeScanScreen(),
                                     ),
                                   );
                                 }

@@ -362,38 +362,6 @@ class _DetailModelScreenState extends State<DetailModelScreen>
             Container(
               width: AppBar().preferredSize.height + 40,
               height: AppBar().preferredSize.height,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
-                      onTap: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.favorite_border),
-                      ),
-                    ),
-                  ),
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
-                      onTap: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(FontAwesomeIcons.locationDot),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             )
           ],
         ),
