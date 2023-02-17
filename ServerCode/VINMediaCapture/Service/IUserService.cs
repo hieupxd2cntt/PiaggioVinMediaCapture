@@ -10,7 +10,7 @@ namespace VINMediaCapture.Services
 {
     public interface IUserService
     {
-        public Task<UserLoginModel> Login(User user);
+        public Task<UserLoginModel> Login(Users user);
        
     }
 }

@@ -12,9 +12,17 @@ build_property.RootNamespace = VINMediaCapture
 build_property.ProjectDir = E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture
 build_property._RazorSourceGeneratorDebug = 
+
+[E:/Working/Daisy/Piaggio/PiaggioVinMediaCapture/ServerCode/VINMediaCapture/Views/Color/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3JcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Working/Daisy/Piaggio/PiaggioVinMediaCapture/ServerCode/VINMediaCapture/Views/Color/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Working/Daisy/Piaggio/PiaggioVinMediaCapture/ServerCode/VINMediaCapture/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=

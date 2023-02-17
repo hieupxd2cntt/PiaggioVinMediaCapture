@@ -31,7 +31,7 @@ namespace VINMediaCaptureEntities.Entities
 
         public int? ValidationRuleID { get; set; }
 
-        public bool? Disabled { get; set; }
+        public int? Disabled { get; set; }
 
     }
 }

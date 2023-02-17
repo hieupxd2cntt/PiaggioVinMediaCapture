@@ -11,7 +11,7 @@ namespace VINMediaCaptureEntities.Entities
 
         public string ModelName { get; set; }
 
-        public bool? Disable { get; set; }
+        public int? Disable { get; set; }
 
     }
 }

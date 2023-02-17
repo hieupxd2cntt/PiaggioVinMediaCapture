@@ -14,7 +14,7 @@ namespace VINMediaCapture.Controllers
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            var userLogin = new UserLoginModel { User = new User { Id=3, UserName="HieuPx",BranchId=1},Branch = new Branch {PharmacyBranchName="Quầy thuốc Xuân Hiếu" } };
+            var userLogin = new UserLoginModel { User = new Users {LoginName="HieuPX" } };
             HttpContext.Session.SetString(ESession.User.ToString(), JsonConvert.SerializeObject(userLogin));
             if (HttpContext.Session.GetString(ESession.User.ToString()) ==null)
             {
@@ -22,7 +22,7 @@ namespace VINMediaCapture.Controllers
             }
             else
             {
-                var session = JsonConvert.DeserializeObject<User>(HttpContext.Session.GetString(ESession.User.ToString()));
+                var session = JsonConvert.DeserializeObject<Users>(HttpContext.Session.GetString(ESession.User.ToString()));
                 if (session == null)
                 {
                     filterContext.Result = new RedirectResult(Url.Action("Login", "Login"), true);

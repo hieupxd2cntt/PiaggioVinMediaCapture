@@ -21,7 +21,7 @@ namespace VINMediaCaptureEntities.Entities
 
         public string? ArchivePeriod { get; set; }
 
-        public bool? Disabled { get; set; }
+        public int? Disabled { get; set; }
 
     }
 }

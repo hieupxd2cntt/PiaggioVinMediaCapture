@@ -5,16 +5,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
 builder.Services.AddSession(cfg => {            // Đăng ký dịch vụ Session
     cfg.Cookie.Name = "VINMediaCapture";     // Đặt tên Session - tên này sử dụng ở Browser (Cookie)
     cfg.IdleTimeout = new TimeSpan(0, 60, 0);   // Thời gian tồn tại của Session
 });
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<IUserService, UserService>();
-builder.Services.AddSingleton<ITransactionService, TransactionService>();
-builder.Services.AddSingleton<ICustomerService, CustomerService>();
+builder.Services.AddSingleton<IColorService, ColorService>();
 builder.Services.AddSingleton<IAllCodeService, AllCodeService>();
-builder.Services.AddSingleton<IWarehouseService, WarehouseService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

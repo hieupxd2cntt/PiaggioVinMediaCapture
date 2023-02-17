@@ -11,7 +11,7 @@ namespace VINMediaCaptureEntities.Entities
 
         public string? Market_Name { get; set; }
 
-        public bool? Disabled { get; set; }
+        public int? Disabled { get; set; }
 
     }
 }

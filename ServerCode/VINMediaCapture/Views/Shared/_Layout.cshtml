@@ -82,7 +82,7 @@
                 <!-- Notifications Dropdown Menu -->
                 @if (notification != null)
                 {
-                    if (notification.DrugExpireNotification.Count > 0 || notification.DrugQuantityNotification.Count > 0)
+                   @* if (notification.DrugExpireNotification.Count > 0 || notification.DrugQuantityNotification.Count > 0)
                     {
                         <li class="nav-item dropdown">
                             <a class="nav-link" data-toggle="dropdown" href="#">
@@ -104,7 +104,7 @@
                         <a href="@Url.Action("Index","Warehouse")" class="dropdown-item dropdown-footer">Xem chi tiết tồn kho</a>
                             </div>
                         </li>
-                    }
+                    }*@
 
                 }
 
@@ -128,8 +128,8 @@
                         <img src="/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">@userLogin.User.FullName</a>
-                        <a href="#" class="d-block">@userLogin.Branch.PharmacyBranchName</a>
+                        <a href="#" class="d-block">@userLogin.User.LoginName</a>
+                        
                     </div>
                 </div>
                 <nav class="mt-2">
@@ -137,20 +137,27 @@
                         <!-- Add icons to the links using the .nav-icon class
                              with font-awesome or any other icon font library -->
                         <li class="nav-item menu-open">
-                            <a href="@Url.Action("Index","Transaction")" class="nav-link active">
+                            <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Quản lý giao dịch
+                                    Quản lý
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="@Url.Action("AddTransaction","Transaction",  new { id = 0, tranType=(int)ETransactionType.Input})" class="nav-link active">
+                                    <a href="@Url.Action("Index","Color")" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Nhập hàng</p>
+                                        <p>Màu sắc</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("Index","Market")" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Thị trường</p>
+                                    </a>
+                                </li>
+                                @*
                                 <li class="nav-item">
                                     <a href="@Url.Action("AddTransaction","Transaction",  new { id = 0, tranType=(int)ETransactionType.Output})" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
@@ -174,18 +181,18 @@
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Xuất hủy</p>
                                     </a>
-                                </li>
+                                </li>*@
                             </ul>
                         </li>
-                        <li class="nav-item menu-open">
-                            <a href="@Url.Action("Index","Warehouse")" class="nav-link active">
+                        @*<li class="nav-item menu-open">
+                            <a href="@Url.Action("Index","Market")" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    Quản lý kho
+                                    Quản lý thị trường
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
-                        </li>
+                        </li>*@
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

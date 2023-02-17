@@ -7,11 +7,11 @@ namespace VINMediaCaptureEntities.Entities
         [Key]
         public int ColorID { get; set; }
 
-        public string ColorCode { get; set; }
+        public string? ColorCode { get; set; }
 
-        public string ColorName { get; set; }
+        public string? ColorName { get; set; }
 
-        public bool? Disable { get; set; }
+        public int? Disable { get; set; }
 
     }
 

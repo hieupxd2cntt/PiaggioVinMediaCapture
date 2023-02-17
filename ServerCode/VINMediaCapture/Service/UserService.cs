@@ -18,7 +18,7 @@ namespace VINMediaCapture.Service
 
         }
 
-        public async Task<UserLoginModel> Login(User user)
+        public async Task<UserLoginModel> Login(Users user)
         {
             var url = "User/Login";
             var data = await PostApi(url, user);

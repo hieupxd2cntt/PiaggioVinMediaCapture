@@ -5,6 +5,7 @@ using VINMediaCaptureEntities.Entities;
 using System.Diagnostics;
 using VINMediaCaptureEntities.Enum;
 using Newtonsoft.Json;
+using VINMediaCapture.Service;
 
 namespace VINMediaCapture.Controllers
 {
@@ -12,28 +13,22 @@ namespace VINMediaCapture.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IUserService _userService;
-        private readonly IWarehouseService _warehouseService;
-        public LoginController(ILogger<HomeController> logger, IUserService userService, IWarehouseService warehouseService)
+
+        public LoginController(ILogger<HomeController> logger, IUserService userServicee)
         {
             _logger = logger;
-            _userService = userService;
-            _warehouseService = warehouseService;
+            _userService = userServicee;
         }
         public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
-        public async Task< IActionResult> Login(User user)
+        public async Task< IActionResult> Login(Users user)
         {
             var userData= await _userService.Login(user);
             if (userData != null)
             {
-                #region Lấy thông tin đưa vào thông báo
-                var notification = await _warehouseService.GetDrugNotification();
-                HttpContext.Session.SetString("Notification", JsonConvert.SerializeObject(notification));
-                #endregion
-
                 HttpContext.Session.SetString(ESession.User.ToString(), JsonConvert.SerializeObject(userData));
                 return RedirectToAction("Index", "Home");
             }

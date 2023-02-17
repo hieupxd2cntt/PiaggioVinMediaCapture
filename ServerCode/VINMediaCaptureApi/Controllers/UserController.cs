@@ -17,34 +17,30 @@ namespace VINMediaCaptureApi.Controllers
         private readonly IRepository _repository;
 
         private readonly IQueryRepository _queryRepository;
-        private readonly PharmacyDbContext _context;
-        private readonly IRepository<PharmacyDbContext> _pharmacyRepository;
+        private readonly VINMediaCaptureDbContext _context;
+        private readonly IRepository<VINMediaCaptureDbContext> _VINMediaCaptureRepository;
 
         private readonly ILogger<UserController> _logger;
 
-        public UserController(ILogger<UserController> logger, IRepository repository, IQueryRepository queryRepository, PharmacyDbContext context, IRepository<PharmacyDbContext> pharmacyRepository)
+        public UserController(ILogger<UserController> logger, IRepository repository, IQueryRepository queryRepository, VINMediaCaptureDbContext context, IRepository<VINMediaCaptureDbContext> VINMediaCaptureRepository)
         {
             _logger = logger;
             _repository = repository;
             _context = context;
             _queryRepository = queryRepository;
-            _pharmacyRepository = pharmacyRepository;
+            _VINMediaCaptureRepository = VINMediaCaptureRepository;
         }
 
         [HttpPost]
         [Route("Login")]
-        public async Task<UserLoginModel> Login(User user)
+        public async Task<Users> Login(Users user)
         {
             try
             {
                 await _context.Database.OpenConnectionAsync(default);
-                var userData = (from u in _context.User.Where(x => x.UserName.ToLower() == user.UserName && x.Password == user.Password)
-                                join b in _context.Branch on u.BranchId equals b.Id
-                                select new UserLoginModel
-                                {
-                                    User = u,
-                                    Branch = b
-                                })
+                var passWord = user.Password;
+                var userData = (from u in _context.Users.Where(x => x.LoginName.ToLower() == user.LoginName && x.Password == passWord)
+                                select u)
                                .ToList();
                 if (userData != null && userData.Any())
                 {
@@ -63,10 +59,16 @@ namespace VINMediaCaptureApi.Controllers
         }
         [HttpPost]
         [Route("Login1")]
-        public string Login1(User user)
+        public UserLoginModel Login1()
         {
+            var userData = (from u in _context.Users
+                            select new UserLoginModel
+                            {
+                                User = u
 
-            return "Json";
+                            })
+                              .ToList();
+            return userData.FirstOrDefault();
 
 
         }

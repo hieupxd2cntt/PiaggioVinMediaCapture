@@ -17,7 +17,7 @@ namespace VINMediaCaptureEntities.Entities
 
         public string? InputMask { get; set; }
 
-        public bool? Disabled { get; set; }
+        public int? Disabled { get; set; }
 
     }
 

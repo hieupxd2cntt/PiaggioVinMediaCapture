@@ -40,19 +40,16 @@ namespace VINMediaCapture.Service
             try
             {
                 var userLogin = JsonConvert.DeserializeObject<UserLoginModel>(_httpContextAccessor.HttpContext.Session.GetString(ESession.User.ToString()));
-                var user = new User();
-                user.UserName = _Configuration["ConfigApp:UserNameApi"];
-                user.Password = _Configuration["ConfigApp:PasswordApi"];
-                var textBytes = Encoding.UTF8.GetBytes(_Configuration["ConfigApp:UserNameApi"] + ":" + _Configuration["ConfigApp:PasswordApi"] + ":" + user.UserName);
+                var user = new Users();
+                //user.UserName = _Configuration["ConfigApp:UserNameApi"];
+                //user.Password = _Configuration["ConfigApp:PasswordApi"];
+                var textBytes = Encoding.UTF8.GetBytes(_Configuration["ConfigApp:UserNameApi"] + ":" + _Configuration["ConfigApp:PasswordApi"] + ":" + user.LoginName);
                 _authToken = Convert.ToBase64String(textBytes);
                 HttpClientHandler clientHandler = new HttpClientHandler();
                 clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
                 using (var client = new HttpClient(clientHandler))
                 {
-                    client.DefaultRequestHeaders.TryAddWithoutValidation(EUserInfoSendToApi.CurrentUserID.ToString(), userLogin.User.Id.ToString());
-                    client.DefaultRequestHeaders.TryAddWithoutValidation(EUserInfoSendToApi.CurrentUserName.ToString(), userLogin.User.UserName?.ToString());
-                    client.DefaultRequestHeaders.TryAddWithoutValidation(EUserInfoSendToApi.CurrentBranchId.ToString(), userLogin.User.BranchId?.ToString());
-                    client.DefaultRequestHeaders.TryAddWithoutValidation(EUserInfoSendToApi.CurrentBranchName.ToString(), userLogin.Branch.PharmacyBranch);
+                   
                     var uri = _remoteServiceBaseUrl + url;
                     var content = "";
                     try
@@ -78,7 +75,7 @@ namespace VINMediaCapture.Service
         {
             try
             {
-                var user = new User();
+                var user = new Users();
               
                 var uri = _remoteServiceBaseUrl + url;
                 HttpClientHandler clientHandler = new HttpClientHandler();
@@ -86,11 +83,7 @@ namespace VINMediaCapture.Service
                 var userLogin = JsonConvert.DeserializeObject<UserLoginModel>(_httpContextAccessor.HttpContext.Session.GetString(ESession.User.ToString()));
                 using (var client = new HttpClient(clientHandler))
                 {
-                    client.DefaultRequestHeaders.TryAddWithoutValidation(EUserInfoSendToApi.CurrentUserID.ToString(), userLogin.User.Id.ToString());
-                    client.DefaultRequestHeaders.TryAddWithoutValidation(EUserInfoSendToApi.CurrentUserName.ToString(), userLogin.User.UserName?.ToString());
-                    client.DefaultRequestHeaders.TryAddWithoutValidation(EUserInfoSendToApi.CurrentBranchId.ToString(), userLogin.User.BranchId?.ToString());
-                    client.DefaultRequestHeaders.TryAddWithoutValidation(EUserInfoSendToApi.CurrentBranchName.ToString(), userLogin.Branch.PharmacyBranch);
-                    var textBytes = Encoding.UTF8.GetBytes(_Configuration["ConfigApp:UserNameApi"] + ":" + _Configuration["ConfigApp:PasswordApi"] + ":" + user.UserName);
+                    var textBytes = Encoding.UTF8.GetBytes(_Configuration["ConfigApp:UserNameApi"] + ":" + _Configuration["ConfigApp:PasswordApi"] + ":" + user.LoginName);
                     _authToken = Convert.ToBase64String(textBytes);
                     var requestMessage = new HttpRequestMessage(HttpMethod.Post, uri);
                     JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings();

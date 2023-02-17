@@ -21,12 +21,12 @@ namespace VINMediaCaptureApi.Controllers
         private readonly IRepository _repository;
 
         private readonly IQueryRepository _queryRepository;
-        private readonly PharmacyDbContext _context;
-        private readonly IRepository<PharmacyDbContext> _pharmacyRepository;
+        private readonly VINMediaCaptureDbContext _context;
+        private readonly IRepository<VINMediaCaptureDbContext> _pharmacyRepository;
 
         private readonly ILogger<UserController> _logger;
 
-        public AllCodeController(ILogger<UserController> logger, IRepository repository, IQueryRepository queryRepository,PharmacyDbContext context,IRepository<PharmacyDbContext> pharmacyRepository)
+        public AllCodeController(ILogger<UserController> logger, IRepository repository, IQueryRepository queryRepository,VINMediaCaptureDbContext context,IRepository<VINMediaCaptureDbContext> pharmacyRepository)
         {
             _logger = logger;
             _repository = repository;
@@ -42,7 +42,7 @@ namespace VINMediaCaptureApi.Controllers
             try
             {
                 await _context.Database.OpenConnectionAsync(default);
-                var allCodes=_context.AllCode.Where(x => x.Code == type);
+                var allCodes=_context.AllCode.Where(x => x.CodeName == type);
                 if(allCodes!=null && allCodes.Any())
                     return allCodes.ToList();
             }
@@ -58,13 +58,16 @@ namespace VINMediaCaptureApi.Controllers
         }
         [HttpGet]
         [Route("LoadAllAllCode")]
-        public async Task<List<ALLCODE>> LoadAllAllCode()
+        public async Task<List<AllCode>> LoadAllAllCode()
         {
             try
             {
+                var test = new List<AllCode>();
+                test.Add(new AllCode { CodeIDX = 1, CodeName = "Hieu" });
+                return test;
                 await _context.Database.OpenConnectionAsync(default);
-                var allCode1s = await _queryRepository.GetCountAsync<ALLCODE>(default);
-                var allCodes = _context.ALLCODE;
+                var allCode1s = await _queryRepository.GetCountAsync<AllCode>(default);
+                var allCodes = _context.AllCode;
                 if (allCodes != null && allCodes.Any())
                     return allCodes.ToList();
                 var a = 1;

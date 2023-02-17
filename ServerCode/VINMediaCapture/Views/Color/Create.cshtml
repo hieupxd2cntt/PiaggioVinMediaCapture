@@ -1,0 +1,93 @@
+﻿@using VINMediaCaptureEntities.Entities
+@using VINMediaCaptureEntities.Enum
+@using VINMediaCaptureEntities.ViewModel
+@model Color
+<form action="@Url.Action("Create","Color")" method="post" id="frmForm">
+    <input type="hidden" class="form-control col-md-8" id="ColorId" name="ColorId" required placeholder="Tên Màu" value="@Model.ColorID">
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>@(Model.ColorID <= 0 ? "Thêm mới" : "Cập nhật")  màu sắc</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                @{
+                    if (ViewBag.ErrorMsg != null)
+                    {
+                        <div class="col-md-12 bg-danger">
+                            <div class="inner">
+                                <h3>Lỗi</h3>
+                                <p>@ViewBag.ErrorMsg</p>
+                            </div>
+                        </div>
+                    }
+                }
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">Giao dịch</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Mã Màu</label>
+                                            <input type="text" class="form-control col-md-8" id="txtTransCode" name="ColorCode" required placeholder="Mã giao dịch" value="@Model.ColorCode">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Tên Màu</label>
+                                            <input type="text" class="form-control col-md-8" id="txtTransCode" name="ColorName" required placeholder="Tên Màu" value="@Model.ColorName">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Trạng thái</label>
+                                            <select class="form-control col-md-8" id="cboDisable" name="Disable">
+                                                @{
+                                                    if (Model.Disable == (int)EStatus.Active)
+                                                    {
+                                                        <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
+                                                    }
+                                                    else{
+                                                        <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
+                                                    }
+                                                    if (Model.Disable == (int)EStatus.InActive)
+                                                    {
+                                                        <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@((int)EStatus.InActive)">@(EStatus.InActive.GetDescription())</option>
+                                                    }
+                                                }
+                                                
+                                               
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-success" id="btnSave"><i class="fa fa-search"></i>Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</form>
+<script src="~/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="~/js/customvalidate.js"></script>
+<script src="~/js/color/create.js"></script>

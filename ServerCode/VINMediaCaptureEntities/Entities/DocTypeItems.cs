@@ -27,7 +27,7 @@ namespace VINMediaCaptureEntities.Entities
 
         public int? DisplayIDX { get; set; }
 
-        public bool? Disabled { get; set; }
+        public int? Disabled { get; set; }
 
     }
 }
