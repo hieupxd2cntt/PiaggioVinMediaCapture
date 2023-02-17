@@ -26,4 +26,5 @@ public class VINMediaCaptureDbContext : DbContext
     public DbSet<AllCode> AllCode { get; set; }
     public DbSet<Users> Users { get; set; }
     public DbSet<Color> Color { get; set; }
+    public DbSet<Model> Model { get; set; }
 }

@@ -1,5 +1,6 @@
 import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:best_flutter_ui_templates/barcode/scanbarcode.dart';
+import 'package:best_flutter_ui_templates/hotel_booking/hotel_app_theme.dart';
 import 'package:best_flutter_ui_templates/login/Toast.dart';
 import 'package:best_flutter_ui_templates/piaggio/detail_model_screen.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ class BarCodeScanScreen extends StatefulWidget {
 }
 
 class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
+  TextEditingController txtBarcode = new TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -36,13 +38,59 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                         left: 8,
                         right: 8),
                     child: Container(
-                      padding: const EdgeInsets.only(top: 20),
-                      child: Text(
-                        'Quét barcode',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: isLightMode ? Colors.black : Colors.white),
+                      decoration: BoxDecoration(
+                        color: HotelAppTheme.buildLightTheme().backgroundColor,
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              offset: const Offset(0, 2),
+                              blurRadius: 8.0),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).padding.top,
+                            left: 8,
+                            right: 8),
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              alignment: Alignment.centerLeft,
+                              width: AppBar().preferredSize.height + 40,
+                              height: AppBar().preferredSize.height,
+                              child: Material(
+                                color: Colors.transparent,
+                                child: InkWell(
+                                  borderRadius: const BorderRadius.all(
+                                    Radius.circular(32.0),
+                                  ),
+                                  onTap: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Icon(Icons.arrow_back),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Center(
+                                child: Text(
+                                  'Scan barcode',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 22,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              width: AppBar().preferredSize.height + 40,
+                              height: AppBar().preferredSize.height,
+                            )
+                          ],
+                        ),
                       ),
                     )),
                 Row(
@@ -62,7 +110,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                             child: ElevatedButton(
                           onPressed: () async {
                             var barcode = await scanBarcodeNormal();
-                            toastmessage(barcode);
+                            txtBarcode.text = barcode;
                           },
                           child: const Text('Open Scan'),
                         )),
@@ -126,6 +174,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
               padding:
                   const EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 0),
               child: TextField(
+                controller: txtBarcode,
                 maxLines: null,
                 onChanged: (String txt) {},
                 style: TextStyle(

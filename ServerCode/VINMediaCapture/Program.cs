@@ -14,6 +14,7 @@ builder.Services.AddSession(cfg => {            // Đăng ký dịch vụ Sessio
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<IColorService, ColorService>();
+builder.Services.AddSingleton<IModelService, ModelService>();
 builder.Services.AddSingleton<IAllCodeService, AllCodeService>();
 
 var app = builder.Build();
