@@ -15,7 +15,9 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<IUserService, UserService>();
 builder.Services.AddSingleton<IColorService, ColorService>();
 builder.Services.AddSingleton<IModelService, ModelService>();
+builder.Services.AddSingleton<IMarketService, MarketService>();
 builder.Services.AddSingleton<IAllCodeService, AllCodeService>();
+builder.Services.AddSingleton<IDocTypeItemsService, DocTypeItemService>();
 
 var app = builder.Build();
 

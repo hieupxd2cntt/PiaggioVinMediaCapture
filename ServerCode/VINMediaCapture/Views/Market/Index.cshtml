@@ -1,13 +1,13 @@
 ﻿@using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
-@model ModelViewModel
-<form action="@Url.Action("Index","Model")" method="post" id="frmForm">
+@model MarketViewModel
+<form action="@Url.Action("Index","Market")" method="post" id="frmForm">
     <div class="content-wrapper">
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Quản lý Sản phẩm</h1>
+                        <h1>Quản lý thị trường</h1>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -18,21 +18,21 @@
                     <div class="col-md-12">
                         <div class="card card-info">
                             <div class="card-header">
-                                <h3 class="card-title">Sản phẩm</h3>
+                                <h3 class="card-title">Tìm kiếm thị trường</h3>
                             </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group row">
-                                            <label class="col-md-4">Mã sản phẩm</label>
+                                            <label class="col-md-4">Mã Thị Trường</label>
 
-                                            <input type="text" class="form-control col-md-8" id="modelCode" name="ModelCode" placeholder="Mã màu" value="@Model.Search.ModelCode">
+                                            <input type="text" class="form-control col-md-8" id="colorCode" name="MarketCode" placeholder="Mã màu" value="@Model.Search.MarketCode">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group row">
-                                            <label class="col-md-4">Tên sản phẩm</label>
-                                            <input type="text" class="col-md-8 form-control" id="modelName" name="ModelName" placeholder="Tên sản phẩm" value="@Model.Search.ModelName">
+                                            <label class="col-md-4">Tên Thị Trường</label>
+                                            <input type="text" class="col-md-8 form-control" id="colorName" name="MarketName" placeholder="Tên Thị Trường" value="@Model.Search.MarketName">
                                         </div>
                                     </div>
                                 </div>
@@ -43,14 +43,14 @@
                                             <select class="col-md-8 form-control" id="cboDisable" name="Disable">
                                                 <option value="-1">-- Chọn --</option>
                                                 @{
-                                                    if (Model.Search.Disable == (int)EStatus.Active)
+                                                    if (Model.Search.Disabled == (int)EStatus.Active)
                                                     {
                                                         <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
                                                     }
                                                     else{
                                                         <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
                                                     }
-                                                    if (Model.Search.Disable == (int)EStatus.InActive)
+                                                    if (Model.Search.Disabled == (int)EStatus.InActive)
                                                     {
                                                         <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
                                                     }
@@ -71,45 +71,45 @@
                 </div>
             </div>
         </section>
-       
+        
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card card-info">
                             <div class="card-header">
-                                <h3 class="card-title">Chi tiết Sản phẩm</h3>
+                                <h3 class="card-title">Chi tiết thị trường</h3>
                                 <div class="dropdown right float-right">
-                                    <a class="btn btn-success" type="button" href="@Url.Action("Create","Model")">
-                                        <i class="fa fa-plus"></i>Thêm sản phẩm
+                                    <a class="btn btn-success" type="button" href="@Url.Action("Create","Market")">
+                                        <i class="fa fa-plus"></i>Thêm Thị Trường
                                     </a>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <table class="table table-bordered">
                                     <thead>
-                                    <th>Mã sản phẩm</th>
-                                    <th>Tên sản phẩm</th>
+                                    <th>Mã Thị Trường</th>
+                                    <th>Tên Thị Trường</th>
                                     <th>Trạng Thái</th>
                                     <th>Hành Động</th>
                                     </thead>
-                                    <tbody id="tbodyModels">
+                                    <tbody id="tbodyMarkets">
                                         @{
-                                            if (Model.Models == null || !Model.Models.Any())
+                                            if (Model.Markets == null || !Model.Markets.Any())
                                             {
                                             <td colspan="4">Không có dữ liệu</td>
                                             }
                                             else
                                             {
-                                                foreach (var item in Model.Models)
+                                                foreach (var item in Model.Markets)
                                                 {
                                                 <tr>
-                                                    <td>@item.ModelCode</td>
-                                                    <td>@item.ModelName</td>
-                                                    <td>@(((EStatus)item.Disable).GetDescription())</td>
+                                                    <td>@item.MarketCode</td>
+                                                    <td>@item.MarketName</td>
+                                                    <td>@(((EStatus)item.Disabled).GetDescription())</td>
                                                     <td>
-                                                        <a href="@Url.Action("Create","Model",new {id=item.ModelID})"><i class="fa fa-pen"></i></a>
-                                                        <a href="#" onclick="DeleteModel(@item.ModelID)"><i class="fa fa-trash"></i></a>
+                                                        <a href="@Url.Action("Create","Market",new {id=item.MarketID})"><i class="fa fa-pen"></i></a>
+                                                        <a href="#" onclick="DeleteMarket(@item.MarketID)"><i class="fa fa-trash"></i></a>
                                                     </td>
                                                     
                                                 </tr>
@@ -126,5 +126,5 @@
         </section>
     </div>
 </form>
-<input type="hidden" id="urlDeleteModel" value="@Url.Action("Delete","Model")" />
-<script src="~/js/model/index.js"></script>
+<input type="hidden" id="urlDeleteMarket" value="@Url.Action("Delete","Market")" />
+<script src="~/js/color/index.js"></script>

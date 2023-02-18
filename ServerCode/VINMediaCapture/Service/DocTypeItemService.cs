@@ -33,7 +33,13 @@ namespace VINMediaCapture.Service
             var response = JsonConvert.DeserializeObject<RestOutput<int>>(data);
             return response;
         }
-
+        public async Task<ViewBagDropDownModelModel> GetViewBagModel()
+        {
+            var url = string.Format("DocTypeItems/GetViewBagModel");
+            var data = await LoadGetApi(url);
+            var module = JsonConvert.DeserializeObject<ViewBagDropDownModelModel>(data);
+            return module;
+        }
         public async Task<DocTypeItems> GetById(int id)
         {
             var url = string.Format("DocTypeItems/GetById?id={0}", id);
@@ -57,5 +63,6 @@ namespace VINMediaCapture.Service
         Task<RestOutput<int>> Create(DocTypeItems docTypeItems);
         Task<DocTypeItems> GetById(int id);
         Task<RestOutput<int>> DeleteById(int id);
+        Task<ViewBagDropDownModelModel> GetViewBagModel();
     }
 }

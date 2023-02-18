@@ -1,15 +1,15 @@
 ﻿@using VINMediaCaptureEntities.Entities
 @using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
-@model Model
-<form action="@Url.Action("Create","Model")" method="post" id="frmForm">
-    <input type="hidden" class="form-control col-md-8" id="ModelId" name="ModelId" required placeholder="Tên Sản Phẩm" value="@Model.ModelID">
+@model Market
+<form action="@Url.Action("Create","Market")" method="post" id="frmForm">
+    <input type="hidden" class="form-control col-md-8" id="MarketId" name="MarketId" required placeholder="Tên Thị Trường" value="@Model.MarketID">
     <div class="content-wrapper">
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>@(Model.ModelID <= 0 ? "Thêm mới" : "Cập nhật")  Sản phẩm</h1>
+                        <h1>@(Model.MarketID <= 0 ? "Thêm mới" : "Cập nhật")  thị trường</h1>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -32,20 +32,20 @@
                     <div class="col-md-12">
                         <div class="card card-info">
                             <div class="card-header">
-                                <h3 class="card-title">Thông tin sản phẩm</h3>
+                                <h3 class="card-title">Thông tin Thị Trường</h3>
                             </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group row">
-                                            <label class="col-md-4">Mã Sản Phẩm</label>
-                                            <input type="text" class="form-control col-md-8" id="txtTransCode" name="ModelCode" required placeholder="Mã giao dịch" value="@Model.ModelCode">
+                                            <label class="col-md-4">Mã Thị Trường</label>
+                                            <input type="text" class="form-control col-md-8" id="txtTransCode" name="MarketCode" required placeholder="Mã Thị Trường" value="@Model.MarketCode">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group row">
-                                            <label class="col-md-4">Tên Sản Phẩm</label>
-                                            <input type="text" class="form-control col-md-8" id="txtTransCode" name="ModelName" required placeholder="Tên Sản Phẩm" value="@Model.ModelName">
+                                            <label class="col-md-4">Tên Thị Trường</label>
+                                            <input type="text" class="form-control col-md-8" id="txtTransCode" name="MarketName" required placeholder="Tên Thị Trường" value="@Model.MarketName">
                                         </div>
                                     </div>
                                 </div>
@@ -55,14 +55,14 @@
                                             <label class="col-md-4">Trạng thái</label>
                                             <select class="form-control col-md-8" id="cboDisable" name="Disable">
                                                 @{
-                                                    if (Model.Disable == (int)EStatus.Active)
+                                                    if (Model.Disabled == (int)EStatus.Active)
                                                     {
                                                         <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
                                                     }
                                                     else{
                                                         <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
                                                     }
-                                                    if (Model.Disable == (int)EStatus.InActive)
+                                                    if (Model.Disabled == (int)EStatus.InActive)
                                                     {
                                                         <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
                                                     }
@@ -77,7 +77,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <button class="btn btn-success" id="btnSave"><i class="fa fa-save"></i>Lưu</button>
+                                        <button class="btn btn-success" id="btnSave"><i class="fa fa-save"></i>&nbsp; Lưu</button>
                                     </div>
                                 </div>
                             </div>
@@ -90,4 +90,4 @@
 </form>
 <script src="~/plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="~/js/customvalidate.js"></script>
-<script src="~/js/model/create.js"></script>
+<script src="~/js/color/create.js"></script>
