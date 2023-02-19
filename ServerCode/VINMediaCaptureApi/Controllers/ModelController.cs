@@ -40,8 +40,8 @@ namespace VINMediaCaptureApi.Controllers
         {
             var data = new ModelViewModel();
             data.Search = model;
-            data.Models = _context.Model.Where(x=>(String.IsNullOrEmpty(model.ModelCode) || x.ModelCode.Contains(model.ModelCode)) ||
-            (String.IsNullOrEmpty(model.ModelName) || x.ModelName.Contains(model.ModelName)) || (model.Disable<=0 || x.Disable == model.Disable)
+            data.Models = _context.Model.Where(x=>(String.IsNullOrEmpty(model.ModelCode) || x.ModelCode.Contains(model.ModelCode)) &&
+            (String.IsNullOrEmpty(model.ModelName) || x.ModelName.Contains(model.ModelName)) && ((model.Disable??0)<=0 || x.Disable == model.Disable)
             ).ToList();
             return data;
         }

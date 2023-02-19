@@ -4,11 +4,9 @@ namespace VINMediaCaptureEntities.Entities
 {
     public class DocTypeItems
     {
-        [Key]
-        public int DocTypeItemsId { get; set; }
-
+        
         public int? DocTypeID { get; set; }
-
+        [Key]
         public int? ItemID { get; set; }
 
         public string? ItemDescription { get; set; }
@@ -17,8 +15,8 @@ namespace VINMediaCaptureEntities.Entities
 
         public string? ItemImage { get; set; }
 
-        public bool? isMandatory { get; set; }
-
+        public bool IsMandatory { get; set; }
+        public bool ManualCollect { get; set; }
         public int? ModelID { get; set; }
 
         public int? MarketID { get; set; }

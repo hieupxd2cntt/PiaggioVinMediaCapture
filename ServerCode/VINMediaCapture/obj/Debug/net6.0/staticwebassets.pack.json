@@ -313,6 +313,14 @@
       "PackagePath": "staticwebassets\\js\\CustomValidate.js"
     },
     {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\DocTypeItems\\Create.js",
+      "PackagePath": "staticwebassets\\js\\DocTypeItems\\Create.js"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\DocTypeItems\\Index.js",
+      "PackagePath": "staticwebassets\\js\\DocTypeItems\\Index.js"
+    },
+    {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\Model\\Create.js",
       "PackagePath": "staticwebassets\\js\\Model\\Create.js"
     },

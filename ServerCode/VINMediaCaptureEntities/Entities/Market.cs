@@ -9,7 +9,7 @@ namespace VINMediaCaptureEntities.Entities
 
         public string? MarketCode { get; set; }
 
-        public string? Market_Name { get; set; }
+        public string? MarketName { get; set; }
 
         public int? Disabled { get; set; }
 
