@@ -2,19 +2,21 @@
 @using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
 @{
+    ViewBag.Title = (Model.ItemID <= 0 ? "Thêm mới" : "Cập nhật") + "thuộc tính thông tin cần thu thập";
     var colors = (List<Color>)ViewBag.Color;
     var markets = (List<Market>)ViewBag.Market;
     var models = (List<Model>)ViewBag.Model;
+    var docTypes = (List<DocType>)ViewBag.DocTypes;
 }
 @model DocTypeItems
-<form action="@Url.Action("Create","DocTypeItems")" method="post" id="frmForm">
-    <input type="hidden" class="form-control col-md-8" id="ColorId" name="ColorId" required placeholder="Tên Màu" value="@Model.DocTypeID">
+<form action="@Url.Action("Create","DocTypeItems")" method="post" id="frmForm" enctype="multipart/form-data">
+    <input type="hidden" class="form-control col-md-8" id="ItemID" name="ItemID" required placeholder="Tên Màu" value="@Model.ItemID">
     <div class="content-wrapper">
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>@(Model.ColorID <= 0 ? "Thêm mới" : "Cập nhật") thuộc tính thông tin cần thu thập</h1>
+                        <h1>@(Model.ItemID <= 0 ? "Thêm mới" : "Cập nhật") thuộc tính thông tin cần thu thập</h1>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -24,12 +26,12 @@
                 @{
                     if (ViewBag.ErrorMsg != null)
                     {
-                        <div class="col-md-12 bg-danger">
-                            <div class="inner">
-                                <h3>Lỗi</h3>
-                                <p>@ViewBag.ErrorMsg</p>
+                            <div class="col-md-12 bg-danger">
+                                <div class="inner">
+                                    <h3>Lỗi</h3>
+                                    <p>@ViewBag.ErrorMsg</p>
+                                </div>
                             </div>
-                        </div>
                     }
                 }
                 <div class="row">
@@ -54,15 +56,20 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 row">
-                                        <div class="form-group row col-md-6">
-                                            @Html.CheckBox("IsMandatory",@Model.IsMandatory)
-                                           @* <input type="checkbox" id="BoolMandatory" asp-for="@Model.BoolMandatory" name="BoolMandatory" value="@Model.isMandatory">*@
-                                            <label>Thuộc tính bắt buộc</label>
-                                        </div>
-                                        <div class="form-group row col-md-6">
-                                            @Html.CheckBox("ManualCollect",@Model.ManualCollect)
-                                            <label>Thuộc tính thủ công</label>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="form-group row col-md-6">
+                                                <div class="form-check">
+                                                    @Html.CheckBox("IsMandatory",@Model.IsMandatory,new {@class="form-check-input"})
+                                                    <label class="form-check-label">Thuộc tính bắt buộc</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-md-6">
+                                                <div class="form-check">
+                                                    @Html.CheckBox("ManualCollect",@Model.ManualCollect,new {@class="form-check-input"})
+                                                    <label class="form-check-label">Thuộc tính thủ công</label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -73,7 +80,14 @@
                                                 @{
                                                     foreach (var item in models)
                                                     {
-                                                        <option value="@item.ModelID">@item.ModelName</option>
+                                                        if (item.ModelID == Model.ModelID)
+                                                        {
+                                                                <option value="@item.ModelID" selected="selected">@item.ModelName</option>
+                                                        }
+                                                        else
+                                                        {
+                                                                <option value="@item.ModelID">@item.ModelName</option>
+                                                        }
                                                     }
                                                 }
                                             </select>
@@ -89,7 +103,14 @@
                                                 @{
                                                     foreach (var item in markets)
                                                     {
-                                                        <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
+                                                        if (item.MarketID == Model.MarketID)
+                                                        {
+                                                                <option value="@item.MarketID" selected="selected">@item.MarketCode - @item.MarketName</option>
+                                                        }
+                                                        else
+                                                        {
+                                                                <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
+                                                        }
                                                     }
                                                 }
                                             </select>
@@ -103,7 +124,14 @@
                                                 @{
                                                     foreach (var item in colors)
                                                     {
-                                                        <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
+                                                        if (Model.ColorID == item.ColorID)
+                                                        {
+                                                                <option value="@item.ColorID" selected="selected">@item.ColorCode - @item.ColorName</option>
+                                                        }
+                                                        else
+                                                        {
+                                                                <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
+                                                        }
                                                     }
                                                 }
                                             </select>
@@ -113,24 +141,61 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group row">
+                                            <label class="col-md-4">File</label>
+                                            @{
+                                                if (!String.IsNullOrEmpty(Model.ItemImage))
+                                                {
+                                                        <div class="custom-file col-md-4">
+                                                            <input type="file" class="custom-file-input" name="image" id="image">
+                                                            <label class="custom-file-label" id="txtImageName">Chọn file</label>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <div class="user-panel d-flex">
+                                                                <div class="image">
+                                                                    <img src="~/@Model.ItemImage" alt="User Image">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                }
+                                                else{
+                                                         <div class="custom-file col-md-8">
+                                                            <input type="file" class="custom-file-input" name="image" id="image">
+                                                            <label class="custom-file-label" id="txtImageName">Chọn file</label>
+                                                        </div>
+                                                }
+                                            }
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Thứ tự</label>
+                                            <input type="text" class="form-control col-md-8" id="DisplayIDX" name="DisplayIDX" placeholder="Thứ tự hiển thị" value="@Model.DisplayIDX">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
                                             <label class="col-md-4">Trạng thái</label>
                                             <select class="form-control col-md-8" id="cboDisable" name="Disabled">
                                                 @{
                                                     if (Model.Disabled == (int)EStatus.Active)
                                                     {
-                                                        <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
+                                                            <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
                                                     }
                                                     else
                                                     {
-                                                        <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
+                                                            <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
                                                     }
                                                     if (Model.Disabled == (int)EStatus.InActive)
                                                     {
-                                                        <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
+                                                            <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
                                                     }
                                                     else
                                                     {
-                                                        <option value="@((int)EStatus.InActive)">@(EStatus.InActive.GetDescription())</option>
+                                                            <option value="@((int)EStatus.InActive)">@(EStatus.InActive.GetDescription())</option>
                                                     }
                                                 }
                                             </select>
@@ -138,8 +203,23 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group row">
-                                            <label class="col-md-4">Thứ tự</label>
-                                            <input type="text" class="form-control col-md-8" id="DisplayIDX" name="DisplayIDX" placeholder="Thứ tự hiển thị" value="@Model.DisplayIDX">
+                                            <label class="col-md-4">Loại đối tượng</label>
+                                            <select class="form-control col-md-8" id="DocTypeID" name="DocTypeID">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in docTypes)
+                                                    {
+                                                        if (item.DocTypeID == Model.DocTypeID)
+                                                        {
+                                                            <option value="@item.DocTypeID" selected="selected">@item.DocTypeCode - @item.DocTypeName</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
+                                                        }
+                                                    }
+                                                }
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

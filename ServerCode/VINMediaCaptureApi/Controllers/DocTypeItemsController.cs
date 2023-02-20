@@ -42,6 +42,7 @@ namespace VINMediaCaptureApi.Controllers
             data.Models = _context.Model.Where(x => x.Disable == (int)EStatus.Active).ToList();
             data.Colors = _context.Color.Where(x => x.Disable == (int)EStatus.Active).ToList();
             data.Markets = _context.Market.Where(x => x.Disabled == (int)EStatus.Active).ToList();
+            data.DocTypes = _context.DocType.Where(x => x.Disabled == (int)EStatus.Active).ToList();
             return data;
         }
         [HttpPost]
@@ -49,9 +50,6 @@ namespace VINMediaCaptureApi.Controllers
         public async Task<DocTypeItemsViewModel> Index([FromBody]DocTypeItems docTypeItems)
         {
             var data = new DocTypeItemsViewModel();
-            data.Models = _context.Model.Where(x => x.Disable == (int)EStatus.Active).ToList();
-            data.Colors = _context.Color.Where(x => x.Disable == (int)EStatus.Active).ToList();
-            data.Markets = _context.Market.Where(x => x.Disabled == (int)EStatus.Active).ToList();
             data.Search = docTypeItems;
             data.DataDocTypeItems = (from d in _context.DocTypeItems
                                      join m in _context.Market on d.MarketID equals m.MarketID
@@ -78,33 +76,47 @@ namespace VINMediaCaptureApi.Controllers
         {
             var outPut = new RestOutput<int>();
             var check = _context.DocTypeItems.Where(x => x.DocTypeID == docTypeItems.DocTypeID && docTypeItems.ColorID == x.ColorID && x.ModelID == docTypeItems.ModelID 
-                                && x.MarketID == docTypeItems.MarketID && (x.ItemName??"").ToLower() == (docTypeItems.ItemName??"").ToLower() && x.ItemID != docTypeItems.ItemID);
+                                && x.MarketID == docTypeItems.MarketID && (x.ItemName??"").ToLower() == (docTypeItems.ItemName??"").ToLower() && x.ItemID != docTypeItems.ItemID && x.ItemID != docTypeItems.ItemID);
             if (check != null && check.Any())
             {
                 outPut.ResultCode = -1;
                 outPut.Message = "Đã tồn tại thông tin cần thu thập";
                 return outPut;
             }
-            if (docTypeItems.ItemID> 0)
+            try
             {
-                var update = _context.DocTypeItems.FirstOrDefault(x => x.ItemID == docTypeItems.ItemID);
-                if (update !=null)
+                if (docTypeItems.ItemID > 0)
                 {
-                    update.ItemDescription = docTypeItems.ItemDescription;
-                    update.ItemName = docTypeItems.ItemName;
-                    update.DisplayIDX = docTypeItems.DisplayIDX;
-                    update.Disabled = docTypeItems.Disabled;
-                    update.ColorID = docTypeItems.ColorID;
-                    update.MarketID = docTypeItems.MarketID;
-                    update.ColorID = docTypeItems.ColorID;
-                    update.MarketID = docTypeItems.MarketID;
-                    update.DisplayIDX = docTypeItems.DisplayIDX;
-                    var r = _context.DocTypeItems.Update(update);
+                    var update = _context.DocTypeItems.FirstOrDefault(x => x.ItemID == docTypeItems.ItemID);
+                    if (update != null)
+                    {
+                        update.DocTypeID = docTypeItems.DocTypeID;
+                        update.ItemDescription = docTypeItems.ItemDescription;
+                        update.ItemName = docTypeItems.ItemName;
+                        update.DisplayIDX = docTypeItems.DisplayIDX;
+                        update.Disabled = docTypeItems.Disabled;
+                        update.ColorID = docTypeItems.ColorID;
+                        update.MarketID = docTypeItems.MarketID;
+                        update.ColorID = docTypeItems.ColorID;
+                        update.MarketID = docTypeItems.MarketID;
+                        update.DisplayIDX = docTypeItems.DisplayIDX;
+                        update.IsMandatory = docTypeItems.IsMandatory;
+                        update.ManualCollect = docTypeItems.ManualCollect;
+                        if (!String.IsNullOrEmpty(docTypeItems.ItemImage))
+                        {
+                            update.ItemImage = docTypeItems.ItemImage;
+                        }
+                        var r = _context.DocTypeItems.Update(update);
+                    }
+                }
+                else
+                {
+                    var res = _context.DocTypeItems.Add(docTypeItems);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                var res = _context.DocTypeItems.Add(docTypeItems);
+
             }
 
             _context.SaveChanges();
@@ -116,9 +128,9 @@ namespace VINMediaCaptureApi.Controllers
         public async Task<RestOutput<int>> DeleteById([FromBody]int id)
         {
             var outPut = new RestOutput<int>();
-            //var check = _context.DocTypeItems.Where(x => x.DocTypeItemsID == id).First();
-            //var res = _context.DocTypeItems.Remove(check);
-            //_context.SaveChanges();
+            var check = _context.DocTypeItems.Where(x => x.ItemID == id).First();
+            var res = _context.DocTypeItems.Remove(check);
+            _context.SaveChanges();
             outPut.ResultCode = 1;
             return outPut;
         }

@@ -42,7 +42,7 @@ namespace VINMediaCaptureApi.Controllers
             data.Search = color;
             data.Colors = _context.Color.Where(x=>(String.IsNullOrEmpty(color.ColorCode) || x.ColorCode.Contains(color.ColorCode)) &&
             (String.IsNullOrEmpty(color.ColorName) || x.ColorName.Contains(color.ColorName)) && ((color.Disable??0)<=0 || x.Disable == color.Disable)
-            ).ToList();
+            ).OrderByDescending(x => x.ColorID).ToList();
             return data;
         }
         [HttpGet]

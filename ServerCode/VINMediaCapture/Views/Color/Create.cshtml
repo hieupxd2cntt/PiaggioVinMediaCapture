@@ -1,6 +1,9 @@
 ﻿@using VINMediaCaptureEntities.Entities
 @using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
+@{
+    ViewBag.Title = (Model.ColorID <= 0 ? "Thêm mới" : "Cập nhật") + " màu sắc";
+}
 @model Color
 <form action="@Url.Action("Create","Color")" method="post" id="frmForm">
     <input type="hidden" class="form-control col-md-8" id="ColorId" name="ColorId" required placeholder="Tên Màu" value="@Model.ColorID">

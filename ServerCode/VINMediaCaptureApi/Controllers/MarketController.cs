@@ -42,7 +42,7 @@ namespace VINMediaCaptureApi.Controllers
             data.Search = market;
             data.Markets = _context.Market.Where(x=>(String.IsNullOrEmpty(market.MarketCode) || x.MarketCode.Contains(market.MarketCode)) &&
             (String.IsNullOrEmpty(market.MarketName) || x.MarketName.Contains(market.MarketName)) && ((market.Disabled??0)<=0 || x.Disabled == market.Disabled)
-            ).ToList();
+            ).OrderByDescending(x=>x.MarketID).ToList();
             return data;
         }
         [HttpGet]

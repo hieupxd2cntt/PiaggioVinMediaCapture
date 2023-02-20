@@ -42,7 +42,7 @@ namespace VINMediaCaptureApi.Controllers
             data.Search = model;
             data.Models = _context.Model.Where(x=>(String.IsNullOrEmpty(model.ModelCode) || x.ModelCode.Contains(model.ModelCode)) &&
             (String.IsNullOrEmpty(model.ModelName) || x.ModelName.Contains(model.ModelName)) && ((model.Disable??0)<=0 || x.Disable == model.Disable)
-            ).ToList();
+            ).OrderByDescending(x => x.ModelID).ToList();
             return data;
         }
         [HttpGet]

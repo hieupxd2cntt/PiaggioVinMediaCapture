@@ -1,6 +1,9 @@
 ﻿@using VINMediaCaptureEntities.Entities
 @using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
+@{
+    ViewBag.Title = (Model.ModelID <= 0 ? "Thêm mới" : "Cập nhật") + " Model";
+}
 @model Model
 <form action="@Url.Action("Create","Model")" method="post" id="frmForm">
     <input type="hidden" class="form-control col-md-8" id="ModelId" name="ModelId" required placeholder="Tên Sản Phẩm" value="@Model.ModelID">

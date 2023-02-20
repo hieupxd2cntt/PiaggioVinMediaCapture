@@ -12,6 +12,7 @@ namespace VINMediaCaptureEntities.ViewModel
     {
         
         public List<Entities.Model> Models { get; set; }
+        public List<DocType> DocTypes { get; set; }
         public List<Color> Colors { get; set; }
         public List<Market> Markets { get; set; }
         public ViewBagDropDownModelModel()
@@ -19,22 +20,17 @@ namespace VINMediaCaptureEntities.ViewModel
             Models = new List<Entities.Model>();
             Colors = new List<Color>();
             Markets = new List<Market>();
+            DocTypes = new List<DocType>();
         }
     }
     public class DocTypeItemsViewModel
     {
         public DocTypeItems Search { get; set; }
         public List<DocTypeItemsInfo> DataDocTypeItems { get; set; }
-        public List<Entities.Model> Models { get; set; }
-        public List<Color> Colors { get; set; }
-        public List<Market> Markets { get; set; }
         public DocTypeItemsViewModel()
         {
             Search = new DocTypeItems();
             DataDocTypeItems = new List<DocTypeItemsInfo>();
-            Models=new List<Entities.Model>();
-            Colors = new List<Color>();
-            Markets = new List<Market>();
         }
     }
     public class DocTypeItemsInfo

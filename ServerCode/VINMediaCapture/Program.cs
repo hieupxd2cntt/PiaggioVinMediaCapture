@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-//builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 builder.Services.AddSession(cfg => {            // Đăng ký dịch vụ Session
     cfg.Cookie.Name = "VINMediaCapture";     // Đặt tên Session - tên này sử dụng ở Browser (Cookie)

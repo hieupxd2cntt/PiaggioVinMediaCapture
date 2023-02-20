@@ -1,6 +1,9 @@
 ﻿@using VINMediaCaptureEntities.Entities
 @using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
+@{
+    ViewBag.Title = (Model.MarketID <= 0 ? "Thêm mới" : "Cập nhật") + " thị trường";
+}
 @model Market
 <form action="@Url.Action("Create","Market")" method="post" id="frmForm">
     <input type="hidden" class="form-control col-md-8" id="MarketId" name="MarketId" required placeholder="Tên Thị Trường" value="@Model.MarketID">

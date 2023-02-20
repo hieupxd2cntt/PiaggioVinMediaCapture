@@ -1,4 +1,5 @@
 ﻿@using Newtonsoft.Json
+@using Microsoft.AspNetCore.Http;
 @using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.Model
 @{
@@ -161,6 +162,12 @@
                                     <a href="@Url.Action("Index","Market")" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Thị trường</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("Index","DocTypeItems")" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>QL thuộc tính cần thu thập</p>
                                     </a>
                                 </li>
                                 @*

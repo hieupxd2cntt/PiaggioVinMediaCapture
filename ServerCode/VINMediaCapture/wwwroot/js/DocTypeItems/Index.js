@@ -1,10 +1,10 @@
 ﻿
-function DeleteColor(colorId) {
+function DeleteDocTypeItems(colorId) {
     bootbox.confirm("Bạn chắc chắn muốn xóa dữ liệu?", function (result) {
         if (result) {
             $.ajax({
                 type: 'POST',
-                url: $("#urlDeleteColor").val(),
+                url: $("#urlDeleteDocTypeItems").val(),
                 data: jQuery.param({ id: colorId }),
                 async: false,
                 success: function (response) {

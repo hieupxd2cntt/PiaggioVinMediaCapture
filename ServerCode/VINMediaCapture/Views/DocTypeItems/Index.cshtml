@@ -1,0 +1,214 @@
+﻿@using VINMediaCaptureEntities.Entities
+@using VINMediaCaptureEntities.Enum
+@using VINMediaCaptureEntities.ViewModel
+@{
+    ViewBag.Title="Quản lý thuộc tính thông tin cần thu thập";
+    var colors = (List<Color>)ViewBag.Color;
+    var markets = (List<Market>)ViewBag.Market;
+    var models = (List<Model>)ViewBag.Model;
+    var docTypes = (List<DocType>)ViewBag.DocTypes;
+}
+}
+@model DocTypeItemsViewModel
+<form action="@Url.Action("Index","DocTypeItems")" method="post" id="frmForm">
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Quản lý thuộc tính cần thu thập</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">Thuộc tính cần thu thập</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Tên thuộc tính</label>
+                                            <input type="text" class="form-control col-md-8" id="modelCode" name="ModelCode" placeholder="Mã màu" value="@Model.Search.ItemName">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Mô tả</label>
+                                            <input type="text" class="col-md-8 form-control" id="modelName" name="ModelName" placeholder="Tên sản phẩm" value="@Model.Search.ItemDescription">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="form-group row col-md-6">
+                                                <div class="form-check">
+                                                    @Html.CheckBox("IsMandatory",@Model.Search.IsMandatory,new {@class="form-check-input"})
+                                                    <label class="form-check-label">Thuộc tính bắt buộc</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row col-md-6">
+                                                <div class="form-check">
+                                                    @Html.CheckBox("ManualCollect",@Model.Search.ManualCollect,new {@class="form-check-input"})
+                                                    <label class="form-check-label">Thuộc tính thủ công</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Model</label>
+                                            <select class="form-control col-md-8" id="ModelID" name="ModelID">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in models)
+                                                    {
+                                                        <option value="@item.ModelID">@item.ModelName</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Thị trường</label>
+                                            <select class="form-control col-md-8" id="MarketId" name="MarketId">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in markets)
+                                                    {
+                                                        <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Màu sắc</label>
+                                            <select class="form-control col-md-8" id="ColorID" name="ColorID">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in colors)
+                                                    {
+                                                        <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Trạng thái</label>
+                                            <select class="col-md-8 form-control" id="cboDisable" name="Disable">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    if (Model.Search.Disabled == (int)EStatus.Active)
+                                                    {
+                                                        <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
+                                                    }
+                                                    if (Model.Search.Disabled == (int)EStatus.InActive)
+                                                    {
+                                                        <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@((int)EStatus.InActive)">@(EStatus.InActive.GetDescription())</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-success" id="btnSearch"><i class="fa fa-find"></i>Tìm kiếm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">Chi tiết thuộc tính</h3>
+                                <div class="dropdown right float-right">
+                                    <a class="btn btn-success" type="button" href="@Url.Action("Create","DocTypeItems")">
+                                        <i class="fa fa-plus"></i>Thêm thuộc tính
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <th>Tên thuộc tính</th>
+                                    <th>Mô tả thuộc tính</th>
+                                    <th>Model</th>
+                                    <th>Thị trường</th>
+                                    <th>Màu sắc</th>
+                                    <th>IsMandatory</th>
+                                    <th>Manual</th>
+                                    <th>Trạng thái</th>
+                                    <th>Hành Động</th>
+                                    </thead>
+                                    <tbody id="tbodyModels">
+                                        @{
+                                            if
+                                            (Model.DataDocTypeItems == null || !Model.DataDocTypeItems.Any())
+                                            {
+                                            <td colspan="9">Không có dữ liệu</td>
+                                            }
+                                            else
+                                            {
+                                                foreach (var item in Model.DataDocTypeItems)
+                                                {
+                                                <tr>
+                                                    <td>@item.DocTypeItems.ItemName</td>
+                                                    <td>@item.DocTypeItems.ItemDescription</td>
+                                                    <td>@item.Model.ModelCode</td>
+                                                    <td>@item.Market.MarketCode</td>
+                                                    <td>@item.Color.ColorCode</td>
+                                                    <td>@Html.CheckBox("IsMandatory",@item.DocTypeItems.IsMandatory)</td>
+                                                    <td>@Html.CheckBox("IsMandatory",@item.DocTypeItems.ManualCollect)</td>
+                                                    <td>@(((EStatus)item.DocTypeItems.Disabled).GetDescription())</td>
+                                                    <td>
+                                                        <a href="@Url.Action("Create","DocTypeItems",new {id=item.DocTypeItems.ItemID})"><i class="fa fa-pen"></i></a>
+                                                        <a href="#" onclick="DeleteDocTypeItems(@item.DocTypeItems.ItemID)"><i class="fa fa-trash"></i></a>
+                                                    </td>
+                                                </tr>
+                                                }
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</form>
+<input type="hidden" id="urlDeleteDocTypeItems" value="@Url.Action("Delete","DocTypeItems")" />
+<script src="~/js/DocTypeItems/index.js"></script>

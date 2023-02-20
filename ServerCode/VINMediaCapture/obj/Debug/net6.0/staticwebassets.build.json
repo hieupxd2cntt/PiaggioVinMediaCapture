@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CtYE/qwsslWBE6fTNxzkpf5fvCp1Y4hEdpSnGG476zI=",
+  "Hash": "fj7SHNb8nnRgH/rSHX11G+UozweO6LmXXl1yWesN9LE=",
   "Source": "VINMediaCapture",
   "BasePath": "_content/VINMediaCapture",
   "Mode": "Default",
@@ -66298,6 +66298,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\plugins\\uplot\\uPlot.min.css"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DocTypeItems\\test_319155386_491540472962980_3537352328386031607_n.jpg",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "uploads/DocTypeItems/test_319155386_491540472962980_3537352328386031607_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DocTypeItems\\test_319155386_491540472962980_3537352328386031607_n.jpg"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DocTypeItems\\test_321077468_1165997737355550_3393505625703392534_n.jpg",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "uploads/DocTypeItems/test_321077468_1165997737355550_3393505625703392534_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DocTypeItems\\test_321077468_1165997737355550_3393505625703392534_n.jpg"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DocTypeItems\\Thuộc Tính 1_319155386_491540472962980_3537352328386031607_n.jpg",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "uploads/DocTypeItems/Thuộc Tính 1_319155386_491540472962980_3537352328386031607_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DocTypeItems\\Thuộc Tính 1_319155386_491540472962980_3537352328386031607_n.jpg"
     }
   ]
 }

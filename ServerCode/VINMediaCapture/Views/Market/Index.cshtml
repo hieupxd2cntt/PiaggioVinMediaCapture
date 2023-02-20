@@ -1,5 +1,8 @@
 ﻿@using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
+@{
+    ViewBag.Title="Quản lý thị trường";
+}
 @model MarketViewModel
 <form action="@Url.Action("Index","Market")" method="post" id="frmForm">
     <div class="content-wrapper">
@@ -45,17 +48,17 @@
                                                 @{
                                                     if (Model.Search.Disabled == (int)EStatus.Active)
                                                     {
-                                                        <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
+                                                            <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
                                                     }
                                                     else{
-                                                        <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
+                                                            <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
                                                     }
                                                     if (Model.Search.Disabled == (int)EStatus.InActive)
                                                     {
-                                                        <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
+                                                            <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
                                                     }
                                                     else{
-                                                        <option value="@((int)EStatus.InActive)">@(EStatus.InActive.GetDescription())</option>
+                                                            <option value="@((int)EStatus.InActive)">@(EStatus.InActive.GetDescription())</option>
                                                     }
                                                 }
                                             </select>
@@ -97,22 +100,22 @@
                                         @{
                                             if (Model.Markets == null || !Model.Markets.Any())
                                             {
-                                            <td colspan="4">Không có dữ liệu</td>
+                                                <td colspan="4">Không có dữ liệu</td>
                                             }
                                             else
                                             {
                                                 foreach (var item in Model.Markets)
                                                 {
-                                                <tr>
-                                                    <td>@item.MarketCode</td>
-                                                    <td>@item.MarketName</td>
-                                                    <td>@(((EStatus)item.Disabled).GetDescription())</td>
-                                                    <td>
-                                                        <a href="@Url.Action("Create","Market",new {id=item.MarketID})"><i class="fa fa-pen"></i></a>
-                                                        <a href="#" onclick="DeleteMarket(@item.MarketID)"><i class="fa fa-trash"></i></a>
-                                                    </td>
-                                                    
-                                                </tr>
+                                                    <tr>
+                                                        <td>@item.MarketCode</td>
+                                                        <td>@item.MarketName</td>
+                                                        <td>@(((EStatus)item.Disabled).GetDescription())</td>
+                                                        <td>
+                                                            <a href="@Url.Action("Create","Market",new {id=item.MarketID})"><i class="fa fa-pen"></i></a>
+                                                            <a href="#" onclick="DeleteMarket(@item.MarketID)"><i class="fa fa-trash"></i></a>
+                                                        </td>
+                                                        
+                                                    </tr>
                                                 }
                                             }
                                         }
