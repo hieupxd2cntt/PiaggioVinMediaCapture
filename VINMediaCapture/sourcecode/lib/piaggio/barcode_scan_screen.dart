@@ -99,21 +99,19 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Container(
-                          //width: MediaQuery.of(context).size.width * 0.7,
-                          child: Expanded(
+                      Expanded(
+                        flex: 3,
                         child: _buildComposer(),
-                      )),
-                      Container(
-                        //width: MediaQuery.of(context).size.width * 0.3,
-                        child: Expanded(
-                            child: ElevatedButton(
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: ElevatedButton(
                           onPressed: () async {
                             var barcode = await scanBarcodeNormal();
                             txtBarcode.text = barcode;
                           },
                           child: const Text('Open Scan'),
-                        )),
+                        ),
                       )
                     ]),
                 Row(
