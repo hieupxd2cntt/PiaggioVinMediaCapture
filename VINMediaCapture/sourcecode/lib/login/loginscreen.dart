@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:best_flutter_ui_templates/apilib/apilib.dart';
-import 'package:best_flutter_ui_templates/objectmodel/users.dart';
-import 'package:best_flutter_ui_templates/piaggio/barcode_scan_screen.dart';
-import 'package:best_flutter_ui_templates/piaggio/doctype_screen.dart';
+import 'package:VinMediaCapture/apilib/apilib.dart';
+import 'package:VinMediaCapture/objectmodel/users.dart';
+import 'package:VinMediaCapture/piaggio/barcode_scan_screen.dart';
+import 'package:VinMediaCapture/piaggio/doctype_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 import 'package:fluttertoast/fluttertoast.dart';

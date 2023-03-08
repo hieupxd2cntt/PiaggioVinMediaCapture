@@ -1,8 +1,8 @@
-import 'package:best_flutter_ui_templates/app_theme.dart';
-import 'package:best_flutter_ui_templates/barcode/scanbarcode.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/hotel_app_theme.dart';
-import 'package:best_flutter_ui_templates/login/Toast.dart';
-import 'package:best_flutter_ui_templates/piaggio/detail_model_screen.dart';
+import 'package:VinMediaCapture/app_theme.dart';
+import 'package:VinMediaCapture/barcode/scanbarcode.dart';
+import 'package:VinMediaCapture/hotel_booking/hotel_app_theme.dart';
+import 'package:VinMediaCapture/login/Toast.dart';
+import 'package:VinMediaCapture/piaggio/detail_model_screen.dart';
 import 'package:flutter/material.dart';
 
 class BarCodeScanScreen extends StatefulWidget {

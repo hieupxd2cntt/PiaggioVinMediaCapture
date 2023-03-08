@@ -111,6 +111,20 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group row">
+                                            <label class="col-md-4">Loại đối tượng</label>
+                                            <select class="form-control col-md-8" id="ColorID" name="ColorID">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in docTypes)
+                                                    {
+                                                        <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
                                             <label class="col-md-4">Trạng thái</label>
                                             <select class="col-md-8 form-control" id="cboDisable" name="Disable">
                                                 <option value="-1">-- Chọn --</option>

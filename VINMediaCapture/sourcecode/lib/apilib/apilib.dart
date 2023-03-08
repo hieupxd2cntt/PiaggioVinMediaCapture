@@ -1,5 +1,5 @@
-import 'package:best_flutter_ui_templates/common/common.dart';
-import 'package:best_flutter_ui_templates/objectmodel/users.dart';
+import 'package:VinMediaCapture/common/common.dart';
+import 'package:VinMediaCapture/objectmodel/users.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;

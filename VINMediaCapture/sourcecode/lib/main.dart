@@ -1,9 +1,9 @@
 import 'dart:io';
-import 'package:best_flutter_ui_templates/app_theme.dart';
-import 'package:best_flutter_ui_templates/login/loginscreen.dart';
-import 'package:best_flutter_ui_templates/piaggio/barcode_scan_screen.dart';
-import 'package:best_flutter_ui_templates/piaggio/detail_model_screen.dart';
-import 'package:best_flutter_ui_templates/piaggio/testcam.dart';
+import 'package:VinMediaCapture/app_theme.dart';
+import 'package:VinMediaCapture/login/loginscreen.dart';
+import 'package:VinMediaCapture/piaggio/barcode_scan_screen.dart';
+import 'package:VinMediaCapture/piaggio/detail_model_screen.dart';
+import 'package:VinMediaCapture/piaggio/testcam.dart';
 import 'package:camera/camera.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
