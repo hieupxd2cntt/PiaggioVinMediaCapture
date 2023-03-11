@@ -1,12 +1,15 @@
+import 'package:VinMediaCapture/app_theme.dart';
 import 'package:VinMediaCapture/hotel_booking/hotel_app_theme.dart';
+import 'package:VinMediaCapture/objectmodel/enum.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:path/path.dart';
 import '../camera/camera_page.dart';
 import '../login/Toast.dart';
-import 'model_list_data.dart';
+import 'doc_type_model_list_data.dart';
+import 'dart:async';
+import 'dart:io';
 
 class ModelListView extends StatelessWidget {
   const ModelListView(
@@ -18,7 +21,7 @@ class ModelListView extends StatelessWidget {
       : super(key: key);
 
   final VoidCallback? callback;
-  final ModelListData? modelData;
+  final DocTypeModelListData? modelData;
   final AnimationController? animationController;
   final Animation<double>? animation;
 
@@ -43,14 +46,14 @@ class ModelListView extends StatelessWidget {
                     borderRadius: const BorderRadius.all(Radius.circular(16.0)),
                     boxShadow: <BoxShadow>[
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.6),
+                        color: Colors.grey.withOpacity(0),
                         offset: const Offset(4, 4),
                         blurRadius: 16,
                       ),
                     ],
                   ),
                   child: ClipRRect(
-                    borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+                    borderRadius: const BorderRadius.all(Radius.circular(0)),
                     child: Stack(
                       children: <Widget>[
                         Column(
@@ -88,7 +91,7 @@ class ModelListView extends StatelessWidget {
                                                   MainAxisAlignment.start,
                                               children: <Widget>[
                                                 Text(
-                                                  modelData!.subTxt + "Hieu",
+                                                  modelData!.subTxt,
                                                   style: TextStyle(
                                                       fontSize: 14,
                                                       color: Colors.grey
@@ -96,75 +99,8 @@ class ModelListView extends StatelessWidget {
                                                 ),
                                                 const SizedBox(
                                                   width: 4,
-                                                ),
-                                                Icon(
-                                                  FontAwesomeIcons.locationDot,
-                                                  size: 12,
-                                                  color: HotelAppTheme
-                                                          .buildLightTheme()
-                                                      .primaryColor,
-                                                ),
-                                                Expanded(
-                                                  child: Text(
-                                                    '${modelData!.dist.toStringAsFixed(1)} km to city',
-                                                    overflow:
-                                                        TextOverflow.ellipsis,
-                                                    style: TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.grey
-                                                            .withOpacity(0.8)),
-                                                  ),
-                                                ),
+                                                )
                                               ],
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.only(top: 4),
-                                              child: Row(
-                                                children: <Widget>[
-                                                  RatingBar(
-                                                    initialRating:
-                                                        modelData!.rating,
-                                                    direction: Axis.horizontal,
-                                                    allowHalfRating: true,
-                                                    itemCount: 5,
-                                                    itemSize: 24,
-                                                    ratingWidget: RatingWidget(
-                                                      full: Icon(
-                                                        Icons.star_rate_rounded,
-                                                        color: HotelAppTheme
-                                                                .buildLightTheme()
-                                                            .primaryColor,
-                                                      ),
-                                                      half: Icon(
-                                                        Icons.star_half_rounded,
-                                                        color: HotelAppTheme
-                                                                .buildLightTheme()
-                                                            .primaryColor,
-                                                      ),
-                                                      empty: Icon(
-                                                        Icons
-                                                            .star_border_rounded,
-                                                        color: HotelAppTheme
-                                                                .buildLightTheme()
-                                                            .primaryColor,
-                                                      ),
-                                                    ),
-                                                    itemPadding:
-                                                        EdgeInsets.zero,
-                                                    onRatingUpdate: (rating) {
-                                                      print(rating);
-                                                    },
-                                                  ),
-                                                  Text(
-                                                    ' ${modelData!.reviews} Reviews',
-                                                    style: TextStyle(
-                                                        fontSize: 14,
-                                                        color: Colors.grey
-                                                            .withOpacity(0.8)),
-                                                  ),
-                                                ],
-                                              ),
                                             ),
                                           ],
                                         ),
@@ -174,31 +110,7 @@ class ModelListView extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            GestureDetector(
-                              // When the child is tapped, show a snackbar.
-                              onTap: () async {
-                                toastmessage("test");
-                                var cameras = await availableCameras().then(
-                                  (value) => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => CameraPage(
-                                        cameras: value,
-                                      ),
-                                    ),
-                                  ),
-                                );
-                                var a = 1;
-                              },
-                              // The custom button
-                              child: AspectRatio(
-                                aspectRatio: 2,
-                                child: Image.asset(
-                                  modelData!.imagePath,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
+                            controlWidget(context),
                           ],
                         ),
                       ],
@@ -211,5 +123,96 @@ class ModelListView extends StatelessWidget {
         );
       },
     );
+  }
+
+  Widget controlWidget(BuildContext context) {
+    TextEditingController txtText = new TextEditingController();
+    if (modelData?.attrDocType == EAttrDataType.IMGCAPT) {
+      var widget = new GestureDetector(
+        // When the child is tapped, show a snackbar.
+        onTap: () async {
+          showInformationDialog(context);
+          /*
+          //Bật camera. Code chuẩn
+          var cameras = await availableCameras().then(
+            (value) => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CameraPage(
+                  cameras: value,
+                ),
+              ),
+            ),
+          );*/
+          var a = 1;
+        },
+        // The custom button
+        child: AspectRatio(
+          aspectRatio: 2,
+          child: modelData?.assetImage.isNotEmpty == true
+              ? Image.file(File(modelData!.assetImage))
+              : Image.network(
+                  modelData!.imagePath,
+                  fit: BoxFit.fill,
+                ),
+        ),
+      );
+      return widget;
+    } else if (modelData?.attrDocType == EAttrDataType.VARCHAR) {
+      var widget = new TextField(
+          controller: txtText,
+          maxLines: null,
+          onChanged: (String txt) {
+            modelData?.textValue = txt;
+          },
+          style: TextStyle(
+            fontFamily: AppTheme.fontName,
+            fontSize: 16,
+            color: AppTheme.lightText,
+          ),
+          cursorColor: Colors.blue,
+          decoration: InputDecoration(
+              border: OutlineInputBorder(), hintText: 'Nhập giá trị...'));
+
+      return widget;
+    }
+    return Text("data");
+  }
+
+  Future<void> showInformationDialog(BuildContext context) async {
+    var value = await availableCameras();
+    return await showDialog(
+        context: context,
+        builder: (context) {
+          final TextEditingController _textEditingController =
+              TextEditingController();
+          bool isChecked = false;
+          return StatefulBuilder(builder: (context, setState) {
+            return AlertDialog(
+              content: Form(
+                  key: key,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      CameraPage(
+                        cameras: value,
+                        modelData: modelData,
+                      ),
+                    ],
+                  )),
+              actions: <Widget>[
+                TextButton(
+                  child: Text('Okay'),
+                  onPressed: () {
+                    //if(key.currentState!.validate()){
+                    // Do something like updating SharedPreferences or User Settings etc.
+                    Navigator.of(context).pop();
+                    // }
+                  },
+                ),
+              ],
+            );
+          });
+        });
   }
 }

@@ -5,6 +5,8 @@ using VINMediaCaptureEntities.Entities;
 using System.Diagnostics;
 using VINMediaCaptureEntities.ViewModel;
 using VINMediaCapture.Service;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using VINMediaCaptureEntities.Enum;
 
 namespace VINMediaCapture.Controllers
 {
@@ -26,6 +28,8 @@ namespace VINMediaCapture.Controllers
             var data = await _docTypeItemsService.Index(new DocTypeItems());
             var viewBag = await _docTypeItemsService.GetViewBagModel();
             CreateViewBagData(viewBag);
+            data.Search.ManualCollect = true;
+            data.Search.IsMandatory = true;
             return View(data);
         }
         [HttpPost]
@@ -43,6 +47,16 @@ namespace VINMediaCapture.Controllers
             ViewBag.Model = docTypeItemsViewModel.Models;
             ViewBag.Market = docTypeItemsViewModel.Markets;
             ViewBag.DocTypes = docTypeItemsViewModel.DocTypes;
+            var attrDataTypes = new List<SelectListItem>();
+            attrDataTypes.Add(new SelectListItem { Value=((int)EAttrDataType.VARCHAR).ToString(),Text= EAttrDataType.VARCHAR.GetDescription()});
+            attrDataTypes.Add(new SelectListItem { Value = ((int)EAttrDataType.INTEGER).ToString(), Text = EAttrDataType.INTEGER.GetDescription() });
+            attrDataTypes.Add(new SelectListItem { Value = ((int)EAttrDataType.BOOLEAN).ToString(), Text = EAttrDataType.BOOLEAN.GetDescription() });
+            attrDataTypes.Add(new SelectListItem { Value = ((int)EAttrDataType.DATE).ToString(), Text = EAttrDataType.DATE.GetDescription() });
+            attrDataTypes.Add(new SelectListItem { Value = ((int)EAttrDataType.FLOAT).ToString(), Text = EAttrDataType.FLOAT.GetDescription() });
+            attrDataTypes.Add(new SelectListItem { Value = ((int)EAttrDataType.IMGCAPT).ToString(), Text = EAttrDataType.IMGCAPT.GetDescription() });
+            ViewBag.AttrDataTypes = attrDataTypes;
+            //attrDataTypes.Add(new SelectListItem { Value = ((int)EAttrDataType.DATFILE).ToString(), Text = EAttrDataType.DATFILE.GetDescription() });
+
         }
 
         public async Task<IActionResult> Create(int id)
@@ -51,14 +65,13 @@ namespace VINMediaCapture.Controllers
             CreateViewBagData(viewBag);
             if (id>0)
             {
-
                 var docTypeItems = await _docTypeItemsService.GetById(id);
                 return View(docTypeItems);
             }
-            return View(new DocTypeItems());
+            return View(new DocTypeItemAddModel());
         }
         [HttpPost]
-        public async Task<IActionResult> Create(DocTypeItems docTypeItems,IFormFile image)
+        public async Task<IActionResult> Create(DocTypeItemAddModel docTypeItemAdd,IFormFile image)
         {
             if(image != null)
             {
@@ -66,8 +79,8 @@ namespace VINMediaCapture.Controllers
                 string uploads = Path.Combine(_hostingEnvironment.WebRootPath, folderPath);
                 if (image.Length > 0)
                 {
-                    var imgName= docTypeItems.ItemName + "_" + image.FileName;
-                    docTypeItems.ItemImage = folderPath + @"\" + imgName;
+                    var imgName= docTypeItemAdd.DocTypeItems.ItemName + "_" + image.FileName;
+                    docTypeItemAdd.DocTypeItems.ItemImage = folderPath + @"\" + imgName;
                     string filePath = Path.Combine(uploads, imgName);
                     if (System.IO.File.Exists(filePath))
                     {
@@ -79,13 +92,13 @@ namespace VINMediaCapture.Controllers
                     }
                 }
             }
-            var data = await _docTypeItemsService.Create(docTypeItems);
+            var data = await _docTypeItemsService.Create(docTypeItemAdd);
             if (data.ResultCode<=0)
             {
                 var viewBag = await _docTypeItemsService.GetViewBagModel();
                 CreateViewBagData(viewBag);
                 ViewBag.ErrorMsg = data.Message;
-                return View(docTypeItems);
+                return View(docTypeItemAdd);
             }
 
             return RedirectToAction("Index","DocTypeItems");

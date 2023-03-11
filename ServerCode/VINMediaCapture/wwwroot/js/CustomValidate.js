@@ -5,7 +5,7 @@
         focusInvalid: true, // do not focus the last invalid input
 
         invalidHandler: function () { //display error alert on form submit   
-            $('.alert-danger', $('#transactionForm')).show();
+            $('.alert-danger', $('#' + formId)).show();
         },
 
         highlight: function (element) { // hightlight error inputs

@@ -1,9 +1,14 @@
+import 'dart:convert';
+
+import 'package:VinMediaCapture/apilib/apilib.dart';
 import 'package:VinMediaCapture/app_theme.dart';
 import 'package:VinMediaCapture/barcode/scanbarcode.dart';
 import 'package:VinMediaCapture/hotel_booking/hotel_app_theme.dart';
 import 'package:VinMediaCapture/login/Toast.dart';
+import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
 import 'package:VinMediaCapture/piaggio/detail_model_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_session_manager/flutter_session_manager.dart';
 
 class BarCodeScanScreen extends StatefulWidget {
   @override
@@ -14,6 +19,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
   TextEditingController txtBarcode = new TextEditingController();
   @override
   void initState() {
+    txtBarcode.text = "SPTestVTDtest";
     super.initState();
   }
 
@@ -130,11 +136,13 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                           child: Expanded(
                               child: ElevatedButton(
                         onPressed: () async {
+                          var sessionManager = SessionManager();
+                          await sessionManager.set(
+                              "currentVinCode", txtBarcode.text);
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => DetailModelScreen(),
-                            ),
+                                builder: (context) => DetailModelScreen()),
                           );
                         },
                         child: const Text('Next'),

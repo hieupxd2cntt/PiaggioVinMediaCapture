@@ -26,7 +26,7 @@ namespace VINMediaCapture.Service
             var docTypeItemsData = JsonConvert.DeserializeObject<DocTypeItemsViewModel>(data);
             return docTypeItemsData;
         }
-        public async Task<RestOutput<int>> Create(DocTypeItems docTypeItems)
+        public async Task<RestOutput<int>> Create(DocTypeItemAddModel docTypeItems)
         {
             var url = "DocTypeItems/Create";
             var data = await PostApi(url, docTypeItems);
@@ -40,11 +40,11 @@ namespace VINMediaCapture.Service
             var module = JsonConvert.DeserializeObject<ViewBagDropDownModelModel>(data);
             return module;
         }
-        public async Task<DocTypeItems> GetById(int id)
+        public async Task<DocTypeItemAddModel> GetById(int id)
         {
             var url = string.Format("DocTypeItems/GetById?id={0}", id);
             var data = await LoadGetApi(url);
-            var module = JsonConvert.DeserializeObject<DocTypeItems>(data);
+            var module = JsonConvert.DeserializeObject<DocTypeItemAddModel>(data);
             return module;
         }
 
@@ -60,8 +60,8 @@ namespace VINMediaCapture.Service
     public interface IDocTypeItemsService
     {
         Task<DocTypeItemsViewModel> Index(DocTypeItems docTypeItems);
-        Task<RestOutput<int>> Create(DocTypeItems docTypeItems);
-        Task<DocTypeItems> GetById(int id);
+        Task<RestOutput<int>> Create(DocTypeItemAddModel docTypeItems);
+        Task<DocTypeItemAddModel> GetById(int id);
         Task<RestOutput<int>> DeleteById(int id);
         Task<ViewBagDropDownModelModel> GetViewBagModel();
     }

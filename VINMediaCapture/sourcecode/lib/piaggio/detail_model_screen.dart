@@ -1,14 +1,21 @@
-import 'package:VinMediaCapture/hotel_booking/calendar_popup_view.dart';
-import 'package:VinMediaCapture/hotel_booking/hotel_list_view.dart';
-import 'package:VinMediaCapture/model/model_list_data.dart';
-import 'package:VinMediaCapture/model/model_list_view.dart';
-import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:intl/intl.dart';
+import 'dart:convert';
 
+import 'package:VinMediaCapture/apilib/apilib.dart';
+import 'package:VinMediaCapture/hotel_booking/calendar_popup_view.dart';
+import 'package:VinMediaCapture/model/doc_type_model_list_data.dart';
+import 'package:VinMediaCapture/model/model_list_view.dart';
+import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
+import 'package:VinMediaCapture/objectmodel/doctypeguide.dart';
+import 'package:VinMediaCapture/objectmodel/doctypeguideinsertmodel.dart';
+import 'package:VinMediaCapture/objectmodel/mobileresult.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_session_manager/flutter_session_manager.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../hotel_booking/hotel_app_theme.dart';
 
 class DetailModelScreen extends StatefulWidget {
+  const DetailModelScreen({super.key});
+  const DetailModelScreen.capturedImage(pictureFile, {super.key});
   @override
   _DetailModelScreenState createState() => _DetailModelScreenState();
 }
@@ -16,7 +23,8 @@ class DetailModelScreen extends StatefulWidget {
 class _DetailModelScreenState extends State<DetailModelScreen>
     with TickerProviderStateMixin {
   AnimationController? animationController;
-  List<ModelListData> modelList = ModelListData.ModelList;
+
+  List<DocTypeModelListData> modelList = <DocTypeModelListData>[];
   final ScrollController _scrollController = ScrollController();
 
   DateTime startDate = DateTime.now();
@@ -27,6 +35,7 @@ class _DetailModelScreenState extends State<DetailModelScreen>
     animationController = AnimationController(
         duration: const Duration(milliseconds: 1000), vsync: this);
     super.initState();
+    DocTypeModelListData.getAttrDataType().then((value) => modelList = value);
   }
 
   Future<bool> getData() async {
@@ -102,7 +111,43 @@ class _DetailModelScreenState extends State<DetailModelScreen>
                           ),
                         ),
                       ),
-                    )
+                    ),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Container(
+                              //width: MediaQuery.of(context).size.width * 0.3,
+                              child: Expanded(
+                            child: ElevatedButton(
+                              onPressed: () async {},
+                              child: const Text('Back'),
+                            ),
+                          )),
+                          Container(
+                              //width: MediaQuery.of(context).size.width * 0.3,
+                              child: Expanded(
+                                  child: ElevatedButton(
+                            onPressed: () async {
+                              var a = modelList;
+                              var docTypeGuide = new DocTypeGuide(
+                                  1, 1, 1, 1, 1, 1, 1, "TXT", "IMG", 0);
+                              var docTypeItemGuide =
+                                  new MobileDoctypeGuideInsertModel(
+                                      docTypeGuide, "");
+                              try {
+                                var imagePath =
+                                    "/data/user/0/com.example.VinMediaCapture/app_flutter/hieu.png";
+                                var data = await PostDocTypeGuideItem(
+                                    docTypeItemGuide, imagePath);
+                                var b = 1;
+                                //var result = MobileResult.fromJson(
+                                //    jsonDecode(data));
+
+                              } catch (e) {}
+                            },
+                            child: const Text('Lưu'),
+                          )))
+                        ])
                   ],
                 ),
               ),
@@ -113,7 +158,7 @@ class _DetailModelScreenState extends State<DetailModelScreen>
     );
   }
 
-  Widget getListUI() {
+  Future<Widget> getListUI() async {
     return Container(
       decoration: BoxDecoration(
         color: HotelAppTheme.buildLightTheme().backgroundColor,

@@ -2,21 +2,23 @@
 @using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
 @{
-    ViewBag.Title = (Model.ItemID <= 0 ? "Thêm mới" : "Cập nhật") + "thuộc tính thông tin cần thu thập";
+    ViewBag.Title = (Model.DocTypeItems.ItemID <= 0 ? "Thêm mới" : "Cập nhật") + "thuộc tính thông tin cần thu thập";
     var colors = (List<Color>)ViewBag.Color;
     var markets = (List<Market>)ViewBag.Market;
     var models = (List<Model>)ViewBag.Model;
     var docTypes = (List<DocType>)ViewBag.DocTypes;
+    var attrDataTypes = (List<SelectListItem>)ViewBag.AttrDataTypes;
 }
-@model DocTypeItems
+@model DocTypeItemAddModel
 <form action="@Url.Action("Create","DocTypeItems")" method="post" id="frmForm" enctype="multipart/form-data">
-    <input type="hidden" class="form-control col-md-8" id="ItemID" name="ItemID" required placeholder="Tên Màu" value="@Model.ItemID">
+    <input type="hidden" class="form-control col-md-8" id="ItemID" name="DocTypeItems.ItemID" required placeholder="mã thuộc tính" value="@Model.DocTypeItems.ItemID">
+    <input type="hidden" class="form-control col-md-8" id="AttrID" name="DocTypeItemAttr.AttrID" required placeholder="Mã thuộc tính" value="@Model.DocTypeItemAttr.AttrID">
     <div class="content-wrapper">
         <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>@(Model.ItemID <= 0 ? "Thêm mới" : "Cập nhật") thuộc tính thông tin cần thu thập</h1>
+                        <h1>@(Model.DocTypeItems.ItemID <= 0 ? "Thêm mới" : "Cập nhật") thuộc tính thông tin cần thu thập</h1>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -45,13 +47,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Tên thuộc tính</label>
-                                            <input type="text" class="form-control col-md-8" id="ItemName" name="ItemName" placeholder="Tên thuộc tính" value="@Model.ItemName">
+                                            <input type="text" class="form-control col-md-8" id="ItemName" name="DocTypeItems.ItemName" required placeholder="Tên thuộc tính" value="@Model.DocTypeItems.ItemName">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Mô tả thuộc tính</label>
-                                            <input type="text" class="form-control col-md-8" id="ItemDescription" name="ItemDescription" required placeholder="Mô tả thuộc tính" value="@Model.ItemDescription">
+                                            <input type="text" class="form-control col-md-8" id="ItemDescription" name="DocTypeItems.ItemDescription" required placeholder="Mô tả thuộc tính" value="@Model.DocTypeItems.ItemDescription">
                                         </div>
                                     </div>
                                 </div>
@@ -60,13 +62,13 @@
                                         <div class="row">
                                             <div class="form-group row col-md-6">
                                                 <div class="form-check">
-                                                    @Html.CheckBox("IsMandatory",@Model.IsMandatory,new {@class="form-check-input"})
+                                                    @Html.CheckBox("DocTypeItems.IsMandatory",@Model.DocTypeItems.IsMandatory,new {@class="form-check-input"})
                                                     <label class="form-check-label">Thuộc tính bắt buộc</label>
                                                 </div>
                                             </div>
                                             <div class="form-group row col-md-6">
                                                 <div class="form-check">
-                                                    @Html.CheckBox("ManualCollect",@Model.ManualCollect,new {@class="form-check-input"})
+                                                    @Html.CheckBox("DocTypeItems.ManualCollect",@Model.DocTypeItems.ManualCollect,new {@class="form-check-input"})
                                                     <label class="form-check-label">Thuộc tính thủ công</label>
                                                 </div>
                                             </div>
@@ -75,12 +77,12 @@
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Model</label>
-                                            <select class="form-control col-md-8" id="ModelID" name="ModelID">
-                                                <option value="-1">-- Chọn --</option>
+                                            <select class="form-control col-md-8 notZero" id="ModelID" for="modelId" required name="DocTypeItems.ModelID">
+                                                <option value="">-- Chọn --</option>
                                                 @{
                                                     foreach (var item in models)
                                                     {
-                                                        if (item.ModelID == Model.ModelID)
+                                                        if (item.ModelID == Model.DocTypeItems.ModelID)
                                                         {
                                                                 <option value="@item.ModelID" selected="selected">@item.ModelName</option>
                                                         }
@@ -98,12 +100,12 @@
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Thị trường</label>
-                                            <select class="form-control col-md-8" id="MarketId" name="MarketId">
-                                                <option value="-1">-- Chọn --</option>
+                                            <select class="form-control col-md-8" id="MarketId" required name="DocTypeItems.MarketId">
+                                                <option value="">-- Chọn --</option>
                                                 @{
                                                     foreach (var item in markets)
                                                     {
-                                                        if (item.MarketID == Model.MarketID)
+                                                        if (item.MarketID == Model.DocTypeItems.MarketID)
                                                         {
                                                                 <option value="@item.MarketID" selected="selected">@item.MarketCode - @item.MarketName</option>
                                                         }
@@ -119,12 +121,12 @@
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Màu sắc</label>
-                                            <select class="form-control col-md-8" id="ColorID" name="ColorID">
-                                                <option value="-1">-- Chọn --</option>
+                                            <select class="form-control col-md-8" id="ColorID" required name="DocTypeItems.ColorID">
+                                                <option value="">-- Chọn --</option>
                                                 @{
                                                     foreach (var item in colors)
                                                     {
-                                                        if (Model.ColorID == item.ColorID)
+                                                        if (Model.DocTypeItems.ColorID == item.ColorID)
                                                         {
                                                                 <option value="@item.ColorID" selected="selected">@item.ColorCode - @item.ColorName</option>
                                                         }
@@ -143,7 +145,7 @@
                                         <div class="form-group row">
                                             <label class="col-md-4">File</label>
                                             @{
-                                                if (!String.IsNullOrEmpty(Model.ItemImage))
+                                                if (!String.IsNullOrEmpty(Model.DocTypeItems.ItemImage))
                                                 {
                                                         <div class="custom-file col-md-4">
                                                             <input type="file" class="custom-file-input" name="image" id="image">
@@ -152,7 +154,7 @@
                                                         <div class="col-4">
                                                             <div class="user-panel d-flex">
                                                                 <div class="image">
-                                                                    <img src="~/@Model.ItemImage" alt="User Image">
+                                                                <img src="~/@Model.DocTypeItems.ItemImage" alt="User Image">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -170,46 +172,26 @@
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Thứ tự</label>
-                                            <input type="text" class="form-control col-md-8" id="DisplayIDX" name="DisplayIDX" placeholder="Thứ tự hiển thị" value="@Model.DisplayIDX">
+                                            <input type="text" class="form-control col-md-8" id="DisplayIDX" name="DisplayIDX" placeholder="Thứ tự hiển thị" value="@Model.DocTypeItems.DisplayIDX">
                                         </div>
                                     </div>
                                 </div>
-
+                               
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group row">
-                                            <label class="col-md-4">Trạng thái</label>
-                                            <select class="form-control col-md-8" id="cboDisable" name="Disabled">
-                                                @{
-                                                    if (Model.Disabled == (int)EStatus.Active)
-                                                    {
-                                                            <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
-                                                    }
-                                                    else
-                                                    {
-                                                            <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
-                                                    }
-                                                    if (Model.Disabled == (int)EStatus.InActive)
-                                                    {
-                                                            <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
-                                                    }
-                                                    else
-                                                    {
-                                                            <option value="@((int)EStatus.InActive)">@(EStatus.InActive.GetDescription())</option>
-                                                    }
-                                                }
-                                            </select>
+                                            <label class="col-md-4">Mô tả thuộc tính</label>
+                                            <input type="text" class="form-control col-md-8" id="AttrFieldName" name="DocTypeItemAttr.AttrDescription" placeholder="Mô tả thuộc tính" value="@Model.DocTypeItemAttr.AttrDescription">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Loại đối tượng</label>
-                                            <select class="form-control col-md-8" id="DocTypeID" name="DocTypeID">
-                                                <option value="-1">-- Chọn --</option>
+                                            <select class="form-control col-md-8" id="DocTypeID" name="DocTypeItems.DocTypeID">
                                                 @{
                                                     foreach (var item in docTypes)
                                                     {
-                                                        if (item.DocTypeID == Model.DocTypeID)
+                                                        if (item.DocTypeID == Model.DocTypeItems.DocTypeID)
                                                         {
                                                             <option value="@item.DocTypeID" selected="selected">@item.DocTypeCode - @item.DocTypeName</option>
                                                         }
@@ -223,9 +205,60 @@
                                         </div>
                                     </div>
                                 </div>
+                              
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <button class="btn btn-success" id="btnSave"><i class="fa fa-save"></i> &nbsp; Lưu</button>
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Kiểu dữ liệu của thuộc tính </label>
+                                            <select class="form-control col-md-8" id="ColorID" required name="DocTypeItemAttr.AttrDataType">
+                                                <option value="">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in attrDataTypes)
+                                                    {
+                                                        if (Model.DocTypeItemAttr.AttrDataType.ToString() == item.Value)
+                                                        {
+                                                            <option value="@item.Value" selected="selected">@item.Text</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@item.Value">@item.Text</option>
+                                                        }
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Trạng thái</label>
+                                            <select class="form-control col-md-8" id="cboDisable" name="DocTypeItems.Disabled">
+                                                @{
+                                                    if (Model.DocTypeItems.Disabled == (int)EStatus.Active)
+                                                    {
+                                                            <option value="@((int)EStatus.Active)" selected="selected">@(EStatus.Active.GetDescription())</option>
+                                                    }
+                                                    else
+                                                    {
+                                                            <option value="@((int)EStatus.Active)">@(EStatus.Active.GetDescription())</option>
+                                                    }
+                                                    if (Model.DocTypeItems.Disabled == (int)EStatus.InActive)
+                                                    {
+                                                            <option value="@((int)EStatus.InActive)" selected="selected">@(EStatus.InActive.GetDescription())</option>
+                                                    }
+                                                    else
+                                                    {
+                                                            <option value="@((int)EStatus.InActive)">@(EStatus.InActive.GetDescription())</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a class="btn btn-success" id="btnSave"><i class="fa fa-save"></i> &nbsp; Lưu</a>
+                                        <a href="@Url.Action("Index","DocTypeItems")">Bỏ qua</a>
                                     </div>
                                 </div>
                             </div>

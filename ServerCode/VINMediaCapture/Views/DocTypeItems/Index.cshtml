@@ -34,13 +34,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Tên thuộc tính</label>
-                                            <input type="text" class="form-control col-md-8" id="modelCode" name="ModelCode" placeholder="Mã màu" value="@Model.Search.ItemName">
+                                            <input type="text" class="form-control col-md-8" id="modelCode" name="ModelCode" placeholder="Tên thuộc tính" value="@Model.Search.ItemName">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Mô tả</label>
-                                            <input type="text" class="col-md-8 form-control" id="modelName" name="ModelName" placeholder="Tên sản phẩm" value="@Model.Search.ItemDescription">
+                                            <input type="text" class="col-md-8 form-control" id="modelName" name="ModelName" placeholder="Mô tả" value="@Model.Search.ItemDescription">
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Trạng thái</label>
-                                            <select class="col-md-8 form-control" id="cboDisable" name="Disable">
+                                            <select class="col-md-8 form-control" id="cboDisable" name="Disabled">
                                                 <option value="-1">-- Chọn --</option>
                                                 @{
                                                     if (Model.Search.Disabled == (int)EStatus.Active)
@@ -181,8 +181,10 @@
                                     <th>Model</th>
                                     <th>Thị trường</th>
                                     <th>Màu sắc</th>
+                                    <th>Barcode</th>
                                     <th>IsMandatory</th>
                                     <th>Manual</th>
+                                    <th>Kiểu dữ liệu</th>
                                     <th>Trạng thái</th>
                                     <th>Hành Động</th>
                                     </thead>
@@ -203,8 +205,10 @@
                                                     <td>@item.Model.ModelCode</td>
                                                     <td>@item.Market.MarketCode</td>
                                                     <td>@item.Color.ColorCode</td>
+                                                    <td>@(String.Format("{0}{1}{2}", item.Model.ModelCode, item.Market.MarketCode, item.Color.ColorCode))</td>
                                                     <td>@Html.CheckBox("IsMandatory",@item.DocTypeItems.IsMandatory)</td>
                                                     <td>@Html.CheckBox("IsMandatory",@item.DocTypeItems.ManualCollect)</td>
+                                                    <td>@(((EAttrDataType)item.DocTypeItemAttr.AttrDataType).GetDescription())</td>
                                                     <td>@(((EStatus)item.DocTypeItems.Disabled).GetDescription())</td>
                                                     <td>
                                                         <a href="@Url.Action("Create","DocTypeItems",new {id=item.DocTypeItems.ItemID})"><i class="fa fa-pen"></i></a>

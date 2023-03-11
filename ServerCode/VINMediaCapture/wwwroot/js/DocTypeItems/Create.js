@@ -1,12 +1,13 @@
 ﻿$(document).ready(function () {
     $("#image").change(function () {
         var fullPath = $(this).val();
-        if (fullPath !=null && fullPath.length>0) {
+        if (fullPath != null && fullPath.length > 0) {
             var filename = fullPath.replace(/^.*[\\\/]/, '')
             $("#txtImageName").html(filename);
         }
     })
     ValiaDateForm("frmForm");
+    
 });
 $('#btnSave').on('click', function (evt) {
     if (!$("#frmForm").valid()) {

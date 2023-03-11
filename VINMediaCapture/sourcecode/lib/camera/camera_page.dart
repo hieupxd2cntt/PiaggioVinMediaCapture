@@ -1,6 +1,7 @@
 import 'dart:io' as io;
 import 'dart:io';
 
+import 'package:VinMediaCapture/model/doc_type_model_list_data.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:gallery_saver/gallery_saver.dart';
@@ -11,7 +12,8 @@ import '../piaggio/detail_model_screen.dart';
 
 class CameraPage extends StatefulWidget {
   final List<CameraDescription>? cameras;
-  const CameraPage({this.cameras, Key? key}) : super(key: key);
+  final DocTypeModelListData? modelData;
+  const CameraPage({this.cameras, this.modelData, Key? key}) : super(key: key);
 
   @override
   _CameraPageState createState() => _CameraPageState();
@@ -20,7 +22,6 @@ class CameraPage extends StatefulWidget {
 class _CameraPageState extends State<CameraPage> {
   late CameraController controller;
   var pictureFile;
-
   @override
   void initState() {
     super.initState();
@@ -68,8 +69,6 @@ class _CameraPageState extends State<CameraPage> {
           child: ElevatedButton(
             onPressed: () async {
               String dir = (await getApplicationDocumentsDirectory()).path;
-              File file = new File('$dir' + "/hieupx.txt");
-              await file.create();
               Directory d = new Directory(dir);
               if (!await d.exists()) {
                 await d.create();
@@ -77,6 +76,7 @@ class _CameraPageState extends State<CameraPage> {
 
               // Construct the path where the image should be saved using the
               // pattern package.
+              var fileName = (widget.modelData?.attrId).toString();
               final path = join(
                 // Store the picture in the temp directory.
                 // Find the temp directory using the `path_provider` plugin.
@@ -87,19 +87,31 @@ class _CameraPageState extends State<CameraPage> {
               XFile t = await controller.takePicture();
               t.saveTo(path);
               pictureFile = path;
+              widget.modelData?.assetImage = pictureFile;
               GallerySaver.saveImage(path);
+              Navigator.of(context).pop();
+              /*
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DetailModelScreen()),
+              );*/
               //setState();
             },
             child: const Text('Capture Image'),
           ),
         ),
-        Padding(
+        /*Padding(
           padding: const EdgeInsets.all(8.0),
           child: ElevatedButton(
-            onPressed: () async {},
+            onPressed: () async {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DetailModelScreen()),
+              );
+            },
             child: const Text('Back To Home Screen'),
           ),
-        ),
+        ),*/
         if (pictureFile != null && pictureFile.length > 0)
           Image.network(
             pictureFile,

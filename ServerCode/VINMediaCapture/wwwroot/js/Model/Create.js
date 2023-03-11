@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     ValiaDateForm("frmForm");
+
 });
 $('#btnSave').on('click', function (evt) {
     if (!$("#frmForm").valid()) {

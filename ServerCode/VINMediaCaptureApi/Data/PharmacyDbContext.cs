@@ -31,4 +31,5 @@ public class VINMediaCaptureDbContext : DbContext
     public DbSet<DocTypeItems> DocTypeItems { get; set; }
     public DbSet<DocType> DocType { get; set; }
     public DbSet<DocTypeItemAttr> DocTypeItemAttr  { get; set; }
+    public DbSet<DocTypeGuide> DocTypeGuide { get; set; }
 }

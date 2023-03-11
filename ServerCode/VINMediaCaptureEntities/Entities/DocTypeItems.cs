@@ -8,7 +8,7 @@ namespace VINMediaCaptureEntities.Entities
         
         public int? DocTypeID { get; set; }
         [Key]
-        public int? ItemID { get; set; }
+        public int ItemID { get; set; }
 
         public string? ItemDescription { get; set; }
 

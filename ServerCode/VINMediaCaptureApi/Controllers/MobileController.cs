@@ -8,6 +8,7 @@ using TanvirArjel.EFCore.GenericRepository;
 using VINMediaCaptureEntities.ViewModel;
 using VINMediaCaptureEntities;
 using System.Data.Entity;
+using System.Text.Json;
 
 namespace VINMediaCaptureApi.Controllers
 {
@@ -96,6 +97,40 @@ namespace VINMediaCaptureApi.Controllers
             outPut.ResultCode = 1;
             return outPut;
         }
-
+        [HttpPost]
+        [Route("GetListAttribute")]
+        public async Task<string> GetListAttribute([FromBody]string barcode)
+        {
+            var data = from d in _context.DocTypeItems
+                       join da in _context.DocTypeItemAttr on d.ItemID equals da.ItemID
+                       join m in _context.Model on d.ModelID equals m.ModelID
+                       join ma in _context.Market on d.MarketID equals ma.MarketID
+                       join c in _context.Color on d.ColorID equals c.ColorID
+                       where m.ModelCode + ma.MarketCode + c.ColorCode == barcode
+                       select new DocTypeItemAddModel {
+                        DocTypeItems=d,
+                        DocTypeItemAttr=da
+                       };
+            return JsonSerializer.Serialize(data);
+        }
+        //[HttpPost]
+        //[Route("InsertDocTypeGuide")]
+        //public async Task<MobileResult> InsertDocTypeGuide(MobileDoctypeGuideInsertModel docType)
+        //{
+        //    var outPut = new MobileResult();
+        //    outPut.Message = "AAAAAAAAAAAAAA";
+        //    outPut.ResultCode = 1;
+        //    return outPut;
+        //}
+        [HttpPost]
+        [Route("InsertDocTypeGuide")]
+        public async Task<MobileResult> InsertDocTypeGuide([FromForm]string docTypeGuides, List<IFormFile> images)
+        {
+            var outPut = new MobileResult();
+            var mobileDoctypeGuide= JsonSerializer.Deserialize<MobileDoctypeGuideInsertModel>(docTypeGuides);
+            outPut.Message = "AAAAAAAAAAAAAA";
+            outPut.ResultCode = 1;
+            return outPut;
+        }
     }
 }

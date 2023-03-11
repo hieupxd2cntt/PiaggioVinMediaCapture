@@ -36,6 +36,7 @@ namespace VINMediaCaptureEntities.ViewModel
     public class DocTypeItemsInfo
     {
         public DocTypeItems DocTypeItems { get; set; }
+        public DocTypeItemAttr DocTypeItemAttr { get; set; }
         public VINMediaCaptureEntities.Entities.Model Model { get; set; }
         public Color Color { get; set; }
         public Market Market { get; set; }
@@ -45,7 +46,7 @@ namespace VINMediaCaptureEntities.ViewModel
             Model = new Entities.Model();
             Color = new Color();
             Market = new Market();
-
+            DocTypeItemAttr = new DocTypeItemAttr();
         }
     }
 }

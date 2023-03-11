@@ -4,16 +4,14 @@ namespace VINMediaCaptureEntities.Entities
 {
     public class DocTypeItemAttr
     {
+       
+        public int ItemID { get; set; }
         [Key]
-        public int Id { get; set; }
-
-        public string ItemID { get; set; }
-
-        public string AttrID { get; set; }
+        public int AttrID { get; set; }
 
         public string? AttrFieldName { get; set; }
 
-        public string AttrDataType { get; set; }
+        public int AttrDataType { get; set; }
 
         public int? AttrDataLength { get; set; }
 
