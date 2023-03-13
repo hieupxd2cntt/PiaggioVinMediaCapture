@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 @JsonSerializable()
 class MobileResult {
   int resultCode;
-  int message;
+  String message;
   MobileResult(
     this.resultCode,
     this.message,

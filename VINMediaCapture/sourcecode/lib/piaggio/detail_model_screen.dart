@@ -1,13 +1,16 @@
 import 'dart:convert';
-
 import 'package:VinMediaCapture/apilib/apilib.dart';
+import 'package:VinMediaCapture/common/common.dart';
 import 'package:VinMediaCapture/hotel_booking/calendar_popup_view.dart';
+import 'package:VinMediaCapture/login/Toast.dart';
 import 'package:VinMediaCapture/model/doc_type_model_list_data.dart';
 import 'package:VinMediaCapture/model/model_list_view.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
 import 'package:VinMediaCapture/objectmodel/doctypeguide.dart';
 import 'package:VinMediaCapture/objectmodel/doctypeguideinsertmodel.dart';
+import 'package:VinMediaCapture/objectmodel/enum.dart';
 import 'package:VinMediaCapture/objectmodel/mobileresult.dart';
+import 'package:VinMediaCapture/piaggio/barcode_scan_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -20,6 +23,8 @@ class DetailModelScreen extends StatefulWidget {
   _DetailModelScreenState createState() => _DetailModelScreenState();
 }
 
+String currentSessionText = "";
+
 class _DetailModelScreenState extends State<DetailModelScreen>
     with TickerProviderStateMixin {
   AnimationController? animationController;
@@ -27,15 +32,17 @@ class _DetailModelScreenState extends State<DetailModelScreen>
   List<DocTypeModelListData> modelList = <DocTypeModelListData>[];
   final ScrollController _scrollController = ScrollController();
 
-  DateTime startDate = DateTime.now();
-  DateTime endDate = DateTime.now().add(const Duration(days: 5));
-
   @override
   void initState() {
     animationController = AnimationController(
         duration: const Duration(milliseconds: 1000), vsync: this);
     super.initState();
-    DocTypeModelListData.getAttrDataType().then((value) => modelList = value);
+    var sessionManager = SessionManager();
+    sessionManager
+        .get("currentSession")
+        .then((value) => currentSessionText = value);
+    DocTypeModelListData.getAttrDataType(currentSessionText)
+        .then((value) => modelList = value);
   }
 
   Future<bool> getData() async {
@@ -55,6 +62,9 @@ class _DetailModelScreenState extends State<DetailModelScreen>
       data: HotelAppTheme.buildLightTheme(),
       child: Container(
         child: Scaffold(
+          onEndDrawerChanged: (isOpened) => () {
+            toastmessage("onloaded");
+          },
           body: Stack(
             children: <Widget>[
               InkWell(
@@ -128,22 +138,57 @@ class _DetailModelScreenState extends State<DetailModelScreen>
                               child: Expanded(
                                   child: ElevatedButton(
                             onPressed: () async {
-                              var a = modelList;
-                              var docTypeGuide = new DocTypeGuide(
-                                  1, 1, 1, 1, 1, 1, 1, "TXT", "IMG", 0);
-                              var docTypeItemGuide =
-                                  new MobileDoctypeGuideInsertModel(
-                                      docTypeGuide, "");
                               try {
-                                var imagePath =
-                                    "/data/user/0/com.example.VinMediaCapture/app_flutter/hieu.png";
-                                var data = await PostDocTypeGuideItem(
-                                    docTypeItemGuide, imagePath);
-                                var b = 1;
-                                //var result = MobileResult.fromJson(
-                                //    jsonDecode(data));
-
-                              } catch (e) {}
+                                bool hasError = false;
+                                for (var element in modelList) {
+                                  if (element.isMandatory) {
+                                    if (element.attrDocType ==
+                                        EAttrDataType.VARCHAR) {
+                                      if (element.textValue.isEmpty ||
+                                          element.textValue.length == 0) {
+                                        element.errorValidate =
+                                            "Bạn phải nhập dữ liệu";
+                                        hasError = true;
+                                      } else {
+                                        element.errorValidate = "";
+                                      }
+                                    } else if (element.attrDocType ==
+                                        EAttrDataType.IMGCAPT) {
+                                      if (element.assetImage.isEmpty ||
+                                          element.textValue.length == 0) {
+                                        element.errorValidate =
+                                            "Bạn phải nhập dữ liệu ảnh";
+                                        hasError = true;
+                                      } else {
+                                        element.errorValidate = "";
+                                      }
+                                    }
+                                  }
+                                }
+                                if (hasError) {
+                                  setState(() {});
+                                  return;
+                                }
+                                var data =
+                                    await PostDocTypeGuideItem(modelList);
+                                var rs = MobileResult.fromJson(data.data);
+                                if (rs.resultCode > 0) {
+                                  //Gửi thành công. Xóa các file cũ. back về phiên mới
+                                  for (var element in modelList) {
+                                    if (element.assetImage.length > 0) {
+                                      await deleteFile(element.assetImage);
+                                    }
+                                  }
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            BarCodeScanScreen()),
+                                  );
+                                }
+                              } catch (e) {
+                                var a = 1;
+                              }
                             },
                             child: const Text('Lưu'),
                           )))
@@ -295,7 +340,7 @@ class _DetailModelScreenState extends State<DetailModelScreen>
                   Radius.circular(32.0),
                 ),
                 onTap: () {
-                  FocusScope.of(context).requestFocus(FocusNode());
+                  //FocusScope.of(context).requestFocus(FocusNode());
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -334,26 +379,6 @@ class _DetailModelScreenState extends State<DetailModelScreen>
           ),
         )
       ],
-    );
-  }
-
-  void showDemoDialog({BuildContext? context}) {
-    showDialog<dynamic>(
-      context: context!,
-      builder: (BuildContext context) => CalendarPopupView(
-        barrierDismissible: true,
-        minimumDate: DateTime.now(),
-        //  maximumDate: DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 10),
-        initialEndDate: endDate,
-        initialStartDate: startDate,
-        onApplyClick: (DateTime startData, DateTime endData) {
-          setState(() {
-            startDate = startData;
-            endDate = endData;
-          });
-        },
-        onCancelClick: () {},
-      ),
     );
   }
 
@@ -396,7 +421,7 @@ class _DetailModelScreenState extends State<DetailModelScreen>
             Expanded(
               child: Center(
                 child: Text(
-                  'Explore',
+                  currentSessionText,
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 22,

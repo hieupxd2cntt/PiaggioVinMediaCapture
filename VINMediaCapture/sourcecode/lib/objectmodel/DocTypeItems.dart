@@ -37,7 +37,7 @@ class DocTypeItems {
         json['ItemDescription'],
         json['ItemName'],
         json['ItemImage'],
-        json['isMandatory'],
+        json['IsMandatory'],
         json['ManualCollect'],
         json['ModelID'],
         json['MarketID'],

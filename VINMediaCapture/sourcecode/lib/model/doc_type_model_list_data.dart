@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 import 'package:VinMediaCapture/apilib/apilib.dart';
 import 'package:VinMediaCapture/common/common.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
@@ -14,44 +15,109 @@ class DocTypeModelListData {
     this.textValue = "",
     this.itemId = 0,
     this.attrId = 0,
+    this.currentSession = "",
+    this.attrText = "",
+    this.isMandatory = true,
+    this.errorValidate = "",
   });
+  DocTypeModelListData.Create(
+    this.imagePath,
+    this.assetImage,
+    this.titleTxt,
+    this.subTxt,
+    this.attrDocType,
+    this.textValue,
+    this.itemId,
+    this.attrId,
+    this.currentSession,
+    this.attrText,
+    this.isMandatory,
+    this.errorValidate,
+  );
 
   String imagePath;
   String titleTxt;
   String subTxt;
   String assetImage;
   String textValue;
+  String currentSession;
   int attrDocType;
   int itemId;
   int attrId;
-  static Future<List<DocTypeModelListData>> getAttrDataType() async {
-    try {
-      var sessionManager = SessionManager();
-      var vincode = await sessionManager.get("currentVinCode");
-      var getListAttribute = await GetListAttribute(vincode);
-      var tagObjsJson = jsonDecode(getListAttribute.body) as List;
-      List<DocTypeItemAddModel> attrs = tagObjsJson
-          .map((tagJson) => DocTypeItemAddModel.fromJson(tagJson))
-          .toList();
-      ModelList.clear();
-      for (var element in attrs) {
+  String attrText;
+  bool isMandatory;
+  String errorValidate;
+  factory DocTypeModelListData.fromJson(Map<String, dynamic> json) {
+    return new DocTypeModelListData.Create(
+      json['imagePath'],
+      json['assetImage'],
+      json['titleTxt'],
+      json['subTxt'],
+      json['attrDocType'],
+      json['textValue'],
+      json['itemId'],
+      json['attrId'],
+      json['currentSession'],
+      json['attrText'],
+      json['isMandatory'],
+      json['errorValidate'],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'imagePath': imagePath,
+      'assetImage': assetImage,
+      'titleTxt': titleTxt,
+      'subTxt': subTxt,
+      'attrDocType': attrDocType,
+      'textValue': textValue,
+      'itemId': itemId,
+      'attrId': attrId,
+      'currentSession': currentSession,
+      'attrText': attrText,
+      'isMandatory': isMandatory,
+      'errorValidate': errorValidate
+    };
+  }
+
+  static Future<List<DocTypeModelListData>> getAttrDataType(
+      String _currentSession) async {
+    var sessionManager = SessionManager();
+    var barCode = await sessionManager.get("currentBarCode");
+    _currentSession = await sessionManager.get("currentSession");
+    var getListAttribute = await GetListAttribute(barCode);
+    var tagObjsJson = jsonDecode(getListAttribute.body) as List;
+    List<DocTypeItemAddModel> attrs = tagObjsJson
+        .map((tagJson) => DocTypeItemAddModel.fromJson(tagJson))
+        .toList();
+    ModelList.clear();
+    for (var element in attrs) {
+      try {
         int attrDocType = 0;
         if (element.docTypeItemAttr != null) {
           attrDocType = element.docTypeItemAttr!.attrDataType;
         }
         var value = DocTypeModelListData(
-          attrDocType: element.docTypeItemAttr!.attrDataType,
-          imagePath: hostUrl +
-              element
-                  .docTypeItems!.itemImage, //element.docTypeItems?.itemImage,
-          subTxt: element.docTypeItems!.itemDescription,
-          titleTxt: element.docTypeItems!.itemName,
-          itemId: element.docTypeItems!.itemID,
-          attrId: element.docTypeItemAttr!.attrID,
-        );
+            attrDocType: element.docTypeItemAttr!.attrDataType,
+            imagePath: element.docTypeItems!.itemImage == null
+                ? ""
+                : hostUrl +
+                    element.docTypeItems!
+                        .itemImage, //element.docTypeItems?.itemImage,
+            subTxt: element.docTypeItems!.itemDescription,
+            titleTxt: element.docTypeItems!.itemName,
+            itemId: element.docTypeItems!.itemID,
+            attrId: element.docTypeItemAttr!.attrID,
+            attrText: element.docTypeItemAttr!.attrName,
+            currentSession: _currentSession,
+            isMandatory: element.docTypeItems!.isMandatory);
         ModelList.add(value);
+      } catch (ee) {
+        var abc = 1;
       }
-    } catch (ee) {}
+    }
+
     return ModelList;
   }
 

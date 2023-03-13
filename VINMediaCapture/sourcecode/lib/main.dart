@@ -8,9 +8,6 @@ import 'package:camera/camera.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'dart:async';
-import 'dart:io';
-
 import 'login/firebase_options.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 

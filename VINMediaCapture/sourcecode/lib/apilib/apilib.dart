@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:VinMediaCapture/common/common.dart';
+import 'package:VinMediaCapture/model/doc_type_model_list_data.dart';
 import 'package:VinMediaCapture/objectmodel/doctypeguideinsertmodel.dart';
 import 'package:VinMediaCapture/objectmodel/users.dart';
 import 'package:dio/dio.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:path/path.dart';
 
 Future<http.Response> GetLogin(Users user) async {
   var response = await http.post(
@@ -31,31 +33,31 @@ Future<http.Response> GetListAttribute(String barcode) async {
   return response;
 }
 
-Future<Response?> PostDocTypeGuideItem(
-    MobileDoctypeGuideInsertModel docTypeGuide, String fileName) async {
-  List<MobileDoctypeGuideInsertModel> docTypeGuides = [];
+Future<Response> PostDocTypeGuideItem(
+    List<DocTypeModelListData> modelList) async {
   List<MultipartFile> images = [];
-  docTypeGuides.add(docTypeGuide);
-  var image = await MultipartFile.fromFile(fileName, filename: "dp");
-  images.add(image);
+  for (var element in modelList) {
+    if (element.assetImage.length > 0) {
+      var image = await MultipartFile.fromFile(element.assetImage,
+          filename: basename(element.assetImage));
+      images.add(image);
+    }
+  }
 
   FormData formData = new FormData.fromMap({
-    "docTypeGuides": json.encode(docTypeGuides),
+    "docTypeGuides": json.encode(modelList),
     "images": images,
   });
-  try {
-    Response response = await Dio().post(
-      apiUrl + 'Mobile/InsertDocTypeGuide',
-      data: formData,
-      options: Options(headers: <String, String>{
-        'Authorization': 'Bearer',
-      }),
-    );
-    return response;
-  } catch (ex) {
-    var b = 1;
-  }
-  return null;
+
+  Response response = await Dio().post(
+    apiUrl + 'Mobile/InsertDocTypeGuide',
+    data: formData,
+    options: Options(headers: <String, String>{
+      'Authorization': 'Bearer',
+    }),
+  );
+  return response;
+
   /*var response = await http.post(
     Uri.parse(apiUrl + 'Mobile/InsertDocTypeGuide'),
     headers: <String, String>{

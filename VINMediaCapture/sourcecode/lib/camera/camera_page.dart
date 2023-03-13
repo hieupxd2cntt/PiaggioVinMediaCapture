@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:VinMediaCapture/model/doc_type_model_list_data.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_session_manager/flutter_session_manager.dart';
 import 'package:gallery_saver/gallery_saver.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
@@ -76,19 +77,22 @@ class _CameraPageState extends State<CameraPage> {
 
               // Construct the path where the image should be saved using the
               // pattern package.
-              var fileName = (widget.modelData?.attrId).toString();
+              var fileName = (widget.modelData?.currentSession).toString() +
+                  "-" +
+                  ((widget.modelData?.attrText).toString()) +
+                  ".png";
               final path = join(
                 // Store the picture in the temp directory.
                 // Find the temp directory using the `path_provider` plugin.
                 dir,
-                'hieu.png',
+                fileName,
               );
 
               XFile t = await controller.takePicture();
               t.saveTo(path);
               pictureFile = path;
               widget.modelData?.assetImage = pictureFile;
-              GallerySaver.saveImage(path);
+              //GallerySaver.saveImage(path);
               Navigator.of(context).pop();
               /*
               Navigator.push(

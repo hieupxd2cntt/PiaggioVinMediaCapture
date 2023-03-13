@@ -102,6 +102,24 @@ class ModelListView extends StatelessWidget {
                                                 )
                                               ],
                                             ),
+                                            Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: <Widget>[
+                                                Text(
+                                                  modelData!.errorValidate,
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Colors.red
+                                                          .withOpacity(0.8)),
+                                                ),
+                                                const SizedBox(
+                                                  width: 4,
+                                                )
+                                              ],
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -127,6 +145,7 @@ class ModelListView extends StatelessWidget {
 
   Widget controlWidget(BuildContext context) {
     TextEditingController txtText = new TextEditingController();
+    txtText.text = modelData!.textValue;
     if (modelData?.attrDocType == EAttrDataType.IMGCAPT) {
       var widget = new GestureDetector(
         // When the child is tapped, show a snackbar.

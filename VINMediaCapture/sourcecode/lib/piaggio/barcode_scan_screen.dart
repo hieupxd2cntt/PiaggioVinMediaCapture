@@ -7,6 +7,7 @@ import 'package:VinMediaCapture/hotel_booking/hotel_app_theme.dart';
 import 'package:VinMediaCapture/login/Toast.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
 import 'package:VinMediaCapture/piaggio/detail_model_screen.dart';
+import 'package:VinMediaCapture/piaggio/vincode_scan_screen..dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 
@@ -138,11 +139,11 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                         onPressed: () async {
                           var sessionManager = SessionManager();
                           await sessionManager.set(
-                              "currentVinCode", txtBarcode.text);
+                              "currentBarcode", txtBarcode.text);
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => DetailModelScreen()),
+                                builder: (context) => VinCodeScanScreen()),
                           );
                         },
                         child: const Text('Next'),
