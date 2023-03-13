@@ -12,6 +12,11 @@ namespace VINMediaCaptureEntities.Entities
         public string ModelName { get; set; }
 
         public int? Disable { get; set; }
+        public Model()
+        {
+            ModelCode = "";
+            ModelName = "";
+        }
 
     }
 }

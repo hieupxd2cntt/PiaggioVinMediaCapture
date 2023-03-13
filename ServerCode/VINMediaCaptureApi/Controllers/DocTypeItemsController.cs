@@ -151,6 +151,7 @@ namespace VINMediaCaptureApi.Controllers
                     docTypeItems.DocTypeItemAttr.ItemID= docTypeItems.DocTypeItems.ItemID;
                     docTypeItems.DocTypeItemAttr.Disabled = docTypeItems.DocTypeItems.Disabled;
                     docTypeItems.DocTypeItemAttr.AttrImage = docTypeItems.DocTypeItems.ItemImage;
+                    docTypeItems.DocTypeItemAttr.AttrDescription = docTypeItems.DocTypeItemAttr.AttrDescription;
                     _context.DocTypeItemAttr.Add(docTypeItems.DocTypeItemAttr);
 
                 }

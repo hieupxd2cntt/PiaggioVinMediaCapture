@@ -62352,6 +62352,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\plugins\uplot\uPlot.min.css))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\DocTypeGuide\MJ7M66700NJ001040\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/DocTypeGuide/MJ7M66700NJ001040/SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\DocTypeGuide\MJ7M66700NJ001040\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\DocTypeItems\test_319155386_491540472962980_3537352328386031607_n.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>VINMediaCapture</SourceId>
@@ -62399,6 +62415,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\DocTypeItems\ThuocTinh2_327554297_885404249370084_7372621672845577870_n.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\DocTypeItems\ThuocTinhTestText_Img1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/DocTypeItems/ThuocTinhTestText_Img1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\DocTypeItems\ThuocTinhTestText_Img1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\DocTypeItems\Thuộc Tính 02_319155386_491540472962980_3537352328386031607_n.jpg))">
       <SourceType>Package</SourceType>
