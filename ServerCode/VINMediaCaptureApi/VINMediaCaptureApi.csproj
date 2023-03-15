@@ -29,4 +29,8 @@
     <ProjectReference Include="..\TanvirArjel.EFCore.QueryRepository\TanvirArjel.EFCore.QueryRepository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
 </Project>

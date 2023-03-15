@@ -1,0 +1,16 @@
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.deps.json
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.csproj.AssemblyReference.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.AssemblyInfoInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.AssemblyInfo.cs
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.csproj.CoreCompileInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.csproj.CopyComplete
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.GenericRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.GenericRepository.pdb

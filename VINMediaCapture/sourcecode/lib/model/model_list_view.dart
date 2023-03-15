@@ -42,16 +42,6 @@ class ModelListView extends StatelessWidget {
                 splashColor: Colors.transparent,
                 onTap: callback,
                 child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-                    boxShadow: <BoxShadow>[
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0),
-                        offset: const Offset(4, 4),
-                        blurRadius: 16,
-                      ),
-                    ],
-                  ),
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(0)),
                     child: Stack(
@@ -221,7 +211,7 @@ class ModelListView extends StatelessWidget {
                   )),
               actions: <Widget>[
                 TextButton(
-                  child: Text('Okay'),
+                  child: Text('Đóng'),
                   onPressed: () {
                     //if(key.currentState!.validate()){
                     // Do something like updating SharedPreferences or User Settings etc.

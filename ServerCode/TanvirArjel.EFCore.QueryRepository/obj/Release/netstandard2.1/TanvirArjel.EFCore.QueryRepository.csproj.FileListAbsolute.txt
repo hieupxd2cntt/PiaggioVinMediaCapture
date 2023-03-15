@@ -1,0 +1,12 @@
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.deps.json
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\bin\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.AssemblyReference.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfoInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.AssemblyInfo.cs
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.csproj.CoreCompileInputs.cache
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.xml
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TanvirArjel.EFCore.QueryRepository\obj\Release\netstandard2.1\TanvirArjel.EFCore.QueryRepository.pdb

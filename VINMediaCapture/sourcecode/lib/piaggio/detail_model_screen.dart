@@ -59,147 +59,150 @@ class _DetailModelScreenState extends State<DetailModelScreen>
   @override
   Widget build(BuildContext context) {
     return Theme(
-      data: HotelAppTheme.buildLightTheme(),
-      child: Container(
-        child: Scaffold(
-          onEndDrawerChanged: (isOpened) => () {
-            toastmessage("onloaded");
+        data: HotelAppTheme.buildLightTheme(),
+        child: Container(
+          child: Scaffold(
+            body: FutureBuilder(
+                future: DocTypeModelListData.getAttrDataType(currentSessionText)
+                    .then((value) => modelList = value),
+                builder: (ctx, snapshot) {
+                  return CreateStack();
+                }),
+          ),
+        ));
+  }
+
+  Stack CreateStack() {
+    return Stack(
+      children: <Widget>[
+        InkWell(
+          splashColor: Colors.transparent,
+          focusColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          hoverColor: Colors.transparent,
+          onTap: () {
+            FocusScope.of(context).requestFocus(FocusNode());
           },
-          body: Stack(
+          child: Column(
             children: <Widget>[
-              InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                onTap: () {
-                  FocusScope.of(context).requestFocus(FocusNode());
-                },
-                child: Column(
-                  children: <Widget>[
-                    getAppBarUI(),
-                    Expanded(
-                      child: NestedScrollView(
-                        controller: _scrollController,
-                        headerSliverBuilder:
-                            (BuildContext context, bool innerBoxIsScrolled) {
-                          return <Widget>[
-                            SliverPersistentHeader(
-                              pinned: true,
-                              floating: true,
-                              delegate: ContestTabHeader(
-                                getFilterBarUI(),
-                              ),
-                            ),
-                          ];
-                        },
-                        body: Container(
-                          color:
-                              HotelAppTheme.buildLightTheme().backgroundColor,
-                          child: ListView.builder(
-                            itemCount: modelList.length,
-                            padding: const EdgeInsets.only(top: 8),
-                            scrollDirection: Axis.vertical,
-                            itemBuilder: (BuildContext context, int index) {
-                              final int count =
-                                  modelList.length > 10 ? 10 : modelList.length;
-                              final Animation<double> animation =
-                                  Tween<double>(begin: 0.0, end: 1.0).animate(
-                                      CurvedAnimation(
-                                          parent: animationController!,
-                                          curve: Interval(
-                                              (1 / count) * index, 1.0,
-                                              curve: Curves.fastOutSlowIn)));
-                              animationController?.forward();
-                              return ModelListView(
-                                callback: () {},
-                                modelData: modelList[index],
-                                animation: animation,
-                                animationController: animationController!,
-                              );
-                            },
-                          ),
+              getAppBarUI(),
+              Expanded(
+                child: NestedScrollView(
+                  controller: _scrollController,
+                  headerSliverBuilder:
+                      (BuildContext context, bool innerBoxIsScrolled) {
+                    return <Widget>[
+                      SliverPersistentHeader(
+                        pinned: true,
+                        floating: true,
+                        delegate: ContestTabHeader(
+                          getFilterBarUI(),
                         ),
                       ),
+                    ];
+                  },
+                  body: Container(
+                    color: HotelAppTheme.buildLightTheme().backgroundColor,
+                    child: ListView.builder(
+                      itemCount: modelList.length,
+                      padding: const EdgeInsets.only(top: 8),
+                      scrollDirection: Axis.vertical,
+                      itemBuilder: (BuildContext context, int index) {
+                        final int count =
+                            modelList.length > 10 ? 10 : modelList.length;
+                        final Animation<double> animation =
+                            Tween<double>(begin: 0.0, end: 1.0).animate(
+                                CurvedAnimation(
+                                    parent: animationController!,
+                                    curve: Interval((1 / count) * index, 1.0,
+                                        curve: Curves.fastLinearToSlowEaseIn)));
+                        animationController?.forward();
+                        return ModelListView(
+                          callback: () {
+                            setState(() {});
+                          },
+                          modelData: modelList[index],
+                          animation: animation,
+                          animationController: animationController!,
+                        );
+                      },
                     ),
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Container(
-                              //width: MediaQuery.of(context).size.width * 0.3,
-                              child: Expanded(
-                            child: ElevatedButton(
-                              onPressed: () async {},
-                              child: const Text('Back'),
-                            ),
-                          )),
-                          Container(
-                              //width: MediaQuery.of(context).size.width * 0.3,
-                              child: Expanded(
-                                  child: ElevatedButton(
-                            onPressed: () async {
-                              try {
-                                bool hasError = false;
-                                for (var element in modelList) {
-                                  if (element.isMandatory) {
-                                    if (element.attrDocType ==
-                                        EAttrDataType.VARCHAR) {
-                                      if (element.textValue.isEmpty ||
-                                          element.textValue.length == 0) {
-                                        element.errorValidate =
-                                            "Bạn phải nhập dữ liệu";
-                                        hasError = true;
-                                      } else {
-                                        element.errorValidate = "";
-                                      }
-                                    } else if (element.attrDocType ==
-                                        EAttrDataType.IMGCAPT) {
-                                      if (element.assetImage.isEmpty ||
-                                          element.textValue.length == 0) {
-                                        element.errorValidate =
-                                            "Bạn phải nhập dữ liệu ảnh";
-                                        hasError = true;
-                                      } else {
-                                        element.errorValidate = "";
-                                      }
-                                    }
-                                  }
-                                }
-                                if (hasError) {
-                                  setState(() {});
-                                  return;
-                                }
-                                var data =
-                                    await PostDocTypeGuideItem(modelList);
-                                var rs = MobileResult.fromJson(data.data);
-                                if (rs.resultCode > 0) {
-                                  //Gửi thành công. Xóa các file cũ. back về phiên mới
-                                  for (var element in modelList) {
-                                    if (element.assetImage.length > 0) {
-                                      await deleteFile(element.assetImage);
-                                    }
-                                  }
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            BarCodeScanScreen()),
-                                  );
-                                }
-                              } catch (e) {
-                                var a = 1;
-                              }
-                            },
-                            child: const Text('Lưu'),
-                          )))
-                        ])
-                  ],
+                  ),
                 ),
               ),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Container(
+                        //width: MediaQuery.of(context).size.width * 0.3,
+                        child: Expanded(
+                      child: ElevatedButton(
+                        onPressed: () async {},
+                        child: const Text('Back'),
+                      ),
+                    )),
+                    Container(
+                        //width: MediaQuery.of(context).size.width * 0.3,
+                        child: Expanded(
+                            child: ElevatedButton(
+                      onPressed: () async {
+                        try {
+                          bool hasError = false;
+                          for (var element in modelList) {
+                            if (element.isMandatory) {
+                              if (element.attrDocType ==
+                                  EAttrDataType.VARCHAR) {
+                                if (element.textValue.isEmpty ||
+                                    element.textValue.length == 0) {
+                                  element.errorValidate =
+                                      "Bạn phải nhập dữ liệu";
+                                  hasError = true;
+                                } else {
+                                  element.errorValidate = "";
+                                }
+                              } else if (element.attrDocType ==
+                                  EAttrDataType.IMGCAPT) {
+                                if (element.assetImage.isEmpty ||
+                                    element.textValue.length == 0) {
+                                  element.errorValidate =
+                                      "Bạn phải nhập dữ liệu ảnh";
+                                  hasError = true;
+                                } else {
+                                  element.errorValidate = "";
+                                }
+                              }
+                            }
+                          }
+                          if (hasError) {
+                            setState(() {});
+                            return;
+                          }
+                          var data = await PostDocTypeGuideItem(modelList);
+                          var rs = MobileResult.fromJson(data.data);
+                          if (rs.resultCode > 0) {
+                            //Gửi thành công. Xóa các file cũ. back về phiên mới
+                            for (var element in modelList) {
+                              if (element.assetImage.length > 0) {
+                                await deleteFile(element.assetImage);
+                              }
+                            }
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => BarCodeScanScreen()),
+                            );
+                          }
+                        } catch (e) {
+                          var a = 1;
+                        }
+                      },
+                      child: const Text('Lưu'),
+                    )))
+                  ])
             ],
           ),
         ),
-      ),
+      ],
     );
   }
 

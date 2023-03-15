@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
 import 'package:VinMediaCapture/apilib/apilib.dart';
 import 'package:VinMediaCapture/common/common.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
