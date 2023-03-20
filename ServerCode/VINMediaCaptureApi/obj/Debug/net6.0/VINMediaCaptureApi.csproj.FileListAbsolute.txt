@@ -98,7 +98,6 @@ E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\ob
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\VINMediaCaptureApi.AssemblyInfoInputs.cache
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\VINMediaCaptureApi.AssemblyInfo.cs
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\VINMediaCaptureApi.csproj.CoreCompileInputs.cache
-E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\VINMediaCaptureApi.MvcApplicationPartsAssemblyInfo.cs
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\VINMediaCaptureApi.MvcApplicationPartsAssemblyInfo.cache
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\staticwebassets\msbuild.VINMediaCaptureApi.Microsoft.AspNetCore.StaticWebAssets.props
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\staticwebassets\msbuild.build.VINMediaCaptureApi.props

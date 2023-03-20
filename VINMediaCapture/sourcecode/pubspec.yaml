@@ -49,6 +49,7 @@ dependencies:
     flutter_session_manager: ^1.0.3
     flutter_barcode_scanner: ^2.0.0
     dio: ^5.0.1
+    platform_device_id: ^1.0.1
 dev_dependencies:
     flutter_test:
         sdk: flutter

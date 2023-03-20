@@ -18,6 +18,7 @@ builder.Services.AddSingleton<IModelService, ModelService>();
 builder.Services.AddSingleton<IMarketService, MarketService>();
 builder.Services.AddSingleton<IAllCodeService, AllCodeService>();
 builder.Services.AddSingleton<IDocTypeItemsService, DocTypeItemService>();
+builder.Services.AddSingleton<IProductDocService, ProductDocService>();
 
 var app = builder.Build();
 

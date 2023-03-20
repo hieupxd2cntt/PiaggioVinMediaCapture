@@ -18,21 +18,22 @@ class DocTypeModelListData {
     this.attrText = "",
     this.isMandatory = true,
     this.errorValidate = "",
+    this.attrDataType = 0,
   });
   DocTypeModelListData.Create(
-    this.imagePath,
-    this.assetImage,
-    this.titleTxt,
-    this.subTxt,
-    this.attrDocType,
-    this.textValue,
-    this.itemId,
-    this.attrId,
-    this.currentSession,
-    this.attrText,
-    this.isMandatory,
-    this.errorValidate,
-  );
+      this.imagePath,
+      this.assetImage,
+      this.titleTxt,
+      this.subTxt,
+      this.attrDocType,
+      this.textValue,
+      this.itemId,
+      this.attrId,
+      this.currentSession,
+      this.attrText,
+      this.isMandatory,
+      this.errorValidate,
+      this.attrDataType);
 
   String imagePath;
   String titleTxt;
@@ -41,6 +42,7 @@ class DocTypeModelListData {
   String textValue;
   String currentSession;
   int attrDocType;
+  int attrDataType;
   int itemId;
   int attrId;
   String attrText;
@@ -60,6 +62,7 @@ class DocTypeModelListData {
       json['attrText'],
       json['isMandatory'],
       json['errorValidate'],
+      json['attrDataType'],
     );
   }
 
@@ -76,7 +79,8 @@ class DocTypeModelListData {
       'currentSession': currentSession,
       'attrText': attrText,
       'isMandatory': isMandatory,
-      'errorValidate': errorValidate
+      'errorValidate': errorValidate,
+      'attrDataType': attrDataType
     };
   }
 
@@ -94,11 +98,11 @@ class DocTypeModelListData {
     for (var element in attrs) {
       try {
         int attrDocType = 0;
-        if (element.docTypeItemAttr != null) {
-          attrDocType = element.docTypeItemAttr!.attrDataType;
+        if (element.docTypeItems != null) {
+          attrDocType = element.docTypeItems!.docTypeID!;
         }
         var value = DocTypeModelListData(
-            attrDocType: element.docTypeItemAttr!.attrDataType,
+            attrDocType: attrDocType,
             imagePath: element.docTypeItems!.itemImage == null
                 ? ""
                 : hostUrl +
@@ -110,7 +114,8 @@ class DocTypeModelListData {
             attrId: element.docTypeItemAttr!.attrID,
             attrText: element.docTypeItemAttr!.attrName,
             currentSession: _currentSession,
-            isMandatory: element.docTypeItems!.isMandatory);
+            isMandatory: element.docTypeItems!.isMandatory,
+            attrDataType: element.docTypeItemAttr!.attrDataType);
         ModelList.add(value);
       } catch (ee) {
         var abc = 1;

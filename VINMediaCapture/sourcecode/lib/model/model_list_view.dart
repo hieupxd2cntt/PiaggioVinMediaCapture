@@ -136,7 +136,7 @@ class ModelListView extends StatelessWidget {
   Widget controlWidget(BuildContext context) {
     TextEditingController txtText = new TextEditingController();
     txtText.text = modelData!.textValue;
-    if (modelData?.attrDocType == EAttrDataType.IMGCAPT) {
+    if (modelData?.attrDataType == EAttrDataType.IMGCAPT) {
       var widget = new GestureDetector(
         // When the child is tapped, show a snackbar.
         onTap: () async {

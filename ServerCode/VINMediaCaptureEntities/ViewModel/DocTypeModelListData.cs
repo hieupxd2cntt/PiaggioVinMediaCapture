@@ -9,6 +9,7 @@
         public string textValue { get; set; }
         public string currentSession { get; set; }
         public int attrDocType { get; set; }
+        public int attrDataType { get; set; }
         public int itemId { get; set; }
         public int attrId { get; set; }
     }

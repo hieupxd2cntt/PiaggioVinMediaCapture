@@ -9,6 +9,5 @@ namespace VINMediaCaptureEntities.Model
     public class CommonConstant
     {
         public static int PageSize { get; set; } = 20;
-        
     }
 }

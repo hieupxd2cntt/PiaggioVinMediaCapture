@@ -147,6 +147,9 @@ class _loginscreenState extends State<loginscreen> {
                                       builder: (context) => BarCodeScanScreen(),
                                     ),
                                   );
+                                } else {
+                                  toastmessage(
+                                      "Tên người dùng hoặc mật khẩu không đúng");
                                 }
 
                                 /*await availableCameras().then(

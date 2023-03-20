@@ -41,8 +41,11 @@ class _DetailModelScreenState extends State<DetailModelScreen>
     sessionManager
         .get("currentSession")
         .then((value) => currentSessionText = value);
-    DocTypeModelListData.getAttrDataType(currentSessionText)
-        .then((value) => modelList = value);
+    DocTypeModelListData.getAttrDataType(currentSessionText).then((value) => {
+          setState(() {
+            modelList = value;
+          })
+        });
   }
 
   Future<bool> getData() async {
@@ -62,12 +65,7 @@ class _DetailModelScreenState extends State<DetailModelScreen>
         data: HotelAppTheme.buildLightTheme(),
         child: Container(
           child: Scaffold(
-            body: FutureBuilder(
-                future: DocTypeModelListData.getAttrDataType(currentSessionText)
-                    .then((value) => modelList = value),
-                builder: (ctx, snapshot) {
-                  return CreateStack();
-                }),
+            body: CreateStack(),
           ),
         ));
   }
@@ -150,7 +148,7 @@ class _DetailModelScreenState extends State<DetailModelScreen>
                           bool hasError = false;
                           for (var element in modelList) {
                             if (element.isMandatory) {
-                              if (element.attrDocType ==
+                              if (element.attrDataType ==
                                   EAttrDataType.VARCHAR) {
                                 if (element.textValue.isEmpty ||
                                     element.textValue.length == 0) {
@@ -160,14 +158,15 @@ class _DetailModelScreenState extends State<DetailModelScreen>
                                 } else {
                                   element.errorValidate = "";
                                 }
-                              } else if (element.attrDocType ==
+                              } else if (element.attrDataType ==
                                   EAttrDataType.IMGCAPT) {
-                                if (element.assetImage.isEmpty ||
+                                if (element.assetImage.isEmpty &&
                                     element.textValue.length == 0) {
                                   element.errorValidate =
                                       "Bạn phải nhập dữ liệu ảnh";
                                   hasError = true;
                                 } else {
+                                  element.textValue = element.assetImage;
                                   element.errorValidate = "";
                                 }
                               }

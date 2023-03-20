@@ -329,6 +329,10 @@
       "PackagePath": "staticwebassets\\js\\Model\\Index.js"
     },
     {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\ProductDoc\\Index.js",
+      "PackagePath": "staticwebassets\\js\\ProductDoc\\Index.js"
+    },
+    {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

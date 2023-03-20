@@ -1,0 +1,203 @@
+﻿@using VINMediaCaptureEntities
+@using VINMediaCaptureEntities.Entities
+@using VINMediaCaptureEntities.Enum
+@using VINMediaCaptureEntities.ViewModel
+@{
+    ViewBag.Title = "Quản lý thuộc tính thông tin cần thu thập";
+    var colors = (List<Color>)ViewBag.Color;
+    var markets = (List<Market>)ViewBag.Market;
+    var models = (List<Model>)ViewBag.Model;
+    var docTypes = (List<DocType>)ViewBag.DocTypes;
+}
+}
+@model ProductDocViewModel
+<form action="@Url.Action("Index","ProductDoc")" method="post" id="frmForm">
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Quản lý hồ sơ sản phẩm</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">Thuộc tính cần thu thập</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">VinCode</label>
+                                            <input type="text" class="form-control col-md-8" id="VINCode" name="Search.VINCode" placeholder="VinCode" value="@Model.Search.VINCode">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Model</label>
+                                            <select class="form-control col-md-8" id="ModelID" name="ModelID">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in models)
+                                                    {
+                                                            <option value="@item.ModelID">@item.ModelName</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Thị trường</label>
+                                            <select class="form-control col-md-8" id="MarketId" name="Search.MarketId">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in markets)
+                                                    {
+                                                            <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Màu sắc</label>
+                                            <select class="form-control col-md-8" id="ColorID" name="Search.ColorID">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in colors)
+                                                    {
+                                                            <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Loại đối tượng</label>
+                                            <select class="form-control col-md-8" id="ColorID" name="Search.ColorID">
+                                                <option value="-1">-- Chọn --</option>
+                                                @{
+                                                    foreach (var item in docTypes)
+                                                    {
+                                                            <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">Từ ngày</label>
+                                            <div class="col-md-8 row">
+                                                <input type="text" class="form-control datepicker col-md-5" id="fromDate" name="FromDate" value="@Model.FromDate"/>
+                                                 <label class=" col-md-2 text-center"> -</label>
+                                                <input type="text" class="form-control datepicker col-md-5" id="toDate" name="ToDate" value="@Model.ToDate" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-success" id="btnSearch"><i class="fa fa-find"></i>Tìm kiếm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">Chi tiết hồ sơ</h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <th>VinCode</th>
+                                    <th>Model</th>
+                                    <th>Thị trường</th>
+                                    <th>Màu sắc</th>
+                                    <th>Barcode</th>
+                                    <th>Loại thuộc tính</th>
+                                    </thead>
+                                    <tbody id="tbodyModels">
+                                        @{
+                                            if
+                                            (Model.ProductDocInfos == null || !Model.ProductDocInfos.Any())
+                                            {
+                                                <td colspan="7">Không có dữ liệu</td>
+                                            }
+                                            else
+                                            {
+                                                foreach (var item in Model.ProductDocInfos)
+                                                {
+                                                    <tr>
+                                                    <td><a href="#" data-toggle="modal" data-target="#exampleModal" onclick="LoadDetailProduct('@item.ProductDoc.VINCode',@item.ProductDoc.Id)">@item.ProductDoc.VINCode</a> </td>
+                                                        <td>@item.Model.ModelCode</td>
+                                                        <td>@item.Market.MarketCode</td>
+                                                        <td>@item.Color.ColorCode</td>
+                                                        <td>@(String.Format("{0}{1}{2}", item.Model.ModelCode, item.Market.MarketCode, item.Color.ColorCode))</td>
+                                                        <td>@item.DocType.DocTypeName</td>
+                                                    </tr>
+                                                }
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                                @{
+                                    if (Model.TotalRecord > Model.PageSize)
+                                    {
+                                        <div class="col-md-12 col-ld-12 no-padding">
+                                            @Html.Partial("_pagination", new SortAndPageModel { PageSize = Model.PageSize, TotalRecordCount = Model.TotalRecord, CurrentPageIndex = Model.CurrPage })
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    @Html.HiddenFor(model => model.CurrPage, new { @id = "CurrPage" })
+</form>
+<input type="hidden" id="urlLoadDetailProduct" value="@Url.Action("LoadDetailProduct","ProductDoc")" />
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Chi tiết xe </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="detail-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/ProductDoc/index.js"></script>

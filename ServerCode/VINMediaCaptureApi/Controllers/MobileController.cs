@@ -9,6 +9,7 @@ using VINMediaCaptureEntities.ViewModel;
 using VINMediaCaptureEntities;
 using System.Data.Entity;
 using System.Text.Json;
+using VINMediaCaptureEntities.Enum;
 
 namespace VINMediaCaptureApi.Controllers
 {
@@ -38,7 +39,7 @@ namespace VINMediaCaptureApi.Controllers
 
         [HttpPost]
         [Route("GetListAttribute")]
-        public async Task<string> GetListAttribute([FromBody]string barcode)
+        public async Task<string> GetListAttribute([FromBody] string barcode)
         {
             var data = from d in _context.DocTypeItems
                        join da in _context.DocTypeItemAttr on d.ItemID equals da.ItemID
@@ -46,11 +47,12 @@ namespace VINMediaCaptureApi.Controllers
                        join ma in _context.Market on d.MarketID equals ma.MarketID
                        join c in _context.Color on d.ColorID equals c.ColorID
                        where m.ModelCode + ma.MarketCode + c.ColorCode == barcode
-                       && d.ManualCollect ==true
+                       && d.ManualCollect == true
                        orderby d.DisplayIDX
-                       select new DocTypeItemAddModel {
-                        DocTypeItems=d,
-                        DocTypeItemAttr=da
+                       select new DocTypeItemAddModel
+                       {
+                           DocTypeItems = d,
+                           DocTypeItemAttr = da
                        };
             return JsonSerializer.Serialize(data);
         }
@@ -65,43 +67,78 @@ namespace VINMediaCaptureApi.Controllers
         //}
         [HttpPost]
         [Route("InsertDocTypeGuide")]
-        public async Task<MobileResult> InsertDocTypeGuide([FromForm]string docTypeGuides, List<IFormFile> images)
+        public async Task<MobileResult> InsertDocTypeGuide([FromForm] string docTypeGuides, List<IFormFile> images)
         {
-             var outPut = new MobileResult();
-            var mobileDoctypeGuides= JsonSerializer.Deserialize<List<DocTypeModelListData>>(docTypeGuides);
-            
+            var serialNumber = HttpContext.Request.Headers["deviceid"].ToString();
+            var userName = HttpContext.Request.Headers["UserName"].ToString();
+            var users = _context.Users.Where(x => x.LoginName == userName);
+            if (users == null && !users.Any())
+            {
+                return new MobileResult { ResultCode=-1,Message="Không tìm thấy user"};
+            }
+            var outPut = new MobileResult();
+            var productDoc = JsonSerializer.Deserialize<List<DocTypeModelListData>>(docTypeGuides);
             var currentSession = "";
-            if (mobileDoctypeGuides!= null && mobileDoctypeGuides.Any()) {
-                currentSession = mobileDoctypeGuides.FirstOrDefault().currentSession;
+            if (productDoc != null && productDoc.Any())
+            {
+                currentSession = productDoc.FirstOrDefault().currentSession;
             }
             if (!String.IsNullOrEmpty(currentSession))
             {
                 var barcode = currentSession.Split('-')[0];
                 var docTypeItems = from d in _context.DocTypeItems
-                        join da in _context.DocTypeItemAttr on d.ItemID equals da.ItemID
-                        join m in _context.Model on d.ModelID equals m.ModelID
-                        join ma in _context.Market on d.MarketID equals ma.MarketID
-                        join c in _context.Color on d.ColorID equals c.ColorID
-                        where m.ModelCode + ma.MarketCode + c.ColorCode == barcode
-                        select d;
-                var docType=docTypeItems.FirstOrDefault();
-                if (docType !=null) {
-                    foreach (var item in mobileDoctypeGuides)
+                                   join da in _context.DocTypeItemAttr on d.ItemID equals da.ItemID
+                                   join m in _context.Model on d.ModelID equals m.ModelID
+                                   join ma in _context.Market on d.MarketID equals ma.MarketID
+                                   join c in _context.Color on d.ColorID equals c.ColorID
+                                   where m.ModelCode + ma.MarketCode + c.ColorCode == barcode
+                                   select d;
+
+                var docType = docTypeItems.FirstOrDefault();
+                var proDoc = new ProductDoc
+                {
+                    MarketID = docType.MarketID ?? 0,
+                    ModelID = docType.ModelID ?? 0,
+                    ColorID = docType.ColorID ?? 0,
+                    DocTypeID = productDoc.FirstOrDefault().attrDocType,
+                    DocTypeDate = DateTime.Now,
+                    UserID= users.First().UserID,
+                    WS_ID=0,
+                    SerialNumber= serialNumber,
+                    VINCode = currentSession.Split('-')[1]
+                };
+                _context.ProductDoc.Add(proDoc);
+                _context.SaveChanges();
+                var vincode = currentSession.Split('-')[1];
+                if (docType != null)
+                {
+                    
+                    foreach (var item in productDoc)
                     {
-                        var docTypeGuide = new DocTypeGuide { AttrID = item.attrId, ColorID = docType.ColorID ?? 0, DocTypeID = item.attrDocType,
-                            GuideImg = Path.GetFileName(item.assetImage),
-                            GuideTXT = item.textValue,
-                            ItemID=item.itemId,MarketID=docType.MarketID??0,ModelID = docType.ModelID??0
+                        if (item.attrDataType == (int)EAttrDataType.IMGCAPT)
+                        {
+                            item.textValue = String.Format(@"\uploads\ProductDocVal\{0}\{1}", vincode,Path.GetFileName(item.textValue));
+                        }
+                        var productDocVal = new ProductDocVal
+                        {
+                            AttrID = item.attrId,
+                            //GuideImg = Path.GetFileName(item.assetImage),
+                            //GuideTXT = item.textValue,
+                            VINCode=currentSession.Split('-')[1],
+                            AttrValue=item.textValue,
+                            ItemID = item.itemId,
+                            ProductDocId=proDoc.Id,
+                            DocType_ID= productDoc.FirstOrDefault().attrDocType
                         };
-                        _context.DocTypeGuide.Add(docTypeGuide);
+                        _context.ProductDocVal.Add(productDocVal);
                     }
                 }
-                var vincode = currentSession.Split('-')[1];
-                var physicalPath = String.Format("{0}{1}{2}", _Configuration.GetSection("ConfigApi")["PhysicalPathApp"], @"\uploads\DocTypeGuide\",vincode);
-                if(!Directory.Exists(physicalPath))
+               
+                var physicalPath = String.Format("{0}{1}{2}", _Configuration.GetSection("ConfigApi")["PhysicalPathApp"], @"\uploads\ProductDocVal\", vincode);
+                if (!Directory.Exists(physicalPath))
                 {
                     Directory.CreateDirectory(physicalPath);
-                }    
+                }
                 foreach (var img in images)
                 {
                     if (img.Length > 0)
@@ -114,7 +151,7 @@ namespace VINMediaCaptureApi.Controllers
                     }
                 }
             }
-           
+
             _context.SaveChanges();
             outPut.Message = "";
             outPut.ResultCode = 1;
