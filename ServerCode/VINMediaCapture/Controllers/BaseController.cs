@@ -14,8 +14,8 @@ namespace VINMediaCapture.Controllers
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            var userLogin = new UserLoginModel { User = new Users {LoginName="HieuPX" } };
-            HttpContext.Session.SetString(ESession.User.ToString(), JsonConvert.SerializeObject(userLogin));
+            //var userLogin = new UserLoginModel { User = new Users {LoginName="HieuPX" } };
+            //HttpContext.Session.SetString(ESession.User.ToString(), JsonConvert.SerializeObject(userLogin));
             if (HttpContext.Session.GetString(ESession.User.ToString()) ==null)
             {
                 filterContext.Result = new RedirectResult(Url.Action("Login", "Login"), true);

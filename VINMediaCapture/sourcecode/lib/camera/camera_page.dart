@@ -92,6 +92,7 @@ class _CameraPageState extends State<CameraPage> {
               t.saveTo(path);
               pictureFile = path;
               widget.modelData?.assetImage = pictureFile;
+
               //GallerySaver.saveImage(path);
               Navigator.of(context).pop();
               /*

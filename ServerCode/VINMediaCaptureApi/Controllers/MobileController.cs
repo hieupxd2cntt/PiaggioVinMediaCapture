@@ -119,6 +119,10 @@ namespace VINMediaCaptureApi.Controllers
                         {
                             item.textValue = String.Format(@"\uploads\ProductDocVal\{0}\{1}", vincode,Path.GetFileName(item.textValue));
                         }
+                        else if (item.attrDataType == (int)EAttrDataType.BOOLEAN)
+                        {
+                            item.textValue = item.valueCheckBox.ToString();
+                        }
                         var productDocVal = new ProductDocVal
                         {
                             AttrID = item.attrId,

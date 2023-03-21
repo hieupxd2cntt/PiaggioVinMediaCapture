@@ -19,6 +19,7 @@ class DocTypeModelListData {
     this.isMandatory = true,
     this.errorValidate = "",
     this.attrDataType = 0,
+    this.valueCheckBox = false,
   });
   DocTypeModelListData.Create(
       this.imagePath,
@@ -33,7 +34,8 @@ class DocTypeModelListData {
       this.attrText,
       this.isMandatory,
       this.errorValidate,
-      this.attrDataType);
+      this.attrDataType,
+      this.valueCheckBox);
 
   String imagePath;
   String titleTxt;
@@ -48,6 +50,7 @@ class DocTypeModelListData {
   String attrText;
   bool isMandatory;
   String errorValidate;
+  bool valueCheckBox;
   factory DocTypeModelListData.fromJson(Map<String, dynamic> json) {
     return new DocTypeModelListData.Create(
       json['imagePath'],
@@ -63,6 +66,7 @@ class DocTypeModelListData {
       json['isMandatory'],
       json['errorValidate'],
       json['attrDataType'],
+      json['valueCheckBox'],
     );
   }
 

@@ -333,6 +333,14 @@
       "PackagePath": "staticwebassets\\js\\ProductDoc\\Index.js"
     },
     {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\Users\\Create.js",
+      "PackagePath": "staticwebassets\\js\\Users\\Create.js"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\Users\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Users\\Index.js"
+    },
+    {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -15631,6 +15639,14 @@
     {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DocTypeItems\\test_321077468_1165997737355550_3393505625703392534_n.jpg",
       "PackagePath": "staticwebassets\\uploads\\DocTypeItems\\test_321077468_1165997737355550_3393505625703392534_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png",
+      "PackagePath": "staticwebassets\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040y\\SPTestVTDtest-MJ7M66700NJ001040y-Thuộc tính 1.png",
+      "PackagePath": "staticwebassets\\uploads\\ProductDocVal\\MJ7M66700NJ001040y\\SPTestVTDtest-MJ7M66700NJ001040y-Thuộc tính 1.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.VINMediaCapture.Microsoft.AspNetCore.StaticWebAssets.props",

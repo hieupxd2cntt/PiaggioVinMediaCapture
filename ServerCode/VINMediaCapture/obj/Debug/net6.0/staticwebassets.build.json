@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Kp3bN8TUDe6oV61HtWTOSJP5MtjR6OStee67NwjKRyg=",
+  "Hash": "nGTalB5f0gkMUPpm1KGUWYmxCAoh/OMMouRUdp9PU4s=",
   "Source": "VINMediaCapture",
   "BasePath": "_content/VINMediaCapture",
   "Mode": "Default",
@@ -1460,6 +1460,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\Users\\Create.js",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "js/Users/Create.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Users\\Create.js"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\Users\\Index.js",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "js/Users/Index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Users\\Index.js"
     },
     {
       "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
@@ -66468,6 +66502,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\DocTypeItems\\ThuocTinhTestText_Img1.jpg"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "uploads/ProductDocVal/MJ7M66700NJ001040/SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040y\\SPTestVTDtest-MJ7M66700NJ001040y-Thuộc tính 1.png",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "uploads/ProductDocVal/MJ7M66700NJ001040y/SPTestVTDtest-MJ7M66700NJ001040y-Thuộc tính 1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040y\\SPTestVTDtest-MJ7M66700NJ001040y-Thuộc tính 1.png"
     }
   ]
 }

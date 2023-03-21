@@ -27,7 +27,12 @@
                                 {
                                 <img src="@item.ProductDocVal.AttrValue" style="width:100px"/>
                                 }
-                                else{
+                                else if(item.DocTypeItemAttr.AttrDataType == (int)EAttrDataType.BOOLEAN)
+                                {
+                                <label>@item.ProductDocVal.AttrValue</label>
+                                }
+                                else
+                                {
                                 <label>@item.ProductDocVal.AttrValue</label>
                                 }
                             }

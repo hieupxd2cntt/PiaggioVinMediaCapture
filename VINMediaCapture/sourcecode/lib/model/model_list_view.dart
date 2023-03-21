@@ -141,6 +141,7 @@ class ModelListView extends StatelessWidget {
         // When the child is tapped, show a snackbar.
         onTap: () async {
           showInformationDialog(context);
+          (context as Element).markNeedsBuild();
           /*
           //Bật camera. Code chuẩn
           var cameras = await availableCameras().then(
@@ -167,12 +168,13 @@ class ModelListView extends StatelessWidget {
         ),
       );
       return widget;
-    } else if (modelData?.attrDocType == EAttrDataType.VARCHAR) {
+    } else if (modelData?.attrDataType == EAttrDataType.VARCHAR) {
       var widget = new TextField(
           controller: txtText,
           maxLines: null,
           onChanged: (String txt) {
             modelData?.textValue = txt;
+            //(context as Element).markNeedsBuild();
           },
           style: TextStyle(
             fontFamily: AppTheme.fontName,
@@ -182,6 +184,17 @@ class ModelListView extends StatelessWidget {
           cursorColor: Colors.blue,
           decoration: InputDecoration(
               border: OutlineInputBorder(), hintText: 'Nhập giá trị...'));
+
+      return widget;
+    } else if (modelData?.attrDataType == EAttrDataType.BOOLEAN) {
+      bool isChecked = false;
+      var widget = Checkbox(
+        value: modelData == null ? false : modelData?.valueCheckBox,
+        onChanged: (bool? value) {
+          modelData?.valueCheckBox = (value == null ? false : value);
+          (context as Element).markNeedsBuild();
+        },
+      );
 
       return widget;
     }

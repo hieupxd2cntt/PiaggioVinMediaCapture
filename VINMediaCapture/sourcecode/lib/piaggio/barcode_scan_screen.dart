@@ -71,7 +71,8 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                                   borderRadius: const BorderRadius.all(
                                     Radius.circular(32.0),
                                   ),
-                                  onTap: () {
+                                  onTap: () async {
+                                    await SessionManager().destroy();
                                     Navigator.pop(context);
                                   },
                                   child: Padding(
@@ -95,7 +96,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                             Container(
                               width: AppBar().preferredSize.height + 40,
                               height: AppBar().preferredSize.height,
-                            )
+                            ),
                           ],
                         ),
                       ),

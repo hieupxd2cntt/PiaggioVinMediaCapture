@@ -12,5 +12,6 @@
         public int attrDataType { get; set; }
         public int itemId { get; set; }
         public int attrId { get; set; }
+        public bool valueCheckBox { get; set; }
     }
 }

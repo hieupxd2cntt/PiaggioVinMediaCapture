@@ -28,6 +28,10 @@ namespace VINMediaCaptureEntities.Entities
         public bool? SelfRegistered { get; set; }
 
         public int? Disabled { get; set; }
+        public Users()
+        {
+            LoginName = "";
+        }
 
     }
 

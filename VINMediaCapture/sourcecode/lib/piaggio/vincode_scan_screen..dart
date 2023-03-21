@@ -5,6 +5,7 @@ import 'package:VinMediaCapture/app_theme.dart';
 import 'package:VinMediaCapture/barcode/scanbarcode.dart';
 import 'package:VinMediaCapture/hotel_booking/hotel_app_theme.dart';
 import 'package:VinMediaCapture/login/Toast.dart';
+import 'package:VinMediaCapture/login/loginscreen.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
 import 'package:VinMediaCapture/piaggio/barcode_scan_screen.dart';
 import 'package:VinMediaCapture/piaggio/detail_model_screen.dart';
@@ -93,9 +94,30 @@ class _VinCodeScanScreenState extends State<VinCodeScanScreen> {
                               ),
                             ),
                             Container(
+                              alignment: Alignment.centerRight,
                               width: AppBar().preferredSize.height + 40,
                               height: AppBar().preferredSize.height,
-                            )
+                              child: Material(
+                                color: Colors.transparent,
+                                child: InkWell(
+                                  borderRadius: const BorderRadius.all(
+                                    Radius.circular(32.0),
+                                  ),
+                                  onTap: () async {
+                                    await SessionManager().destroy();
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => loginscreen()),
+                                    );
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Icon(Icons.logout),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
