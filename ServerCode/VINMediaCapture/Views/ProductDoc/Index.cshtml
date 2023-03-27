@@ -92,7 +92,7 @@
                                                 @{
                                                     foreach (var item in docTypes)
                                                     {
-                                                            <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
+                                                        <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
                                                     }
                                                 }
                                             </select>
@@ -135,6 +135,8 @@
                                     <th>Thị trường</th>
                                     <th>Màu sắc</th>
                                     <th>Barcode</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Người tạo</th>
                                     <th>Loại thuộc tính</th>
                                     </thead>
                                     <tbody id="tbodyModels">
@@ -142,7 +144,7 @@
                                             if
                                             (Model.ProductDocInfos == null || !Model.ProductDocInfos.Any())
                                             {
-                                                <td colspan="7">Không có dữ liệu</td>
+                                                <td colspan="8">Không có dữ liệu</td>
                                             }
                                             else
                                             {
@@ -154,6 +156,8 @@
                                                         <td>@item.Market.MarketCode</td>
                                                         <td>@item.Color.ColorCode</td>
                                                         <td>@(String.Format("{0}{1}{2}", item.Model.ModelCode, item.Market.MarketCode, item.Color.ColorCode))</td>
+                                                        <td>@item.ProductDoc.DocTypeDate.ToString("dd/MM/yyyy hh:mm:ss")</td>
+                                                        <td>@item.User.LoginName</td>
                                                         <td>@item.DocType.DocTypeName</td>
                                                     </tr>
                                                 }

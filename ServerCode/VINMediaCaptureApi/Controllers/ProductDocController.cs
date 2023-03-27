@@ -51,6 +51,7 @@ namespace VINMediaCaptureApi.Controllers
                        //join pdv in _context.ProductDocVal on pd.Id equals pdv.ProductDocId
                        join c in _context.Color on pd.ColorID equals c.ColorID
                        join m in _context.Market on pd.MarketID equals m.MarketID
+                       join u in _context.Users on pd.UserID equals u.UserID
                        join md in _context.Model on pd.ModelID equals md.ModelID
                        select new ProductDocInfo
                        {
@@ -59,7 +60,8 @@ namespace VINMediaCaptureApi.Controllers
                            Model=md,
                            //ProductDocVal=pdv,
                            ProductDoc=pd,
-                           DocType= dt
+                           DocType= dt,
+                           User=u
                        };
             search.TotalRecord = data.Count();
             if (search.TotalRecord>search.PageSize)
@@ -82,12 +84,14 @@ namespace VINMediaCaptureApi.Controllers
                        join dt in _context.DocType on pd.DocTypeID equals dt.DocTypeID
                        join pdv in _context.ProductDocVal on pd.Id equals pdv.ProductDocId
                        join di in _context.DocTypeItems on pdv.ItemID equals di.ItemID
+                       join u in _context.Users on pd.UserID equals u.UserID
                        join dia in _context.DocTypeItemAttr on pdv.AttrID equals dia.AttrID
                        select new ProductDocValInfo
                        {
                            ProductDocVal= pdv,
                            DocTypeItemAttr=dia,
-                           DocTypeItem=di
+                           DocTypeItem=di,
+                           User=u,
                        };
             model.ProductDocValInfo = data.ToList();
             return model;

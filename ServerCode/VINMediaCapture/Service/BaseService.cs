@@ -80,7 +80,12 @@ namespace VINMediaCapture.Service
                 var uri = _remoteServiceBaseUrl + url;
                 HttpClientHandler clientHandler = new HttpClientHandler();
                 clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-                var userLogin = JsonConvert.DeserializeObject<UserLoginModel>(_httpContextAccessor.HttpContext.Session.GetString(ESession.User.ToString()));
+                var userLogin = new UserLoginModel();
+                if (url != "User/Login")
+                {
+                    userLogin = JsonConvert.DeserializeObject<UserLoginModel>(_httpContextAccessor.HttpContext.Session.GetString(ESession.User.ToString()));
+                }
+                
                 using (var client = new HttpClient(clientHandler))
                 {
                     var textBytes = Encoding.UTF8.GetBytes(_Configuration["ConfigApp:UserNameApi"] + ":" + _Configuration["ConfigApp:PasswordApi"] + ":" + user.LoginName);

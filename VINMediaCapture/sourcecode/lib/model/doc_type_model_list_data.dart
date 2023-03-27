@@ -84,7 +84,8 @@ class DocTypeModelListData {
       'attrText': attrText,
       'isMandatory': isMandatory,
       'errorValidate': errorValidate,
-      'attrDataType': attrDataType
+      'attrDataType': attrDataType,
+      'valueCheckBox': valueCheckBox,
     };
   }
 

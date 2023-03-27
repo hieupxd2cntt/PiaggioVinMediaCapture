@@ -102,6 +102,10 @@ class _loginscreenState extends State<loginscreen> {
                                       hintText: "Email",
                                     )),
                                 TextFormField(
+                                  obscureText: true,
+                                  enableSuggestions: false,
+                                  autocorrect: false,
+
                                   /*validator: (value) {
                                     if (value!.isEmpty) {
                                       return 'Enter Password';

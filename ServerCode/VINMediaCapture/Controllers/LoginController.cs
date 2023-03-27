@@ -26,14 +26,20 @@ namespace VINMediaCapture.Controllers
         [HttpPost]
         public async Task< IActionResult> Login(Users user)
         {
+            if (user.LoginName !="admin")
+            {
+                ViewBag.Message = "Tên đăng nhập hoặc mật khẩu không chính xác";
+                return View(user);
+            }
             var userData= await _userService.Login(user);
+            
             if (userData != null)
             {
                 HttpContext.Session.SetString(ESession.User.ToString(), JsonConvert.SerializeObject(userData));
                 return RedirectToAction("Index", "Home");
             }
-            
-            return View();
+            ViewBag.Message = "Tên đăng nhập hoặc mật khẩu không chính xác";
+            return View(user);
         }
 
         public IActionResult Privacy()

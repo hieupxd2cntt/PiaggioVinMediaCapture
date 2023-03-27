@@ -31,7 +31,7 @@ namespace VINMediaCapture.Controllers
             var data = await _productDocService.Index(new ProductDocViewModel());
             var viewBag = await _docTypeItemsService.GetViewBagModel();
             CreateViewBagData(viewBag);
-            var fromDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            var fromDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             data.ToDate = fromDate.AddMonths(1).AddDays(-1).ToString("dd/MM/yyyy");
             data.FromDate = fromDate.ToString("dd/MM/yyyy");
             return View(data);

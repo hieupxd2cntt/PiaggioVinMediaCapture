@@ -31,6 +31,7 @@ namespace VINMediaCaptureEntities.ViewModel
         public DocType DocType { get; set; }
         public Color Color { get; set; }
         public Market Market { get; set; }
+        public Users User { get; set; }
         public ProductDocInfo()
         {
             ProductDoc = new ProductDoc();
@@ -40,6 +41,7 @@ namespace VINMediaCaptureEntities.ViewModel
             Model = new Entities.Model();
             Color = new Color();
             Market = new Market();
+            User=new Users();
         }
     }
 
@@ -56,11 +58,13 @@ namespace VINMediaCaptureEntities.ViewModel
         public ProductDocVal ProductDocVal { get; set; }
         public DocTypeItems DocTypeItem { get; set; }
         public DocTypeItemAttr DocTypeItemAttr { get; set; }
+        public Users User { get; set; }
         public ProductDocValInfo()
         {
             ProductDocVal = new ProductDocVal();
             DocTypeItem = new DocTypeItems();
             DocTypeItemAttr = new DocTypeItemAttr();
+            User = new Users();
         }
     }
 }
