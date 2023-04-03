@@ -1,3 +1,4 @@
+import 'package:VinMediaCapture/login/Toast.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAttr.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItems.dart';
 import 'package:VinMediaCapture/objectmodel/model.dart';
@@ -14,7 +15,7 @@ class DocTypeItemAddModel {
     docTypeItems = json["DocTypeItems"] == null
         ? null
         : DocTypeItems.fromJson(json["DocTypeItems"]);
-    model = json["Model"] == null ? null : Model.fromJson(json["Model"]);
+    //model = json["Model"] == null ? null : Model.fromJson(json["Model"]);
     docTypeItemAttr = json["DocTypeItemAttr"] == null
         ? null
         : DocTypeItemAttr.fromJson(json["DocTypeItemAttr"]);

@@ -10,6 +10,7 @@ using VINMediaCaptureEntities;
 using System.Data.Entity;
 using System.Text.Json;
 using VINMediaCaptureEntities.Enum;
+using System.Diagnostics;
 
 namespace VINMediaCaptureApi.Controllers
 {
@@ -41,6 +42,11 @@ namespace VINMediaCaptureApi.Controllers
         [Route("GetListAttribute")]
         public async Task<string> GetListAttribute([FromBody] string barcode)
         {
+            StreamWriter sw = new StreamWriter("D://LogPiagio1.txt");
+            sw.WriteLine("barcode=" + barcode);
+            sw.Flush();
+            sw.Dispose();
+            sw.Close();
             var data = from d in _context.DocTypeItems
                        join da in _context.DocTypeItemAttr on d.ItemID equals da.ItemID
                        join m in _context.Model on d.ModelID equals m.ModelID
@@ -55,6 +61,7 @@ namespace VINMediaCaptureApi.Controllers
                            DocTypeItemAttr = da
                        };
             return JsonSerializer.Serialize(data);
+            //return JsonSerializer.Serialize(data, new JsonSerializerOptions { IgnoreNullValues = true });
         }
         //[HttpPost]
         //[Route("InsertDocTypeGuide")]

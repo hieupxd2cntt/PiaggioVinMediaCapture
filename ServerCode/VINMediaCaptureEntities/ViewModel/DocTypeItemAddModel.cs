@@ -11,11 +11,11 @@ namespace VINMediaCaptureEntities.ViewModel
     public class DocTypeItemAddModel
     {
         public DocTypeItems DocTypeItems { get; set; }
-        public Entities.Model Model { get; set; }
+        //public Entities.Model Model { get; set; }
         public DocTypeItemAttr DocTypeItemAttr { get; set; }
         public DocTypeItemAddModel()
         {
-            Model = new Entities.Model();
+            //Model = new Entities.Model();
             DocTypeItems = new DocTypeItems();
             DocTypeItemAttr = new DocTypeItemAttr();
         }

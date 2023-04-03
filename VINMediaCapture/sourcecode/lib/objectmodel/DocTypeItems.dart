@@ -34,9 +34,9 @@ class DocTypeItems {
     return new DocTypeItems(
         json['DocTypeID'],
         json['ItemID'],
-        json['ItemDescription'],
-        json['ItemName'],
-        json['ItemImage'],
+        json['ItemDescription'] == null ? "" : json['ItemDescription'],
+        json['ItemName'] == null ? "" : json['ItemName'],
+        json['ItemImage'] == null ? "" : json['ItemImage'],
         json['IsMandatory'],
         json['ManualCollect'],
         json['ModelID'],

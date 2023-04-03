@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:VinMediaCapture/apilib/apilib.dart';
 import 'package:VinMediaCapture/common/common.dart';
+import 'package:VinMediaCapture/login/Toast.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 
@@ -92,13 +93,19 @@ class DocTypeModelListData {
   static Future<List<DocTypeModelListData>> getAttrDataType(
       String _currentSession) async {
     var sessionManager = SessionManager();
-    var barCode = await sessionManager.get("currentBarCode");
+
+    var barCode = await sessionManager.get("currentBarcode");
     _currentSession = await sessionManager.get("currentSession");
     var getListAttribute = await GetListAttribute(barCode);
+    List<DocTypeItemAddModel> attrs = [];
     var tagObjsJson = jsonDecode(getListAttribute.body) as List;
-    List<DocTypeItemAddModel> attrs = tagObjsJson
-        .map((tagJson) => DocTypeItemAddModel.fromJson(tagJson))
-        .toList();
+    try {
+      attrs = tagObjsJson
+          .map((tagJson) => DocTypeItemAddModel.fromJson(tagJson))
+          .toList();
+    } catch (ew) {
+      toastmessage(ew.toString());
+    }
     ModelList.clear();
     for (var element in attrs) {
       try {
@@ -107,26 +114,40 @@ class DocTypeModelListData {
           attrDocType = element.docTypeItems!.docTypeID!;
         }
         var value = DocTypeModelListData(
-            attrDocType: attrDocType,
-            imagePath: element.docTypeItems!.itemImage == null
-                ? ""
-                : hostUrl +
-                    element.docTypeItems!
-                        .itemImage, //element.docTypeItems?.itemImage,
-            subTxt: element.docTypeItems!.itemDescription,
-            titleTxt: element.docTypeItems!.itemName,
-            itemId: element.docTypeItems!.itemID,
-            attrId: element.docTypeItemAttr!.attrID,
-            attrText: element.docTypeItemAttr!.attrName,
-            currentSession: _currentSession,
-            isMandatory: element.docTypeItems!.isMandatory,
-            attrDataType: element.docTypeItemAttr!.attrDataType);
+          attrDocType: attrDocType,
+          imagePath: (element.docTypeItems!.itemImage == null ||
+                  element.docTypeItems!.itemImage.length == 0)
+              ? ""
+              : hostUrl +
+                  element.docTypeItems!
+                      .itemImage, //element.docTypeItems?.itemImage,
+          subTxt: element.docTypeItems == null
+              ? ""
+              : element.docTypeItems!.itemDescription,
+          titleTxt: element.docTypeItems == null
+              ? ""
+              : element.docTypeItems!.itemName,
+          itemId:
+              element.docTypeItems == null ? 0 : element.docTypeItems!.itemID,
+          attrId: element.docTypeItemAttr == null
+              ? 0
+              : element.docTypeItemAttr!.attrID,
+          attrText: element.docTypeItemAttr == null
+              ? ""
+              : element.docTypeItemAttr!.attrName,
+          currentSession: _currentSession,
+          isMandatory: element.docTypeItems!.isMandatory,
+          attrDataType: element.docTypeItemAttr == null
+              ? 0
+              : element.docTypeItemAttr!.attrDataType,
+        );
+        //toastmessage("image path=" + value.imagePath);
         ModelList.add(value);
       } catch (ee) {
+        toastmessage("getAttrDataType ex=" + ee.toString());
         var abc = 1;
       }
     }
-
     return ModelList;
   }
 

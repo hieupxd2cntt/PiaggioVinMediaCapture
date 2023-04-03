@@ -1,6 +1,7 @@
 import 'dart:io' as io;
 import 'dart:io';
 
+import 'package:VinMediaCapture/login/Toast.dart';
 import 'package:VinMediaCapture/model/doc_type_model_list_data.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +80,7 @@ class _CameraPageState extends State<CameraPage> {
               // pattern package.
               var fileName = (widget.modelData?.currentSession).toString() +
                   "-" +
-                  ((widget.modelData?.attrText).toString()) +
+                  ((widget.modelData?.titleTxt).toString()) +
                   ".png";
               final path = join(
                 // Store the picture in the temp directory.
@@ -87,7 +88,7 @@ class _CameraPageState extends State<CameraPage> {
                 dir,
                 fileName,
               );
-
+              toastmessage("image path=" + path);
               XFile t = await controller.takePicture();
               t.saveTo(path);
               pictureFile = path;

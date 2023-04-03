@@ -5,6 +5,7 @@ import 'package:VinMediaCapture/app_theme.dart';
 import 'package:VinMediaCapture/barcode/scanbarcode.dart';
 import 'package:VinMediaCapture/hotel_booking/hotel_app_theme.dart';
 import 'package:VinMediaCapture/login/Toast.dart';
+import 'package:VinMediaCapture/login/loginscreen.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
 import 'package:VinMediaCapture/piaggio/detail_model_screen.dart';
 import 'package:VinMediaCapture/piaggio/vincode_scan_screen..dart';
@@ -73,7 +74,11 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                                   ),
                                   onTap: () async {
                                     await SessionManager().destroy();
-                                    Navigator.pop(context);
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => loginscreen()),
+                                    );
                                   },
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
@@ -129,7 +134,14 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                           //width: MediaQuery.of(context).size.width * 0.3,
                           child: Expanded(
                         child: ElevatedButton(
-                          onPressed: () async {},
+                          onPressed: () async {
+                            await SessionManager().destroy();
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => loginscreen()),
+                            );
+                          },
                           child: const Text('Back'),
                         ),
                       )),

@@ -159,12 +159,15 @@ class ModelListView extends StatelessWidget {
         // The custom button
         child: AspectRatio(
           aspectRatio: 2,
-          child: modelData?.assetImage.isNotEmpty == true
-              ? Image.file(File(modelData!.assetImage))
-              : Image.network(
-                  modelData!.imagePath,
-                  fit: BoxFit.fill,
-                ),
+          child: (modelData?.assetImage.length == 0 &&
+                  modelData!.imagePath.isEmpty)
+              ? Image.asset('assets/images/supportIcon.png')
+              : (modelData?.assetImage.isNotEmpty == true
+                  ? Image.file(File(modelData!.assetImage))
+                  : Image.network(
+                      modelData!.imagePath,
+                      fit: BoxFit.fill,
+                    )),
         ),
       );
       return widget;

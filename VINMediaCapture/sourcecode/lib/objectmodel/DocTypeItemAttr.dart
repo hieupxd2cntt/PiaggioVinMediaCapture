@@ -1,3 +1,4 @@
+import 'package:VinMediaCapture/login/Toast.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 @JsonSerializable()
@@ -36,17 +37,17 @@ class DocTypeItemAttr {
     return new DocTypeItemAttr(
         json['ItemID'],
         json['AttrID'],
-        json['AttrFieldName'],
-        json['AttrDataType'],
-        json['AttrDataLength'],
-        json['AttrDescription'],
-        json['AttrName'],
-        json['AttrImage'],
-        json['isMandatory'],
-        json['isManualCollect'],
-        json['DisplayIDX'],
-        json['ValidationRuleID'],
-        json['Disabled']);
+        "", //json['AttrFieldName'] == null ? 0 : json['AttrFieldName'],
+        json['AttrDataType'] == null ? 0 : json['AttrDataType'],
+        0, //json['AttrDataLength'] == null ? 0 : json['AttrDataLength'],
+        "", //json['AttrDescription'] == null ? "" : json['AttrDescription'],
+        "", //json['AttrName'],
+        "", //json['AttrImage'] == null ? "" : json['AttrImage'],
+        json['isMandatory'] == null ? false : json['isMandatory'],
+        json['isManualCollect'] == null ? false : json['isManualCollect'],
+        json['DisplayIDX'] == null ? 0 : json['DisplayIDX'],
+        0, //json['ValidationRuleID'] == null ? "" : json['ValidationRuleID'],
+        json['Disabled'] == null ? 0 : json['Disabled']);
   }
 
   Map<String, dynamic> toJson() {

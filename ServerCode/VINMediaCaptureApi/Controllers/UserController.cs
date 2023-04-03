@@ -8,6 +8,7 @@ using TanvirArjel.EFCore.GenericRepository;
 using VINMediaCaptureEntities;
 using VINMediaCaptureEntities.CommonFunction;
 using VINMediaCaptureEntities.ViewModel;
+using System.Diagnostics;
 
 namespace VINMediaCaptureApi.Controllers
 {
@@ -38,6 +39,11 @@ namespace VINMediaCaptureApi.Controllers
         [Route("Login")]
         public async Task<Users> Login(Users user)
         {
+            StreamWriter sw = new StreamWriter("D://LogPiagio.txt");
+            sw.WriteLine("User=" + user.LoginName);
+            sw.Flush();
+            sw.Dispose();
+            sw.Close();
             try
             {
                 await _context.Database.OpenConnectionAsync(default);

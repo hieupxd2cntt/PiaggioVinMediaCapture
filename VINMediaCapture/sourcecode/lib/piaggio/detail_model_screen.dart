@@ -11,6 +11,7 @@ import 'package:VinMediaCapture/objectmodel/doctypeguideinsertmodel.dart';
 import 'package:VinMediaCapture/objectmodel/enum.dart';
 import 'package:VinMediaCapture/objectmodel/mobileresult.dart';
 import 'package:VinMediaCapture/piaggio/barcode_scan_screen.dart';
+import 'package:VinMediaCapture/piaggio/vincode_scan_screen..dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -135,7 +136,13 @@ class _DetailModelScreenState extends State<DetailModelScreen>
                         //width: MediaQuery.of(context).size.width * 0.3,
                         child: Expanded(
                       child: ElevatedButton(
-                        onPressed: () async {},
+                        onPressed: () async {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => VinCodeScanScreen()),
+                          );
+                        },
                         child: const Text('Back'),
                       ),
                     )),
@@ -179,6 +186,7 @@ class _DetailModelScreenState extends State<DetailModelScreen>
                           var data = await PostDocTypeGuideItem(modelList);
                           var rs = MobileResult.fromJson(data.data);
                           if (rs.resultCode > 0) {
+                            toastmessage('Lưu dữ liệu thành công');
                             //Gửi thành công. Xóa các file cũ. back về phiên mới
                             for (var element in modelList) {
                               if (element.assetImage.length > 0) {
