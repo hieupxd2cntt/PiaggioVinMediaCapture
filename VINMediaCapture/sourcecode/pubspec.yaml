@@ -50,6 +50,7 @@ dependencies:
     flutter_barcode_scanner: ^2.0.0
     dio: ^5.0.1
     platform_device_id: ^1.0.1
+    global_configuration: 
 dev_dependencies:
     flutter_test:
         sdk: flutter
@@ -72,6 +73,10 @@ flutter:
         - assets/hotel/
         - assets/introduction_animation/
         - assets/images/supportIcon.png
+        - assets/images/icon-camera.png
+        - assets/images/icons8-settings-64.png
+        - assets/images/motorcycle.png
+        - assets/cfg/
 
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/assets-and-images/#resolution-aware.

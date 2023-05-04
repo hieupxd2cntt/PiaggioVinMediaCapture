@@ -15641,6 +15641,10 @@
       "PackagePath": "staticwebassets\\uploads\\DocTypeItems\\test_321077468_1165997737355550_3393505625703392534_n.jpg"
     },
     {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DocTypeItems\\Đầu xe_319155386_491540472962980_3537352328386031607_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DocTypeItems\\Đầu xe_319155386_491540472962980_3537352328386031607_n.jpg"
+    },
+    {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-.png",
       "PackagePath": "staticwebassets\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-.png"
     },
@@ -15649,8 +15653,16 @@
       "PackagePath": "staticwebassets\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Image Null.png"
     },
     {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Image Null20230403_092517.png",
+      "PackagePath": "staticwebassets\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Image Null20230403_092517.png"
+    },
+    {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png",
       "PackagePath": "staticwebassets\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 120230403_092505.png",
+      "PackagePath": "staticwebassets\\uploads\\ProductDocVal\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 120230403_092505.png"
     },
     {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040qq\\SPTestVTDtest-MJ7M66700NJ001040qq-.png",

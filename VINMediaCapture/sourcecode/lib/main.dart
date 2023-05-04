@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:VinMediaCapture/app_theme.dart';
+import 'package:VinMediaCapture/login/configscreen.dart';
 import 'package:VinMediaCapture/login/loginscreen.dart';
+import 'package:VinMediaCapture/login/menuscreen.dart';
 import 'package:VinMediaCapture/piaggio/barcode_scan_screen.dart';
 import 'package:VinMediaCapture/piaggio/detail_model_screen.dart';
 import 'package:VinMediaCapture/piaggio/testcam.dart';
@@ -10,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'login/firebase_options.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
-
+import 'package:global_configuration/global_configuration.dart';
 import 'piaggio/doctype_screen.dart';
 
 class MyHttpOverrides extends HttpOverrides {
@@ -50,6 +52,7 @@ void main() async {
   final cameras = await availableCameras();
 
 // Get a specific camera from the list of available cameras.
+  await GlobalConfiguration().loadFromAsset("app_settings");
   final firstCamera = cameras.first;
   await SystemChrome.setPreferredOrientations(<DeviceOrientation>[
     DeviceOrientation.portraitUp,
@@ -77,7 +80,7 @@ class MyApp extends StatelessWidget {
         textTheme: AppTheme.textTheme,
         platform: TargetPlatform.iOS,
       ),
-      home: loginscreen(),
+      home: MenuScreen(),
     );
   }
 }

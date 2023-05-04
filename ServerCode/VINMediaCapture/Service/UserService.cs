@@ -24,8 +24,8 @@ namespace VINMediaCapture.Service
         {
             var url = "User/Login";
             var data = await PostApi(url, user);
-            var userData = JsonConvert.DeserializeObject<UserLoginModel>(data);
-            return userData; ;
+            var userData = JsonConvert.DeserializeObject<Users>(data);
+            return new UserLoginModel { User=userData};
         }
         
         public async Task<UserViewModel> Index(Users User)

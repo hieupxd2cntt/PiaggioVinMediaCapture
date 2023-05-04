@@ -7,6 +7,7 @@ import 'package:VinMediaCapture/hotel_booking/hotel_app_theme.dart';
 import 'package:VinMediaCapture/login/Toast.dart';
 import 'package:VinMediaCapture/login/loginscreen.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
+import 'package:VinMediaCapture/objectmodel/enum.dart';
 import 'package:VinMediaCapture/piaggio/detail_model_screen.dart';
 import 'package:VinMediaCapture/piaggio/vincode_scan_screen..dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,8 @@ class BarCodeScanScreen extends StatefulWidget {
 
 class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
   TextEditingController txtBarcode = new TextEditingController();
+  TextEditingController txtModel = new TextEditingController();
+  TextEditingController txtTotalAttribute = new TextEditingController();
   @override
   void initState() {
     txtBarcode.text = "SPTestVTDtest";
@@ -127,6 +130,54 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                         ),
                       )
                     ]),
+                const SizedBox(
+                  width: 4,
+                  height: 10,
+                ),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              txtModel.text,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 22,
+                                  color: Colors.red.withOpacity(0.8)),
+                            ),
+                            Text(
+                              txtTotalAttribute.text,
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.green.withOpacity(0.8)),
+                            ),
+                            const SizedBox(
+                              width: 4,
+                            ),
+                            /*Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      "modelData!.errorValidate",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Colors.red.withOpacity(0.8)),
+                                    ),
+                                    const SizedBox(
+                                      width: 4,
+                                    )
+                                  ],
+                                ),*/
+                          ],
+                        ),
+                      )
+                    ]),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
@@ -150,6 +201,16 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                           child: Expanded(
                               child: ElevatedButton(
                         onPressed: () async {
+                          var getListAttribute =
+                              await GetListAttribute(txtBarcode.text);
+                          List<DocTypeItemAddModel> attrs = [];
+                          var tagObjsJson =
+                              jsonDecode(getListAttribute.body) as List;
+                          if (tagObjsJson.length == 0) {
+                            toastmessage(
+                                "Không có thuộc tính được cấu hình cho barcode này.");
+                            return;
+                          }
                           var sessionManager = SessionManager();
                           await sessionManager.set(
                               "currentBarcode", txtBarcode.text);
@@ -196,7 +257,56 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
               child: TextField(
                 controller: txtBarcode,
                 maxLines: null,
-                onChanged: (String txt) {},
+                onChanged: (String txt) async {
+                  var getListAttribute =
+                      await GetListAttribute(txtBarcode.text);
+                  List<DocTypeItemAddModel> attrs = [];
+                  var tagObjsJson = jsonDecode(getListAttribute.body) as List;
+                  if (tagObjsJson.length == 0) {
+                    toastmessage(
+                        "Không có thuộc tính được cấu hình cho barcode này.");
+                    txtModel.text = "";
+                    txtTotalAttribute.text = "";
+                    setState(() {});
+                    return;
+                  } else {
+                    try {
+                      attrs = tagObjsJson
+                          .map((tagJson) =>
+                              DocTypeItemAddModel.fromJson(tagJson))
+                          .toList();
+                      txtModel.text = "Thông tin xe :" +
+                          (attrs[0].model == null
+                              ? ""
+                              : attrs[0].model!.modelCode!);
+                      var imgCount = attrs
+                          .where((element) =>
+                              element.docTypeItemAttr?.attrDataType ==
+                              EAttrDataType.IMGCAPT)
+                          .length;
+                      var textCount = attrs
+                          .where((element) =>
+                              element.docTypeItemAttr?.attrDataType ==
+                              EAttrDataType.VARCHAR)
+                          .length;
+                      var boolCount = attrs
+                          .where((element) =>
+                              element.docTypeItemAttr?.attrDataType ==
+                              EAttrDataType.BOOLEAN)
+                          .length;
+                      txtTotalAttribute.text = "Bạn cần chụp " +
+                          imgCount.toString() +
+                          " ảnh, " +
+                          textCount.toString() +
+                          " text, " +
+                          boolCount.toString() +
+                          " đúng sai";
+                      setState(() {});
+                    } catch (ew) {
+                      toastmessage(ew.toString());
+                    }
+                  }
+                },
                 style: TextStyle(
                   fontFamily: AppTheme.fontName,
                   fontSize: 16,
@@ -204,7 +314,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                 ),
                 cursorColor: Colors.blue,
                 decoration: InputDecoration(
-                    border: InputBorder.none, hintText: 'Quét VIN code...'),
+                    border: InputBorder.none, hintText: 'Quét Barcode...'),
               ),
             ),
           ),

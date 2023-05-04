@@ -3,6 +3,7 @@ import 'package:VinMediaCapture/apilib/apilib.dart';
 import 'package:VinMediaCapture/common/common.dart';
 import 'package:VinMediaCapture/login/Toast.dart';
 import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
+import 'package:VinMediaCapture/objectmodel/enum.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 
 class DocTypeModelListData {
@@ -96,9 +97,19 @@ class DocTypeModelListData {
 
     var barCode = await sessionManager.get("currentBarcode");
     _currentSession = await sessionManager.get("currentSession");
-    var getListAttribute = await GetListAttribute(barCode);
+    var currentVinCode = await sessionManager.get("currentVinCode");
+
+    var viewVinCode = await sessionManager.get("ViewVinCode");
+    String bodyResponse = "";
+    if (viewVinCode != null && viewVinCode == 1) {
+      var getListAttribute = await GetListAttributeByVinCode(currentVinCode);
+      bodyResponse = getListAttribute.body;
+    } else {
+      var getListAttribute = await GetListAttribute(barCode);
+      bodyResponse = getListAttribute.body;
+    }
     List<DocTypeItemAddModel> attrs = [];
-    var tagObjsJson = jsonDecode(getListAttribute.body) as List;
+    var tagObjsJson = jsonDecode(bodyResponse) as List;
     try {
       attrs = tagObjsJson
           .map((tagJson) => DocTypeItemAddModel.fromJson(tagJson))
@@ -113,14 +124,16 @@ class DocTypeModelListData {
         if (element.docTypeItems != null) {
           attrDocType = element.docTypeItems!.docTypeID!;
         }
+        String imgPath = (element.docTypeItems!.itemImage == null ||
+                element.docTypeItems!.itemImage.length == 0)
+            ? ""
+            : hostUrl +
+                element.docTypeItems!
+                    .itemImage; //element.docTypeItems?.itemImage,;
+
         var value = DocTypeModelListData(
           attrDocType: attrDocType,
-          imagePath: (element.docTypeItems!.itemImage == null ||
-                  element.docTypeItems!.itemImage.length == 0)
-              ? ""
-              : hostUrl +
-                  element.docTypeItems!
-                      .itemImage, //element.docTypeItems?.itemImage,
+          imagePath: imgPath, //element.docTypeItems?.itemImage,
           subTxt: element.docTypeItems == null
               ? ""
               : element.docTypeItems!.itemDescription,
@@ -141,6 +154,19 @@ class DocTypeModelListData {
               ? 0
               : element.docTypeItemAttr!.attrDataType,
         );
+        if (element.prodocValue != null && element.prodocValue.length > 0) {
+          if (value.attrDataType == EAttrDataType.IMGCAPT) {
+            value.imagePath = hostUrl + element.prodocValue;
+          } else if (value.attrDataType == EAttrDataType.BOOLEAN) {
+            if (element.prodocValue.toLowerCase() == "false") {
+              value.valueCheckBox = false;
+            } else {
+              value.valueCheckBox = true;
+            }
+          }
+          value.textValue = element.prodocValue;
+        }
+
         //toastmessage("image path=" + value.imagePath);
         ModelList.add(value);
       } catch (ee) {

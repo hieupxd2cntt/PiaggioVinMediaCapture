@@ -1,13 +1,8 @@
-import 'dart:convert';
 import 'package:VinMediaCapture/apilib/apilib.dart';
 import 'package:VinMediaCapture/common/common.dart';
-import 'package:VinMediaCapture/hotel_booking/calendar_popup_view.dart';
 import 'package:VinMediaCapture/login/Toast.dart';
 import 'package:VinMediaCapture/model/doc_type_model_list_data.dart';
 import 'package:VinMediaCapture/model/model_list_view.dart';
-import 'package:VinMediaCapture/objectmodel/DocTypeItemAddModel.dart';
-import 'package:VinMediaCapture/objectmodel/doctypeguide.dart';
-import 'package:VinMediaCapture/objectmodel/doctypeguideinsertmodel.dart';
 import 'package:VinMediaCapture/objectmodel/enum.dart';
 import 'package:VinMediaCapture/objectmodel/mobileresult.dart';
 import 'package:VinMediaCapture/piaggio/barcode_scan_screen.dart';
@@ -24,6 +19,7 @@ class DetailModelScreen extends StatefulWidget {
   _DetailModelScreenState createState() => _DetailModelScreenState();
 }
 
+int ViewVinCode = 1;
 String currentSessionText = "";
 
 class _DetailModelScreenState extends State<DetailModelScreen>
@@ -42,6 +38,9 @@ class _DetailModelScreenState extends State<DetailModelScreen>
     sessionManager
         .get("currentSession")
         .then((value) => currentSessionText = value);
+
+    sessionManager.get("ViewVinCode").then((value) => ViewVinCode = value);
+
     DocTypeModelListData.getAttrDataType(currentSessionText).then((value) => {
           setState(() {
             modelList = value;
@@ -146,65 +145,69 @@ class _DetailModelScreenState extends State<DetailModelScreen>
                         child: const Text('Back'),
                       ),
                     )),
-                    Container(
-                        //width: MediaQuery.of(context).size.width * 0.3,
-                        child: Expanded(
-                            child: ElevatedButton(
-                      onPressed: () async {
-                        try {
-                          bool hasError = false;
-                          for (var element in modelList) {
-                            if (element.isMandatory) {
-                              if (element.attrDataType ==
-                                  EAttrDataType.VARCHAR) {
-                                if (element.textValue.isEmpty ||
-                                    element.textValue.length == 0) {
-                                  element.errorValidate =
-                                      "Bạn phải nhập dữ liệu";
-                                  hasError = true;
-                                } else {
-                                  element.errorValidate = "";
-                                }
-                              } else if (element.attrDataType ==
-                                  EAttrDataType.IMGCAPT) {
-                                if (element.assetImage.isEmpty &&
-                                    element.textValue.length == 0) {
-                                  element.errorValidate =
-                                      "Bạn phải nhập dữ liệu ảnh";
-                                  hasError = true;
-                                } else {
-                                  element.textValue = element.assetImage;
-                                  element.errorValidate = "";
+                    Visibility(
+                        visible: ViewVinCode == 1 ? false : true,
+                        child: Container(
+
+                            //width: MediaQuery.of(context).size.width * 0.3,
+                            child: Expanded(
+                                child: ElevatedButton(
+                          onPressed: () async {
+                            try {
+                              bool hasError = false;
+                              for (var element in modelList) {
+                                if (element.isMandatory) {
+                                  if (element.attrDataType ==
+                                      EAttrDataType.VARCHAR) {
+                                    if (element.textValue.isEmpty ||
+                                        element.textValue.length == 0) {
+                                      element.errorValidate =
+                                          "Bạn phải nhập dữ liệu";
+                                      hasError = true;
+                                    } else {
+                                      element.errorValidate = "";
+                                    }
+                                  } else if (element.attrDataType ==
+                                      EAttrDataType.IMGCAPT) {
+                                    if (element.assetImage.isEmpty &&
+                                        element.textValue.length == 0) {
+                                      element.errorValidate =
+                                          "Bạn phải nhập dữ liệu ảnh";
+                                      hasError = true;
+                                    } else {
+                                      element.textValue = element.assetImage;
+                                      element.errorValidate = "";
+                                    }
+                                  }
                                 }
                               }
-                            }
-                          }
-                          if (hasError) {
-                            setState(() {});
-                            return;
-                          }
-                          var data = await PostDocTypeGuideItem(modelList);
-                          var rs = MobileResult.fromJson(data.data);
-                          if (rs.resultCode > 0) {
-                            toastmessage('Lưu dữ liệu thành công');
-                            //Gửi thành công. Xóa các file cũ. back về phiên mới
-                            for (var element in modelList) {
-                              if (element.assetImage.length > 0) {
-                                await deleteFile(element.assetImage);
+                              if (hasError) {
+                                setState(() {});
+                                return;
                               }
+                              var data = await PostDocTypeGuideItem(modelList);
+                              var rs = MobileResult.fromJson(data.data);
+                              if (rs.resultCode > 0) {
+                                toastmessage('Lưu dữ liệu thành công');
+                                //Gửi thành công. Xóa các file cũ. back về phiên mới
+                                for (var element in modelList) {
+                                  if (element.assetImage.length > 0) {
+                                    await deleteFile(element.assetImage);
+                                  }
+                                }
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          BarCodeScanScreen()),
+                                );
+                              }
+                            } catch (e) {
+                              var a = 1;
                             }
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => BarCodeScanScreen()),
-                            );
-                          }
-                        } catch (e) {
-                          var a = 1;
-                        }
-                      },
-                      child: const Text('Lưu'),
-                    )))
+                          },
+                          child: const Text('Lưu'),
+                        )))),
                   ])
             ],
           ),

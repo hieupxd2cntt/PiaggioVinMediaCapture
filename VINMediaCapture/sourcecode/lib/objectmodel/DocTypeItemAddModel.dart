@@ -10,21 +10,23 @@ class DocTypeItemAddModel {
   Model? model;
   DocTypeItemAttr? docTypeItemAttr;
   DocTypeItemAddModel(this.docTypeItems, this.model, this.docTypeItemAttr);
-
+  String prodocValue = "";
   DocTypeItemAddModel.fromJson(Map<String, dynamic> json) {
     docTypeItems = json["DocTypeItems"] == null
         ? null
         : DocTypeItems.fromJson(json["DocTypeItems"]);
-    //model = json["Model"] == null ? null : Model.fromJson(json["Model"]);
+    model = json["Model"] == null ? null : Model.fromJson(json["Model"]);
     docTypeItemAttr = json["DocTypeItemAttr"] == null
         ? null
         : DocTypeItemAttr.fromJson(json["DocTypeItemAttr"]);
+    prodocValue = json["ProdocValue"] == null ? "" : json["ProdocValue"];
   }
   Map<String, dynamic> toJson() {
     return {
       'docTypeItems': docTypeItems!.toJson(),
       'model': model!.toJson(),
       'docTypeItemAttr': docTypeItemAttr!.toJson(),
+      'prodocValue': prodocValue
     };
   }
 }

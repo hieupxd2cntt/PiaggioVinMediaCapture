@@ -37,6 +37,17 @@ Future<http.Response> GetListAttribute(String barcode) async {
   return response;
 }
 
+Future<http.Response> GetListAttributeByVinCode(String vinCode) async {
+  var response = await http.post(
+    Uri.parse(apiUrl + 'Mobile/GetListAttributeByVinCode'),
+    headers: <String, String>{
+      'Content-Type': 'application/json; charset=UTF-8',
+    },
+    body: json.encode(vinCode),
+  );
+  return response;
+}
+
 Future<Response> PostDocTypeGuideItem(
     List<DocTypeModelListData> modelList) async {
   List<MultipartFile> images = [];

@@ -12,7 +12,14 @@ import 'package:VinMediaCapture/piaggio/detail_model_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 
+int ViewVincode = 0;
+
 class VinCodeScanScreen extends StatefulWidget {
+  @override
+  _VinCodeScanScreenState createState() => _VinCodeScanScreenState();
+}
+
+class ViewVinCodeScanScreen extends StatefulWidget {
   @override
   _VinCodeScanScreenState createState() => _VinCodeScanScreenState();
 }
@@ -172,6 +179,17 @@ class _VinCodeScanScreenState extends State<VinCodeScanScreen> {
                           await sessionManager
                               .get("currentBarcode")
                               .then((value) => currentBarCode = value);
+
+                          var getListAttribute =
+                              await GetListAttribute(currentBarCode);
+                          List<DocTypeItemAddModel> attrs = [];
+                          var tagObjsJson =
+                              jsonDecode(getListAttribute.body) as List;
+                          if (tagObjsJson.length == 0) {
+                            toastmessage(
+                                "Không có thuộc tính được cấu hính cho barcode này.");
+                            return;
+                          }
                           String temp = currentBarCode + "-" + txtVinCode.text;
                           await sessionManager.set("currentSession", temp);
                           Navigator.push(

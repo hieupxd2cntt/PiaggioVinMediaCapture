@@ -39,16 +39,11 @@ namespace VINMediaCaptureApi.Controllers
         [Route("Login")]
         public async Task<Users> Login(Users user)
         {
-            StreamWriter sw = new StreamWriter("D://LogPiagio.txt");
-            sw.WriteLine("User=" + user.LoginName);
-            sw.Flush();
-            sw.Dispose();
-            sw.Close();
             try
             {
                 await _context.Database.OpenConnectionAsync(default);
                 var passWord = SystemMethod.sha256_hash(user.Password);
-                var userData = (from u in _context.Users.Where(x => x.LoginName.ToLower() == user.LoginName && x.Password == passWord)
+                var userData = (from u in _context.Users.Where(x => x.LoginName.ToLower() == user.LoginName.ToLower() && x.Password == passWord)
                                 select u)
                                .ToList();
                 if (userData != null && userData.Any())

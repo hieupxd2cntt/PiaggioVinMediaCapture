@@ -23,6 +23,11 @@ namespace VINMediaCapture.Controllers
         {
             return View();
         }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "Login");
+        }
         [HttpPost]
         public async Task< IActionResult> Login(Users user)
         {
@@ -35,6 +40,11 @@ namespace VINMediaCapture.Controllers
             
             if (userData != null)
             {
+                if (userData.User==null)
+                {
+                    ViewBag.Message = "Tên đăng nhập hoặc mật khẩu không chính xác";
+                    return View(user);
+                }
                 HttpContext.Session.SetString(ESession.User.ToString(), JsonConvert.SerializeObject(userData));
                 return RedirectToAction("Index", "Home");
             }

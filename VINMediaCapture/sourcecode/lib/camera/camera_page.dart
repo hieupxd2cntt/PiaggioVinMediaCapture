@@ -7,6 +7,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_session_manager/flutter_session_manager.dart';
 import 'package:gallery_saver/gallery_saver.dart';
+import 'package:intl/intl.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -75,12 +76,14 @@ class _CameraPageState extends State<CameraPage> {
               if (!await d.exists()) {
                 await d.create();
               }
-
-              // Construct the path where the image should be saved using the
-              // pattern package.
+              String str =
+                  widget.modelData == null ? "" : widget.modelData!.titleTxt;
+              String newStr = str;
               var fileName = (widget.modelData?.currentSession).toString() +
                   "-" +
-                  ((widget.modelData?.titleTxt).toString()) +
+                  ((newStr).toString()) +
+                  "_" +
+                  DateFormat("yyyyMMdd_HHmmss").format(DateTime.now()) +
                   ".png";
               final path = join(
                 // Store the picture in the temp directory.
@@ -88,7 +91,6 @@ class _CameraPageState extends State<CameraPage> {
                 dir,
                 fileName,
               );
-              toastmessage("image path=" + path);
               XFile t = await controller.takePicture();
               t.saveTo(path);
               pictureFile = path;

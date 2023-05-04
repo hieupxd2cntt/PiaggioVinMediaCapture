@@ -113,3 +113,4 @@ E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\ob
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\VINMediaCaptureApi.pdb
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\VINMediaCaptureApi.genruntimeconfig.cache
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\ref\VINMediaCaptureApi.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCaptureApi\obj\Debug\net6.0\VINMediaCaptureApi.MvcApplicationPartsAssemblyInfo.cs
