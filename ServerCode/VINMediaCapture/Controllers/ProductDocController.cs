@@ -8,6 +8,7 @@ using VINMediaCapture.Service;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using VINMediaCaptureEntities.Enum;
 using System.Reflection;
+using System.Net.WebSockets;
 
 namespace VINMediaCapture.Controllers
 {

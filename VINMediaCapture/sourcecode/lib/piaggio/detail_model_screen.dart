@@ -1,6 +1,8 @@
 import 'package:VinMediaCapture/apilib/apilib.dart';
 import 'package:VinMediaCapture/common/common.dart';
 import 'package:VinMediaCapture/login/Toast.dart';
+import 'package:VinMediaCapture/login/loginscreen.dart';
+import 'package:VinMediaCapture/login/menuscreen.dart';
 import 'package:VinMediaCapture/model/doc_type_model_list_data.dart';
 import 'package:VinMediaCapture/model/model_list_view.dart';
 import 'package:VinMediaCapture/objectmodel/enum.dart';
@@ -443,9 +445,39 @@ class _DetailModelScreenState extends State<DetailModelScreen>
               ),
             ),
             Container(
-              width: AppBar().preferredSize.height + 40,
+              alignment: Alignment.centerRight,
+              width: AppBar().preferredSize.height,
               height: AppBar().preferredSize.height,
-            )
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(32.0),
+                  ),
+                  onTap: () {
+                    if (ViewVinCode == 1) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MenuScreen(),
+                        ),
+                      );
+                    } else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => loginscreen(),
+                        ),
+                      );
+                    }
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(Icons.home),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

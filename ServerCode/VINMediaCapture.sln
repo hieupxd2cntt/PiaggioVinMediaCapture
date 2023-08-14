@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TanvirArjel.EFCore.GenericR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TanvirArjel.EFCore.QueryRepository", "TanvirArjel.EFCore.QueryRepository\TanvirArjel.EFCore.QueryRepository.csproj", "{14F0C8C6-7E0C-497B-8303-7DCDA85186F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VINMediaCapture", "VINMediaCapture\VINMediaCapture.csproj", "{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VINMediaCapture", "VINMediaCapture\VINMediaCapture.csproj", "{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwainScan", "TwainScan\TwainScan.csproj", "{9048FCDD-EDA1-4D0F-9A8A-2E50337BB4B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDC8E72A-9A09-41CB-A248-895B8AE82EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9048FCDD-EDA1-4D0F-9A8A-2E50337BB4B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9048FCDD-EDA1-4D0F-9A8A-2E50337BB4B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9048FCDD-EDA1-4D0F-9A8A-2E50337BB4B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9048FCDD-EDA1-4D0F-9A8A-2E50337BB4B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -138,7 +138,7 @@ class _loginscreenState extends State<loginscreen> {
                               title: "Login",
                               tapfun: () async {
                                 if (emailcon.text == "admin" &&
-                                    passwordcon.text == "admin@123") {
+                                    passwordcon.text == "0706326686") {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(

@@ -24,7 +24,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
   TextEditingController txtTotalAttribute = new TextEditingController();
   @override
   void initState() {
-    txtBarcode.text = "SPTestVTDtest";
+    txtBarcode.text = "";
     super.initState();
   }
 
@@ -134,7 +134,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                   width: 4,
                   height: 10,
                 ),
-                Row(
+                /*Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Expanded(
@@ -177,7 +177,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                           ],
                         ),
                       )
-                    ]),
+                    ]),*/
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
@@ -258,7 +258,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                 controller: txtBarcode,
                 maxLines: null,
                 onChanged: (String txt) async {
-                  var getListAttribute =
+                  /*var getListAttribute =
                       await GetListAttribute(txtBarcode.text);
                   List<DocTypeItemAddModel> attrs = [];
                   var tagObjsJson = jsonDecode(getListAttribute.body) as List;
@@ -305,7 +305,7 @@ class _BarCodeScanScreenState extends State<BarCodeScanScreen> {
                     } catch (ew) {
                       toastmessage(ew.toString());
                     }
-                  }
+                  }*/
                 },
                 style: TextStyle(
                   fontFamily: AppTheme.fontName,
