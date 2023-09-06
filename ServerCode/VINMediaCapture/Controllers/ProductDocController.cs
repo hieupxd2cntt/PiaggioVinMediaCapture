@@ -37,9 +37,9 @@ namespace VINMediaCapture.Controllers
             data.FromDate = fromDate.ToString("dd/MM/yyyy");
             return View(data);
         }
-        public async Task<IActionResult> LoadDetailProduct(string vinCode,int productDoc)
+        public async Task<IActionResult> LoadDetailProduct(string vinCode,int productDoc,int docType)
         {
-            var data = await _productDocService.LoadDetailProductDoc(vinCode, productDoc);
+            var data = await _productDocService.LoadDetailProductDoc(vinCode, productDoc, docType);
             return PartialView(@"~/Views/ProductDoc/DetailProductDoc.cshtml", data);
         }
         [HttpPost]

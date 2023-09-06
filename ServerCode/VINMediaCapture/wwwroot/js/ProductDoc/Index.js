@@ -4,11 +4,11 @@
 }
 
 
-function LoadDetailProduct(vinCode, productDoc) {
+function LoadDetailProduct(vinCode, productDoc, docType) {
     $.ajax({
         type: 'POST',
         url: $("#urlLoadDetailProduct").val(),
-        data: jQuery.param({ vinCode: vinCode, productDoc: productDoc }),
+        data: jQuery.param({ vinCode: vinCode, productDoc: productDoc, docType: docType }),
         async: false,
         success: function (response) {
             debugger;

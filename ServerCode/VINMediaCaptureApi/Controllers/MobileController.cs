@@ -40,7 +40,7 @@ namespace VINMediaCaptureApi.Controllers
 
         [HttpPost]
         [Route("GetListAttribute")]
-        public async Task<string> GetListAttribute([FromBody] string barcode)
+        public async Task<string> GetListAttribute([FromBody] string barcode,int docTypeId=1)
         {
             var data = from d in _context.DocTypeItems
                        join da in _context.DocTypeItemAttr on d.ItemID equals da.ItemID
@@ -48,6 +48,7 @@ namespace VINMediaCaptureApi.Controllers
                        join ma in _context.Market on d.MarketID equals ma.MarketID
                        join c in _context.Color on d.ColorID equals c.ColorID
                        where m.ModelCode + ma.MarketCode + c.ColorCode == barcode
+                       && d.DocTypeID== docTypeId
                        && d.ManualCollect == true
                        orderby d.DisplayIDX
                        select new DocTypeItemAddModel

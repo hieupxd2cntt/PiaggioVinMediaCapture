@@ -9,6 +9,7 @@ using VINMediaCaptureEntities.ViewModel;
 using VINMediaCaptureEntities;
 using System.Data.Entity;
 using VINMediaCaptureEntities.CommonFunction;
+using VINMediaCaptureEntities.Enum;
 
 namespace VINMediaCaptureApi.Controllers
 {
@@ -77,23 +78,52 @@ namespace VINMediaCaptureApi.Controllers
 
         [HttpGet]
         [Route("LoadDetailProductDoc")]
-        public async Task<DetailProductDocModel> LoadDetailProductDoc(string vinCode, int productDoc)
+        public async Task<DetailProductDocModel> LoadDetailProductDoc(string vinCode, int productDoc,int docType=(int)EDocType.ThuThapQC)
         {
-            var model = new DetailProductDocModel();
-            var data = from pd in _context.ProductDoc.Where(x => (x.VINCode.ToLower() == vinCode.ToLower() && x.Id==productDoc))
-                       join dt in _context.DocType on pd.DocTypeID equals dt.DocTypeID
-                       join pdv in _context.ProductDocVal on pd.Id equals pdv.ProductDocId
-                       join di in _context.DocTypeItems on pdv.ItemID equals di.ItemID
-                       join u in _context.Users on pd.UserID equals u.UserID
-                       join dia in _context.DocTypeItemAttr on pdv.AttrID equals dia.AttrID
-                       select new ProductDocValInfo
-                       {
-                           ProductDocVal= pdv,
-                           DocTypeItemAttr=dia,
-                           DocTypeItem=di,
-                           User=u,
-                       };
-            model.ProductDocValInfo = data.ToList();
+            var model = new DetailProductDocModel { DocType=docType};
+            model.Vincode = vinCode;
+            if (docType == (int)EDocType.ThuThapQC)
+            {
+                var data = from pd in _context.ProductDoc.Where(x => (x.VINCode.ToLower() == vinCode.ToLower() && x.Id == productDoc))
+                           join dt in _context.DocType on pd.DocTypeID equals dt.DocTypeID
+                           join pdv in _context.ProductDocVal on pd.Id equals pdv.ProductDocId
+                           join di in _context.DocTypeItems on pdv.ItemID equals di.ItemID
+                           join u in _context.Users on pd.UserID equals u.UserID
+                           join dia in _context.DocTypeItemAttr on pdv.AttrID equals dia.AttrID
+                           select new ProductDocValInfo
+                           {
+                               ProductDocVal = pdv,
+                               DocTypeItemAttr = dia,
+                               DocTypeItem = di,
+                               User = u,
+                           };
+                model.ProductDocValInfo = data.ToList();
+            }
+            else
+            {
+                var data = from pd in _context.ProductDoc.Where(x => (x.VINCode.ToLower() == vinCode.ToLower() && x.Id == productDoc))
+                           join dt in _context.DocType on pd.DocTypeID equals dt.DocTypeID
+                           join pdv in _context.ProductDocVal on pd.Id equals pdv.ProductDocId
+                           join di in _context.DocTypeItems on pdv.ItemID equals di.ItemID
+                           join u in _context.Users on pd.UserID equals u.UserID
+                           //join dia in _context.DocTypeItemAttr on pdv.AttrID equals dia.AttrID
+                           select new ProductDocValInfo
+                           {
+                               ProductDocVal = pdv,
+                               //DocTypeItemAttr = dia,
+                               DocTypeItem = di,
+                               User = u,
+                           };
+                model.ProductDocValInfo = data.ToList();
+            }
+            if (model.ProductDocValInfo!=null && model.ProductDocValInfo.Any())
+            {
+                var docTypeItem= model.ProductDocValInfo.First().DocTypeItem;
+                model.Model = _context.Model.FirstOrDefault(x => x.ModelID == docTypeItem.ModelID);
+                model.Color = _context.Color.FirstOrDefault(x => x.ColorID == docTypeItem.ColorID);
+                model.Market = _context.Market.FirstOrDefault(x => x.MarketID== docTypeItem.MarketID);
+
+            }
             return model;
         }
     }

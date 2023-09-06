@@ -48,9 +48,17 @@ namespace VINMediaCaptureEntities.ViewModel
     public class DetailProductDocModel
     {
         public List<ProductDocValInfo> ProductDocValInfo { get; set; }
+        public int DocType { get; set; }
+        public Color Color { get; set; }
+        public Market Market{ get; set; }
+        public Entities.Model Model { get; set; }
+        public string Vincode { get; set; }
         public DetailProductDocModel()
         {
             ProductDocValInfo = new List<ProductDocValInfo>();
+            Color = new Color();
+            Market = new Market();
+            Model = new Entities.Model();
         }
     }
     public class ProductDocValInfo

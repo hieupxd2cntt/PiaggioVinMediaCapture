@@ -46,7 +46,7 @@
                                                 @{
                                                     foreach (var item in models)
                                                     {
-                                                            <option value="@item.ModelID">@item.ModelName</option>
+                                                                <option value="@item.ModelID">@item.ModelName</option>
                                                     }
                                                 }
                                             </select>
@@ -62,7 +62,7 @@
                                                 @{
                                                     foreach (var item in markets)
                                                     {
-                                                            <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
+                                                                <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
                                                     }
                                                 }
                                             </select>
@@ -76,7 +76,7 @@
                                                 @{
                                                     foreach (var item in colors)
                                                     {
-                                                            <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
+                                                                <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
                                                     }
                                                 }
                                             </select>
@@ -92,7 +92,7 @@
                                                 @{
                                                     foreach (var item in docTypes)
                                                     {
-                                                        <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
+                                                            <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
                                                     }
                                                 }
                                             </select>
@@ -144,22 +144,22 @@
                                             if
                                             (Model.ProductDocInfos == null || !Model.ProductDocInfos.Any())
                                             {
-                                                <td colspan="8">Không có dữ liệu</td>
+                                                    <td colspan="8">Không có dữ liệu</td>
                                             }
                                             else
                                             {
                                                 foreach (var item in Model.ProductDocInfos)
                                                 {
-                                                    <tr>
-                                                    <td><a href="#" data-toggle="modal" data-target="#exampleModal" onclick="LoadDetailProduct('@item.ProductDoc.VINCode',@item.ProductDoc.Id)">@item.ProductDoc.VINCode</a> </td>
-                                                        <td>@item.Model.ModelCode</td>
-                                                        <td>@item.Market.MarketCode</td>
-                                                        <td>@item.Color.ColorCode</td>
-                                                        <td>@(String.Format("{0}{1}{2}", item.Model.ModelCode, item.Market.MarketCode, item.Color.ColorCode))</td>
-                                                        <td>@item.ProductDoc.DocTypeDate.ToString("dd/MM/yyyy HH:mm:ss")</td>
-                                                        <td>@item.User.LoginName</td>
-                                                        <td>@item.DocType.DocTypeName</td>
-                                                    </tr>
+                                                        <tr>
+                                                        <td><a href="#" data-toggle="modal" data-target="#exampleModal" onclick="LoadDetailProduct('@item.ProductDoc.VINCode',@item.ProductDoc.Id,@item.DocType.DocTypeID)">@item.ProductDoc.VINCode</a> </td>
+                                                            <td>@item.Model.ModelCode</td>
+                                                            <td>@item.Market.MarketCode</td>
+                                                            <td>@item.Color.ColorCode</td>
+                                                            <td>@(String.Format("{0}{1}{2}", item.Model.ModelCode, item.Market.MarketCode, item.Color.ColorCode))</td>
+                                                            <td>@item.ProductDoc.DocTypeDate.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                                                            <td>@item.User.LoginName</td>
+                                                            <td>@item.DocType.DocTypeName</td>
+                                                        </tr>
                                                 }
                                             }
                                         }
@@ -170,9 +170,9 @@
                                 @{
                                     if (Model.TotalRecord > Model.PageSize)
                                     {
-                                        <div class="col-md-12 col-ld-12 no-padding">
-                                            @Html.Partial("_pagination", new SortAndPageModel { PageSize = Model.PageSize, TotalRecordCount = Model.TotalRecord, CurrentPageIndex = Model.CurrPage })
-                                        </div>
+                                            <div class="col-md-12 col-ld-12 no-padding">
+                                                @Html.Partial("_pagination", new SortAndPageModel { PageSize = Model.PageSize, TotalRecordCount = Model.TotalRecord, CurrentPageIndex = Model.CurrPage })
+                                            </div>
                                     }
                                 }
                             </div>
@@ -195,7 +195,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" id="detail-body">
+            <div class="modal-body" id="detail-body" style="width:900px;">
                 
             </div>
             <div class="modal-footer">

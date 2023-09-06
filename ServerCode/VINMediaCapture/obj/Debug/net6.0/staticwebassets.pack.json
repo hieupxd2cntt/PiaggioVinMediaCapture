@@ -15673,6 +15673,18 @@
       "PackagePath": "staticwebassets\\uploads\\ProductDocVal\\MJ7M66700NJ001040y\\SPTestVTDtest-MJ7M66700NJ001040y-Thuộc tính 1.png"
     },
     {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\321077468_1165997737355550_3393505625703392534_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\321077468_1165997737355550_3393505625703392534_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\327554297_885404249370084_7372621672845577870_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\327554297_885404249370084_7372621672845577870_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg",
+      "PackagePath": "staticwebassets\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.VINMediaCapture.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

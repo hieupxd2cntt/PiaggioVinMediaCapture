@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k2nmfHkUvR1ndYKRsMfrp4yfF8Ni31pmnWpFz+DuNOo=",
+  "Hash": "LJ6UqPgbHXBgiRQNFj+e/M82bY5/Ku2VkqNX3VR8mTo=",
   "Source": "VINMediaCapture",
   "BasePath": "_content/VINMediaCapture",
   "Mode": "Default",
@@ -66638,6 +66638,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\ProductDocVal\\MJ7M66700NJ001040y\\SPTestVTDtest-MJ7M66700NJ001040y-Thuộc tính 1.png"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\321077468_1165997737355550_3393505625703392534_n.jpg",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/321077468_1165997737355550_3393505625703392534_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\321077468_1165997737355550_3393505625703392534_n.jpg"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\327554297_885404249370084_7372621672845577870_n.jpg",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/327554297_885404249370084_7372621672845577870_n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\327554297_885404249370084_7372621672845577870_n.jpg"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg"
     }
   ]
 }

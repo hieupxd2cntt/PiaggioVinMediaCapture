@@ -1,43 +1,73 @@
 ﻿@using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
 @model DetailProductDocModel
-<h2>Test nè</h2>
+<h2>@(String.Format("{0} - {1} -{2}",Model.Model.ModelName, String.Format("{0}{1}{2}", Model.Model.ModelCode, Model.Market.MarketCode, Model.Color.ColorCode),Model.Vincode))</h2>
 <table class="table table-bordered">
     <thead>
     <th>Tên thuộc tính</th>
-    <th>Kiểu dữ liệu</th>
+        @{
+            if (Model.DocType == (int)EDocType.ThuThapQC)
+            {
+                <th>Kiểu dữ liệu</th>
+            }
+        }
+
     <th>Giá trị</th>
     </thead>
     <tbody id="tbodyModels">
         @{
-            if (Model.ProductDocValInfo == null || !Model.ProductDocValInfo.Any())
+            if (Model.DocType == (int)EDocType.ThuThapQC)
             {
-            <td colspan="3">Không có dữ liệu</td>
+                if (Model.ProductDocValInfo == null || !Model.ProductDocValInfo.Any())
+                {
+                <td colspan="3">Không có dữ liệu</td>
+                }
+                else
+                {
+                    foreach (var item in Model.ProductDocValInfo)
+                    {
+                    <tr>
+                        <td>@item.DocTypeItem.ItemName</td>
+                        <td>@(((EAttrDataType)item.DocTypeItemAttr.AttrDataType).GetDescription())</td>
+                        <td>
+                                @{
+                                    if (item.DocTypeItemAttr.AttrDataType == (int)EAttrDataType.IMGCAPT)
+                                    {
+                                    <img src="@item.ProductDocVal.AttrValue" style="width:100px" />
+                                    }
+                                    else if (item.DocTypeItemAttr.AttrDataType == (int)EAttrDataType.BOOLEAN)
+                                    {
+                                    <label>@item.ProductDocVal.AttrValue</label>
+                                    }
+                                    else
+                                    {
+                                    <label>@item.ProductDocVal.AttrValue</label>
+                                    }
+                                }
+                        </td>
+                    </tr>
+                    }
+                }
             }
             else
             {
-                foreach (var item in Model.ProductDocValInfo)
+                if (Model.ProductDocValInfo == null || !Model.ProductDocValInfo.Any())
                 {
-                <tr>
-                    <td>@item.DocTypeItem.ItemName</td>
-                    <td>@(((EAttrDataType)item.DocTypeItemAttr.AttrDataType).GetDescription())</td>
-                    <td>
-                            @{
-                                if (item.DocTypeItemAttr.AttrDataType == (int)EAttrDataType.IMGCAPT)
-                                {
-                                <img src="@item.ProductDocVal.AttrValue" style="width:100px"/>
+                <td colspan="2">Không có dữ liệu</td>
+                }
+                else
+                {
+                    foreach (var item in Model.ProductDocValInfo)
+                    {
+                    <tr>
+                        <td>@item.DocTypeItem.ItemName</td>
+                        <td>
+                                @{
+                                <img src="@item.ProductDocVal.AttrValue" style="width:100px" />
                                 }
-                                else if(item.DocTypeItemAttr.AttrDataType == (int)EAttrDataType.BOOLEAN)
-                                {
-                                <label>@item.ProductDocVal.AttrValue</label>
-                                }
-                                else
-                                {
-                                <label>@item.ProductDocVal.AttrValue</label>
-                                }
-                            }
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
+                    }
                 }
             }
         }

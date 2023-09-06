@@ -25,6 +25,15 @@ namespace VINMediaCaptureEntities.Enum
         [Description("Ngừng sử dụng")]
         InActive = 1,
     }
+    public enum EDocType
+    {
+        [Description("Thu thập QC")]
+        [MappingTo("ThuThapQC")]
+        ThuThapQC = 1,
+        [Description("Thu thập tài liệu")]
+        [MappingTo("ThuThapTaiLieu")]
+        ThuThapTaiLieu = 2,
+    }
     public enum EAttrDataType
     {
         [Description("Text")]

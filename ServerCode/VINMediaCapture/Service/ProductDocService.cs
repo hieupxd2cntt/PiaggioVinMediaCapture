@@ -27,9 +27,9 @@ namespace VINMediaCapture.Service
             return docTypeItemsData;
         }
 
-        public async Task<DetailProductDocModel> LoadDetailProductDoc(string vinCode, int productDoc)
+        public async Task<DetailProductDocModel> LoadDetailProductDoc(string vinCode, int productDoc, int docType)
         {
-            var url = String.Format("ProductDoc/LoadDetailProductDoc?vinCode={0}&productDoc={1}", vinCode,productDoc);
+            var url = String.Format("ProductDoc/LoadDetailProductDoc?vinCode={0}&productDoc={1}&docType={2}", vinCode,productDoc, docType);
             var data = await LoadGetApi(url);
             var docTypeItemsData = JsonConvert.DeserializeObject<DetailProductDocModel>(data);
             return docTypeItemsData;
@@ -39,6 +39,6 @@ namespace VINMediaCapture.Service
     public interface IProductDocService
     {
         Task<ProductDocViewModel> Index(ProductDocViewModel search);
-        Task<DetailProductDocModel> LoadDetailProductDoc(string vinCode, int productDoc);
+        Task<DetailProductDocModel> LoadDetailProductDoc(string vinCode, int productDoc,int docType);
     }
 }

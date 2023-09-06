@@ -49,7 +49,6 @@ namespace VINMediaCapture.Service
                 clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
                 using (var client = new HttpClient(clientHandler))
                 {
-                   
                     var uri = _remoteServiceBaseUrl + url;
                     var content = "";
                     try
@@ -59,7 +58,6 @@ namespace VINMediaCapture.Service
                     }
                     catch (Exception e1)
                     {
-
                         System.Diagnostics.Debug.WriteLine("hieu=" + e1.ToString());
                     }
                     return content;
