@@ -82,5 +82,11 @@ namespace VINMediaCaptureApi.Controllers
             }
             return null;
         }
+        [HttpGet]
+        [Route("GetSystemDate")]
+        public async Task<string> GetSystemDate()
+        {
+            return DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+        }
     }
 }

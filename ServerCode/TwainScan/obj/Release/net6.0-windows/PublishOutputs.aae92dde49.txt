@@ -1,0 +1,9 @@
+E:\PublishAllProject\WinformDeploy\TwainScan.exe
+E:\PublishAllProject\WinformDeploy\TwainScan.dll
+E:\PublishAllProject\WinformDeploy\TwainScan.deps.json
+E:\PublishAllProject\WinformDeploy\TwainScan.runtimeconfig.json
+E:\PublishAllProject\WinformDeploy\TwainScan.pdb
+E:\PublishAllProject\WinformDeploy\TwainDotNet.WinFroms.dll
+E:\PublishAllProject\WinformDeploy\TwainDotNet.Wpf.dll
+E:\PublishAllProject\WinformDeploy\TwainDotNet.dll
+E:\PublishAllProject\WinformDeploy\log4net.dll
