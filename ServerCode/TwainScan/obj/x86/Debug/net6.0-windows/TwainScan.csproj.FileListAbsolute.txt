@@ -4,9 +4,7 @@ E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Deb
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\TwainScan.dll
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\TwainScan.pdb
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\TwainDotNet.WinFroms.dll
-E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\TwainDotNet.Wpf.dll
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\TwainDotNet.dll
-E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\log4net.dll
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\WeifenLuo.WinFormsUI.Docking.dll
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\VINMediaCaptureEntities.dll
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\VINMediaCaptureEntities.pdb
@@ -32,3 +30,5 @@ E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Deb
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\obj\x86\Debug\net6.0-windows\TwainScan.frmScanVincode.resources
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\obj\x86\Debug\net6.0-windows\TwainScan.frmLogin.resources
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\TwainScan.dll.config
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\log4net.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\log4net.xml

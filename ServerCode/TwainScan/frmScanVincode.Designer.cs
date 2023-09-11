@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 99);
+            this.label1.Location = new System.Drawing.Point(19, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // txtVinCode
             // 
-            this.txtVinCode.Location = new System.Drawing.Point(111, 96);
+            this.txtVinCode.Location = new System.Drawing.Point(111, 79);
             this.txtVinCode.Name = "txtVinCode";
             this.txtVinCode.Size = new System.Drawing.Size(392, 23);
             this.txtVinCode.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(111, 137);
+            this.btnBack.Location = new System.Drawing.Point(110, 124);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(192, 137);
+            this.button1.Location = new System.Drawing.Point(191, 124);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(577, 306);
+            this.ClientSize = new System.Drawing.Size(515, 174);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtVinCode);

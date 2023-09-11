@@ -30,7 +30,11 @@ namespace TwainScan
                 Common.CurrentValue.CurrentAttributeModel = data;
                 CurrentValue.Barcode = txtBarcode.Text.Trim();
                 frmScanVincode frm=new frmScanVincode();
-                frm.ShowDialog();
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    MsgBox.Show("Phiên mới","OK");
+                    Common.CurrentValue.ClearCurrentBarcodeValue();
+                }
             }
             else
             {

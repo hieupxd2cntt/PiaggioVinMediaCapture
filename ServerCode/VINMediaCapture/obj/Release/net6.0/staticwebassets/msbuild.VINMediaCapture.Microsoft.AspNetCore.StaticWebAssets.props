@@ -62672,6 +62672,198 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\ProductDocVal\MJ7M66700NJ001040y\SPTestVTDtest-MJ7M66700NJ001040y-Thuộc tính 1.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\321077468_1165997737355550_3393505625703392534_n - Copy (2).jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/321077468_1165997737355550_3393505625703392534_n - Copy (2).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\321077468_1165997737355550_3393505625703392534_n - Copy (2).jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\321077468_1165997737355550_3393505625703392534_n - Copy.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/321077468_1165997737355550_3393505625703392534_n - Copy.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\321077468_1165997737355550_3393505625703392534_n - Copy.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\321077468_1165997737355550_3393505625703392534_n.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/321077468_1165997737355550_3393505625703392534_n.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\321077468_1165997737355550_3393505625703392534_n.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/327554297_885404249370084_7372621672845577870_n - Copy (2).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/327554297_885404249370084_7372621672845577870_n - Copy (3).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\327554297_885404249370084_7372621672845577870_n - Copy.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/327554297_885404249370084_7372621672845577870_n - Copy.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\327554297_885404249370084_7372621672845577870_n - Copy.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\327554297_885404249370084_7372621672845577870_n.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/327554297_885404249370084_7372621672845577870_n.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\327554297_885404249370084_7372621672845577870_n.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\4650C0EE-A5BC-4BFF-917E-417DD23BD41C - Copy (2).jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/4650C0EE-A5BC-4BFF-917E-417DD23BD41C - Copy (2).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\4650C0EE-A5BC-4BFF-917E-417DD23BD41C - Copy (2).jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\4650C0EE-A5BC-4BFF-917E-417DD23BD41C - Copy (3).jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/4650C0EE-A5BC-4BFF-917E-417DD23BD41C - Copy (3).jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\4650C0EE-A5BC-4BFF-917E-417DD23BD41C - Copy (3).jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\4650C0EE-A5BC-4BFF-917E-417DD23BD41C - Copy.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/4650C0EE-A5BC-4BFF-917E-417DD23BD41C - Copy.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\4650C0EE-A5BC-4BFF-917E-417DD23BD41C - Copy.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>VINMediaCapture</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/VINMediaCapture</BasePath>
+      <RelativePath>uploads/TaiwanScan/SPTestVTDtest/Vespa SprintVTDBlue/4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\TaiwanScan\SPTestVTDtest\Vespa SprintVTDBlue\4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\VINMediaCapture.bundle.scp.css))">
       <SourceType>Package</SourceType>
       <SourceId>VINMediaCapture</SourceId>

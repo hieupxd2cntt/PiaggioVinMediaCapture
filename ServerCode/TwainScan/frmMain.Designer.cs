@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -129,7 +130,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.lblVersion);
             this.splitContainer1.Size = new System.Drawing.Size(1166, 33);
-            this.splitContainer1.SplitterDistance = 488;
+            this.splitContainer1.SplitterDistance = 733;
             this.splitContainer1.TabIndex = 0;
             // 
             // lblServerDate
@@ -137,7 +138,7 @@
             this.lblServerDate.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblServerDate.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblServerDate.ForeColor = System.Drawing.Color.Blue;
-            this.lblServerDate.Location = new System.Drawing.Point(175, 0);
+            this.lblServerDate.Location = new System.Drawing.Point(188, 0);
             this.lblServerDate.Name = "lblServerDate";
             this.lblServerDate.Size = new System.Drawing.Size(313, 33);
             this.lblServerDate.TabIndex = 3;
@@ -150,7 +151,7 @@
             this.lblServerDateText.ForeColor = System.Drawing.Color.Blue;
             this.lblServerDateText.Location = new System.Drawing.Point(0, 0);
             this.lblServerDateText.Name = "lblServerDateText";
-            this.lblServerDateText.Size = new System.Drawing.Size(175, 33);
+            this.lblServerDateText.Size = new System.Drawing.Size(188, 33);
             this.lblServerDateText.TabIndex = 2;
             this.lblServerDateText.Text = "Thời gian hệ thống:";
             // 
@@ -159,11 +160,12 @@
             this.lblVersion.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblVersion.ForeColor = System.Drawing.Color.Blue;
-            this.lblVersion.Location = new System.Drawing.Point(482, 0);
+            this.lblVersion.Location = new System.Drawing.Point(192, 0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(192, 33);
+            this.lblVersion.Size = new System.Drawing.Size(237, 33);
             this.lblVersion.TabIndex = 0;
             this.lblVersion.Text = "Version";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmMain
             // 
@@ -174,10 +176,11 @@
             this.ClientSize = new System.Drawing.Size(1166, 623);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMain";
+            this.Text = "Hệ thống Scan tài liệu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);

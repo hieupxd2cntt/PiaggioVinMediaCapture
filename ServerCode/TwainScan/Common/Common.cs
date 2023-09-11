@@ -18,7 +18,7 @@ namespace TwainScan.Common
             var xml = new XMLProcess();
             var configModel=new ConfigModel();
             var configFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData) + ConstantConfig.DefaultScanConfig;
-            if (!File.Exists(configFile))
+            if (File.Exists(configFile))
             {
                 var xmlString=xml.LoadXmlFromFile(configFile);
                 configModel=(ConfigModel)xml.LoadObjectFromXMLString(xmlString,typeof(ConfigModel));
@@ -49,5 +49,10 @@ namespace TwainScan.Common
         public static String VinCode { get; set; }
         public static UserLoginModel User { get; set; }
         public static List<DocTypeItemAddModel> CurrentAttributeModel { get; set; }
+        public static void ClearCurrentBarcodeValue()
+        {
+            Barcode = "";
+            VinCode = "";
+        }
     }
 }

@@ -15,21 +15,6 @@
           }
         }
       },
-      "TwainDotNet/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/TwainDotNet.WinFroms.dll": {},
-          "lib/TwainDotNet.Wpf.dll": {},
-          "lib/TwainDotNet.dll": {},
-          "lib/log4net.dll": {}
-        },
-        "runtime": {
-          "lib/TwainDotNet.WinFroms.dll": {},
-          "lib/TwainDotNet.Wpf.dll": {},
-          "lib/TwainDotNet.dll": {},
-          "lib/log4net.dll": {}
-        }
-      },
       "WeifenLuo.WinFormsUI.Docking/2.1.0": {
         "type": "package",
         "compile": {
@@ -82,21 +67,6 @@
         "packageIcon.png"
       ]
     },
-    "TwainDotNet/1.0.0": {
-      "sha512": "e6vf9stFVj1RhwRUDEqa5rlQLcfkA+SVtgx/5GxtxbPGMTWHbv8rE4oJd98Ze9lLG7NZRQ6gTKsUxC7Yu/njSA==",
-      "type": "package",
-      "path": "twaindotnet/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/TwainDotNet.WinFroms.dll",
-        "lib/TwainDotNet.Wpf.dll",
-        "lib/TwainDotNet.dll",
-        "lib/log4net.dll",
-        "twaindotnet.1.0.0.nupkg.sha512",
-        "twaindotnet.nuspec"
-      ]
-    },
     "WeifenLuo.WinFormsUI.Docking/2.1.0": {
       "sha512": "jpd15CVlqEJR+nvg9WZX+al/M9D5T6wpz4Xoi+bbNv94RUk9EmDFEiG29fb8eO1RPE422t01//ACS8WCF9ks5w==",
       "type": "package",
@@ -118,7 +88,6 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Newtonsoft.Json >= 13.0.2",
-      "TwainDotNet >= 1.0.0",
       "VINMediaCaptureEntities >= 1.0.0",
       "WeifenLuo.WinFormsUI.Docking >= 2.1.0"
     ]
@@ -176,10 +145,6 @@
             "target": "Package",
             "version": "[13.0.2, )"
           },
-          "TwainDotNet": {
-            "target": "Package",
-            "version": "[1.0.0, )"
-          },
           "WeifenLuo.WinFormsUI.Docking": {
             "target": "Package",
             "version": "[2.1.0, )"
@@ -227,16 +192,6 @@
     }
   },
   "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'TwainDotNet 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "TwainDotNet",
-      "targetGraphs": [
-        "net6.0-windows7.0"
-      ]
-    },
     {
       "code": "NU1701",
       "level": "Warning",

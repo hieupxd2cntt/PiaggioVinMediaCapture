@@ -1,5 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Target Name="SetAssemblyVersion" BeforeTargets="BeforeCompile">
+    <FormatVersion Version="$(ApplicationVersion)" Revision="$(ApplicationRevision)">
+      <Output PropertyName="AssemblyVersion" TaskParameter="OutputVersion" />
+    </FormatVersion>
+    <FormatVersion Version="$(ApplicationVersion)" Revision="$(ApplicationRevision)">
+      <Output PropertyName="FileVersion" TaskParameter="OutputVersion" />
+    </FormatVersion>
+</Target>
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
@@ -7,11 +14,20 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Platforms>AnyCPU;x86</Platforms>
+    <PackageIcon>printer.png</PackageIcon>
+    <ApplicationIcon>printer.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="printer.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="printer.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="TwainDotNet" Version="1.0.0" />
     <PackageReference Include="WeifenLuo.WinFormsUI.Docking" Version="2.1.0" />
   </ItemGroup>
 
@@ -20,11 +36,30 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Dlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="TwainDotNet">
+      <HintPath>..\Dlls\TwainDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TwainDotNet.WinFroms">
+      <HintPath>..\Dlls\TwainDotNet.WinFroms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmScanVincode.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Update="Resource1.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -38,6 +73,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Resources\printer.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

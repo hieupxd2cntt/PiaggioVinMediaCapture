@@ -196,7 +196,8 @@
             this.Controls.Add(this.txtScanFolder);
             this.Controls.Add(this.label1);
             this.Name = "frmConfig";
-            this.Text = "frmConfig";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cấu hình hệ thống";
             this.Load += new System.EventHandler(this.frmConfig_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

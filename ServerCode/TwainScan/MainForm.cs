@@ -122,7 +122,11 @@ namespace TestApp
             var config = Common.GetConfig();
             var scanFilesPath = config.ScanFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
             var files = Directory.GetFiles(scanFilesPath);
-            var content = new MultipartFormDataContent();
+            if (files == null || !files.Any())
+            {
+                MsgBox.ShowError("Không tìm thấy tài liệu scan");
+                return;
+            }
             var currAttrs = CurrentValue.CurrentAttributeModel;
             var dataSendApi = new List<DocTypeModelListData>();
             foreach (var item in currAttrs)
@@ -143,12 +147,7 @@ namespace TestApp
                 MoveToSuccessFolder();
                 if(MsgBox.Show("Gửi tài liệu thành công","Thông báo")== DialogResult.OK)
                 {
-                    TwainScan.Common.CurrentValue.User = null;
-                    TwainScan.Common.CurrentValue.CurrentAttributeModel = null;
-                    TwainScan.Common.CurrentValue.Barcode = String.Empty;
-                    TwainScan.Common.CurrentValue.VinCode = String.Empty;
-                    var frm=new frmScanBarcode();
-                    frm.ShowDialog();
+                    this.DialogResult = DialogResult.OK;
                 }
             }
             else
@@ -160,61 +159,116 @@ namespace TestApp
         }
         private void MoveToSuccessFolder()
         {
-            var config = Common.GetConfig();
-            var scanFilesPath = config.ScanFolder + "/" + CurrentValue.Barcode;
-            var successFolder=config.ScanSuccessFolder;
-            Directory.Move(scanFilesPath, successFolder);
+            try
+            {
+                var config = Common.GetConfig();
+                var scanFilesPath = config.ScanFolder + "/" + CurrentValue.Barcode;
+                var successFolder = config.ScanSuccessFolder;
+                if (!Directory.Exists(successFolder))
+                {
+                    Directory.CreateDirectory(successFolder);
+                }
+                if (Directory.Exists(successFolder + "/" + CurrentValue.Barcode))
+                {
+                    Directory.Move(scanFilesPath, String.Format("{0}/{1}_{2}", successFolder, CurrentValue.Barcode,DateTime.Now.ToString("yyyyMMddHHmmss")));
+                }
+                else
+                {
+                    Directory.Move(scanFilesPath, successFolder + "/" + CurrentValue.Barcode);
+                }
+                
+            }
+            catch (Exception e)
+            {
+                MsgBox.ShowError("Không thể di chuyển sang Thư mục Scan thành công:" + e.Message);
+            }
+            
         }
         private void MoveToFailFolder()
         {
-            var config = Common.GetConfig();
-            var scanFilesPath = config.ScanFolder + "/" + CurrentValue.Barcode;
-            var failFolder = config.ScanFailFolder;
-            Directory.Move(scanFilesPath, failFolder);
+            try
+            {
+                var config = Common.GetConfig();
+                var scanFilesPath = config.ScanFolder + "/" + CurrentValue.Barcode;
+                var failFolder = config.ScanFailFolder;
+                if (Directory.Exists(failFolder + "/" + CurrentValue.Barcode))
+                {
+                    Directory.Move(scanFilesPath, String.Format("{0}/{1}_{2}", failFolder, CurrentValue.Barcode, DateTime.Now.ToString("yyyyMMddHHmmss")));
+                }
+                else
+                {
+                    Directory.Move(scanFilesPath, failFolder + "/" + CurrentValue.Barcode);
+                }
+                
+            }
+            catch (Exception e)
+            {
+                MsgBox.ShowError("Không thể di chuyển sang Thư mục Scan thất bại:" + e.Message);
+            }
+            
         }
         private MobileResult Send2Api(string url, List<DocTypeModelListData> obj)
         {
             var outPut = new MobileResult { ResultCode=-1};
-            var config = Common.GetConfig();
-            var scanFilesPath = config.ScanFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
-            var files = Directory.GetFiles(scanFilesPath);
-            HttpClientHandler clientHandler = new HttpClientHandler();
-            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-            MultipartFormDataContent mpform = new MultipartFormDataContent();
-            using (var httpClient = new HttpClient(clientHandler))
+            try
             {
-                var authUname = ConfigurationManager.AppSettings["UserNameApi"];
-                var authPass = ConfigurationManager.AppSettings["PasswordApi"];
-                var textBytes = Encoding.UTF8.GetBytes(authUname + ":" + authPass + ":" + CurrentValue.User.User.LoginName);
-                httpClient.DefaultRequestHeaders.Add("UserName", CurrentValue.User.User.LoginName);
-                var _authToken = Convert.ToBase64String(textBytes);
-                foreach (var item in files)
+                var config = Common.GetConfig();
+                var scanFilesPath = config.ScanFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
+                var files = Directory.GetFiles(scanFilesPath);
+                if (files == null || !files.Any())
                 {
-                    FileInfo arquivoInfo = new FileInfo(item);
-                    httpClient.DefaultRequestHeaders.Add("X-Requested-By", "AM-Request");
-                    
-                    string Name = arquivoInfo.FullName;
-                    using (FileStream fs = System.IO.File.OpenRead(Name))
+                    MsgBox.ShowError("Không tìm thấy tài liệu scan");
+                    outPut.ResultCode = -1;
+                    return outPut;
+                }
+                HttpClientHandler clientHandler = new HttpClientHandler();
+                clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+                if (CurrentValue.User == null)
+                {
+                    MsgBox.ShowError("Mất thông tin đăng nhập. Vui lòng đăng xuất hệ thống và thử lại");
+                    outPut.ResultCode = -1;
+                    return outPut;
+                }
+                MultipartFormDataContent mpform = new MultipartFormDataContent();
+                using (var httpClient = new HttpClient(clientHandler))
+                {
+                    var authUname = ConfigurationManager.AppSettings["UserNameApi"];
+                    var authPass = ConfigurationManager.AppSettings["PasswordApi"];
+                    var textBytes = Encoding.UTF8.GetBytes(authUname + ":" + authPass + ":" + CurrentValue.User.User.LoginName);
+                    httpClient.DefaultRequestHeaders.Add("UserName", CurrentValue.User.User.LoginName);
+                    var _authToken = Convert.ToBase64String(textBytes);
+                    foreach (var item in files)
                     {
-                        using (var streamContent = new StreamContent(fs))
-                        {
-                            var fileContent = new ByteArrayContent(streamContent.ReadAsByteArrayAsync().Result);
-                            mpform.Add(fileContent, Path.GetFileNameWithoutExtension(Name), Path.GetFileName(Name));
-                        }
-                    }                    
-                }
-                JsonSerializerSettings jsonSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-                var json = JsonConvert.SerializeObject(obj, jsonSettings);
-                mpform.Add(new StringContent(json), "docTypeModelListData");
-                try
-                {
-                    var response = httpClient.PostAsync(url, mpform).Result;
-                    outPut = JsonConvert.DeserializeObject<MobileResult>(response.Content.ReadAsStringAsync().Result);
-                }
-                catch (Exception e)
-                {
+                        FileInfo arquivoInfo = new FileInfo(item);
+                        httpClient.DefaultRequestHeaders.Add("X-Requested-By", "AM-Request");
 
+                        string Name = arquivoInfo.FullName;
+                        using (FileStream fs = System.IO.File.OpenRead(Name))
+                        {
+                            using (var streamContent = new StreamContent(fs))
+                            {
+                                var fileContent = new ByteArrayContent(streamContent.ReadAsByteArrayAsync().Result);
+                                mpform.Add(fileContent, Path.GetFileNameWithoutExtension(Name), Path.GetFileName(Name));
+                            }
+                        }
+                    }
+                    JsonSerializerSettings jsonSettings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
+                    var json = JsonConvert.SerializeObject(obj, jsonSettings);
+                    mpform.Add(new StringContent(json), "docTypeModelListData");
+                    try
+                    {
+                        var response = httpClient.PostAsync(url, mpform).Result;
+                        outPut = JsonConvert.DeserializeObject<MobileResult>(response.Content.ReadAsStringAsync().Result);
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MsgBox.ShowError("Không thể gửi dữ liệu:" + ex.Message);
             }
             return outPut;
         }
@@ -245,6 +299,11 @@ namespace TestApp
             pictureBox1.Image = imageLst.Images[currentImage];
             widthLabel.Text = "Width: " + imageLst.Images[currentImage].Width;
             heightLabel.Text = "Height: " + imageLst.Images[currentImage].Height;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

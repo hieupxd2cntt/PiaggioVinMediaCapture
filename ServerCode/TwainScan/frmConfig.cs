@@ -57,6 +57,8 @@ namespace TwainScan
             configModel.WebApi=txtApiUrl.Text.Trim();
             configModel.WebApp = txtHostUrl.Text.Trim();
             configModel.ScanFolder = txtScanFolder.Text.Trim();
+            configModel.ScanSuccessFolder = txtScanSuccessFolder.Text.Trim();
+            configModel.ScanFailFolder = txtScanFailFolder.Text.Trim();
             XMLProcess xMLProcess = new XMLProcess();
             var xml = xMLProcess.GetXMLFromObject(configModel);
             var configFile= System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData)+ "/TaiwanScan/TaiwanScanConfig.Xml";

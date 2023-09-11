@@ -39,7 +39,14 @@ namespace TwainScan
                 Common.CurrentValue.CurrentAttributeModel = data;
 
                 MainForm frm = new MainForm();
-                frm.ShowDialog();
+                if(frm.ShowDialog()== DialogResult.OK)
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
+            }
+            else
+            {
+                MsgBox.ShowError("Không tìm thấy thông tin thuộc tính của xe");
             }
         }
 

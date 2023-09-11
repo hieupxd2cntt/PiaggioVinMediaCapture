@@ -1,3 +1,4 @@
+using Microsoft.Win32;
 using TestApp;
 
 namespace TwainScan
@@ -15,5 +16,6 @@ namespace TwainScan
             ApplicationConfiguration.Initialize();
             Application.Run(new frmMain());
         }
+       
     }
 }

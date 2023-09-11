@@ -24,6 +24,15 @@ namespace TwainScan
             backgroundWorker1 = new BackgroundWorker();
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             backgroundWorker1.RunWorkerAsync();
+            try
+            {
+                lblVersion.Text = String.Format("Version: {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString()) ;
+            }
+            catch (Exception e)
+            {
+
+                lblVersion.Text = "Không lấy được Version hệ thống";
+            }
         }
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {

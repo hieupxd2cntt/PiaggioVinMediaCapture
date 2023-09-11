@@ -53,10 +53,6 @@
               "target": "Package",
               "version": "[13.0.2, )"
             },
-            "TwainDotNet": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
             "WeifenLuo.WinFormsUI.Docking": {
               "target": "Package",
               "version": "[2.1.0, )"
