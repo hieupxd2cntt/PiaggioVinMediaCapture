@@ -44,40 +44,47 @@ namespace TestApp
         public MainForm()
         {
             InitializeComponent();
-            ScanFolder = Config.ScanFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
-            ScanSuccessFolder = Config.ScanSuccessFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
-            ScanFailFolder = Config.ScanFailFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
-            if (CurrentValue.CurrentAttributeModel != null && CurrentValue.CurrentAttributeModel.Any())
+            try
             {
-                lblModelInfo.Text = CurrentValue.CurrentAttributeModel.FirstOrDefault().Model.ModelName;
-            }
-
-            if (!Directory.Exists(ScanFolder))
-            {
-                Directory.CreateDirectory(ScanFolder);
-            }
-            _twain = new Twain(new WinFormsWindowMessageHook(this));
-            imageLst.ImageSize = new Size(255, 255);
-            _twain.TransferImage += delegate (Object sender, TransferImageEventArgs args)
-            {
-                if (args.Image != null)
+                ScanFolder = Config.ScanFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
+                ScanSuccessFolder = Config.ScanSuccessFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
+                ScanFailFolder = Config.ScanFailFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
+                if (CurrentValue.CurrentAttributeModel != null && CurrentValue.CurrentAttributeModel.Any())
                 {
-                    imageLst.Images.Add(args.Image);
-                    pictureBox1.Image = args.Image;
-                    var fileName = String.Format("{0}/{1}.png", ScanFolder, Guid.NewGuid());
-                    args.Image.Save(fileName, ImageFormat.Png);
-                    widthLabel.Text = "Width: " + pictureBox1.Image.Width;
-                    heightLabel.Text = "Height: " + pictureBox1.Image.Height;
-                    if (imageLst.Images.Count > 0)
-                    {
-                        currentImage = imageLst.Images.Count - 1;
-                    }
+                    lblModelInfo.Text = CurrentValue.CurrentAttributeModel.FirstOrDefault().Model.ModelName;
                 }
-            };
-            _twain.ScanningComplete += delegate
+
+                if (!Directory.Exists(ScanFolder))
+                {
+                    Directory.CreateDirectory(ScanFolder);
+                }
+                _twain = new Twain(new WinFormsWindowMessageHook(this));
+                imageLst.ImageSize = new Size(255, 255);
+                _twain.TransferImage += delegate (Object sender, TransferImageEventArgs args)
+                {
+                    if (args.Image != null)
+                    {
+                        imageLst.Images.Add(args.Image);
+                        pictureBox1.Image = args.Image;
+                        var fileName = String.Format("{0}/{1}.png", ScanFolder, Guid.NewGuid());
+                        args.Image.Save(fileName, ImageFormat.Png);
+                        widthLabel.Text = "Width: " + pictureBox1.Image.Width;
+                        heightLabel.Text = "Height: " + pictureBox1.Image.Height;
+                        if (imageLst.Images.Count > 0)
+                        {
+                            currentImage = imageLst.Images.Count - 1;
+                        }
+                    }
+                };
+                _twain.ScanningComplete += delegate
+                {
+                    Enabled = true;
+                };
+            }
+            catch (Exception e)
             {
-                Enabled = true;
-            };
+
+            }
         }
 
         private void selectSource_Click(object sender, EventArgs e)

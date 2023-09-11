@@ -16,6 +16,7 @@
     <Platforms>AnyCPU;x86</Platforms>
     <PackageIcon>printer.png</PackageIcon>
     <ApplicationIcon>printer.ico</ApplicationIcon>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,7 +29,6 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="WeifenLuo.WinFormsUI.Docking" Version="2.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="log4net">
       <HintPath>..\Dlls\log4net.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="TwainDotNet">
       <HintPath>..\Dlls\TwainDotNet.dll</HintPath>
@@ -50,12 +51,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmScanVincode.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="frmLogin.cs" />
+    <Compile Update="frmScanVincode.cs" />
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>

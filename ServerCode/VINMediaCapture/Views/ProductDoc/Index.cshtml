@@ -41,12 +41,17 @@
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Model</label>
-                                            <select class="form-control col-md-8" id="ModelID" name="ModelID">
+                                            <select class="form-control col-md-8" id="ModelID" name="Search.ModelID">
                                                 <option value="-1">-- Chọn --</option>
                                                 @{
                                                     foreach (var item in models)
                                                     {
-                                                                <option value="@item.ModelID">@item.ModelName</option>
+                                                        if(Model.Search.ModelID == item.ModelID){
+                                                             <option value="@item.ModelID" selected="selected">@item.ModelName</option>
+                                                        }
+                                                        else{
+                                                             <option value="@item.ModelID">@item.ModelName</option>
+                                                        }
                                                     }
                                                 }
                                             </select>
@@ -62,7 +67,13 @@
                                                 @{
                                                     foreach (var item in markets)
                                                     {
-                                                                <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
+                                                        if(Model.Search.MarketID == item.MarketID){
+                                                             <option value="@item.MarketID" selected="selected">@item.MarketName</option>
+                                                        }
+                                                        else{
+                                                            <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
+                                                        }
+                                                                
                                                     }
                                                 }
                                             </select>
@@ -76,7 +87,15 @@
                                                 @{
                                                     foreach (var item in colors)
                                                     {
-                                                                <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
+                                                        if (Model.Search.ColorID == item.ColorID)
+                                                        {
+                                                            <option value="@item.ColorID" selected="selected">@item.ColorCode - @item.ColorName</option>
+                                                        }
+                                                        else
+                                                        {
+                                                            <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
+                                                        }
+                                                               
                                                     }
                                                 }
                                             </select>
@@ -87,12 +106,20 @@
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-md-4">Loại đối tượng</label>
-                                            <select class="form-control col-md-8" id="ColorID" name="Search.ColorID">
+                                            <select class="form-control col-md-8" id="ColorID" name="Search.DocTypeID">
                                                 <option value="-1">-- Chọn --</option>
                                                 @{
                                                     foreach (var item in docTypes)
                                                     {
+                                                        if (Model.Search.DocTypeID == item.DocTypeID)
+                                                        {
+                                                            <option selected="selected" value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
+                                                        }
+                                                        else
+                                                        {
                                                             <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
+                                                        }
+                                                            
                                                     }
                                                 }
                                             </select>

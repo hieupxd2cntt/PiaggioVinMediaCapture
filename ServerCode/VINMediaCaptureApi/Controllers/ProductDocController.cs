@@ -46,14 +46,15 @@ namespace VINMediaCaptureApi.Controllers
                        && (x.ModelID == search.Search.ModelID || search.Search.ModelID <= 0)
                        && (x.ColorID == search.Search.ColorID || search.Search.ColorID <= 0)
                        && (x.VINCode.Contains(search.Search.VINCode) || String.IsNullOrEmpty( search.Search.VINCode))
-                       && (x.DocTypeDate >= fromDate || x.DocTypeDate <= toDate)
+                       && (x.DocTypeDate >= fromDate && x.DocTypeDate <= toDate)
                        )
-                       join dt in _context.DocType on pd.DocTypeID equals dt.DocTypeID
+                       join dt in _context.DocType.Where(x=>x.DocTypeID== search.Search.DocTypeID || search.Search.DocTypeID<=0) on pd.DocTypeID equals dt.DocTypeID
                        //join pdv in _context.ProductDocVal on pd.Id equals pdv.ProductDocId
                        join c in _context.Color on pd.ColorID equals c.ColorID
                        join m in _context.Market on pd.MarketID equals m.MarketID
                        join u in _context.Users on pd.UserID equals u.UserID
                        join md in _context.Model on pd.ModelID equals md.ModelID
+                       orderby pd.Id descending
                        select new ProductDocInfo
                        {
                            Color=c,
@@ -90,6 +91,7 @@ namespace VINMediaCaptureApi.Controllers
                            join di in _context.DocTypeItems on pdv.ItemID equals di.ItemID
                            join u in _context.Users on pd.UserID equals u.UserID
                            join dia in _context.DocTypeItemAttr on pdv.AttrID equals dia.AttrID
+                           orderby pd.Id descending
                            select new ProductDocValInfo
                            {
                                ProductDocVal = pdv,
@@ -107,6 +109,7 @@ namespace VINMediaCaptureApi.Controllers
                            join di in _context.DocTypeItems on pdv.ItemID equals di.ItemID
                            join u in _context.Users on pd.UserID equals u.UserID
                            //join dia in _context.DocTypeItemAttr on pdv.AttrID equals dia.AttrID
+                           orderby pd.Id descending
                            select new ProductDocValInfo
                            {
                                ProductDocVal = pdv,
@@ -114,6 +117,7 @@ namespace VINMediaCaptureApi.Controllers
                                DocTypeItem = di,
                                User = u,
                            };
+
                 model.ProductDocValInfo = data.ToList();
             }
             if (model.ProductDocValInfo!=null && model.ProductDocValInfo.Any())

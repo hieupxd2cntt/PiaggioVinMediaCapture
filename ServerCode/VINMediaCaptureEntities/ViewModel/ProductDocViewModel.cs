@@ -14,6 +14,7 @@ namespace VINMediaCaptureEntities.ViewModel
         public ProductDoc Search { get; set; }
         public string? FromDate { get; set; }
         public string? ToDate { get; set; }
+        public int ModelId { get; set; }
         public List<ProductDocInfo> ProductDocInfos { get; set; }
         public ProductDocViewModel()
         {

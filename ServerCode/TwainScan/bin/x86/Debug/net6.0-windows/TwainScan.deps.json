@@ -10,7 +10,6 @@
         "dependencies": {
           "Newtonsoft.Json": "13.0.2",
           "VINMediaCaptureEntities": "1.0.0",
-          "WeifenLuo.WinFormsUI.Docking": "2.1.0",
           "log4net": "1.2.11.0",
           "TwainDotNet": "1.0.0.0",
           "TwainDotNet.WinFroms": "1.0.0.0"
@@ -24,14 +23,6 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "13.0.0.0",
             "fileVersion": "13.0.2.27524"
-          }
-        }
-      },
-      "WeifenLuo.WinFormsUI.Docking/2.1.0": {
-        "runtime": {
-          "lib/net20/WeifenLuo.WinFormsUI.Docking.dll": {
-            "assemblyVersion": "2.1.6643.41644",
-            "fileVersion": "2.1.0.0"
           }
         }
       },
@@ -78,13 +69,6 @@
       "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
       "path": "newtonsoft.json/13.0.2",
       "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
-    },
-    "WeifenLuo.WinFormsUI.Docking/2.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-jpd15CVlqEJR+nvg9WZX+al/M9D5T6wpz4Xoi+bbNv94RUk9EmDFEiG29fb8eO1RPE422t01//ACS8WCF9ks5w==",
-      "path": "weifenluo.winformsui.docking/2.1.0",
-      "hashPath": "weifenluo.winformsui.docking.2.1.0.nupkg.sha512"
     },
     "VINMediaCaptureEntities/1.0.0": {
       "type": "project",

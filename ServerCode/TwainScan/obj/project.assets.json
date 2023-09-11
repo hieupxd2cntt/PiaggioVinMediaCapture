@@ -15,15 +15,6 @@
           }
         }
       },
-      "WeifenLuo.WinFormsUI.Docking/2.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/net20/WeifenLuo.WinFormsUI.Docking.dll": {}
-        },
-        "runtime": {
-          "lib/net20/WeifenLuo.WinFormsUI.Docking.dll": {}
-        }
-      },
       "VINMediaCaptureEntities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -67,18 +58,6 @@
         "packageIcon.png"
       ]
     },
-    "WeifenLuo.WinFormsUI.Docking/2.1.0": {
-      "sha512": "jpd15CVlqEJR+nvg9WZX+al/M9D5T6wpz4Xoi+bbNv94RUk9EmDFEiG29fb8eO1RPE422t01//ACS8WCF9ks5w==",
-      "type": "package",
-      "path": "weifenluo.winformsui.docking/2.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net20/WeifenLuo.WinFormsUI.Docking.dll",
-        "weifenluo.winformsui.docking.2.1.0.nupkg.sha512",
-        "weifenluo.winformsui.docking.nuspec"
-      ]
-    },
     "VINMediaCaptureEntities/1.0.0": {
       "type": "project",
       "path": "../VINMediaCaptureEntities/VINMediaCaptureEntities.csproj",
@@ -88,8 +67,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Newtonsoft.Json >= 13.0.2",
-      "VINMediaCaptureEntities >= 1.0.0",
-      "WeifenLuo.WinFormsUI.Docking >= 2.1.0"
+      "VINMediaCaptureEntities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -144,10 +122,6 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.2, )"
-          },
-          "WeifenLuo.WinFormsUI.Docking": {
-            "target": "Package",
-            "version": "[2.1.0, )"
           }
         },
         "imports": [
@@ -190,17 +164,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'WeifenLuo.WinFormsUI.Docking 2.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "WeifenLuo.WinFormsUI.Docking",
-      "targetGraphs": [
-        "net6.0-windows7.0"
-      ]
-    }
-  ]
+  }
 }

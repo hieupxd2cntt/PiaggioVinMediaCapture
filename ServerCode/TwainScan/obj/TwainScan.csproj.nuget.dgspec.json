@@ -52,10 +52,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.2, )"
-            },
-            "WeifenLuo.WinFormsUI.Docking": {
-              "target": "Package",
-              "version": "[2.1.0, )"
             }
           },
           "imports": [

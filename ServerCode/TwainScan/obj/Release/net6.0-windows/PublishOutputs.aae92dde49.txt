@@ -5,8 +5,9 @@ E:\PublishAllProject\WinformDeploy\TwainScan.runtimeconfig.json
 E:\PublishAllProject\WinformDeploy\TwainScan.dll.config
 E:\PublishAllProject\WinformDeploy\TwainScan.pdb
 E:\PublishAllProject\WinformDeploy\Newtonsoft.Json.dll
-E:\PublishAllProject\WinformDeploy\WeifenLuo.WinFormsUI.Docking.dll
+E:\PublishAllProject\WinformDeploy\log4net.dll
 E:\PublishAllProject\WinformDeploy\TwainDotNet.dll
 E:\PublishAllProject\WinformDeploy\TwainDotNet.WinFroms.dll
 E:\PublishAllProject\WinformDeploy\VINMediaCaptureEntities.dll
 E:\PublishAllProject\WinformDeploy\VINMediaCaptureEntities.pdb
+E:\PublishAllProject\WinformDeploy\log4net.xml
