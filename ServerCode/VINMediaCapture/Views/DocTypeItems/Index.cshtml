@@ -71,7 +71,13 @@
                                                 @{
                                                     foreach (var item in models)
                                                     {
-                                                        <option value="@item.ModelID">@item.ModelName</option>
+                                                        if(item.ModelID == Model.Search.ModelID){
+                                                            <option value="@item.ModelID" selected="selected">@item.ModelName</option>
+                                                        }
+                                                        else{
+                                                            <option value="@item.ModelID">@item.ModelName</option>
+                                                        }
+                                                        
                                                     }
                                                 }
                                             </select>
@@ -87,7 +93,14 @@
                                                 @{
                                                     foreach (var item in markets)
                                                     {
-                                                        <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
+                                                        if (item.MarketID == Model.Search.MarketID)
+                                                        {
+                                                            <option value="@item.MarketID" selected="selected">@item.MarketCode - @item.MarketName</option>
+                                                        }
+                                                        else{
+                                                            <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
+                                                        }
+                                                        
                                                     }
                                                 }
                                             </select>
@@ -101,7 +114,13 @@
                                                 @{
                                                     foreach (var item in colors)
                                                     {
-                                                        <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
+                                                        if (item.ColorID == Model.Search.ColorID){
+                                                            <option value="@item.ColorID" selected="selected">@item.ColorCode - @item.ColorName</option>
+                                                        }
+                                                        else{
+                                                            <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
+                                                        }
+                                                        
                                                     }
                                                 }
                                             </select>
@@ -117,7 +136,13 @@
                                                 @{
                                                     foreach (var item in docTypes)
                                                     {
-                                                        <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
+                                                         if (item.DocTypeID == Model.Search.DocTypeID){
+                                                            <option value="@item.DocTypeID" selected="selected">@item.DocTypeCode - @item.DocTypeName</option>
+                                                         }
+                                                         else{
+                                                             <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
+                                                         }
+                                                        
                                                     }
                                                 }
                                             </select>

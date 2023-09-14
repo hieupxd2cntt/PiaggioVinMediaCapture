@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ckZHiVuTQmPChXI+6ictap1NQlFb//RcDF8qvVAI6Hk=",
+  "Hash": "I2mJuci40bgil8ufyFlLqK5ZLAc66qfEGoaUWngD3zg=",
   "Source": "VINMediaCapture",
   "BasePath": "_content/VINMediaCapture",
   "Mode": "Default",
@@ -799,6 +799,23 @@
       "OriginalItemSpec": "wwwroot\\dist\\img\\credit\\visa.png"
     },
     {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\dist\\img\\DAISY.ICO",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "dist/img/DAISY.ICO",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dist\\img\\DAISY.ICO"
+    },
+    {
       "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\dist\\img\\default-150x150.png",
       "SourceId": "VINMediaCapture",
       "SourceType": "Discovered",
@@ -1120,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\dist\\img\\user8-128x128.jpg"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\dist\\img\\UserIcon.png",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "dist/img/UserIcon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dist\\img\\UserIcon.png"
     },
     {
       "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\dist\\js\\.eslintrc.json",

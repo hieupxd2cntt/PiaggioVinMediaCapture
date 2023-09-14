@@ -48,7 +48,7 @@ namespace TwainScan
             var frm = new frmLogin();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                if (CurrentValue.User.User.LoginName.ToLower() == "admin")
+                if (CurrentValue.User != null && CurrentValue.User.User.LoginName.ToLower() == "admin")
                 {
                     configToolStripMenuItem.Enabled = true;
                 }
@@ -56,6 +56,7 @@ namespace TwainScan
                 {
                     configToolStripMenuItem.Enabled = false;
                 }
+                lblUser.Text = CurrentValue.User == null ? "" : "Người dùng:"+ CurrentValue.User.User.LoginName;
                 scanDocMenuItem.Enabled = true;
                 var frmScan = new frmScanBarcode();
                 frmScan.ShowDialog();

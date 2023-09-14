@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScanVincode));
             this.label1 = new System.Windows.Forms.Label();
             this.txtVinCode = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Barcode";
+            this.label1.Text = "Vincode";
             // 
             // txtVinCode
             // 
@@ -50,7 +51,6 @@
             this.txtVinCode.Name = "txtVinCode";
             this.txtVinCode.Size = new System.Drawing.Size(392, 23);
             this.txtVinCode.TabIndex = 1;
-            this.txtVinCode.Text = "Vespa SprintVTDBlue";
             this.txtVinCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarcode_KeyDown);
             // 
             // btnBack
@@ -94,9 +94,10 @@
             this.Controls.Add(this.txtVinCode);
             this.Controls.Add(this.lblModelInfo);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmScanVincode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Scan barcode";
+            this.Text = "Scan Vincode";
             this.ResumeLayout(false);
             this.PerformLayout();
 

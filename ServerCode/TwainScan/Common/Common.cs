@@ -40,6 +40,10 @@ namespace TwainScan.Common
             {
                 configModel.WebApi = ConstantConfig.ApiUrl;
             }
+            if (String.IsNullOrEmpty(configModel.LogPath))
+            {
+                configModel.LogPath = ConstantConfig.LogPath;
+            }
             return configModel;
         }
     }

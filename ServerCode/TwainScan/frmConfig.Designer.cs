@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfig));
             this.label1 = new System.Windows.Forms.Label();
             this.txtScanFolder = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
@@ -43,6 +44,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtScanSuccessFolder = new System.Windows.Forms.TextBox();
             this.btnBrowseSuccessFolder = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtLogPath = new System.Windows.Forms.TextBox();
+            this.btnBrowseLogPath = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -105,7 +109,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(154, 214);
+            this.btnSave.Location = new System.Drawing.Point(156, 288);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(73, 32);
             this.btnSave.TabIndex = 2;
@@ -115,7 +119,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(252, 214);
+            this.btnClose.Location = new System.Drawing.Point(254, 288);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(73, 32);
             this.btnClose.TabIndex = 2;
@@ -175,26 +179,56 @@
             this.btnBrowseSuccessFolder.UseVisualStyleBackColor = true;
             this.btnBrowseSuccessFolder.Click += new System.EventHandler(this.btnBrowseSuccessFolder_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 233);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 15);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Folder log Lỗi";
+            // 
+            // txtLogPath
+            // 
+            this.txtLogPath.Location = new System.Drawing.Point(156, 230);
+            this.txtLogPath.Name = "txtLogPath";
+            this.txtLogPath.Size = new System.Drawing.Size(331, 23);
+            this.txtLogPath.TabIndex = 1;
+            // 
+            // btnBrowseLogPath
+            // 
+            this.btnBrowseLogPath.Location = new System.Drawing.Point(493, 230);
+            this.btnBrowseLogPath.Name = "btnBrowseLogPath";
+            this.btnBrowseLogPath.Size = new System.Drawing.Size(38, 23);
+            this.btnBrowseLogPath.TabIndex = 2;
+            this.btnBrowseLogPath.Text = "...";
+            this.btnBrowseLogPath.UseVisualStyleBackColor = true;
+            this.btnBrowseLogPath.Click += new System.EventHandler(this.btnBrowseLogPath_Click);
+            // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 265);
+            this.ClientSize = new System.Drawing.Size(543, 332);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBrowseSuccessFolder);
+            this.Controls.Add(this.btnBrowseLogPath);
             this.Controls.Add(this.btnBrowseScanFail);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.txtApiUrl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtScanSuccessFolder);
             this.Controls.Add(this.txtHostUrl);
+            this.Controls.Add(this.txtLogPath);
             this.Controls.Add(this.txtScanFailFolder);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtScanFolder);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cấu hình hệ thống";
@@ -221,5 +255,8 @@
         private Label label5;
         private TextBox txtScanSuccessFolder;
         private Button btnBrowseSuccessFolder;
+        private Label label6;
+        private TextBox txtLogPath;
+        private Button btnBrowseLogPath;
     }
 }

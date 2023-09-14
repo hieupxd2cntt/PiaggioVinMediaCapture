@@ -25,11 +25,17 @@ namespace TwainScan
             {
                 lblModelInfo.Text = Common.CurrentValue.CurrentAttributeModel.FirstOrDefault().Model.ModelName;
             }
+            txtVinCode.Focus();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             ApiMethod api = new ApiMethod();
+            if (String.IsNullOrWhiteSpace(txtVinCode.Text))
+            {
+                MsgBox.ShowError("Vincode không được để trống");
+                return; 
+            }
             var model = api.GetModelByBarcode(CurrentValue.Barcode);
             var data = JsonConvert.DeserializeObject<List<DocTypeItemAddModel>>(model);
             if (data != null && data.Any())

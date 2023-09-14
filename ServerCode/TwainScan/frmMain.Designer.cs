@@ -40,6 +40,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lblServerDate = new System.Windows.Forms.Label();
             this.lblServerDateText = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -128,9 +129,10 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.lblUser);
             this.splitContainer1.Panel2.Controls.Add(this.lblVersion);
             this.splitContainer1.Size = new System.Drawing.Size(1166, 33);
-            this.splitContainer1.SplitterDistance = 733;
+            this.splitContainer1.SplitterDistance = 583;
             this.splitContainer1.TabIndex = 0;
             // 
             // lblServerDate
@@ -155,14 +157,26 @@
             this.lblServerDateText.TabIndex = 2;
             this.lblServerDateText.Text = "Thời gian hệ thống:";
             // 
+            // lblUser
+            // 
+            this.lblUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblUser.ForeColor = System.Drawing.Color.Blue;
+            this.lblUser.Location = new System.Drawing.Point(0, 0);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(275, 33);
+            this.lblUser.TabIndex = 1;
+            this.lblUser.Text = "User";
+            this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblVersion
             // 
             this.lblVersion.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblVersion.ForeColor = System.Drawing.Color.Blue;
-            this.lblVersion.Location = new System.Drawing.Point(192, 0);
+            this.lblVersion.Location = new System.Drawing.Point(365, 0);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(237, 33);
+            this.lblVersion.Size = new System.Drawing.Size(214, 33);
             this.lblVersion.TabIndex = 0;
             this.lblVersion.Text = "Version";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,5 +223,6 @@
         private Label lblVersion;
         private Label lblServerDateText;
         private Label lblServerDate;
+        private Label lblUser;
     }
 }

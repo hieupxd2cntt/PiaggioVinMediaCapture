@@ -18,6 +18,7 @@ namespace TwainScan
         public frmScanBarcode()
         {
             InitializeComponent();
+            txtBarcode.Focus();
         }
 
         private void btnNext_Click(object sender, EventArgs e)

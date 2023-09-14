@@ -29,4 +29,10 @@
     <Folder Include="wwwroot\uploads\DocTypeGuide\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\dist\img\DAISY.ICO">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

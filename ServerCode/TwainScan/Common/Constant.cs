@@ -14,5 +14,6 @@ namespace TwainScan.Common
         public static string DefaultScanFailFolder = @"/TaiwanScan/ScanFail";
         public static string DefaultScanSuccessFolder = @"/TaiwanScan/ScanSuccess";
         public static string ApiUrl = ConfigurationManager.AppSettings["UrlApi"].ToString();
+        public static string LogPath = "/TaiwanScan/Logs";
     }
 }

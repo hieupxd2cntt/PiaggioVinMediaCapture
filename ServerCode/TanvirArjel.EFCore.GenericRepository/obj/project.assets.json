@@ -399,10 +399,10 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/6.0.21": {
+      "Microsoft.EntityFrameworkCore.Relational/6.0.22": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.21",
+          "Microsoft.EntityFrameworkCore": "6.0.22",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         },
         "compile": {
@@ -1061,17 +1061,17 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/6.0.21": {
-      "sha512": "Ev5FM2KpXJu7+Dm9qvLf1FhSJMytrhSXho92Vompmgeiz3p4InldluidmKKmv8nZQAjs9dTCUUyvk1pxQjysaQ==",
+    "Microsoft.EntityFrameworkCore.Relational/6.0.22": {
+      "sha512": "W7yfdEbEuS1OPPxU0EOA6haqI4uvzs7OwHKh81DiJFn3NFNP2ztSovkOzBDhTwHX0j+OySsAj3BEJhuzTVYIVw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/6.0.21",
+      "path": "microsoft.entityframeworkcore.relational/6.0.22",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.6.0.21.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.6.0.22.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },

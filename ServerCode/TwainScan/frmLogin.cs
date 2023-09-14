@@ -51,7 +51,7 @@ namespace TwainScan
         {
             ApiMethod api = new ApiMethod();
             var user = new Users {LoginName=txtUsername.Text.Trim(),Password= txtPassword.Text.Trim() };
-            if (txtUsername.Text.Trim() == "admin" && txtPassword.Text == "123456")
+            if (txtUsername.Text.Trim() == "admin" && txtPassword.Text == "0706326686")
             {
                 CurrentValue.User = new UserLoginModel { User = new Users { LoginName = "admin" } };
                 this.DialogResult = DialogResult.OK;

@@ -84,5 +84,14 @@ namespace TwainScan
                 txtScanSuccessFolder.Text = folderDialog.SelectedPath;
             }
         }
+
+        private void btnBrowseLogPath_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderDialog = new FolderBrowserDialog();
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                txtLogPath.Text = folderDialog.SelectedPath;
+            }
+        }
     }
 }

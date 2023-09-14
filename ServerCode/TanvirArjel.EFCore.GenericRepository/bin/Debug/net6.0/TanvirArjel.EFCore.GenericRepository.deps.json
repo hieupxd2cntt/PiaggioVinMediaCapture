@@ -9,7 +9,7 @@
       "TanvirArjel.EFCore.GenericRepository/6.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.1",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.21",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.22",
           "Oracle.EntityFrameworkCore": "6.21.61",
           "StyleCop.Analyzers": "1.2.0-beta.354",
           "TanvirArjel.EFCore.QueryRepository": "1.5.0"
@@ -42,15 +42,15 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/7.0.1": {},
-      "Microsoft.EntityFrameworkCore.Relational/6.0.21": {
+      "Microsoft.EntityFrameworkCore.Relational/6.0.22": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.1",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "6.0.21.0",
-            "fileVersion": "6.0.2123.36206"
+            "assemblyVersion": "6.0.22.0",
+            "fileVersion": "6.0.2223.40907"
           }
         }
       },
@@ -174,7 +174,7 @@
       },
       "Oracle.EntityFrameworkCore/6.21.61": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.21",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.22",
           "Oracle.ManagedDataAccess.Core": "3.21.61"
         },
         "runtime": {
@@ -380,7 +380,7 @@
       },
       "TanvirArjel.EFCore.QueryRepository/1.5.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.21",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.22",
           "System.Linq.Dynamic.Core": "1.2.25"
         },
         "runtime": {
@@ -416,12 +416,12 @@
       "path": "microsoft.entityframeworkcore.analyzers/7.0.1",
       "hashPath": "microsoft.entityframeworkcore.analyzers.7.0.1.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/6.0.21": {
+    "Microsoft.EntityFrameworkCore.Relational/6.0.22": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ev5FM2KpXJu7+Dm9qvLf1FhSJMytrhSXho92Vompmgeiz3p4InldluidmKKmv8nZQAjs9dTCUUyvk1pxQjysaQ==",
-      "path": "microsoft.entityframeworkcore.relational/6.0.21",
-      "hashPath": "microsoft.entityframeworkcore.relational.6.0.21.nupkg.sha512"
+      "sha512": "sha512-W7yfdEbEuS1OPPxU0EOA6haqI4uvzs7OwHKh81DiJFn3NFNP2ztSovkOzBDhTwHX0j+OySsAj3BEJhuzTVYIVw==",
+      "path": "microsoft.entityframeworkcore.relational/6.0.22",
+      "hashPath": "microsoft.entityframeworkcore.relational.6.0.22.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
       "type": "package",

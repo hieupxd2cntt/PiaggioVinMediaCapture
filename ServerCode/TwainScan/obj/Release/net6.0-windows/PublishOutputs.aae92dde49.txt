@@ -1,4 +1,5 @@
 E:\PublishAllProject\WinformDeploy\TwainScan.exe
+E:\PublishAllProject\WinformDeploy\DAISY.ICO
 E:\PublishAllProject\WinformDeploy\TwainScan.dll
 E:\PublishAllProject\WinformDeploy\TwainScan.deps.json
 E:\PublishAllProject\WinformDeploy\TwainScan.runtimeconfig.json

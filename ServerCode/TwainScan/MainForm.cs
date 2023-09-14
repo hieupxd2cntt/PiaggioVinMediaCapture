@@ -33,7 +33,6 @@ namespace TestApp
     public partial class MainForm : Form
     {
         private static AreaSettings AreaSettings = new AreaSettings(Units.Centimeters, 0.1f, 5.7f, 0.1F + 2.6f, 5.7f + 2.6f);
-
         Twain _twain;
         ScanSettings _settings;
         private ConfigModel Config = Common.GetConfig();
@@ -59,6 +58,7 @@ namespace TestApp
                     Directory.CreateDirectory(ScanFolder);
                 }
                 _twain = new Twain(new WinFormsWindowMessageHook(this));
+                
                 imageLst.ImageSize = new Size(255, 255);
                 _twain.TransferImage += delegate (Object sender, TransferImageEventArgs args)
                 {
@@ -78,8 +78,9 @@ namespace TestApp
                 };
                 _twain.ScanningComplete += delegate
                 {
-                    Enabled = true;
+                    scan.Enabled = true;
                 };
+                //scan.Enabled = true;
             }
             catch (Exception e)
             {
@@ -94,9 +95,14 @@ namespace TestApp
 
         private void scan_Click(object sender, EventArgs e)
         {
+            if (_twain.SourceNames == null || !_twain.SourceNames.Any())
+            {
+                MsgBox.ShowError("Không tìm thấy thông tin máy Scan");
+                return;
+            }
             imageLst.Images.Clear();
-            Enabled = false;
-
+            //Enabled = false;
+            scan.Enabled = false;
             _settings = new ScanSettings();
             _settings.UseDocumentFeeder = useAdfCheckBox.Checked;
             _settings.ShowTwainUI = useUICheckBox.Checked;
@@ -115,15 +121,16 @@ namespace TestApp
 
             try
             {
+                
                 _twain.StartScanning(_settings);
             }
             catch (TwainException ex)
             {
-                MessageBox.Show(ex.Message);
-                Enabled = true;
+                MsgBox.ShowError(ex.Message);
+                scan.Enabled = true;
             }
         }
-
+       
         private void saveButton_Click(object sender, EventArgs e)
         {
             var config = Common.GetConfig();

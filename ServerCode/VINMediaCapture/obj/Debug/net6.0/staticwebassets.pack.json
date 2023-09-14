@@ -129,6 +129,14 @@
       "PackagePath": "staticwebassets\\dist\\img\\AdminLTELogo.png"
     },
     {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\dist\\img\\DAISY.ICO",
+      "PackagePath": "staticwebassets\\dist\\img\\DAISY.ICO"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\dist\\img\\UserIcon.png",
+      "PackagePath": "staticwebassets\\dist\\img\\UserIcon.png"
+    },
+    {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\dist\\img\\avatar.png",
       "PackagePath": "staticwebassets\\dist\\img\\avatar.png"
     },

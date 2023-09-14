@@ -355,3 +355,4 @@ E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\obj\R
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\obj\Release\net6.0\VINMediaCapture.pdb
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\obj\Release\net6.0\VINMediaCapture.genruntimeconfig.cache
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\obj\Release\net6.0\ref\VINMediaCapture.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\bin\Release\net6.0\wwwroot\dist\img\DAISY.ICO

@@ -62,6 +62,7 @@ namespace VINMediaCaptureApi.Controllers
                                      && (d.MarketID ==docTypeItems.MarketID || docTypeItems.MarketID < 0)
                                      && (d.ColorID ==docTypeItems.ColorID || docTypeItems.ColorID < 0)
                                      && (d.ManualCollect ==docTypeItems.ManualCollect)
+                                     && (d.DocTypeID == docTypeItems.DocTypeID || docTypeItems.DocTypeID <=0)
                                      && (d.Disabled == docTypeItems.Disabled || docTypeItems.Disabled < 0)
                                      select new DocTypeItemsInfo
                                      {
