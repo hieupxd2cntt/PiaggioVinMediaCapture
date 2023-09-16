@@ -40,9 +40,13 @@ namespace TwainScan.Common
             {
                 configModel.WebApi = ConstantConfig.ApiUrl;
             }
+            if (String.IsNullOrEmpty(configModel.WebApp))
+            {
+                configModel.WebApp = ConstantConfig.HostUrl;
+            }
             if (String.IsNullOrEmpty(configModel.LogPath))
             {
-                configModel.LogPath = ConstantConfig.LogPath;
+                configModel.LogPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + ConstantConfig.LogPath;
             }
             return configModel;
         }

@@ -355,3 +355,4 @@ E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\bin\D
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\obj\Debug\net6.0\VINMediaCapture.MvcApplicationPartsAssemblyInfo.cs
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\VINMediaCapture\bin\Debug\net6.0\wwwroot\dist\img\DAISY.ICO

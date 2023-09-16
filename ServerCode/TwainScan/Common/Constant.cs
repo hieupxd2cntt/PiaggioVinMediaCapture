@@ -9,11 +9,12 @@ namespace TwainScan.Common
 {
     public class ConstantConfig
     {
-        public static string DefaultScanConfig = "/TaiwanScan/TaiwanScanConfig.Xml";
-        public static string DefaultScanFolder = @"/TaiwanScan/Scan";
-        public static string DefaultScanFailFolder = @"/TaiwanScan/ScanFail";
-        public static string DefaultScanSuccessFolder = @"/TaiwanScan/ScanSuccess";
+        public static string DefaultScanConfig = @"\DaisyEdoc\DaisyEdoc.Xml";
+        public static string DefaultScanFolder = @"\DaisyEdoc\Scan";
+        public static string DefaultScanFailFolder = @"\DaisyEdoc\ScanFail";
+        public static string DefaultScanSuccessFolder = @"\DaisyEdoc\ScanSuccess";
         public static string ApiUrl = ConfigurationManager.AppSettings["UrlApi"].ToString();
-        public static string LogPath = "/TaiwanScan/Logs";
+        public static string HostUrl = ConfigurationManager.AppSettings["WebAppUrl"].ToString();
+        public static string LogPath = @"\DaisyEdoc\Logs";
     }
 }

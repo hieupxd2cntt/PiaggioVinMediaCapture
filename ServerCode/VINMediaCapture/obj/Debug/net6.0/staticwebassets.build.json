@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I2mJuci40bgil8ufyFlLqK5ZLAc66qfEGoaUWngD3zg=",
+  "Hash": "3uazWoHagUhxtU30TfyEBPK1fHW2cl7ca7fZkon1xDg=",
   "Source": "VINMediaCapture",
   "BasePath": "_content/VINMediaCapture",
   "Mode": "Default",
@@ -811,7 +811,7 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
+      "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\dist\\img\\DAISY.ICO"
     },

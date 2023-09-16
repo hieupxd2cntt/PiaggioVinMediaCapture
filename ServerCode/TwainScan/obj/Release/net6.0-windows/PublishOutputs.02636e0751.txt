@@ -1,0 +1,14 @@
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\TwainScan.exe
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\DAISY.ICO
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\TwainScan.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\TwainScan.deps.json
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\TwainScan.runtimeconfig.json
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\TwainScan.dll.config
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\TwainScan.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\Newtonsoft.Json.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\log4net.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\TwainDotNet.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\TwainDotNet.WinFroms.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\VINMediaCaptureEntities.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\VINMediaCaptureEntities.pdb
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\publish\log4net.xml

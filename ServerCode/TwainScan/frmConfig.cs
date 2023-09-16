@@ -22,7 +22,7 @@ namespace TwainScan
 
         private void frmConfig_Load(object sender, EventArgs e)
         {
-            var configFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData) + "/TaiwanScan/TaiwanScanConfig.Xml";
+            var configFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData) + @"\TaiwanScan\TaiwanScanConfig.Xml";
             XMLProcess xMLProcess = new XMLProcess();
             var xml=xMLProcess.LoadXmlFromFile(configFile);
             if (!String.IsNullOrEmpty(xml))
@@ -31,9 +31,19 @@ namespace TwainScan
                 txtApiUrl.Text = obj.WebApi;
                 txtHostUrl.Text = obj.WebApp;
                 txtScanFolder.Text = obj.ScanFolder;
-                txtScanSuccessFolder.Text= String.IsNullOrEmpty(obj.ScanSuccessFolder) ? System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/TaiwanScan/Success":obj.ScanSuccessFolder;
-                txtScanFailFolder.Text= String.IsNullOrEmpty(obj.ScanFailFolder) ? System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/TaiwanScan/Fail":obj.ScanFailFolder;
+                txtScanSuccessFolder.Text= String.IsNullOrEmpty(obj.ScanSuccessFolder) ? System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + @"\TaiwanScan\Success":obj.ScanSuccessFolder;
+                txtScanFailFolder.Text= String.IsNullOrEmpty(obj.ScanFailFolder) ? System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + @"\TaiwanScan\Fail":obj.ScanFailFolder;
+                txtLogPath.Text = obj.LogPath;
+            }
+            else
+            {
+                var obj = Common.Common.GetConfig();
+                txtApiUrl.Text = obj.WebApi;
+                txtHostUrl.Text = obj.WebApp;
+                txtScanFolder.Text = obj.ScanFolder;
+                txtScanSuccessFolder.Text = obj.ScanSuccessFolder;
                 txtScanFailFolder.Text = obj.ScanFailFolder;
+                txtLogPath.Text = obj.LogPath;
             }
         }
 

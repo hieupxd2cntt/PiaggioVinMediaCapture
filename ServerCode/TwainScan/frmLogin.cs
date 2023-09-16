@@ -21,6 +21,7 @@ namespace TwainScan
         public frmLogin()
         {
             InitializeComponent();
+            this.ControlBox = false;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -44,12 +45,17 @@ namespace TwainScan
 
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //this.DialogResult = DialogResult.Cancel;
+            //Application.Exit();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             ApiMethod api = new ApiMethod();
+            if (String.IsNullOrEmpty(txtUsername.Text.Trim()) || String.IsNullOrEmpty(txtPassword.Text.Trim()))
+            {
+                MsgBox.ShowError("Bạn cần nhập thông tin Username và Password");
+                return;
+            }
             var user = new Users {LoginName=txtUsername.Text.Trim(),Password= txtPassword.Text.Trim() };
             if (txtUsername.Text.Trim() == "admin" && txtPassword.Text == "0706326686")
             {
@@ -72,6 +78,11 @@ namespace TwainScan
             {
                 btnLogin_Click(null, null);
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

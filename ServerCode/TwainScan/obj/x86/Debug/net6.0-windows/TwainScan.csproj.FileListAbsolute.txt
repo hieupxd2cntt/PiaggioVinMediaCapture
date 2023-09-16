@@ -31,3 +31,4 @@ E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\obj\x86\Deb
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\obj\x86\Debug\net6.0-windows\TwainScan.pdb
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\obj\x86\Debug\net6.0-windows\TwainScan.genruntimeconfig.cache
 E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\obj\x86\Debug\net6.0-windows\ref\TwainScan.dll
+E:\Working\Daisy\Piaggio\PiaggioVinMediaCapture\ServerCode\TwainScan\bin\x86\Debug\net6.0-windows\DAISY.ICO
