@@ -84,13 +84,22 @@ namespace TestApp
             }
             catch (Exception e)
             {
-
+                ErrorLog.WriteLog("MainForm", e.Message);
             }
         }
 
         private void selectSource_Click(object sender, EventArgs e)
         {
-            _twain.SelectSource();
+            try
+            {
+                _twain.SelectSource();
+            }
+            catch (Exception ex)
+            {
+                MsgBox.ShowError("Không thể chọn máy in:"+ex.Message);
+                ErrorLog.WriteLog("selectSource_Click", ex.Message);
+            }
+            
         }
 
         private void scan_Click(object sender, EventArgs e)
@@ -126,48 +135,59 @@ namespace TestApp
             }
             catch (TwainException ex)
             {
+                ErrorLog.WriteLog("scan_Click", ex.Message);
                 MsgBox.ShowError(ex.Message);
                 scan.Enabled = true;
+
             }
         }
        
         private void saveButton_Click(object sender, EventArgs e)
         {
-            var config = Common.GetConfig();
-            var scanFilesPath = config.ScanFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
-            var files = Directory.GetFiles(scanFilesPath);
-            if (files == null || !files.Any())
+            try
             {
-                MsgBox.ShowError("Không tìm thấy tài liệu scan");
-                return;
-            }
-            var currAttrs = CurrentValue.CurrentAttributeModel;
-            var dataSendApi = new List<DocTypeModelListData>();
-            foreach (var item in currAttrs)
-            {
-                var docTypeModel = new DocTypeModelListData
+                var config = Common.GetConfig();
+                var scanFilesPath = config.ScanFolder + "/" + CurrentValue.Barcode + "/" + CurrentValue.VinCode;
+                var files = Directory.GetFiles(scanFilesPath);
+                if (files == null || !files.Any())
                 {
-                    attrDocType = item.DocTypeItems.DocTypeID ?? 0,
-                    attrId = item.DocTypeItemAttr.ItemID,
-                    itemId=item.DocTypeItems.ItemID
-                };
-                docTypeModel.currentSession = String.Format("{0}-{1}", CurrentValue.Barcode, CurrentValue.VinCode);
-                dataSendApi.Add(docTypeModel);
-            }
-            var urlApi = config.WebApi.TrimEnd('/') + "/Taiwain/UploadFileAsync";
-            var rs=Send2Api(urlApi, dataSendApi);
-            if (rs.ResultCode>0)
-            {
-                MoveToSuccessFolder();
-                if(MsgBox.Show("Gửi tài liệu thành công","Thông báo")== DialogResult.OK)
+                    MsgBox.ShowError("Không tìm thấy tài liệu scan");
+                    return;
+                }
+                var currAttrs = CurrentValue.CurrentAttributeModel;
+                var dataSendApi = new List<DocTypeModelListData>();
+                foreach (var item in currAttrs)
                 {
-                    this.DialogResult = DialogResult.OK;
+                    var docTypeModel = new DocTypeModelListData
+                    {
+                        attrDocType = item.DocTypeItems.DocTypeID ?? 0,
+                        attrId = item.DocTypeItemAttr.ItemID,
+                        itemId = item.DocTypeItems.ItemID
+                    };
+                    docTypeModel.currentSession = String.Format("{0}-{1}", CurrentValue.Barcode, CurrentValue.VinCode);
+                    dataSendApi.Add(docTypeModel);
+                }
+                var urlApi = config.WebApi.TrimEnd('/') + "/Taiwain/UploadFileAsync";
+                var rs = Send2Api(urlApi, dataSendApi);
+                if (rs.ResultCode > 0)
+                {
+                    MoveToSuccessFolder();
+                    if (MsgBox.Show("Gửi tài liệu thành công", "Thông báo") == DialogResult.OK)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                    }
+                }
+                else
+                {
+                    MoveToFailFolder();
+                    MsgBox.ShowError("Gửi tài liệu thất bại", "Thông báo");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MoveToFailFolder();
-                MsgBox.ShowError("Gửi tài liệu thất bại", "Thông báo");
+
+                ErrorLog.WriteLog("saveButton_Click", ex.Message);
+                MsgBox.ShowError(ex.Message);
             }
 
         }
@@ -194,6 +214,7 @@ namespace TestApp
             }
             catch (Exception e)
             {
+                ErrorLog.WriteLog("MoveToSuccessFolder", e.Message);
                 MsgBox.ShowError("Không thể di chuyển sang Thư mục Scan thành công:" + e.Message);
             }
             
@@ -217,6 +238,7 @@ namespace TestApp
             }
             catch (Exception e)
             {
+                ErrorLog.WriteLog("MoveToFailFolder", e.Message);
                 MsgBox.ShowError("Không thể di chuyển sang Thư mục Scan thất bại:" + e.Message);
             }
             
@@ -282,13 +304,23 @@ namespace TestApp
             }
             catch (Exception ex)
             {
+                ErrorLog.WriteLog("Send2Api", ex.Message);
                 MsgBox.ShowError("Không thể gửi dữ liệu:" + ex.Message);
             }
             return outPut;
         }
         private void diagnostics_Click(object sender, EventArgs e)
         {
-            var diagnostics = new Diagnostics(new WinFormsWindowMessageHook(this));
+            try
+            {
+                var diagnostics = new Diagnostics(new WinFormsWindowMessageHook(this));
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.WriteLog("diagnostics_Click", ex.Message);
+                MsgBox.ShowError("Không thể gửi dữ liệu:" + ex.Message);
+            }
+           
         }
 
         private void btnPre_Click(object sender, EventArgs e)

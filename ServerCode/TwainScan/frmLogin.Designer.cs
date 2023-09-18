@@ -87,7 +87,7 @@
             this.btnExit.Location = new System.Drawing.Point(217, 111);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(95, 23);
-            this.btnExit.TabIndex = 3;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);

@@ -50,26 +50,34 @@ namespace TwainScan
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            ApiMethod api = new ApiMethod();
-            if (String.IsNullOrEmpty(txtUsername.Text.Trim()) || String.IsNullOrEmpty(txtPassword.Text.Trim()))
+            try
             {
-                MsgBox.ShowError("Bạn cần nhập thông tin Username và Password");
-                return;
-            }
-            var user = new Users {LoginName=txtUsername.Text.Trim(),Password= txtPassword.Text.Trim() };
-            if (txtUsername.Text.Trim() == "admin" && txtPassword.Text == "0706326686")
-            {
-                CurrentValue.User = new UserLoginModel { User = new Users { LoginName = "admin" } };
+                ApiMethod api = new ApiMethod();
+                if (String.IsNullOrEmpty(txtUsername.Text.Trim()) || String.IsNullOrEmpty(txtPassword.Text.Trim()))
+                {
+                    MsgBox.ShowError("Bạn cần nhập thông tin Username và Password");
+                    return;
+                }
+                var user = new Users { LoginName = txtUsername.Text.Trim(), Password = txtPassword.Text.Trim() };
+                if (txtUsername.Text.Trim() == "admin" && txtPassword.Text == "0706326686")
+                {
+                    CurrentValue.User = new UserLoginModel { User = new Users { LoginName = "admin" } };
+                    this.DialogResult = DialogResult.OK;
+                    return;
+                }
+                var userLogin = api.Login(user);
+                if (userLogin == null)
+                {
+                    MsgBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác", "Thông báo");
+                }
+                CurrentValue.User = userLogin;
                 this.DialogResult = DialogResult.OK;
-                return;
             }
-            var userLogin = api.Login(user);
-            if (userLogin == null)
+            catch (Exception ex)
             {
-                MsgBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác","Thông báo");
+                MsgBox.ShowError("btnLogin_Click",ex.Message);
+                ErrorLog.WriteLog("MainForm", ex.Message);
             }
-            CurrentValue.User = userLogin;
-            this.DialogResult=DialogResult.OK;
         }
 
         private void txt_KeyDown(object sender, KeyEventArgs e)

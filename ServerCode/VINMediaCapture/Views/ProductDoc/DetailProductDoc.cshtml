@@ -33,7 +33,7 @@
                                 @{
                                     if (item.DocTypeItemAttr.AttrDataType == (int)EAttrDataType.IMGCAPT)
                                     {
-                                    <img src="@item.ProductDocVal.AttrValue" style="width:100px" />
+                                    <a href="@Url.Action("Download","ProductDoc", new{url=item.ProductDocVal.AttrValue})"><img src="@item.ProductDocVal.AttrValue" style="width:100px" /></a>
                                     }
                                     else if (item.DocTypeItemAttr.AttrDataType == (int)EAttrDataType.BOOLEAN)
                                     {
@@ -63,7 +63,7 @@
                         <td>@item.DocTypeItem.ItemName</td>
                         <td>
                                 @{
-                                <img src="@item.ProductDocVal.AttrValue" style="width:100px" />
+                                <a href="@Url.Action("Download","ProductDoc", new{url=item.ProductDocVal.AttrValue})"><img src="@item.ProductDocVal.AttrValue" style="width:100px" /></a>
                                 }
                         </td>
                     </tr>

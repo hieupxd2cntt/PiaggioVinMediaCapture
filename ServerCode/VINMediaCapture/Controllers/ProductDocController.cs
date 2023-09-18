@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using VINMediaCaptureEntities.Enum;
 using System.Reflection;
 using System.Net.WebSockets;
+using Microsoft.AspNetCore.Hosting.Server;
 
 namespace VINMediaCapture.Controllers
 {
@@ -68,6 +69,13 @@ namespace VINMediaCapture.Controllers
             ViewBag.AttrDataTypes = attrDataTypes;
             //attrDataTypes.Add(new SelectListItem { Value = ((int)EAttrDataType.DATFILE).ToString(), Text = EAttrDataType.DATFILE.GetDescription() });
 
+        }
+        public FileResult Download(string url)
+        {
+            var path = _hostingEnvironment.WebRootPath+ url;
+            byte[] fileBytes = System.IO.File.ReadAllBytes(path);
+            string fileName = Path.GetFileName(path);
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
         }
     }
 }
