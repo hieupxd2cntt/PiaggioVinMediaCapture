@@ -13,6 +13,7 @@ using TwainScan.Common;
 using VINMediaCaptureEntities.Entities;
 using VINMediaCaptureEntities.Model;
 using VINMediaCaptureEntities.ViewModel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TwainScan
 {
@@ -21,7 +22,7 @@ namespace TwainScan
         public frmLogin()
         {
             InitializeComponent();
-            this.ControlBox = false;
+            
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -91,6 +92,11 @@ namespace TwainScan
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUsername_TabIndexChanged(object sender, EventArgs e)
+        {
+            MsgBox.Show("Changed","");
         }
     }
 }

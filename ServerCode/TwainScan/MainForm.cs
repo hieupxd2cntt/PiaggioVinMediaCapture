@@ -109,36 +109,44 @@ namespace TestApp
                 MsgBox.ShowError("Không tìm thấy thông tin máy Scan");
                 return;
             }
-            imageLst.Images.Clear();
-            //Enabled = false;
-            scan.Enabled = false;
-            _settings = new ScanSettings();
-            _settings.UseDocumentFeeder = useAdfCheckBox.Checked;
-            _settings.ShowTwainUI = useUICheckBox.Checked;
-            _settings.ShowProgressIndicatorUI = showProgressIndicatorUICheckBox.Checked;
-            _settings.UseDuplex = useDuplexCheckBox.Checked;
-            _settings.Resolution =
-                blackAndWhiteCheckBox.Checked
-                ? ResolutionSettings.Fax : ResolutionSettings.ColourPhotocopier;
-            _settings.Area = !checkBoxArea.Checked ? null : AreaSettings;
-            _settings.ShouldTransferAllPages = true;
-            _settings.Rotation = new RotationSettings()
-            {
-                AutomaticRotate = autoRotateCheckBox.Checked,
-                AutomaticBorderDetection = autoDetectBorderCheckBox.Checked
-            };
-
             try
             {
-                
-                _twain.StartScanning(_settings);
+                imageLst.Images.Clear();
+                //Enabled = false;
+                scan.Enabled = false;
+                _settings = new ScanSettings();
+                _settings.UseDocumentFeeder = useAdfCheckBox.Checked;
+                _settings.ShowTwainUI = useUICheckBox.Checked;
+                _settings.ShowProgressIndicatorUI = showProgressIndicatorUICheckBox.Checked;
+                _settings.UseDuplex = useDuplexCheckBox.Checked;
+                _settings.Resolution =
+                    blackAndWhiteCheckBox.Checked
+                    ? ResolutionSettings.Fax : ResolutionSettings.ColourPhotocopier;
+                _settings.Area = !checkBoxArea.Checked ? null : AreaSettings;
+                _settings.ShouldTransferAllPages = true;
+                _settings.Rotation = new RotationSettings()
+                {
+                    AutomaticRotate = autoRotateCheckBox.Checked,
+                    AutomaticBorderDetection = autoDetectBorderCheckBox.Checked
+                };
+
+                try
+                {
+
+                    _twain.StartScanning(_settings);
+                }
+                catch (TwainException ex)
+                {
+                    ErrorLog.WriteLog("scan_Click", ex.Message);
+                    MsgBox.ShowError("Không thể scan:"+ex.Message);
+                    scan.Enabled = true;
+
+                }
             }
-            catch (TwainException ex)
+            catch (Exception ex)
             {
                 ErrorLog.WriteLog("scan_Click", ex.Message);
-                MsgBox.ShowError(ex.Message);
-                scan.Enabled = true;
-
+                MsgBox.ShowError("Không thể scan."+ ex.Message);
             }
         }
        
@@ -331,8 +339,8 @@ namespace TestApp
             }
             currentImage--;
             pictureBox1.Image = imageLst.Images[currentImage];
-            widthLabel.Text = "Width: " + imageLst.Images[currentImage].Width;
-            heightLabel.Text = "Height: " + imageLst.Images[currentImage].Height;
+            widthLabel.Text = "Chiều rộng: " + imageLst.Images[currentImage].Width;
+            heightLabel.Text = "Chiều cao: " + imageLst.Images[currentImage].Height;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -343,8 +351,8 @@ namespace TestApp
             }
             currentImage++;
             pictureBox1.Image = imageLst.Images[currentImage];
-            widthLabel.Text = "Width: " + imageLst.Images[currentImage].Width;
-            heightLabel.Text = "Height: " + imageLst.Images[currentImage].Height;
+            widthLabel.Text = "Chiều rộng: " + imageLst.Images[currentImage].Width;
+            heightLabel.Text = "Chiều cao: " + imageLst.Images[currentImage].Height;
         }
 
         private void button1_Click(object sender, EventArgs e)

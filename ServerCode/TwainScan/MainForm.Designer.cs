@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.selectSource = new System.Windows.Forms.Button();
             this.scan = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -64,7 +63,7 @@
             this.selectSource.Name = "selectSource";
             this.selectSource.Size = new System.Drawing.Size(136, 55);
             this.selectSource.TabIndex = 0;
-            this.selectSource.Text = "Select Source";
+            this.selectSource.Text = "Chọn kết nối";
             this.selectSource.UseVisualStyleBackColor = true;
             this.selectSource.Click += new System.EventHandler(this.selectSource_Click);
             // 
@@ -75,17 +74,17 @@
             this.scan.Name = "scan";
             this.scan.Size = new System.Drawing.Size(136, 61);
             this.scan.TabIndex = 1;
-            this.scan.Text = "Scan";
+            this.scan.Text = "Quét";
             this.scan.UseVisualStyleBackColor = true;
             this.scan.Click += new System.EventHandler(this.scan_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(172, 78);
+            this.pictureBox1.Location = new System.Drawing.Point(204, 78);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(537, 693);
+            this.pictureBox1.Size = new System.Drawing.Size(505, 693);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -93,12 +92,14 @@
             // useAdfCheckBox
             // 
             this.useAdfCheckBox.AutoSize = true;
+            this.useAdfCheckBox.Checked = true;
+            this.useAdfCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.useAdfCheckBox.Location = new System.Drawing.Point(14, 221);
             this.useAdfCheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.useAdfCheckBox.Name = "useAdfCheckBox";
-            this.useAdfCheckBox.Size = new System.Drawing.Size(70, 19);
+            this.useAdfCheckBox.Size = new System.Drawing.Size(117, 19);
             this.useAdfCheckBox.TabIndex = 3;
-            this.useAdfCheckBox.Text = "Use ADF";
+            this.useAdfCheckBox.Text = "Tự động kéo giấy";
             this.useAdfCheckBox.UseVisualStyleBackColor = true;
             // 
             // useUICheckBox
@@ -107,9 +108,9 @@
             this.useUICheckBox.Location = new System.Drawing.Point(14, 276);
             this.useUICheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.useUICheckBox.Name = "useUICheckBox";
-            this.useUICheckBox.Size = new System.Drawing.Size(59, 19);
+            this.useUICheckBox.Size = new System.Drawing.Size(182, 19);
             this.useUICheckBox.TabIndex = 4;
-            this.useUICheckBox.Text = "Use UI";
+            this.useUICheckBox.Text = "Dùng giao diện của máy quét";
             this.useUICheckBox.UseVisualStyleBackColor = true;
             // 
             // saveButton
@@ -119,19 +120,21 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(136, 61);
             this.saveButton.TabIndex = 2;
-            this.saveButton.Text = "Save";
+            this.saveButton.Text = "Lưu";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // blackAndWhiteCheckBox
             // 
             this.blackAndWhiteCheckBox.AutoSize = true;
+            this.blackAndWhiteCheckBox.Checked = true;
+            this.blackAndWhiteCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.blackAndWhiteCheckBox.Location = new System.Drawing.Point(14, 332);
             this.blackAndWhiteCheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.blackAndWhiteCheckBox.Name = "blackAndWhiteCheckBox";
-            this.blackAndWhiteCheckBox.Size = new System.Drawing.Size(60, 19);
+            this.blackAndWhiteCheckBox.Size = new System.Drawing.Size(106, 19);
             this.blackAndWhiteCheckBox.TabIndex = 6;
-            this.blackAndWhiteCheckBox.Text = "B && W";
+            this.blackAndWhiteCheckBox.Text = "Quét đen trắng";
             this.blackAndWhiteCheckBox.UseVisualStyleBackColor = true;
             // 
             // widthLabel
@@ -140,9 +143,9 @@
             this.widthLabel.Location = new System.Drawing.Point(14, 387);
             this.widthLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.widthLabel.Name = "widthLabel";
-            this.widthLabel.Size = new System.Drawing.Size(39, 15);
+            this.widthLabel.Size = new System.Drawing.Size(66, 15);
             this.widthLabel.TabIndex = 7;
-            this.widthLabel.Text = "Width";
+            this.widthLabel.Text = "Chiều rộng";
             // 
             // heightLabel
             // 
@@ -150,9 +153,9 @@
             this.heightLabel.Location = new System.Drawing.Point(14, 402);
             this.heightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(43, 15);
+            this.heightLabel.Size = new System.Drawing.Size(60, 15);
             this.heightLabel.TabIndex = 8;
-            this.heightLabel.Text = "Height";
+            this.heightLabel.Text = "Chiều cao";
             // 
             // diagnosticsButton
             // 
@@ -161,7 +164,7 @@
             this.diagnosticsButton.Name = "diagnosticsButton";
             this.diagnosticsButton.Size = new System.Drawing.Size(136, 46);
             this.diagnosticsButton.TabIndex = 3;
-            this.diagnosticsButton.Text = "Diagnostics";
+            this.diagnosticsButton.Text = "Tự kiểm tra";
             this.diagnosticsButton.UseVisualStyleBackColor = true;
             this.diagnosticsButton.Click += new System.EventHandler(this.diagnostics_Click);
             // 
@@ -171,9 +174,9 @@
             this.checkBoxArea.Location = new System.Drawing.Point(14, 358);
             this.checkBoxArea.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.checkBoxArea.Name = "checkBoxArea";
-            this.checkBoxArea.Size = new System.Drawing.Size(76, 19);
+            this.checkBoxArea.Size = new System.Drawing.Size(112, 19);
             this.checkBoxArea.TabIndex = 10;
-            this.checkBoxArea.Text = "Grab area";
+            this.checkBoxArea.Text = "Chọn vùng quét";
             this.checkBoxArea.UseVisualStyleBackColor = true;
             // 
             // showProgressIndicatorUICheckBox
@@ -182,9 +185,9 @@
             this.showProgressIndicatorUICheckBox.Location = new System.Drawing.Point(14, 303);
             this.showProgressIndicatorUICheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.showProgressIndicatorUICheckBox.Name = "showProgressIndicatorUICheckBox";
-            this.showProgressIndicatorUICheckBox.Size = new System.Drawing.Size(103, 19);
+            this.showProgressIndicatorUICheckBox.Size = new System.Drawing.Size(125, 19);
             this.showProgressIndicatorUICheckBox.TabIndex = 11;
-            this.showProgressIndicatorUICheckBox.Text = "Show Progress";
+            this.showProgressIndicatorUICheckBox.Text = "Hiển thị hiện trạng";
             this.showProgressIndicatorUICheckBox.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -204,7 +207,7 @@
             this.useDuplexCheckBox.Name = "useDuplexCheckBox";
             this.useDuplexCheckBox.Size = new System.Drawing.Size(85, 19);
             this.useDuplexCheckBox.TabIndex = 13;
-            this.useDuplexCheckBox.Text = "Use Duplex";
+            this.useDuplexCheckBox.Text = "Quét 2 mặt";
             this.useDuplexCheckBox.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -237,23 +240,27 @@
             // autoRotateCheckBox
             // 
             this.autoRotateCheckBox.AutoSize = true;
+            this.autoRotateCheckBox.Checked = true;
+            this.autoRotateCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.autoRotateCheckBox.Location = new System.Drawing.Point(14, 461);
             this.autoRotateCheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.autoRotateCheckBox.Name = "autoRotateCheckBox";
-            this.autoRotateCheckBox.Size = new System.Drawing.Size(89, 19);
+            this.autoRotateCheckBox.Size = new System.Drawing.Size(117, 19);
             this.autoRotateCheckBox.TabIndex = 18;
-            this.autoRotateCheckBox.Text = "Auto Rotate";
+            this.autoRotateCheckBox.Text = "Tự đảo chiều ảnh";
             this.autoRotateCheckBox.UseVisualStyleBackColor = true;
             // 
             // autoDetectBorderCheckBox
             // 
             this.autoDetectBorderCheckBox.AutoSize = true;
+            this.autoDetectBorderCheckBox.Checked = true;
+            this.autoDetectBorderCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.autoDetectBorderCheckBox.Location = new System.Drawing.Point(14, 434);
             this.autoDetectBorderCheckBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.autoDetectBorderCheckBox.Name = "autoDetectBorderCheckBox";
-            this.autoDetectBorderCheckBox.Size = new System.Drawing.Size(127, 19);
+            this.autoDetectBorderCheckBox.Size = new System.Drawing.Size(106, 19);
             this.autoDetectBorderCheckBox.TabIndex = 17;
-            this.autoDetectBorderCheckBox.Text = "Auto Detect Border";
+            this.autoDetectBorderCheckBox.Text = "Tự nhận lề giấy";
             this.autoDetectBorderCheckBox.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -333,7 +340,6 @@
             this.Controls.Add(this.scan);
             this.Controls.Add(this.selectSource);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
