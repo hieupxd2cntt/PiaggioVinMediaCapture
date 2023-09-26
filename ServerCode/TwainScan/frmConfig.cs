@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TwainScan.Common;
 using VINMediaCaptureEntities.TaiwainAppModel;
 using static System.Environment;
 
@@ -63,17 +64,7 @@ namespace TwainScan
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var configModel = new ConfigModel();
-            configModel.WebApi=txtApiUrl.Text.Trim();
-            configModel.WebApp = txtHostUrl.Text.Trim();
-            configModel.ScanFolder = txtScanFolder.Text.Trim();
-            configModel.ScanSuccessFolder = txtScanSuccessFolder.Text.Trim();
-            configModel.ScanFailFolder = txtScanFailFolder.Text.Trim();
-            XMLProcess xMLProcess = new XMLProcess();
-            var xml = xMLProcess.GetXMLFromObject(configModel);
-            var configFile= System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData)+ "/TaiwanScan/TaiwanScanConfig.Xml";
-            xMLProcess.SaveXmlToFile(xml, configFile);
-            MsgBox.Show("Lưu file thành công","Thông báo");
+            
 
         }
 
@@ -102,6 +93,22 @@ namespace TwainScan
             {
                 txtLogPath.Text = folderDialog.SelectedPath;
             }
+        }
+
+        private void btnSave1_Click(object sender, EventArgs e)
+        {
+            var configModel = new ConfigModel();
+            configModel.WebApi = txtApiUrl.Text.Trim();
+            configModel.WebApp = txtHostUrl.Text.Trim();
+            configModel.ScanFolder = txtScanFolder.Text.Trim();
+            configModel.ScanSuccessFolder = txtScanSuccessFolder.Text.Trim();
+            configModel.ScanFailFolder = txtScanFailFolder.Text.Trim();
+            configModel.LogPath = txtLogPath.Text.Trim();
+            XMLProcess xMLProcess = new XMLProcess();
+            var xml = xMLProcess.GetXMLFromObject(configModel);
+            var configFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData) + ConstantConfig.DefaultScanConfig;
+            xMLProcess.SaveXmlToFile(xml, configFile);
+            MsgBox.Show("Lưu file thành công", "Thông báo");
         }
     }
 }

@@ -59,14 +59,14 @@ namespace TwainScan.Common
                     catch (Exception e1)
                     {
 
-                        System.Diagnostics.Debug.WriteLine("hieu=" + e1.ToString());
+                        ErrorLog.WriteLog("LoadGetApi",e1.Message);
                     }
                     return content;
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                ErrorLog.WriteLog("LoadGetApi", e.Message);
             }
             return string.Empty;
         }
@@ -101,13 +101,13 @@ namespace TwainScan.Common
                     }
                     catch (Exception ex)
                     {
-
+                        ErrorLog.WriteLog("PostApi", ex.Message);
                     }
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                ErrorLog.WriteLog("PostApi", e.Message);
             }
             return null;
         }

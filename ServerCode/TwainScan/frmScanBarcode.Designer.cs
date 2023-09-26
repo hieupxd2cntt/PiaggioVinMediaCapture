@@ -52,7 +52,6 @@
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Size = new System.Drawing.Size(392, 23);
             this.txtBarcode.TabIndex = 0;
-            this.txtBarcode.Text = "SPTestVTDtest";
             this.txtBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarcode_KeyDown);
             // 
             // btnNext

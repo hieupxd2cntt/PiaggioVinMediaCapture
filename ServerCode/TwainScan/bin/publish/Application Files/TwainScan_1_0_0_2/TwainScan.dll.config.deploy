@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-	<appSettings>
-		<add key="UserNameApi" value="hieupx3"/>
-		<add key="PasswordApi" value="hieupx3"/>
-		<add key="UrlApi" value="http://123.31.12.221:8024/api/"/>
-		<add key="WebAppUrl" value="http://123.31.12.221:8022"/>
-	</appSettings>
-</configuration>

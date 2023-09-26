@@ -1,0 +1,14 @@
+E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.exe
+E:\PublishAllProject\VinMediaCapture\Winform\DAISY.ICO
+E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.dll
+E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.deps.json
+E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.runtimeconfig.json
+E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.dll.config
+E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.pdb
+E:\PublishAllProject\VinMediaCapture\Winform\Newtonsoft.Json.dll
+E:\PublishAllProject\VinMediaCapture\Winform\log4net.dll
+E:\PublishAllProject\VinMediaCapture\Winform\TwainDotNet.dll
+E:\PublishAllProject\VinMediaCapture\Winform\TwainDotNet.WinFroms.dll
+E:\PublishAllProject\VinMediaCapture\Winform\VINMediaCaptureEntities.dll
+E:\PublishAllProject\VinMediaCapture\Winform\VINMediaCaptureEntities.pdb
+E:\PublishAllProject\VinMediaCapture\Winform\log4net.xml

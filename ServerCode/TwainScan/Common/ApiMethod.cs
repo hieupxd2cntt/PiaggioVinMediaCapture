@@ -25,8 +25,12 @@ namespace TwainScan.Common
         {
             var url = "User/Login";
             var data = PostApi(url, user);
+            if (data==null)
+            {
+                return null;
+            }
             var userData = JsonConvert.DeserializeObject<Users>(data);
-             return new UserLoginModel { User = userData }; ;
+            return new UserLoginModel { User = userData };
         }
 
         public DateTime? GetSystemDate()

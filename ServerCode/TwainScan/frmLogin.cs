@@ -22,28 +22,9 @@ namespace TwainScan
         public frmLogin()
         {
             InitializeComponent();
+            this.ControlBox = false;
             
         }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            ApiMethod api =new ApiMethod();
-            var model=api.GetModelByBarcode(txtUsername.Text.Trim());
-            var data = JsonConvert.DeserializeObject<List<DocTypeItemAddModel>>(model);
-            if (data !=null && data.Any())
-            {
-                Common.CurrentValue.CurrentAttributeModel = data;
-                CurrentValue.Barcode = txtUsername.Text.Trim();
-                frmScanVincode frm=new frmScanVincode();
-                frm.ShowDialog();
-            }
-            else
-            {
-                MsgBox.ShowError("Không tìm thấy thông tin thuộc tính của xe");
-            }
-
-        }
-
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Application.Exit();
@@ -67,17 +48,18 @@ namespace TwainScan
                     return;
                 }
                 var userLogin = api.Login(user);
-                if (userLogin == null)
+                if (userLogin == null || userLogin.User == null)
                 {
-                    MsgBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác", "Thông báo");
+                    MsgBox.ShowError("Tên đăng nhập hoặc mật khẩu không chính xác");
+                    return;
                 }
                 CurrentValue.User = userLogin;
                 this.DialogResult = DialogResult.OK;
             }
             catch (Exception ex)
             {
-                MsgBox.ShowError("btnLogin_Click",ex.Message);
-                ErrorLog.WriteLog("MainForm", ex.Message);
+                MsgBox.ShowError("Lỗi đăng nhập user:"+ex.Message);
+                ErrorLog.WriteLog("btnLogin_Click", ex.Message);
             }
         }
 
@@ -97,6 +79,11 @@ namespace TwainScan
         private void txtUsername_TabIndexChanged(object sender, EventArgs e)
         {
             MsgBox.Show("Changed","");
+        }
+
+        private void btnLogin1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
