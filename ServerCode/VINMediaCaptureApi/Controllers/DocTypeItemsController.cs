@@ -47,23 +47,23 @@ namespace VINMediaCaptureApi.Controllers
         }
         [HttpPost]
         [Route("Index")]
-        public async Task<DocTypeItemsViewModel> Index([FromBody] DocTypeItems docTypeItems)
+        public async Task<DocTypeItemsViewModel> Index([FromBody] DocTypeItemsViewModel search)
         {
             var data = new DocTypeItemsViewModel();
-            data.Search = docTypeItems;
-            data.DataDocTypeItems = (from d in _context.DocTypeItems
+            data.Search = search.Search;
+            var dataDocTypeItems = (from d in _context.DocTypeItems
                                      join da in _context.DocTypeItemAttr on d.ItemID equals da.ItemID
                                      join m in _context.Market on d.MarketID equals m.MarketID
                                      join c in _context.Color on d.ColorID equals c.ColorID
                                      join md in _context.Model on d.ModelID equals md.ModelID
-                                     where (d.ItemName.Contains(docTypeItems.ItemName) || String.IsNullOrEmpty(docTypeItems.ItemName))
-                                     && (d.ItemDescription.Contains(docTypeItems.ItemDescription) || String.IsNullOrEmpty(docTypeItems.ItemDescription))
-                                     && (d.ModelID ==docTypeItems.ModelID || docTypeItems.ModelID<0)
-                                     && (d.MarketID ==docTypeItems.MarketID || docTypeItems.MarketID < 0)
-                                     && (d.ColorID ==docTypeItems.ColorID || docTypeItems.ColorID < 0)
-                                     && (d.ManualCollect ==docTypeItems.ManualCollect)
-                                     && (d.DocTypeID == docTypeItems.DocTypeID || docTypeItems.DocTypeID <=0)
-                                     && (d.Disabled == docTypeItems.Disabled || docTypeItems.Disabled < 0)
+                                     where (d.ItemName.Contains(search.Search.ItemName) || String.IsNullOrEmpty(search.Search.ItemName))
+                                     && (d.ItemDescription.Contains(search.Search.ItemDescription) || String.IsNullOrEmpty(search.Search.ItemDescription))
+                                     && (d.ModelID == search.Search.ModelID || search.Search.ModelID<0)
+                                     && (d.MarketID == search.Search.MarketID || search.Search.MarketID < 0)
+                                     && (d.ColorID == search.Search.ColorID || search.Search.ColorID < 0)
+                                     && (d.ManualCollect == search.Search.ManualCollect)
+                                     && (d.DocTypeID == search.Search.DocTypeID || search.Search.DocTypeID <=0)
+                                     && (d.Disabled == search.Search.Disabled || search.Search.Disabled < 0)
                                      select new DocTypeItemsInfo
                                      {
                                          DocTypeItemAttr=da,
@@ -71,7 +71,17 @@ namespace VINMediaCaptureApi.Controllers
                                          Color = c,
                                          Model = md,
                                          Market = m
-                                     }).ToList();
+                                     });
+            data.TotalRecord = dataDocTypeItems.Count();
+            
+            if (data.TotalRecord > data.PageSize)
+            {
+                data.DataDocTypeItems = dataDocTypeItems.Skip((search.CurrPage - 1) * search.PageSize).Take(search.PageSize).ToList();
+            }
+            else
+            {
+                data.DataDocTypeItems = dataDocTypeItems.ToList();
+            }
             return data;
         }
         [HttpGet]

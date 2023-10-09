@@ -177,7 +177,6 @@ namespace TwainScan
         {
             Common.CurrentValue.User = null;
             Common.CurrentValue.CurrentAttributeModel = null;
-            Common.CurrentValue.Barcode = String.Empty;
             Common.CurrentValue.VinCode = String.Empty;
             ShowLogin();
         }

@@ -26,6 +26,10 @@ namespace VINMediaCapture.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(Users search)
         {
+            if (String.IsNullOrEmpty(search.LoginName))
+            {
+                search.LoginName = "";
+            }
             var data= await _userlService.Index(search);
             return View(data);
         }

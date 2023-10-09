@@ -35,6 +35,7 @@ namespace TwainScan
                 txtScanSuccessFolder.Text= String.IsNullOrEmpty(obj.ScanSuccessFolder) ? System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + @"\TaiwanScan\Success":obj.ScanSuccessFolder;
                 txtScanFailFolder.Text= String.IsNullOrEmpty(obj.ScanFailFolder) ? System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + @"\TaiwanScan\Fail":obj.ScanFailFolder;
                 txtLogPath.Text = obj.LogPath;
+                txtLineName.Text = obj.LineName;
             }
             else
             {
@@ -45,6 +46,7 @@ namespace TwainScan
                 txtScanSuccessFolder.Text = obj.ScanSuccessFolder;
                 txtScanFailFolder.Text = obj.ScanFailFolder;
                 txtLogPath.Text = obj.LogPath;
+                txtLineName.Text = obj.LineName;
             }
         }
 
@@ -104,11 +106,13 @@ namespace TwainScan
             configModel.ScanSuccessFolder = txtScanSuccessFolder.Text.Trim();
             configModel.ScanFailFolder = txtScanFailFolder.Text.Trim();
             configModel.LogPath = txtLogPath.Text.Trim();
+            configModel.LineName = txtLineName.Text;
             XMLProcess xMLProcess = new XMLProcess();
             var xml = xMLProcess.GetXMLFromObject(configModel);
             var configFile = System.Environment.GetFolderPath(System.Environment.SpecialFolder.CommonApplicationData) + ConstantConfig.DefaultScanConfig;
             xMLProcess.SaveXmlToFile(xml, configFile);
             MsgBox.Show("Lưu file thành công", "Thông báo");
+            Common.CurrentValue.CurrConfig = null;
         }
     }
 }

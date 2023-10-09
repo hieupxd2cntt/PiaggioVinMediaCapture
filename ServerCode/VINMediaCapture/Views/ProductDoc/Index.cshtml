@@ -46,11 +46,13 @@
                                                 @{
                                                     foreach (var item in models)
                                                     {
-                                                        if(Model.Search.ModelID == item.ModelID){
-                                                             <option value="@item.ModelID" selected="selected">@item.ModelName</option>
+                                                        if (Model.Search.ModelID == item.ModelID)
+                                                        {
+                                                            <option value="@item.ModelID" selected="selected">@item.ModelName</option>
                                                         }
-                                                        else{
-                                                             <option value="@item.ModelID">@item.ModelName</option>
+                                                        else
+                                                        {
+                                                            <option value="@item.ModelID">@item.ModelName</option>
                                                         }
                                                     }
                                                 }
@@ -67,13 +69,15 @@
                                                 @{
                                                     foreach (var item in markets)
                                                     {
-                                                        if(Model.Search.MarketID == item.MarketID){
-                                                             <option value="@item.MarketID" selected="selected">@item.MarketName</option>
+                                                        if (Model.Search.MarketID == item.MarketID)
+                                                        {
+                                                            <option value="@item.MarketID" selected="selected">@item.MarketName</option>
                                                         }
-                                                        else{
+                                                        else
+                                                        {
                                                             <option value="@item.MarketID">@item.MarketCode - @item.MarketName</option>
                                                         }
-                                                                
+
                                                     }
                                                 }
                                             </select>
@@ -95,7 +99,7 @@
                                                         {
                                                             <option value="@item.ColorID">@item.ColorCode - @item.ColorName</option>
                                                         }
-                                                               
+
                                                     }
                                                 }
                                             </select>
@@ -119,7 +123,7 @@
                                                         {
                                                             <option value="@item.DocTypeID">@item.DocTypeCode - @item.DocTypeName</option>
                                                         }
-                                                            
+
                                                     }
                                                 }
                                             </select>
@@ -129,8 +133,8 @@
                                         <div class="form-group row">
                                             <label class="col-md-4">Từ ngày</label>
                                             <div class="col-md-8 row">
-                                                <input type="text" class="form-control datepicker col-md-5" id="fromDate" name="FromDate" value="@Model.FromDate"/>
-                                                 <label class=" col-md-2 text-center"> -</label>
+                                                <input type="text" class="form-control datepicker col-md-5" id="fromDate" name="FromDate" value="@Model.FromDate" />
+                                                <label class=" col-md-2 text-center"> -</label>
                                                 <input type="text" class="form-control datepicker col-md-5" id="toDate" name="ToDate" value="@Model.ToDate" />
                                             </div>
                                         </div>
@@ -171,22 +175,27 @@
                                             if
                                             (Model.ProductDocInfos == null || !Model.ProductDocInfos.Any())
                                             {
-                                                    <td colspan="8">Không có dữ liệu</td>
+                                            <td colspan="8">Không có dữ liệu</td>
                                             }
                                             else
                                             {
                                                 foreach (var item in Model.ProductDocInfos)
                                                 {
-                                                        <tr>
-                                                        <td><a href="#" data-toggle="modal" data-target="#exampleModal" onclick="LoadDetailProduct('@item.ProductDoc.VINCode',@item.ProductDoc.Id,@item.DocType.DocTypeID)">@item.ProductDoc.VINCode</a> </td>
-                                                            <td>@item.Model.ModelCode</td>
-                                                            <td>@item.Market.MarketCode</td>
-                                                            <td>@item.Color.ColorCode</td>
-                                                            <td>@(String.Format("{0}{1}{2}", item.Model.ModelCode, item.Market.MarketCode, item.Color.ColorCode))</td>
-                                                            <td>@item.ProductDoc.DocTypeDate.ToString("dd/MM/yyyy HH:mm:ss")</td>
-                                                            <td>@item.User.LoginName</td>
-                                                            <td>@item.DocType.DocTypeName</td>
-                                                        </tr>
+                                                <tr>
+                                                    <td><a href="#" data-toggle="modal" data-target="#exampleModal" onclick="LoadDetailProduct('@item.ProductDoc.VINCode',@item.ProductDoc.Id,@item.DocType.DocTypeID)">@item.ProductDoc.VINCode</a> </td>
+                                                    <td>@(item.Model == null ? "" : item.Model.ModelCode)</td>
+                                                    <td>@(item.Market == null ? "" : item.Market.MarketCode)</td>
+                                                    <td>@(item.Color == null ? "" : item.Color.ColorCode)</td>
+                                                    <td>
+                                                            @if (item.Model != null && item.Market != null && item.Color != null)
+                                                            {
+                                                            <span>@(String.Format("{0}{1}{2}", item.Model.ModelCode, item.Market.MarketCode, item.Color.ColorCode))</span>
+                                                            }
+                                                    </td>
+                                                    <td>@item.ProductDoc.DocTypeDate.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                                                    <td>@item.User.LoginName</td>
+                                                    <td>@item.DocType.DocTypeName</td>
+                                                </tr>
                                                 }
                                             }
                                         }
@@ -197,9 +206,9 @@
                                 @{
                                     if (Model.TotalRecord > Model.PageSize)
                                     {
-                                            <div class="col-md-12 col-ld-12 no-padding">
-                                                @Html.Partial("_pagination", new SortAndPageModel { PageSize = Model.PageSize, TotalRecordCount = Model.TotalRecord, CurrentPageIndex = Model.CurrPage })
-                                            </div>
+                                        <div class="col-md-12 col-ld-12 no-padding">
+                                            @Html.Partial("_pagination", new SortAndPageModel { PageSize = Model.PageSize, TotalRecordCount = Model.TotalRecord, CurrentPageIndex = Model.CurrPage })
+                                        </div>
                                     }
                                 }
                             </div>
@@ -223,7 +232,6 @@
                 </button>
             </div>
             <div class="modal-body" id="detail-body" style="width:900px;">
-                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

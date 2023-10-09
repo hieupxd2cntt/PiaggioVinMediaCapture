@@ -21,11 +21,6 @@ namespace TwainScan
         public frmScanVincode()
         {
             InitializeComponent();
-            if (Common.CurrentValue.CurrentAttributeModel != null && Common.CurrentValue.CurrentAttributeModel.Any())
-            {
-                lblModelInfo.Text = Common.CurrentValue.CurrentAttributeModel.FirstOrDefault().Model.ModelName;
-            }
-            txtVinCode.Focus();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -35,24 +30,6 @@ namespace TwainScan
             {
                 MsgBox.ShowError("Vincode không được để trống");
                 return; 
-            }
-            var model = api.GetModelByBarcode(CurrentValue.Barcode);
-            var data = JsonConvert.DeserializeObject<List<DocTypeItemAddModel>>(model);
-            if (data != null && data.Any())
-            {
-                CurrentValue.VinCode = txtVinCode.Text.Trim();
-                var dataSendApi = new List<DocTypeModelListData>();
-                Common.CurrentValue.CurrentAttributeModel = data;
-
-                MainForm frm = new MainForm();
-                if(frm.ShowDialog()== DialogResult.OK)
-                {
-                    this.DialogResult = DialogResult.OK;
-                }
-            }
-            else
-            {
-                MsgBox.ShowError("Không tìm thấy thông tin thuộc tính của xe");
             }
         }
 

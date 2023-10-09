@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using VINMediaCaptureEntities.Entities;
+using VINMediaCaptureEntities.Model;
 
 namespace VINMediaCaptureEntities.ViewModel
 {
@@ -23,7 +24,7 @@ namespace VINMediaCaptureEntities.ViewModel
             DocTypes = new List<DocType>();
         }
     }
-    public class DocTypeItemsViewModel
+    public class DocTypeItemsViewModel: PagingModel
     {
         public DocTypeItems Search { get; set; }
         public List<DocTypeItemsInfo> DataDocTypeItems { get; set; }

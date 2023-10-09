@@ -1,11 +1,11 @@
 ﻿
-function DeleteModel(colorId) {
+function DeleteUsers(userId) {
     bootbox.confirm("Bạn chắc chắn muốn xóa dữ liệu?", function (result) {
         if (result) {
             $.ajax({
                 type: 'POST',
-                url: $("#urlDeleteModel").val(),
-                data: jQuery.param({ id: colorId }),
+                url: $("#urlDeleteUsers").val(),
+                data: jQuery.param({ id: userId }),
                 async: false,
                 success: function (response) {
                     if (response.resultCode > 0) {

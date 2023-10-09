@@ -71,6 +71,8 @@ namespace VINMediaCaptureApi.Controllers
             var outPut = new MobileResult();
             var serialNumber = HttpContext.Request.Host.Host;
             var userName = HttpContext.Request.Headers["UserName"].ToString();
+            var machineName = HttpContext.Request.Headers["MachineName"].ToString();
+            var lineName = HttpContext.Request.Headers["LineName"].ToString();
             var users = _context.Users.Where(x => x.LoginName == userName);
             if (users == null || !users.Any())
             {
@@ -84,67 +86,86 @@ namespace VINMediaCaptureApi.Controllers
             }
             if (!String.IsNullOrEmpty(currentSession))
             {
-                var barcode = currentSession.Split('-')[0];
-                var docTypeItems = from d in _context.DocTypeItems
-                                   join da in _context.DocTypeItemAttr on d.ItemID equals da.ItemID
-                                   join m in _context.Model on d.ModelID equals m.ModelID
-                                   join ma in _context.Market on d.MarketID equals ma.MarketID
-                                   join c in _context.Color on d.ColorID equals c.ColorID
-                                   where m.ModelCode + ma.MarketCode + c.ColorCode == barcode
-                                   && d.DocTypeID== (int)EDocType.ThuThapTaiLieu
-                                   select d;
-
-                var docType = docTypeItems.FirstOrDefault();
                 var proDoc = new ProductDoc
                 {
-                    MarketID = docType.MarketID ?? 0,
-                    ModelID = docType.ModelID ?? 0,
-                    ColorID = docType.ColorID ?? 0,
-                    DocTypeID =(int)EDocType.ThuThapTaiLieu,
+                    MarketID = -1,
+                    ModelID = -1,
+                    ColorID = -1,
+                    DocTypeID = (int)EDocType.ThuThapTaiLieu,
                     DocTypeDate = DateTime.Now,
                     UserID = users.First().UserID,
                     WS_ID = 0,
                     SerialNumber = serialNumber,
-                    VINCode = currentSession.Split('-')[1]
+                    VINCode = currentSession
                 };
                 _context.ProductDoc.Add(proDoc);
                 _context.SaveChanges();
-                var vincode = currentSession.Split('-')[1];
-                if (docType != null)
+                var vincode = currentSession;
+                var pathSaveDb = "";
+                var physicalPath = String.Empty;
+                if (productDoc.FirstOrDefault().sendPdf)
                 {
-                    var physicalPath = String.Format("{0}{1}", _Configuration.GetSection("ConfigApi")["PhysicalPathApp"], String.Format(@"\uploads\TaiwanScan\{0}\{1}", barcode, vincode));
-                    if (!Directory.Exists(physicalPath))
+                    physicalPath = String.Format("{0}{1}", _Configuration.GetSection("ConfigApi")["PhysicalPathApp"], String.Format(@"\uploads\DaisyEDoc\{0}\{1}", lineName, machineName));
+                }
+                else
+                {
+                    physicalPath = String.Format("{0}{1}", _Configuration.GetSection("ConfigApi")["PhysicalPathApp"], String.Format(@"\uploads\DaisyEDoc\{0}\{1}\{2}", lineName, machineName, vincode));
+                    pathSaveDb = String.Format(@"\uploads\DaisyEDoc\{0}\{1}\{2}", lineName, machineName, vincode);
+                    if (Directory.Exists(physicalPath))
                     {
-                        Directory.CreateDirectory(physicalPath);
-                    }
-                    foreach (var item in productDoc)
-                    {
-                        foreach (var img in images)
-                        {
-                            if (img.Length > 0)
-                            {
-                                string filePath = Path.Combine(physicalPath, img.FileName);
-                                using (Stream fileStream = new FileStream(filePath, FileMode.Create))
-                                {
-                                    await img.CopyToAsync(fileStream);
-                                }
-                            }
-                            item.textValue = String.Format(@"\uploads\TaiwanScan\{0}\{1}\{2}", barcode, vincode, Path.GetFileName(img.FileName));
-                            var productDocVal = new ProductDocVal
-                            {
-                                AttrID = item.attrId,
-                                //GuideImg = Path.GetFileName(item.assetImage),
-                                //GuideTXT = item.textValue,
-                                VINCode = currentSession.Split('-')[1],
-                                AttrValue = item.textValue,
-                                ItemID = item.itemId,
-                                ProductDocId = proDoc.Id,
-                                DocType_ID = productDoc.FirstOrDefault().attrDocType
-                            };
-                            _context.ProductDocVal.Add(productDocVal);
-                        }                        
+                        pathSaveDb = String.Format(@"\uploads\DaisyEDoc\{0}\{1}\{2}_3", lineName, machineName, vincode, DateTime.Now.ToString("yyyyMMddHHmmss"));
+                        physicalPath = String.Format("{0}{1}", _Configuration.GetSection("ConfigApi")["PhysicalPathApp"], pathSaveDb);
+                        
                     }
                 }
+                
+                if (!Directory.Exists(physicalPath))
+                {
+                    Directory.CreateDirectory(physicalPath);
+                }
+                foreach (var item in productDoc)
+                {
+                    foreach (var img in images)
+                    {
+                        var fileNameSaveDbPdf = "";
+                        if (img.Length > 0)
+                        {
+                            string filePath = Path.Combine(physicalPath, img.FileName);
+                            fileNameSaveDbPdf = img.FileName;
+                            if (System.IO.File.Exists(filePath))
+                            {
+                                fileNameSaveDbPdf = String.Format("{0}_{1}.{2}", Path.GetFileNameWithoutExtension(img.FileName), DateTime.Now.ToString("yyyyMMddHHmmss"), Path.GetExtension(img.FileName));
+                                filePath = Path.Combine(physicalPath, fileNameSaveDbPdf);
+                                
+                            }
+                            using (Stream fileStream = new FileStream(filePath, FileMode.Create))
+                            {
+                                await img.CopyToAsync(fileStream);
+                            }
+                        }
+                        if (productDoc.FirstOrDefault().sendPdf)
+                        {
+                            item.textValue = String.Format(@"\uploads\DaisyEDoc\{0}\{1}\{2}", lineName, machineName, Path.GetFileName(fileNameSaveDbPdf));
+                        }
+                        else
+                        {
+                            item.textValue = String.Format(@"{0}\{1}", pathSaveDb, Path.GetFileName(img.FileName));
+                        }
+                        var productDocVal = new ProductDocVal
+                        {
+                            AttrID = item.attrId,
+                            //GuideImg = Path.GetFileName(item.assetImage),
+                            //GuideTXT = item.textValue,
+                            VINCode = currentSession,
+                            AttrValue = item.textValue,
+                            ItemID = item.itemId,
+                            ProductDocId = proDoc.Id,
+                            DocType_ID = productDoc.FirstOrDefault().attrDocType
+                        };
+                        _context.ProductDocVal.Add(productDocVal);
+                    }
+                }
+
             }
 
             _context.SaveChanges();

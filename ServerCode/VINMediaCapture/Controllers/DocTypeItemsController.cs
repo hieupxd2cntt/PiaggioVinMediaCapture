@@ -25,7 +25,7 @@ namespace VINMediaCapture.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _docTypeItemsService.Index(new DocTypeItems());
+            var data = await _docTypeItemsService.Index(new DocTypeItemsViewModel());
             var viewBag = await _docTypeItemsService.GetViewBagModel();
             CreateViewBagData(viewBag);
             data.Search.ManualCollect = true;
@@ -33,12 +33,12 @@ namespace VINMediaCapture.Controllers
             return View(data);
         }
         [HttpPost]
-        public async Task<IActionResult> Index(DocTypeItems search)
+        public async Task<IActionResult> Index(DocTypeItemsViewModel model)
         {
             var viewBag = await _docTypeItemsService.GetViewBagModel();
             CreateViewBagData(viewBag);
-            var data= await _docTypeItemsService.Index(search);
-
+            var data= await _docTypeItemsService.Index(model);
+            data.CurrPage = model.CurrPage;
             return View(data);
         }
         public void CreateViewBagData(ViewBagDropDownModelModel docTypeItemsViewModel)

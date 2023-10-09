@@ -14,5 +14,6 @@ namespace VINMediaCaptureEntities.TaiwainAppModel
         public string WebApp { get; set; }
         public string WebApi { get; set; }
         public string LogPath { get; set; }
+        public string LineName { get; set; }
     }
 }

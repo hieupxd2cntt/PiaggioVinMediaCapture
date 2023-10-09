@@ -19,7 +19,7 @@ namespace VINMediaCapture.Service
 
         }
 
-        public async Task<DocTypeItemsViewModel> Index(DocTypeItems docTypeItems)
+        public async Task<DocTypeItemsViewModel> Index(DocTypeItemsViewModel docTypeItems)
         {
             var url = "DocTypeItems/Index";
             var data = await PostApi(url, docTypeItems);
@@ -59,7 +59,7 @@ namespace VINMediaCapture.Service
 
     public interface IDocTypeItemsService
     {
-        Task<DocTypeItemsViewModel> Index(DocTypeItems docTypeItems);
+        Task<DocTypeItemsViewModel> Index(DocTypeItemsViewModel docTypeItems);
         Task<RestOutput<int>> Create(DocTypeItemAddModel docTypeItems);
         Task<DocTypeItemAddModel> GetById(int id);
         Task<RestOutput<int>> DeleteById(int id);

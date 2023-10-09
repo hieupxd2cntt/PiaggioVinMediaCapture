@@ -1,14 +1,14 @@
 ﻿@using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
 @model DetailProductDocModel
-<h2>@(String.Format("{0} - {1} -{2}",Model.Model.ModelName, String.Format("{0}{1}{2}", Model.Model.ModelCode, Model.Market.MarketCode, Model.Color.ColorCode),Model.Vincode))</h2>
+<h2>@(String.Format("{0} - {1} -{2}", Model.Model.ModelName, String.Format("{0}{1}{2}", Model.Model.ModelCode, Model.Market.MarketCode, Model.Color.ColorCode), Model.Vincode))</h2>
 <table class="table table-bordered">
     <thead>
     <th>Tên thuộc tính</th>
         @{
             if (Model.DocType == (int)EDocType.ThuThapQC)
             {
-                <th>Kiểu dữ liệu</th>
+            <th>Kiểu dữ liệu</th>
             }
         }
 
@@ -62,8 +62,18 @@
                     <tr>
                         <td>@item.DocTypeItem.ItemName</td>
                         <td>
+
                                 @{
-                                <a href="@Url.Action("Download","ProductDoc", new{url=item.ProductDocVal.AttrValue})"><img src="@item.ProductDocVal.AttrValue" style="width:100px" /></a>
+                                    if (System.IO.Path.GetExtension(item.ProductDocVal.AttrValue).ToLower() == ".pdf")
+                                    {
+                                    <a target="_blank" href="/pdfviewer/web/viewer.html?file=@item.ProductDocVal.AttrValue"><i class="fa fa-eye"></i></a>
+                                    <a href="@Url.Action("Download","ProductDoc", new{url=item.ProductDocVal.AttrValue})"><i class="fa fa-download"></i></a>
+                                    }
+                                    else
+                                    {
+                                    <a href="@Url.Action("Download","ProductDoc", new{url=item.ProductDocVal.AttrValue})"><img src="@item.ProductDocVal.AttrValue" style="width:100px" /></a>
+                                    }
+
                                 }
                         </td>
                     </tr>

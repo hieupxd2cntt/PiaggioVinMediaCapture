@@ -11,7 +11,6 @@ function LoadDetailProduct(vinCode, productDoc, docType) {
         data: jQuery.param({ vinCode: vinCode, productDoc: productDoc, docType: docType }),
         async: false,
         success: function (response) {
-            debugger;
             $("#detail-body").empty().append(response);
         },
         error: function (error) {

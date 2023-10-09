@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
+using VINMediaCaptureEntities.Model;
 
 namespace VINMediaCaptureEntities.Entities
 {

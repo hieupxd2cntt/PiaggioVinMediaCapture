@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using iTextSharp.text.pdf;
+using Microsoft.VisualBasic.ApplicationServices;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,6 @@ namespace TwainScan
         {
             InitializeComponent();
             this.ControlBox = false;
-            
         }
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -84,6 +84,51 @@ namespace TwainScan
         private void btnLogin1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Common.Common.ConvertJPG2PDF1("C:\\Users\\HieuPX\\Desktop\\319155386_491540472962980_3537352328386031607_n.jpg", "C:\\Users\\HieuPX\\Desktop\\Abc.pdf", "hieupx");
+            //Common.Common.ConvertJPG2PDF("C:\\Users\\HieuPX\\Documents\\DaisyEdoc\\Scan\\SPTestVTDtest\\Vespa SprintVTDBlue", "C:\\Users\\HieuPX\\Desktop\\Abc.pdf", "hieupx");
+        }
+        void ConvertJPG2PDF(string jpgfile, string pdf, string text)
+        {
+            var document = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 25, 25, 25, 25);
+            PdfWriter pdfWriter;
+            using (var stream = new FileStream(pdf, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                //QR Code
+
+                pdfWriter = PdfWriter.GetInstance(document, stream);
+                document.Open();
+                iTextSharp.text.Image image;
+                using (var imageStream = new FileStream(jpgfile, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    image = iTextSharp.text.Image.GetInstance(imageStream);
+                    if (image.Height > iTextSharp.text.PageSize.A4.Height - 25)
+                    {
+                        image.ScaleToFit(iTextSharp.text.PageSize.A4.Width - 25, iTextSharp.text.PageSize.A4.Height - 25);
+                    }
+                    else if (image.Width > iTextSharp.text.PageSize.A4.Width - 25)
+                    {
+                        image.ScaleToFit(iTextSharp.text.PageSize.A4.Width - 25, iTextSharp.text.PageSize.A4.Height - 25);
+                    }
+                    image.Alignment = iTextSharp.text.Image.ALIGN_MIDDLE;
+                    document.Add(image);
+
+                }
+
+                ////Adding text
+                //var textY = ((PageSize.A4.Height - image.ScaledHeight) / 2) - 5;
+                //var textX = PageSize.A4.Width / 2;
+                //var chunk = new Chunk(text, FontFactory.GetFont("Helvetica", 22.0f, BaseColor.BLACK));
+                //PdfContentByte cb = pdfWriter.DirectContent;
+                //cb.BeginText();
+                //ColumnText.ShowTextAligned(cb, Element.ALIGN_CENTER, new Phrase(chunk), textX, textY, 0);
+                //cb.EndText();
+
+                document.Close();
+            }
         }
     }
 }

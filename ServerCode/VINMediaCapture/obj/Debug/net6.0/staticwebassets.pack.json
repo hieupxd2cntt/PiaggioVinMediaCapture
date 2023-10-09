@@ -329,6 +329,14 @@
       "PackagePath": "staticwebassets\\js\\DocTypeItems\\Index.js"
     },
     {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\Market\\Create.js",
+      "PackagePath": "staticwebassets\\js\\Market\\Create.js"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\Market\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Market\\Index.js"
+    },
+    {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\js\\Model\\Create.js",
       "PackagePath": "staticwebassets\\js\\Model\\Create.js"
     },
@@ -579,6 +587,1486 @@
     {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\LICENSE",
+      "PackagePath": "staticwebassets\\pdfviewer"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\build\\pdf.js",
+      "PackagePath": "staticwebassets\\pdfviewer\\build\\pdf.js"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\build\\pdf.js.map",
+      "PackagePath": "staticwebassets\\pdfviewer\\build\\pdf.js.map"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\build\\pdf.sandbox.js",
+      "PackagePath": "staticwebassets\\pdfviewer\\build\\pdf.sandbox.js"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\build\\pdf.sandbox.js.map",
+      "PackagePath": "staticwebassets\\pdfviewer\\build\\pdf.sandbox.js.map"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\build\\pdf.worker.js",
+      "PackagePath": "staticwebassets\\pdfviewer\\build\\pdf.worker.js"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\build\\pdf.worker.js.map",
+      "PackagePath": "staticwebassets\\pdfviewer\\build\\pdf.worker.js.map"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\78-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\78-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\78-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\78-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\78-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\78-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\78-RKSJ-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\78-RKSJ-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\78-RKSJ-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\78-RKSJ-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\78-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\78-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\78ms-RKSJ-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\78ms-RKSJ-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\78ms-RKSJ-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\78ms-RKSJ-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\83pv-RKSJ-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\83pv-RKSJ-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\90ms-RKSJ-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\90ms-RKSJ-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\90ms-RKSJ-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\90ms-RKSJ-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\90msp-RKSJ-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\90msp-RKSJ-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\90msp-RKSJ-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\90msp-RKSJ-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\90pv-RKSJ-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\90pv-RKSJ-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\90pv-RKSJ-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\90pv-RKSJ-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Add-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Add-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Add-RKSJ-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Add-RKSJ-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Add-RKSJ-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Add-RKSJ-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Add-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Add-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-CNS1-0.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-CNS1-0.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-CNS1-1.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-CNS1-1.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-CNS1-2.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-CNS1-2.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-CNS1-3.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-CNS1-3.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-CNS1-4.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-CNS1-4.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-CNS1-5.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-CNS1-5.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-CNS1-6.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-CNS1-6.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-CNS1-UCS2.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-CNS1-UCS2.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-GB1-0.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-GB1-0.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-GB1-1.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-GB1-1.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-GB1-2.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-GB1-2.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-GB1-3.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-GB1-3.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-GB1-4.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-GB1-4.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-GB1-5.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-GB1-5.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-GB1-UCS2.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-GB1-UCS2.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Japan1-0.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Japan1-0.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Japan1-1.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Japan1-1.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Japan1-2.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Japan1-2.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Japan1-3.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Japan1-3.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Japan1-4.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Japan1-4.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Japan1-5.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Japan1-5.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Japan1-6.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Japan1-6.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Japan1-UCS2.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Japan1-UCS2.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Korea1-0.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Korea1-0.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Korea1-1.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Korea1-1.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Korea1-2.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Korea1-2.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Adobe-Korea1-UCS2.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Adobe-Korea1-UCS2.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\B5pc-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\B5pc-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\B5pc-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\B5pc-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\CNS-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\CNS-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\CNS-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\CNS-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\CNS1-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\CNS1-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\CNS1-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\CNS1-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\CNS2-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\CNS2-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\CNS2-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\CNS2-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\ETHK-B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\ETHK-B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\ETHK-B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\ETHK-B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\ETen-B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\ETen-B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\ETen-B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\ETen-B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\ETenms-B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\ETenms-B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\ETenms-B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\ETenms-B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Ext-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Ext-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Ext-RKSJ-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Ext-RKSJ-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Ext-RKSJ-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Ext-RKSJ-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Ext-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Ext-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GB-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GB-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GB-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GB-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GB-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GB-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GB-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GB-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBK-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBK-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBK-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBK-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBK2K-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBK2K-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBK2K-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBK2K-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBKp-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBKp-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBKp-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBKp-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBT-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBT-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBT-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBT-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBT-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBT-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBT-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBT-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBTpc-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBTpc-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBTpc-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBTpc-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBpc-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBpc-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\GBpc-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\GBpc-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKdla-B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKdla-B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKdla-B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKdla-B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKdlb-B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKdlb-B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKdlb-B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKdlb-B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKgccs-B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKgccs-B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKgccs-B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKgccs-B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKm314-B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKm314-B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKm314-B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKm314-B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKm471-B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKm471-B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKm471-B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKm471-B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKscs-B5-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKscs-B5-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\HKscs-B5-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\HKscs-B5-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Hankaku.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Hankaku.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Hiragana.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Hiragana.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSC-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSC-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSC-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSC-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSC-Johab-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSC-Johab-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSC-Johab-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSC-Johab-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSCms-UHC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSCms-UHC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSCms-UHC-HW-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSCms-UHC-HW-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSCms-UHC-HW-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSCms-UHC-HW-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSCms-UHC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSCms-UHC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSCpc-EUC-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSCpc-EUC-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\KSCpc-EUC-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\KSCpc-EUC-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Katakana.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Katakana.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\LICENSE",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\NWP-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\NWP-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\NWP-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\NWP-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\RKSJ-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\RKSJ-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\RKSJ-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\RKSJ-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\Roman.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\Roman.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniCNS-UCS2-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniCNS-UCS2-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniCNS-UCS2-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniCNS-UCS2-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniCNS-UTF16-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniCNS-UTF16-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniCNS-UTF16-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniCNS-UTF16-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniCNS-UTF32-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniCNS-UTF32-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniCNS-UTF32-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniCNS-UTF32-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniCNS-UTF8-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniCNS-UTF8-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniCNS-UTF8-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniCNS-UTF8-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniGB-UCS2-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniGB-UCS2-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniGB-UCS2-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniGB-UCS2-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniGB-UTF16-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniGB-UTF16-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniGB-UTF16-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniGB-UTF16-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniGB-UTF32-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniGB-UTF32-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniGB-UTF32-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniGB-UTF32-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniGB-UTF8-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniGB-UTF8-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniGB-UTF8-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniGB-UTF8-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UCS2-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UCS2-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UCS2-HW-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UCS2-HW-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UCS2-HW-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UCS2-HW-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UCS2-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UCS2-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UTF16-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UTF16-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UTF16-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UTF16-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UTF32-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UTF32-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UTF32-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UTF32-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UTF8-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UTF8-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS-UTF8-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS-UTF8-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF16-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF16-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF16-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF16-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF32-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF32-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF32-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF32-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF8-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF8-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF8-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJIS2004-UTF8-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJISPro-UCS2-HW-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJISPro-UCS2-HW-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJISPro-UCS2-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJISPro-UCS2-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJISPro-UTF8-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJISPro-UTF8-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJISX0213-UTF32-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJISX0213-UTF32-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJISX0213-UTF32-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJISX0213-UTF32-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJISX02132004-UTF32-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJISX02132004-UTF32-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniJISX02132004-UTF32-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniJISX02132004-UTF32-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniKS-UCS2-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniKS-UCS2-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniKS-UCS2-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniKS-UCS2-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniKS-UTF16-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniKS-UTF16-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniKS-UTF16-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniKS-UTF16-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniKS-UTF32-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniKS-UTF32-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniKS-UTF32-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniKS-UTF32-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniKS-UTF8-H.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniKS-UTF8-H.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\UniKS-UTF8-V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\UniKS-UTF8-V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\V.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\V.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\cmaps\\WP-Symbol.bcmap",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\cmaps\\WP-Symbol.bcmap"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\compressed.tracemonkey-pldi-09.pdf",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\compressed.tracemonkey-pldi-09.pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\debugger.css",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\debugger.css"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\debugger.js",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\debugger.js"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\altText_add.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\altText_add.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\altText_done.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\altText_done.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-check.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-check.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-comment.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-comment.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-help.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-help.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-insert.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-insert.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-key.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-key.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-newparagraph.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-newparagraph.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-noicon.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-noicon.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-note.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-note.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-paperclip.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-paperclip.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-paragraph.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-paragraph.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\annotation-pushpin.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\annotation-pushpin.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\cursor-editorFreeText.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\cursor-editorFreeText.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\cursor-editorInk.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\cursor-editorInk.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\findbarButton-next.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\findbarButton-next.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\findbarButton-previous.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\findbarButton-previous.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\gv-toolbarButton-download.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\gv-toolbarButton-download.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\gv-toolbarButton-openinapp.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\gv-toolbarButton-openinapp.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\loading-dark.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\loading-dark.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\loading-icon.gif",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\loading-icon.gif"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\loading.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\loading.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-documentProperties.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-documentProperties.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-firstPage.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-firstPage.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-handTool.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-handTool.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-lastPage.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-lastPage.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-rotateCcw.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-rotateCcw.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-rotateCw.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-rotateCw.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-scrollHorizontal.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-scrollHorizontal.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-scrollPage.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-scrollPage.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-scrollVertical.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-scrollVertical.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-scrollWrapped.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-scrollWrapped.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-selectTool.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-selectTool.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-spreadEven.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-spreadEven.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-spreadNone.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-spreadNone.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\secondaryToolbarButton-spreadOdd.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\secondaryToolbarButton-spreadOdd.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-bookmark.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-bookmark.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-currentOutlineItem.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-currentOutlineItem.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-download.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-download.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-editorFreeText.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-editorFreeText.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-editorInk.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-editorInk.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-editorStamp.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-editorStamp.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-menuArrow.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-menuArrow.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-openFile.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-openFile.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-pageDown.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-pageDown.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-pageUp.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-pageUp.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-presentationMode.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-presentationMode.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-print.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-print.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-search.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-search.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-secondaryToolbarToggle.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-secondaryToolbarToggle.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-sidebarToggle.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-sidebarToggle.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-viewAttachments.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-viewAttachments.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-viewLayers.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-viewLayers.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-viewOutline.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-viewOutline.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-viewThumbnail.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-viewThumbnail.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-zoomIn.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-zoomIn.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\toolbarButton-zoomOut.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\toolbarButton-zoomOut.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\treeitem-collapsed.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\treeitem-collapsed.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\images\\treeitem-expanded.svg",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\images\\treeitem-expanded.svg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ach\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ach\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\af\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\af\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\an\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\an\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ar\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ar\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ast\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ast\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\az\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\az\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\be\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\be\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\bg\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\bg\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\bn\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\bn\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\bo\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\bo\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\br\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\br\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\brx\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\brx\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\bs\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\bs\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ca\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ca\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\cak\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\cak\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ckb\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ckb\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\cs\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\cs\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\cy\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\cy\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\da\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\da\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\de\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\de\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\dsb\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\dsb\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\el\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\el\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\en-CA\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\en-CA\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\en-GB\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\en-GB\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\en-US\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\en-US\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\eo\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\eo\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\es-AR\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\es-AR\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\es-CL\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\es-CL\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\es-ES\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\es-ES\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\es-MX\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\es-MX\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\et\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\et\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\eu\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\eu\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\fa\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\fa\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ff\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ff\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\fi\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\fi\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\fr\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\fr\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\fur\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\fur\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\fy-NL\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\fy-NL\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ga-IE\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ga-IE\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\gd\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\gd\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\gl\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\gl\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\gn\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\gn\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\gu-IN\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\gu-IN\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\he\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\he\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\hi-IN\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\hi-IN\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\hr\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\hr\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\hsb\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\hsb\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\hu\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\hu\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\hy-AM\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\hy-AM\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\hye\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\hye\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ia\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ia\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\id\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\id\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\is\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\is\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\it\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\it\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ja\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ja\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ka\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ka\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\kab\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\kab\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\kk\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\kk\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\km\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\km\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\kn\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\kn\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ko\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ko\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\lij\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\lij\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\lo\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\lo\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\locale.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\locale.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\lt\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\lt\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ltg\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ltg\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\lv\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\lv\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\meh\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\meh\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\mk\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\mk\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\mr\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\mr\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ms\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ms\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\my\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\my\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\nb-NO\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\nb-NO\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ne-NP\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ne-NP\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\nl\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\nl\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\nn-NO\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\nn-NO\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\oc\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\oc\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\pa-IN\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\pa-IN\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\pl\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\pl\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\pt-BR\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\pt-BR\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\pt-PT\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\pt-PT\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\rm\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\rm\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ro\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ro\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ru\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ru\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\sat\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\sat\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\sc\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\sc\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\scn\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\scn\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\sco\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\sco\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\si\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\si\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\sk\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\sk\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\skr\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\skr\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\sl\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\sl\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\son\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\son\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\sq\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\sq\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\sr\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\sr\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\sv-SE\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\sv-SE\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\szl\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\szl\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ta\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ta\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\te\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\te\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\tg\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\tg\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\th\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\th\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\tl\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\tl\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\tr\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\tr\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\trs\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\trs\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\uk\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\uk\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\ur\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\ur\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\uz\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\uz\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\vi\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\vi\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\wo\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\wo\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\xh\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\xh\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\zh-CN\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\zh-CN\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\locale\\zh-TW\\viewer.properties",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\locale\\zh-TW\\viewer.properties"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitDingbats.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitDingbats.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitFixed.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitFixed.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitFixedBold.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitFixedBold.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitFixedBoldItalic.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitFixedBoldItalic.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitFixedItalic.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitFixedItalic.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitSerif.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitSerif.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitSerifBold.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitSerifBold.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitSerifBoldItalic.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitSerifBoldItalic.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitSerifItalic.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitSerifItalic.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\FoxitSymbol.pfb",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\FoxitSymbol.pfb"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\LICENSE_FOXIT",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\LICENSE_LIBERATION",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\LiberationSans-Bold.ttf",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\LiberationSans-Bold.ttf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\LiberationSans-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\LiberationSans-BoldItalic.ttf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\LiberationSans-Italic.ttf",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\LiberationSans-Italic.ttf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\standard_fonts\\LiberationSans-Regular.ttf",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\standard_fonts\\LiberationSans-Regular.ttf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\viewer.css",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\viewer.css"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\viewer.html",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\viewer.html"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\viewer.js",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\viewer.js"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\pdfviewer\\web\\viewer.js.map",
+      "PackagePath": "staticwebassets\\pdfviewer\\web\\viewer.js.map"
     },
     {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\plugins\\bootbox.zip",
@@ -15613,6 +17101,154 @@
       "PackagePath": "staticwebassets\\plugins\\uplot\\uPlot.min.css"
     },
     {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\1234567.pdf",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\1234567.pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456789.pdf",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456789.pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\1234567890.pdf",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\1234567890.pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\1234567890_20231009102533..pdf",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\1234567890_20231009102533..pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456789_20231009_100154..pdf",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456789_20231009_100154..pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456789_20231009_100820.pdf",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456789_20231009_100820.pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\321077468_1165997737355550_3393505625703392534_n - Copy.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\321077468_1165997737355550_3393505625703392534_n - Copy.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\321077468_1165997737355550_3393505625703392534_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\321077468_1165997737355550_3393505625703392534_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\327554297_885404249370084_7372621672845577870_n - Copy.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\327554297_885404249370084_7372621672845577870_n - Copy.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\327554297_885404249370084_7372621672845577870_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\12345678\\327554297_885404249370084_7372621672845577870_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\123456.pdf",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\123456.pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\321077468_1165997737355550_3393505625703392534_n - Copy.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\321077468_1165997737355550_3393505625703392534_n - Copy.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\321077468_1165997737355550_3393505625703392534_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\321077468_1165997737355550_3393505625703392534_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\327554297_885404249370084_7372621672845577870_n - Copy.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\327554297_885404249370084_7372621672845577870_n - Copy.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\327554297_885404249370084_7372621672845577870_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456\\327554297_885404249370084_7372621672845577870_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\1234567890.pdf",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\1234567890.pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\321077468_1165997737355550_3393505625703392534_n - Copy.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\321077468_1165997737355550_3393505625703392534_n - Copy.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\321077468_1165997737355550_3393505625703392534_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\321077468_1165997737355550_3393505625703392534_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\327554297_885404249370084_7372621672845577870_n - Copy.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\327554297_885404249370084_7372621672845577870_n - Copy.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\327554297_885404249370084_7372621672845577870_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_20231009_101945\\327554297_885404249370084_7372621672845577870_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\1234567890.pdf",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\1234567890.pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\321077468_1165997737355550_3393505625703392534_n - Copy (3).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\321077468_1165997737355550_3393505625703392534_n - Copy.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\321077468_1165997737355550_3393505625703392534_n - Copy.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\321077468_1165997737355550_3393505625703392534_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\321077468_1165997737355550_3393505625703392534_n.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\327554297_885404249370084_7372621672845577870_n - Copy (2).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\327554297_885404249370084_7372621672845577870_n - Copy (3).jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\327554297_885404249370084_7372621672845577870_n - Copy.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\327554297_885404249370084_7372621672845577870_n - Copy.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\327554297_885404249370084_7372621672845577870_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\123456_3\\327554297_885404249370084_7372621672845577870_n.jpg"
+    },
+    {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DocTypeGuide\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png",
       "PackagePath": "staticwebassets\\uploads\\DocTypeGuide\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png"
     },
@@ -15727,6 +17363,14 @@
     {
       "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg",
       "PackagePath": "staticwebassets\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\4650C0EE-A5BC-4BFF-917E-417DD23BD41C.jpg"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\SPTestVTDtest_Vespa SprintVTDBlue.pdf",
+      "PackagePath": "staticwebassets\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\SPTestVTDtest_Vespa SprintVTDBlue.pdf"
+    },
+    {
+      "Id": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\_.pdf",
+      "PackagePath": "staticwebassets\\uploads\\TaiwanScan\\SPTestVTDtest\\Vespa SprintVTDBlue\\_.pdf"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.VINMediaCapture.Microsoft.AspNetCore.StaticWebAssets.props",

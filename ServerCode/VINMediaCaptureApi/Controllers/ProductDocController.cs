@@ -40,26 +40,31 @@ namespace VINMediaCaptureApi.Controllers
         [Route("Index")]
         public async Task<ProductDocViewModel> Index([FromBody] ProductDocViewModel search)
         {
-            var fromDate= search.FromDate.StringToDateTime();
+            var fromDate = search.FromDate.StringToDateTime();
             var toDate = search.ToDate.StringToDateTime();
-            var data = from pd in _context.ProductDoc.Where(x=>(x.MarketID == search.Search.MarketID || search.Search.MarketID<=0)
+            var data = from pd in _context.ProductDoc.Where(x => (x.MarketID == search.Search.MarketID || search.Search.MarketID <= 0)
                        && (x.ModelID == search.Search.ModelID || search.Search.ModelID <= 0)
                        && (x.ColorID == search.Search.ColorID || search.Search.ColorID <= 0)
-                       && (x.VINCode.Contains(search.Search.VINCode) || String.IsNullOrEmpty( search.Search.VINCode))
+                       && (x.VINCode.Contains(search.Search.VINCode) || String.IsNullOrEmpty(search.Search.VINCode))
                        && (x.DocTypeDate >= fromDate && x.DocTypeDate <= toDate)
                        )
-                       join dt in _context.DocType.Where(x=>x.DocTypeID== search.Search.DocTypeID || search.Search.DocTypeID<=0) on pd.DocTypeID equals dt.DocTypeID
+                       join dt in _context.DocType.Where(x => x.DocTypeID == search.Search.DocTypeID || search.Search.DocTypeID <= 0) on pd.DocTypeID equals dt.DocTypeID
                        //join pdv in _context.ProductDocVal on pd.Id equals pdv.ProductDocId
                        join c in _context.Color on pd.ColorID equals c.ColorID
-                       join m in _context.Market on pd.MarketID equals m.MarketID
+                        into color
+                       from pColor in color.DefaultIfEmpty()
+
+                       join m in _context.Market on pd.MarketID equals m.MarketID into market
+                       from pMarket in market.DefaultIfEmpty()
                        join u in _context.Users on pd.UserID equals u.UserID
-                       join md in _context.Model on pd.ModelID equals md.ModelID
+                       join md in _context.Model on pd.ModelID equals md.ModelID into model
+                       from pModel in model.DefaultIfEmpty()
                        orderby pd.Id descending
                        select new ProductDocInfo
                        {
-                           Color=c,
-                           Market=m,
-                           Model=md,
+                           Color= pColor,
+                           Market=pMarket,
+                           Model=pModel,
                            //ProductDocVal=pdv,
                            ProductDoc=pd,
                            DocType= dt,
@@ -105,8 +110,8 @@ namespace VINMediaCaptureApi.Controllers
             {
                 var data = from pd in _context.ProductDoc.Where(x => (x.VINCode.ToLower() == vinCode.ToLower() && x.Id == productDoc))
                            join dt in _context.DocType on pd.DocTypeID equals dt.DocTypeID
-                           join pdv in _context.ProductDocVal on pd.Id equals pdv.ProductDocId
-                           join di in _context.DocTypeItems on pdv.ItemID equals di.ItemID
+                           join pdv in _context.ProductDocVal on pd.Id equals pdv.ProductDocId 
+                           //join di in _context.DocTypeItems on pdv.ItemID equals di.ItemID
                            join u in _context.Users on pd.UserID equals u.UserID
                            //join dia in _context.DocTypeItemAttr on pdv.AttrID equals dia.AttrID
                            orderby pd.Id descending
@@ -114,20 +119,13 @@ namespace VINMediaCaptureApi.Controllers
                            {
                                ProductDocVal = pdv,
                                //DocTypeItemAttr = dia,
-                               DocTypeItem = di,
+                               //DocTypeItem = di,
                                User = u,
                            };
 
                 model.ProductDocValInfo = data.ToList();
             }
-            if (model.ProductDocValInfo!=null && model.ProductDocValInfo.Any())
-            {
-                var docTypeItem= model.ProductDocValInfo.First().DocTypeItem;
-                model.Model = _context.Model.FirstOrDefault(x => x.ModelID == docTypeItem.ModelID);
-                model.Color = _context.Color.FirstOrDefault(x => x.ColorID == docTypeItem.ColorID);
-                model.Market = _context.Market.FirstOrDefault(x => x.MarketID== docTypeItem.MarketID);
-
-            }
+            
             return model;
         }
     }

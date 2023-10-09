@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="TwainScan.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="TwainScan.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="DAISY.ICO" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -54,6 +54,15 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="BouncyCastle.Crypto.dll" size="2609152">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MzkDx9IqJwmORfxkt3omSqIgYFz70+MpwgDX5LQsiBw=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="DAISY.ICO" size="5430">
     <hash>
       <dsig:Transforms>
@@ -61,6 +70,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>hAWJ18MKzRb3vlYRAcnhjZGc0hZZ/J2vepjvcTgHfcw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="itextsharp.dll" size="2592768">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zloQfa1DpBAe6z/oT/bRc6bVXzTwv/cltTY2bxDplBA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="log4net.dll" size="294912">
@@ -99,22 +117,22 @@
       <dsig:DigestValue>5fiogLFE7SeS3PRV6UFHz5CXlzOQswnGg6Gw69KsGAM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TwainScan.deps.json" size="2415">
+  <file name="TwainScan.deps.json" size="3545">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>W+8r1/btLHd1j1EYwsYtryOiEXI/Z7F8IJ8TkjyFfhA=</dsig:DigestValue>
+      <dsig:DigestValue>FQMvFmRDpSugdZ0KfGF1DE0VAaKiORktaZhD/bakQgM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TwainScan.dll" size="1269248">
+  <file name="TwainScan.dll" size="1272832">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>1tCvHzoNFM/N7Hi90/Yj168eC4qsIXS0PO4jYDz84hM=</dsig:DigestValue>
+      <dsig:DigestValue>v/LBzINTQ4hBJ+zomu+qRKRZlsJ27nk77ztjRqGtvy4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TwainScan.dll.config" size="320">
@@ -132,7 +150,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>CD/nJ0oCBC1Crm6YS3k6uXEmIDIFxGylPXlQWTfRD9M=</dsig:DigestValue>
+      <dsig:DigestValue>SmtvSbuoq6EAfr+Y3WiIGG2EavEh3PevAR9fDY3Q7jE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TwainScan.runtimeconfig.json" size="372">

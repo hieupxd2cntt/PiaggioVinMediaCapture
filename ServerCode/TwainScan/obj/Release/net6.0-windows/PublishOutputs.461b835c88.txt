@@ -5,6 +5,8 @@ E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.deps.json
 E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.runtimeconfig.json
 E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.dll.config
 E:\PublishAllProject\VinMediaCapture\Winform\TwainScan.pdb
+E:\PublishAllProject\VinMediaCapture\Winform\BouncyCastle.Crypto.dll
+E:\PublishAllProject\VinMediaCapture\Winform\itextsharp.dll
 E:\PublishAllProject\VinMediaCapture\Winform\Newtonsoft.Json.dll
 E:\PublishAllProject\VinMediaCapture\Winform\log4net.dll
 E:\PublishAllProject\VinMediaCapture\Winform\TwainDotNet.dll

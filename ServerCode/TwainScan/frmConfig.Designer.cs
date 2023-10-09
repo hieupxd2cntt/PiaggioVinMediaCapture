@@ -47,6 +47,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtLogPath = new System.Windows.Forms.TextBox();
             this.btnBrowseLogPath = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtLineName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -109,7 +111,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(156, 288);
+            this.btnSave.Location = new System.Drawing.Point(156, 322);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(73, 32);
             this.btnSave.TabIndex = 2;
@@ -119,7 +121,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(254, 288);
+            this.btnClose.Location = new System.Drawing.Point(254, 322);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(73, 32);
             this.btnClose.TabIndex = 2;
@@ -205,11 +207,27 @@
             this.btnBrowseLogPath.UseVisualStyleBackColor = true;
             this.btnBrowseLogPath.Click += new System.EventHandler(this.btnBrowseLogPath_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 281);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 15);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Tên line";
+            // 
+            // txtLineName
+            // 
+            this.txtLineName.Location = new System.Drawing.Point(156, 278);
+            this.txtLineName.Name = "txtLineName";
+            this.txtLineName.Size = new System.Drawing.Size(375, 23);
+            this.txtLineName.TabIndex = 1;
+            // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 332);
+            this.ClientSize = new System.Drawing.Size(544, 407);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBrowseSuccessFolder);
@@ -219,10 +237,12 @@
             this.Controls.Add(this.txtApiUrl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtScanSuccessFolder);
+            this.Controls.Add(this.txtLineName);
             this.Controls.Add(this.txtHostUrl);
             this.Controls.Add(this.txtLogPath);
             this.Controls.Add(this.txtScanFailFolder);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
@@ -261,5 +281,7 @@
         private Label label6;
         private TextBox txtLogPath;
         private Button btnBrowseLogPath;
+        private Label label7;
+        private TextBox txtLineName;
     }
 }
