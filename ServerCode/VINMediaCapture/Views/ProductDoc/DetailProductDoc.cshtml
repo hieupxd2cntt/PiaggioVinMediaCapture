@@ -1,7 +1,16 @@
 ﻿@using VINMediaCaptureEntities.Enum
 @using VINMediaCaptureEntities.ViewModel
 @model DetailProductDocModel
-<h2>@(String.Format("{0} - {1} -{2}", Model.Model.ModelName, String.Format("{0}{1}{2}", Model.Model.ModelCode, Model.Market.MarketCode, Model.Color.ColorCode), Model.Vincode))</h2>
+
+@if (String.IsNullOrEmpty(Model.Model.ModelName) && String.IsNullOrEmpty(Model.Market.MarketCode) && String.IsNullOrEmpty(Model.Color.ColorCode))
+{
+    <h2>@(String.Format("{0}", Model.Vincode))</h2>
+}
+else
+{
+    <h2>@(String.Format("{0} - {1} -{2}", Model.Model.ModelName, String.Format("{0}{1}{2}", Model.Model.ModelCode, Model.Market.MarketCode, Model.Color.ColorCode), Model.Vincode))</h2>
+}
+
 <table class="table table-bordered">
     <thead>
     <th>Tên thuộc tính</th>

@@ -37,7 +37,7 @@ namespace TwainScan.Common
                 _authToken = Convert.ToBase64String(textBytes);
             }
         }
-        public async Task<string> LoadGetApi(string url)
+        public string LoadGetApi(string url)
         {
             try
             {
@@ -53,8 +53,8 @@ namespace TwainScan.Common
                     var content = "";
                     try
                     {
-                        var data = await client.GetAsync(uri);
-                        content = await data.Content.ReadAsStringAsync();
+                        var data = client.GetStringAsync(uri);
+                        content = data.Result;
                     }
                     catch (Exception e1)
                     {

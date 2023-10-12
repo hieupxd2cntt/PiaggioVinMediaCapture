@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q/Fd4wyKBlc0F0w1PEVr5qsL5SqqEvH308rACTKO7YY=",
+  "Hash": "j8uSnxsEs/9kTjqe9lKiUo3LGaGRmba193RklkZLcYo=",
   "Source": "VINMediaCapture",
   "BasePath": "_content/VINMediaCapture",
   "Mode": "Default",
@@ -73336,6 +73336,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\1234567890_20231009102533..pdf"
+    },
+    {
+      "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\1234567890_20231009102727..pdf",
+      "SourceId": "VINMediaCapture",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\",
+      "BasePath": "_content/VINMediaCapture",
+      "RelativePath": "uploads/DaisyEDoc/Line1/DESKTOP-TT34PF0/1234567890_20231009102727..pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\DaisyEDoc\\Line1\\DESKTOP-TT34PF0\\1234567890_20231009102727..pdf"
     },
     {
       "Identity": "E:\\Working\\Daisy\\Piaggio\\PiaggioVinMediaCapture\\ServerCode\\VINMediaCapture\\wwwroot\\uploads\\DocTypeGuide\\MJ7M66700NJ001040\\SPTestVTDtest-MJ7M66700NJ001040-Thuộc tính 1.png",

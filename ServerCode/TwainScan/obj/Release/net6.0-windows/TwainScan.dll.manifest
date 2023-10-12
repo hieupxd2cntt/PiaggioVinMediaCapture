@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="TwainScan.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="TwainScan.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="DAISY.ICO" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -126,22 +126,22 @@
       <dsig:DigestValue>FQMvFmRDpSugdZ0KfGF1DE0VAaKiORktaZhD/bakQgM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TwainScan.dll" size="1272832">
+  <file name="TwainScan.dll" size="1272320">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>v/LBzINTQ4hBJ+zomu+qRKRZlsJ27nk77ztjRqGtvy4=</dsig:DigestValue>
+      <dsig:DigestValue>YBiFcITQYLFSq/x5D1i2WbzEehjp6l3aRLomVLorWuw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TwainScan.dll.config" size="320">
+  <file name="TwainScan.dll.config" size="316">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>EqkbEpqyCTcs+WY7ja8S89kyzPDS1P2zoiyywvwun0E=</dsig:DigestValue>
+      <dsig:DigestValue>bM5WDoFfUiR9qfmlSfgQhle52eeKMCkoUdoLdoea3DY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TwainScan.exe" size="120320">
@@ -150,7 +150,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>SmtvSbuoq6EAfr+Y3WiIGG2EavEh3PevAR9fDY3Q7jE=</dsig:DigestValue>
+      <dsig:DigestValue>PztSKyrlrJ7HcmBi3TTHfDN0htSIRZ8+Wu010Bn3NV8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TwainScan.runtimeconfig.json" size="372">
@@ -162,13 +162,13 @@
       <dsig:DigestValue>HsoPDHAHCqg7tgnkt0mybctECXhDJgMnJjlHIiJKCYo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="VINMediaCaptureEntities.dll" size="56832">
+  <file name="VINMediaCaptureEntities.dll" size="57856">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>UOdlh1sN3ddYBL1ieJKbLuRAyEXIuVSlouSExPykG6Q=</dsig:DigestValue>
+      <dsig:DigestValue>hmPyd93w7UfVuFfLma+39fSEk97AjamH/5RbFYUc1To=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

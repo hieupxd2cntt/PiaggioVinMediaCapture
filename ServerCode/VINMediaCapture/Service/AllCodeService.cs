@@ -26,9 +26,18 @@ namespace VINMediaCapture.Service
             var module = JsonConvert.DeserializeObject<List<AllCode>>(data);
             return module;
         }
+
+        public async Task<RestOutput<int>> SaveScanSettings(List<AllCode> allCodes)
+        {
+            var url = string.Format("AllCode/SaveScanSettings");
+            var data = await PostApi(url, allCodes);
+            var module = JsonConvert.DeserializeObject<RestOutput<int>>(data);
+            return module;
+        }
     }
     public interface IAllCodeService
     {
         public Task<List<AllCode>> LoadAllCodeByType(string type);
+        public Task<RestOutput<int>> SaveScanSettings(List<AllCode> allCodes);
     }
 }

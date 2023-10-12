@@ -21,6 +21,25 @@ namespace TwainScan.Common
             
             return data;
         }
+        public List<AllCode> LoadScanSetting()
+        {
+            try
+            {
+                var url = String.Format("AllCode/LoadAllCodeByType?type={0}", EAllCode.ScanSetting.GetMapping());
+                var data = LoadGetApi(url);
+                if (data == null)
+                {
+                    return null;
+                }
+                var allCodes = JsonConvert.DeserializeObject<List<AllCode>>(data);
+                return allCodes;
+            }
+            catch (Exception e)
+            {
+
+                throw e ;
+            }
+        }
         public UserLoginModel Login(Users user)
         {
             var url = "User/Login";

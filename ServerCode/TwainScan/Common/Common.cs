@@ -69,7 +69,7 @@ namespace TwainScan.Common
                     MsgBox.ShowError("Không tìm thấy tài liệu scan");
                     return false;
                 }
-                var document = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 25, 25, 25, 25);
+                var document = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 0, 0,0,0);
 
                 iTextSharp.text.Document doc = new iTextSharp.text.Document();
                 if (File.Exists(pdf))
@@ -78,19 +78,23 @@ namespace TwainScan.Common
                 }
                 try
                 {
-                    PdfWriter.GetInstance(doc, new FileStream(pdf, FileMode.Create));
+                    var writer=PdfWriter.GetInstance(doc, new FileStream(pdf, FileMode.Create));
+                    writer.SetPdfVersion(PdfWriter.PDF_VERSION_1_7);
+                    writer.CompressionLevel = PdfStream.NO_COMPRESSION;
+                    writer.SetFullCompression();
                     doc.Open();
                     foreach (var jpgfile in files)
                     {
                         //doc.Add(new Paragraph("GIF"));
                         iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(jpgfile);
-                        if (image.Height > iTextSharp.text.PageSize.A4.Height - 25)
+                        
+                        if (image.Height > iTextSharp.text.PageSize.A4.Height)
                         {
-                            image.ScaleToFit(iTextSharp.text.PageSize.A4.Width - 25, iTextSharp.text.PageSize.A4.Height - 25);
+                            image.ScaleToFit(iTextSharp.text.PageSize.A4.Width, iTextSharp.text.PageSize.A4.Height);
                         }
-                        else if (image.Width > iTextSharp.text.PageSize.A4.Width - 25)
+                        else if (image.Width > iTextSharp.text.PageSize.A4.Width )
                         {
-                            image.ScaleToFit(iTextSharp.text.PageSize.A4.Width - 25, iTextSharp.text.PageSize.A4.Height - 25);
+                            image.ScaleToFit(iTextSharp.text.PageSize.A4.Width, iTextSharp.text.PageSize.A4.Height);
                         }
                         image.Alignment = iTextSharp.text.Image.ALIGN_MIDDLE;
                         doc.NewPage();
@@ -117,6 +121,7 @@ namespace TwainScan.Common
                 return false;
             }
         }
+        
         public static ConfigModel GetConfig()
         {
             try

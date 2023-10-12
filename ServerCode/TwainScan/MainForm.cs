@@ -47,6 +47,7 @@ namespace TestApp
         {
             InitializeComponent();
             lblVinCode.Text = CurrentValue.VinCode;
+            LoadScanSetting();
             try
             {
                 ScanFolder = Config.ScanFolder + "/" + CurrentValue.VinCode;
@@ -86,7 +87,37 @@ namespace TestApp
                 ErrorLog.WriteLog("MainForm", e.Message);
             }
         }
+        private void LoadScanSetting()
+        {
+            try
+            {
+                ApiMethod method = new ApiMethod();
+                var scanSetting = method.LoadScanSetting();
+                if (scanSetting == null && !scanSetting.Any())
+                {
+                    return;
+                }
+                chkSendPdf.Checked = scanSetting.Where(x => x.TypeName == EScanSetting.SendPdf.GetMapping() && x.CodeVal == "on").Any() ? true : false;
+                useUICheckBox.Checked = scanSetting.Where(x => x.TypeName == EScanSetting.UseUI.GetMapping() && x.CodeVal == "on").Any() ? true : false;
+                useDuplexCheckBox.Checked = scanSetting.Where(x => x.TypeName == EScanSetting.UseDuplex.GetMapping() && x.CodeVal == "on").Any() ? true : false;
+                useAdfCheckBox.Checked = scanSetting.Where(x => x.TypeName == EScanSetting.UseAdf.GetMapping() && x.CodeVal == "on").Any() ? true : false;
+                showProgressIndicatorUICheckBox.Checked = scanSetting.Where(x => x.TypeName == EScanSetting.ShowProgressIndicator.GetMapping() && x.CodeVal == "on").Any() ? true : false;
+                checkBoxArea.Checked = scanSetting.Where(x => x.TypeName == EScanSetting.Area.GetMapping() && x.CodeVal == "on").Any() ? true : false;
+                autoDetectBorderCheckBox.Checked = scanSetting.Where(x => x.TypeName == EScanSetting.AutoDetectBorder.GetMapping() && x.CodeVal == "on").Any() ? true : false;
+                autoRotateCheckBox.Checked = scanSetting.Where(x => x.TypeName == EScanSetting.AutoRotate.GetMapping() && x.CodeVal == "on").Any() ? true : false;
+                blackAndWhiteCheckBox.Checked = scanSetting.Where(x => x.TypeName == EScanSetting.BlackAndWhite.GetMapping() && x.CodeVal == "on").Any() ? true : false;
+                var dpiTemp = scanSetting.Where(x => x.TypeName == EScanSetting.DPI.GetMapping());
+                if (dpiTemp!=null && dpiTemp.Any()) {
+                    txtDPI.Text= dpiTemp.First().CodeVal;
+                }
+                
+            }
+            catch (Exception e)
+            {
+                ErrorLog.WriteLog("LoadScanSetting", e.Message);
+            }
 
+        }
         private void selectSource_Click(object sender, EventArgs e)
         {
             try
@@ -118,12 +149,14 @@ namespace TestApp
                 _settings.ShowTwainUI = useUICheckBox.Checked;
                 _settings.ShowProgressIndicatorUI = showProgressIndicatorUICheckBox.Checked;
                 _settings.UseDuplex = useDuplexCheckBox.Checked;
+                
                 _settings.Resolution =
                     blackAndWhiteCheckBox.Checked
                     ? ResolutionSettings.Fax : ResolutionSettings.ColourPhotocopier;
+                
                 _settings.Area = !checkBoxArea.Checked ? null : AreaSettings;
                 _settings.ShouldTransferAllPages = true;
-
+                _settings.Resolution.Dpi = Convert.ToInt32(txtDPI.Text.Trim());
                 _settings.Rotation = new RotationSettings()
                 {
                     AutomaticRotate = autoRotateCheckBox.Checked,

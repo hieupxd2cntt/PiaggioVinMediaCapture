@@ -9,6 +9,9 @@ using System.Data.Entity;
 using System.Net.WebSockets;
 using System.Threading;
 using TanvirArjel.EFCore.GenericRepository;
+using VINMediaCaptureEntities.ViewModel;
+using VINMediaCaptureEntities;
+using VINMediaCaptureEntities.Enum;
 
 namespace VINMediaCaptureApi.Controllers
 {
@@ -34,6 +37,7 @@ namespace VINMediaCaptureApi.Controllers
             _queryRepository = queryRepository;
             _pharmacyRepository = pharmacyRepository;
         }
+
 
         [HttpGet]
         [Route("LoadAllCodeByType")]
@@ -87,6 +91,32 @@ namespace VINMediaCaptureApi.Controllers
         public async Task<string> GetSystemDate()
         {
             return DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+        }
+        [Route("SaveScanSettings")]
+        [HttpPost]
+        public async Task<RestOutput<int>> SaveScanSettings([FromBody] List<AllCode> allCodes)
+        {
+            var data = new RestOutput<int>();
+            await _context.Database.OpenConnectionAsync(default);
+            var allCodeDBs = _context.AllCode.Where(x => x.CodeName.ToLower() == EAllCode.ScanSetting.GetMapping().ToLower()).ToList();
+            
+            foreach (var item in allCodes)
+            {
+                var check = allCodeDBs.Where(x => (x.TypeName??"").ToLower() == item.TypeName.ToLower());
+                if (check!=null && check.Any())
+                {
+                    var update = check.First();
+                    update.CodeVal = item.CodeVal;
+                }
+
+                else
+                {
+                    _context.AllCode.Add(item);
+                }
+            }
+            _context.SaveChanges();
+            data.ResultCode = 1;
+            return data;
         }
     }
 }

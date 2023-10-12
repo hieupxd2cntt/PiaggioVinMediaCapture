@@ -55,6 +55,8 @@
             this.chkSendPdf = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblVinCode = new System.Windows.Forms.Label();
+            this.txtDPI = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,11 +339,31 @@
             this.lblVinCode.Text = "Vincode";
             this.lblVinCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtDPI
+            // 
+            this.txtDPI.Location = new System.Drawing.Point(43, 537);
+            this.txtDPI.Name = "txtDPI";
+            this.txtDPI.Size = new System.Drawing.Size(100, 23);
+            this.txtDPI.TabIndex = 22;
+            this.txtDPI.Text = "100";
+            this.txtDPI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 540);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 15);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "DPI";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 808);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtDPI);
             this.Controls.Add(this.lblVinCode);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPre);
@@ -407,6 +429,8 @@
         private CheckBox chkSendPdf;
         private Label label6;
         private Label lblVinCode;
+        private TextBox txtDPI;
+        private Label label7;
     }
 }
 

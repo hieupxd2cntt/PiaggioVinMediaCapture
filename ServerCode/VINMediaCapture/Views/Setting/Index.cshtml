@@ -1,0 +1,255 @@
+﻿@using VINMediaCaptureEntities.Entities
+@using VINMediaCaptureEntities.Enum
+@using VINMediaCaptureEntities.ViewModel
+@{
+    ViewBag.Title = "Cấu hình tham số Scan";
+}
+@model List<AllCode>
+<form action="@Url.Action("Index","Setting")" method="post" id="frmForm">
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Cấu hình tham số Scan</h1>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <section class="content">
+            <div class="container-fluid">
+                @{
+                    if (ViewBag.ErrorMsg != null)
+                    {
+                            <div class="col-md-12 bg-danger">
+                                <div class="inner">
+                                    <h3>Lỗi</h3>
+                                    <p>@ViewBag.ErrorMsg</p>
+                                </div>
+                            </div>
+                    }
+                }
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">Thông tin Scan</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.UseAdf.GetDescription())</label>
+                                            @{
+                                                string check = "";
+                                                var checkUseAdf = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.UseAdf.GetMapping().ToLower());
+                                                if (checkUseAdf != null && checkUseAdf.Any())
+                                                {
+                                                    if (checkUseAdf.First().CodeVal == "on")
+                                                    {
+                                                        check = "checked='checked'";
+                                                    }
+                                                }
+                                                    <input type="checkbox" name="[0].CodeVal" @check />
+                                            }
+                                            <input type="hidden" name="[0].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[0].TypeName" value="@EScanSetting.UseAdf.GetMapping()" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.UseDuplex.GetDescription())</label>
+                                            @{
+                                                string checkChkUseDuplex = "";
+                                                var checkUseDuplex = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.UseDuplex.GetMapping().ToLower());
+                                                if (checkUseDuplex != null && checkUseDuplex.Any())
+                                                {
+                                                    if (checkUseDuplex.First().CodeVal == "on")
+                                                    {
+                                                        checkChkUseDuplex = "checked='checked'";
+                                                    }
+                                                }
+                                                    <input type="checkbox" name="[1].CodeVal" @checkChkUseDuplex />
+                                            }
+                                            <input type="hidden" name="[1].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[1].TypeName" value="@EScanSetting.UseDuplex.GetMapping()" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.UseUI.GetDescription())</label>
+                                            @{
+                                                string checkChkUseUI = "";
+                                                var checkUseUI = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.UseUI.GetMapping().ToLower());
+                                                if (checkUseUI != null && checkUseDuplex.Any())
+                                                {
+                                                    if (checkUseDuplex.First().CodeVal == "on")
+                                                    {
+                                                        checkChkUseDuplex = "checked='checked'";
+                                                    }
+                                                }
+                                                    <input type="checkbox" name="[2].CodeVal" @checkChkUseDuplex />
+                                            }
+                                            <input type="hidden" name="[2].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[2].TypeName" value="@EScanSetting.UseUI.GetMapping()" />
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.ShowProgressIndicator.GetDescription())</label>
+                                            @{
+                                                string checkChkShowProgressIndicator = "";
+                                                var checkShowProgressIndicator = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.ShowProgressIndicator.GetMapping().ToLower());
+                                                if (checkShowProgressIndicator != null && checkShowProgressIndicator.Any())
+                                                {
+                                                    if (checkShowProgressIndicator.First().CodeVal == "on")
+                                                    {
+                                                        checkChkShowProgressIndicator = "checked='checked'";
+                                                    }
+                                                }
+                                                    <input type="checkbox" name="[3].CodeVal" @checkChkShowProgressIndicator />
+                                            }
+                                            <input type="hidden" name="[3].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[3].TypeName" value="@EScanSetting.ShowProgressIndicator.GetMapping()" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.BlackAndWhite.GetDescription())</label>
+                                            @{
+                                                string checkChkBlackAndWhite = "";
+                                                var checkBlackAndWhite = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.BlackAndWhite.GetMapping().ToLower());
+                                                if (checkBlackAndWhite != null && checkBlackAndWhite.Any())
+                                                {
+                                                    if (checkBlackAndWhite.First().CodeVal == "on")
+                                                    {
+                                                        checkChkBlackAndWhite = "checked='checked'";
+                                                    }
+                                                }
+                                                    <input type="checkbox" name="[4].CodeVal" @checkChkBlackAndWhite />
+                                            }
+                                            <input type="hidden" name="[4].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[4].TypeName" value="@EScanSetting.BlackAndWhite.GetMapping()" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.Area.GetDescription())</label>
+                                            @{
+                                                string checkChkArea = "";
+                                                var checkArea = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.Area.GetMapping().ToLower());
+                                                if (checkArea != null && checkArea.Any())
+                                                {
+                                                    if (checkArea.First().CodeVal == "on")
+                                                    {
+                                                        checkChkArea = "checked='checked'";
+                                                    }
+                                                }
+                                                    <input type="checkbox" name="[5].CodeVal" @checkChkArea />
+                                            }
+                                            <input type="hidden" name="[5].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[5].TypeName" value="@EScanSetting.Area.GetMapping()" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.AutoDetectBorder.GetDescription())</label>
+                                            @{
+                                                string checkChkAutoDetectBorder = "";
+                                                var checkAutoDetectBorder = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.AutoDetectBorder.GetMapping().ToLower());
+                                                if (checkAutoDetectBorder != null && checkAutoDetectBorder.Any())
+                                                {
+                                                    if (checkAutoDetectBorder.First().CodeVal == "on")
+                                                    {
+                                                        checkChkAutoDetectBorder = "checked='checked'";
+                                                    }
+                                                }
+                                                    <input type="checkbox" name="[6].CodeVal" @checkChkAutoDetectBorder />
+                                            }
+                                            <input type="hidden" name="[6].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[6].TypeName" value="@EScanSetting.AutoDetectBorder.GetMapping()" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.AutoRotate.GetDescription())</label>
+                                            @{
+                                                string checkChkAutoRotate = "";
+                                                var checkAutoRotate = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.AutoRotate.GetMapping().ToLower());
+                                                if (checkAutoRotate != null && checkAutoRotate.Any())
+                                                {
+                                                    if (checkAutoRotate.First().CodeVal == "on")
+                                                    {
+                                                        checkChkAutoRotate = "checked='checked'";
+                                                    }
+                                                }
+                                                    <input type="checkbox" name="[7].CodeVal" @checkChkAutoRotate />
+                                            }
+                                            <input type="hidden" name="[7].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[7].TypeName" value="@EScanSetting.AutoRotate.GetMapping()" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.SendPdf.GetDescription())</label>
+                                            @{
+                                                string checkChkSendPdf = "";
+                                                var checkSendPdf = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.SendPdf.GetMapping().ToLower());
+                                                if (checkSendPdf != null && checkSendPdf.Any())
+                                                {
+                                                    if (checkSendPdf.First().CodeVal == "on")
+                                                    {
+                                                        checkChkSendPdf = "checked='checked'";
+                                                    }
+                                                }
+                                                    <input type="checkbox" name="[8].CodeVal" @checkChkSendPdf />
+                                            }
+                                            <input type="hidden" name="[8].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[8].TypeName" value="@EScanSetting.SendPdf.GetMapping()" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group row">
+                                            <label class="col-md-4">@(EScanSetting.DPI.GetDescription())</label>
+                                            @{
+                                                string dpiValue = "200";
+                                                var dpi = Model.Where(x => (x.TypeName ?? "").ToLower() == EScanSetting.DPI.GetMapping().ToLower());
+                                                if(dpi!=null && dpi.Any()){
+                                                    dpiValue = dpi.First().CodeVal;
+                                                }
+                                                 <input type="text" name="[9].CodeVal" class="form-control text-right" value="@dpiValue" />
+                                            }
+                                           
+                                            <input type="hidden" name="[9].CodeName" value="@EAllCode.ScanSetting.GetMapping()" />
+                                            <input type="hidden" name="[9].TypeName" value="@EScanSetting.DPI.GetMapping()" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn btn-success" id="btnSave"><i class="fa fa-save"></i>&nbsp; Lưu</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</form>
